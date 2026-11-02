@@ -1,0 +1,14 @@
+id: khan-academy-kids
+name: Khan Academy Kids
+url: https://learn.khanacademy.org/khan-academy-kids/
+subjects: [reading, phonics, math, social-emotional learning]
+ages: { min: 2, max: 8 }
+claims:
+  - text: Learning games, books and videos for children aged 2 to 8.
+    source: khan-academy-kids-app-store
+    provenance: measured
+    checked_on: 2026-11-02
+  - text: Free to use, with no ads and no subscriptions.
+    source: khan-academy-kids-app-store
+    provenance: measured
+    checked_on: 2026-11-02

@@ -1,0 +1,17 @@
+id: summer-reading-challenge
+name: Summer Reading Challenge (UK public libraries)
+url: https://readingagency.org.uk/children/summer-reading-challenge/
+subjects: [reading, library programme]
+ages: { min: 4, max: 11 }
+claims:
+  - text: Aimed at children aged 4 to 11.
+    source: reading-agency-summer-reading-challenge
+    provenance: measured
+    checked_on: 2026-11-02
+  - text: Free to take part; children sign up at their local library or online.
+    source: reading-agency-summer-reading-challenge
+    provenance: measured
+    checked_on: 2026-11-02
+  - text: Runs over the school summer holidays, so it is seasonal rather than year-round.
+    source: reading-agency-summer-reading-challenge
+    provenance: inferred

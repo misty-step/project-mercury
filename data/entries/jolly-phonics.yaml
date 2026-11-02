@@ -1,0 +1,17 @@
+id: jolly-phonics
+name: Jolly Phonics
+url: https://www.jollylearning.co.uk/jolly-phonics/
+subjects: [phonics, reading, writing, curriculum]
+ages: { min: 3, max: 7 }
+claims:
+  - text: A systematic synthetic phonics programme validated by the UK Department for Education.
+    source: jolly-learning-jolly-phonics
+    provenance: measured
+    checked_on: 2026-11-02
+  - text: Teaches the 42 letter sounds of English.
+    source: jolly-learning-jolly-phonics
+    provenance: measured
+    checked_on: 2026-11-02
+  - text: Suitable roughly for ages 3 to 7 (early years and first school years); the publisher page does not state an exact range.
+    source: jolly-learning-jolly-phonics
+    provenance: guess
