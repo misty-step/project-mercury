@@ -1,0 +1,20 @@
+- id: koinonia-home
+  url: https://www.koinoniahybrid.org/
+  publisher: Koinonia Hybrid Academy
+  type: official-site
+  checked_on: "2026-11-03"
+- id: koinonia-hybrid-model
+  url: https://www.koinoniahybrid.org/hybrid-model
+  publisher: Koinonia Hybrid Academy
+  type: official-site
+  checked_on: "2026-11-03"
+- id: koinonia-academics
+  url: https://www.koinoniahybrid.org/academics
+  publisher: Koinonia Hybrid Academy
+  type: official-site
+  checked_on: "2026-11-03"
+- id: koinonia-tuition
+  url: https://www.koinoniahybrid.org/tuition-and-fees
+  publisher: Koinonia Hybrid Academy
+  type: official-site
+  checked_on: "2026-11-03"

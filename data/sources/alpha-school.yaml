@@ -1,0 +1,10 @@
+- id: alpha-home
+  url: https://alpha.school/
+  publisher: Alpha School
+  type: official-site
+  checked_on: "2026-11-03"
+- id: alpha-faq
+  url: https://alpha.school/faq/
+  publisher: Alpha School
+  type: official-site
+  checked_on: "2026-11-03"

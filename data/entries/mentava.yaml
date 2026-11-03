@@ -1,0 +1,38 @@
+id: mentava
+name: Mentava
+url: https://www.mentava.com/
+kind: app
+summary: >-
+  Early-literacy iPad app for preschoolers that teaches letter sounds and then
+  blending, aiming to take a child "from zero to reading books in 15-30
+  minutes/day" over a fixed sequence of 120 levels, with an on-call coach for
+  parents.
+subjects: [reading, phonics]
+ages: { min: 3, max: 6 }
+approaches: [phonics, self-paced, app-based, short-daily-sessions]
+cost: "$500/month including software, curriculum and coach; 14-day free trial"
+claims:
+  - field: ages
+    value: "designed for preschoolers"
+    provenance: measured
+    source_id: mentava-home
+    checked_on: "2026-11-03"
+  - field: ages
+    value: "3-6 (from 'designed for preschoolers' and testimonials)"
+    provenance: inferred
+    source_id: mentava-home
+  - field: subjects
+    value: "early reading: letter sounds, then blending them into words"
+    provenance: measured
+    source_id: mentava-home
+    checked_on: "2026-11-03"
+  - field: approaches
+    value: "120 levels, ~2,500 activities, child works mostly independently on iPad"
+    provenance: measured
+    source_id: mentava-home
+    checked_on: "2026-11-03"
+  - field: cost
+    value: "$500/month with a free 14-day trial"
+    provenance: measured
+    source_id: mentava-home
+    checked_on: "2026-11-03"

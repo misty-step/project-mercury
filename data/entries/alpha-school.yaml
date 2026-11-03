@@ -1,0 +1,41 @@
+id: alpha-school
+name: Alpha School
+url: https://alpha.school/
+kind: school
+summary: >-
+  Private school network using "2 Hour Learning": students finish core
+  academics in the morning with an adaptive AI tutor at their own pace, while
+  adult guides coach motivation and afternoons go to life-skills workshops.
+  Campuses in many US states and Puerto Rico.
+subjects: [math, reading, writing, science, social studies, life skills]
+ages: { min: 4, max: 14 }
+approaches: [2-hour-learning, ai-tutor, adaptive, mastery, self-paced]
+cost: >-
+  Tuition varies by campus and is not published on the official site; the FAQ
+  says it is "on par with the nation's best private schools" and covers all
+  student activities.
+claims:
+  - field: approaches
+    value: "academics in 2 hours each morning with adaptive technology and an AI tutor; afternoon life-skills workshops"
+    provenance: measured
+    source_id: alpha-home
+    checked_on: "2026-11-03"
+  - field: subjects
+    value: "core curriculum: mathematics, reading and writing, science, history and social studies"
+    provenance: measured
+    source_id: alpha-faq
+    checked_on: "2026-11-03"
+  - field: ages
+    value: "grades depend on location; Alpha Austin serves PreK-8; grades 9-12 via Alpha High"
+    provenance: measured
+    source_id: alpha-faq
+    checked_on: "2026-11-03"
+  - field: ages
+    value: "4-14 (PreK 4 through 8th grade)"
+    provenance: inferred
+    source_id: alpha-faq
+  - field: cost
+    value: "no dollar figure; tuition 'on par with the nation's best private schools'"
+    provenance: measured
+    source_id: alpha-faq
+    checked_on: "2026-11-03"

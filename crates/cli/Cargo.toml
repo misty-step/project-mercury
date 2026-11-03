@@ -1,0 +1,18 @@
+[package]
+name = "project-mercury-cli"
+description = "Command-line interface for the Project Mercury catalog"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "project-mercury"
+path = "src/main.rs"
+
+[dependencies]
+project-mercury-core = { path = "../core" }
+anyhow.workspace = true
+clap.workspace = true
+serde_json.workspace = true
