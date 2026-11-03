@@ -47,9 +47,12 @@ the facet name for every facet that is set.
 ## Website
 
 `mercury-site` renders the catalog to a static site in `dist/` (gitignored): a home
-page with an age/subject filter (works without JS; a small inline script narrows the
-list), one page per entry with a sourced facts table, one page per approach, plus
-`styles.css`, `404.html`, `llms.txt` and `dump.json` (the whole catalog as JSON).
+page of resource cards (best at, most useful when, age bar, involvement and screen-time
+meters, cost tier, skill levels) with an age-coverage chart and a faceted filter bar
+(age, subject and each facet, with counts; a small inline script filters live, and
+without JS every card shows), one page per entry with a sourced facts table, one page
+per approach, plus `styles.css`, `404.html`, `llms.txt` and `dump.json` (the whole
+catalog as JSON). Light and dark follow `prefers-color-scheme`.
 The catalog is validated first; the build fails on any validation error.
 
 ```sh
