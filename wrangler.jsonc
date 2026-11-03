@@ -1,0 +1,13 @@
+// Cloudflare Worker serving the generated static site (assets only, no Worker script).
+// Build first: cargo run -p mercury-site -- --data data --out dist
+// Then deploy:  npx wrangler deploy
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "project-mercury",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  },
+  "routes": [{ "pattern": "projectmercury.mistystep.io", "custom_domain": true }]
+}
