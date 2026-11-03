@@ -3,7 +3,7 @@ use std::process::ExitCode;
 
 use anyhow::{bail, Result};
 use clap::{Parser, Subcommand};
-use project_mercury_core::{load, search, validate, Entry, Query};
+use project_mercury_core::{load, search, validate, CostTier, Entry, Format, Query, SkillLevel};
 
 /// Browse the Project Mercury catalog of homeschool resources.
 #[derive(Parser)]
@@ -18,7 +18,7 @@ struct Cli {
 
 #[derive(Subcommand)]
 enum Command {
-    /// Filter entries by free text, subject, age and approach.
+    /// Filter entries by free text, subject, age, approach and facets.
     Search {
         query: Option<String>,
         #[arg(long)]
@@ -27,6 +27,15 @@ enum Command {
         age: Option<u8>,
         #[arg(long)]
         approach: Option<String>,
+        /// beginner | intermediate | advanced
+        #[arg(long)]
+        skill_level: Option<SkillLevel>,
+        /// online | in_person | hybrid
+        #[arg(long)]
+        format: Option<Format>,
+        /// free | low | mid | high
+        #[arg(long)]
+        cost_tier: Option<CostTier>,
         #[arg(long)]
         json: bool,
     },
@@ -58,6 +67,9 @@ fn run(cli: Cli) -> Result<()> {
             subject,
             age,
             approach,
+            skill_level,
+            format,
+            cost_tier,
             json,
         } => {
             let q = Query {
@@ -65,6 +77,9 @@ fn run(cli: Cli) -> Result<()> {
                 subject,
                 age,
                 approach,
+                skill_level,
+                format,
+                cost_tier,
             };
             let hits = search(&catalog.entries, &q);
             if json {

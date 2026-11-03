@@ -39,3 +39,19 @@ claims:
     provenance: measured
     source_id: alpha-faq
     checked_on: "2026-11-03"
+  - { field: best_at, value: "two hours of adaptive academics, then life skills", provenance: inferred, source_id: alpha-faq }
+  - { field: most_useful_when, value: "full-time in-person private school; tuition on par with top private schools", provenance: inferred, source_id: alpha-faq }
+  - { field: skill_levels, value: "There is no ceiling for academic progression", provenance: inferred, source_id: alpha-faq }
+  - { field: format, value: "Alpha School is an in-person school with a full campus experience", provenance: measured, checked_on: "2026-11-03", source_id: alpha-faq }
+  - { field: cost_tier, value: "high: no figure published; 'on par with the nation's best private schools'", provenance: inferred, source_id: alpha-faq }
+  - { field: parent_involvement, value: "low: students attend a full school day; FAQ asks nothing of parents beyond tuition", provenance: inferred, source_id: alpha-faq }
+  - { field: screen_time, value: "medium: Students typically spend about two hours per day on academic learning software", provenance: measured, checked_on: "2026-11-03", source_id: alpha-faq }
+  - { field: pace, value: "students are able to progress at their own pace", provenance: measured, checked_on: "2026-11-03", source_id: alpha-faq }
+best_at: "fast core academics plus life skills"
+most_useful_when: "want full-time private school, budget allows"
+skill_levels: [beginner, intermediate, advanced]
+format: in_person
+cost_tier: high
+parent_involvement: low
+screen_time: medium
+pace: self_paced

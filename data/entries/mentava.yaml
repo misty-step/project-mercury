@@ -36,3 +36,19 @@ claims:
     provenance: measured
     source_id: mentava-home
     checked_on: "2026-11-03"
+  - { field: best_at, value: "teaching preschoolers to read independently", provenance: inferred, source_id: mentava-home }
+  - { field: most_useful_when, value: "a readiness check comes first ('Can your child track sounds from left to right?')", provenance: inferred, source_id: mentava-home }
+  - { field: skill_levels, value: "beginner: prepares kids to independently read simple books like Green Eggs and Ham", provenance: inferred, source_id: mentava-home }
+  - { field: format, value: "online: child learns in the Mentava iPad app, parents use a parent app", provenance: inferred, source_id: mentava-home }
+  - { field: cost_tier, value: "high: $500/month", provenance: measured, checked_on: "2026-11-03", source_id: mentava-home }
+  - { field: parent_involvement, value: "nobody in your house has to be the teacher; on-call coach for parents", provenance: measured, checked_on: "2026-11-03", source_id: mentava-home }
+  - { field: screen_time, value: "low: from zero to reading books in 15-30 minutes/day", provenance: measured, checked_on: "2026-11-03", source_id: mentava-home }
+  - { field: pace, value: "self-paced: 1 level a day or 2 days per level, coach helps with pacing", provenance: inferred, source_id: mentava-home }
+best_at: "early reading fluency"
+most_useful_when: "child is ready to decode, ages 3-6"
+skill_levels: [beginner]
+format: online
+cost_tier: high
+parent_involvement: low
+screen_time: low
+pace: self_paced

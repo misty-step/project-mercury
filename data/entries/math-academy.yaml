@@ -35,3 +35,19 @@ claims:
     provenance: measured
     source_id: mathacademy-home
     checked_on: "2026-11-03"
+  - { field: best_at, value: "accelerated, mastery-based math for strong students", provenance: inferred, source_id: mathacademy-home }
+  - { field: most_useful_when, value: "the page says it is 'geared towards students with an aptitude for math'", provenance: inferred, source_id: mathacademy-home }
+  - { field: skill_levels, value: "Courses available from elementary through university-level", provenance: inferred, source_id: mathacademy-home }
+  - { field: format, value: "online (web platform with a diagnostic and automated path)", provenance: inferred, source_id: mathacademy-home }
+  - { field: cost_tier, value: "low: Only $49/mo per student", provenance: measured, checked_on: "2026-11-03", source_id: mathacademy-home }
+  - { field: parent_involvement, value: "for homeschoolers it 'can take that job completely off your hands'", provenance: measured, checked_on: "2026-11-03", source_id: mathacademy-home }
+  - { field: screen_time, value: "medium: all work is on screen; daily XP goals are set per student, no fixed time stated", provenance: inferred, source_id: mathacademy-home }
+  - { field: pace, value: "allows them to learn at their own pace", provenance: measured, checked_on: "2026-11-03", source_id: mathacademy-home }
+best_at: "accelerated mastery math"
+most_useful_when: "math-keen child, ages 9+, wants to accelerate"
+skill_levels: [beginner, intermediate, advanced]
+format: online
+cost_tier: low
+parent_involvement: low
+screen_time: medium
+pace: self_paced

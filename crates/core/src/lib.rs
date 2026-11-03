@@ -21,6 +21,82 @@ pub struct Entry {
     /// Free-text cost description.
     pub cost: String,
     pub claims: Vec<Claim>,
+    // Facets for an at-a-glance catalog. All optional so older data still loads;
+    // each one that is set must be backed by a claim whose `field` is its name.
+    /// What the resource is best at (about 6 words).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub best_at: Option<String>,
+    /// When it is most useful (about 8 words).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub most_useful_when: Option<String>,
+    /// Skill levels the material reaches.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub skill_levels: Vec<SkillLevel>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub format: Option<Format>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub cost_tier: Option<CostTier>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub parent_involvement: Option<Level>,
+    /// low: up to ~30 min/day; medium: ~30 min to 2 h; high: over 2 h.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub screen_time: Option<Level>,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub pace: Option<Pace>,
+}
+
+/// A closed set of facet values with stable snake_case names.
+pub trait FacetValue: Copy + PartialEq + 'static {
+    const ALL: &'static [Self];
+    fn as_str(self) -> &'static str;
+}
+
+macro_rules! facet_enum {
+    ($(#[$m:meta])* $name:ident { $($(#[$vm:meta])* $var:ident = $s:literal),+ $(,)? }) => {
+        $(#[$m])*
+        #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+        pub enum $name { $($(#[$vm])* #[serde(rename = $s)] $var),+ }
+        impl FacetValue for $name {
+            const ALL: &'static [Self] = &[$(Self::$var),+];
+            fn as_str(self) -> &'static str { match self { $(Self::$var => $s),+ } }
+        }
+        /// Case-insensitive; `-` is accepted for `_`.
+        impl std::str::FromStr for $name {
+            type Err = String;
+            fn from_str(s: &str) -> Result<Self, String> {
+                let s = s.trim().to_ascii_lowercase().replace('-', "_");
+                Self::ALL.iter().copied().find(|v| v.as_str() == s).ok_or_else(|| {
+                    let all: Vec<_> = Self::ALL.iter().map(|v| v.as_str()).collect();
+                    format!("expected one of: {}", all.join(", "))
+                })
+            }
+        }
+    };
+}
+
+facet_enum!(SkillLevel { Beginner = "beginner", Intermediate = "intermediate", Advanced = "advanced" });
+facet_enum!(Format { Online = "online", InPerson = "in_person", Hybrid = "hybrid" });
+facet_enum!(
+    /// Monthly cost: low is under $50, mid $50-300, high over $300.
+    CostTier { Free = "free", Low = "low", Mid = "mid", High = "high" }
+);
+facet_enum!(Level { Low = "low", Medium = "medium", High = "high" });
+facet_enum!(Pace { SelfPaced = "self_paced", Scheduled = "scheduled" });
+
+impl Entry {
+    /// Facet field names paired with whether this entry sets them.
+    fn facets_set(&self) -> [(&'static str, bool); 8] {
+        [
+            ("best_at", self.best_at.is_some()),
+            ("most_useful_when", self.most_useful_when.is_some()),
+            ("skill_levels", !self.skill_levels.is_empty()),
+            ("format", self.format.is_some()),
+            ("cost_tier", self.cost_tier.is_some()),
+            ("parent_involvement", self.parent_involvement.is_some()),
+            ("screen_time", self.screen_time.is_some()),
+            ("pace", self.pace.is_some()),
+        ]
+    }
 }
 
 /// Inclusive age range in years.
@@ -141,6 +217,11 @@ pub fn validate(catalog: &Catalog) -> Result<(), Vec<String>> {
                 ));
             }
         }
+        for (field, set) in e.facets_set() {
+            if set && !e.claims.iter().any(|c| c.field == field) {
+                errors.push(format!("{}: facet `{field}` has no backing claim", e.id));
+            }
+        }
     }
     if errors.is_empty() {
         Ok(())
@@ -158,6 +239,10 @@ pub struct Query {
     /// Matches entries with `ages.min <= age <= ages.max`.
     pub age: Option<u8>,
     pub approach: Option<String>,
+    /// Matches entries whose `skill_levels` include this level.
+    pub skill_level: Option<SkillLevel>,
+    pub format: Option<Format>,
+    pub cost_tier: Option<CostTier>,
 }
 
 /// Pure filter over entries; preserves input order.
@@ -171,6 +256,9 @@ pub fn search<'a>(entries: &'a [Entry], q: &Query) -> Vec<&'a Entry> {
         .iter()
         .filter(|e| eq(&e.subjects, &q.subject) && eq(&e.approaches, &q.approach))
         .filter(|e| q.age.is_none_or(|a| (e.ages.min..=e.ages.max).contains(&a)))
+        .filter(|e| q.skill_level.is_none_or(|l| e.skill_levels.contains(&l)))
+        .filter(|e| q.format.is_none_or(|f| e.format == Some(f)))
+        .filter(|e| q.cost_tier.is_none_or(|c| e.cost_tier == Some(c)))
         .filter(|e| {
             term.as_ref().is_none_or(|t| {
                 [&e.name, &e.summary]
@@ -180,4 +268,38 @@ pub fn search<'a>(entries: &'a [Entry], q: &Query) -> Vec<&'a Entry> {
             })
         })
         .collect()
+}
+
+/// Entry counts for every value of one facet axis, in declaration order (zeros included).
+#[derive(Debug, Clone, PartialEq, Eq, Serialize)]
+pub struct FacetCounts {
+    /// The `Entry` field name, e.g. `format`.
+    pub axis: &'static str,
+    pub counts: Vec<(&'static str, usize)>,
+}
+
+/// Counts per value for each facet axis, for charts. Single-valued axes sum to the
+/// number of entries that set them; `skill_levels` counts each level an entry lists.
+pub fn facets(entries: &[Entry]) -> Vec<FacetCounts> {
+    fn tally<T: FacetValue>(
+        axis: &'static str,
+        entries: &[Entry],
+        has: impl Fn(&Entry, T) -> bool,
+    ) -> FacetCounts {
+        let counts = T::ALL
+            .iter()
+            .map(|&v| (v.as_str(), entries.iter().filter(|e| has(e, v)).count()))
+            .collect();
+        FacetCounts { axis, counts }
+    }
+    vec![
+        tally("skill_levels", entries, |e, v| e.skill_levels.contains(&v)),
+        tally("format", entries, |e, v| e.format == Some(v)),
+        tally("cost_tier", entries, |e, v| e.cost_tier == Some(v)),
+        tally("parent_involvement", entries, |e, v| {
+            e.parent_involvement == Some(v)
+        }),
+        tally("screen_time", entries, |e, v| e.screen_time == Some(v)),
+        tally("pace", entries, |e, v| e.pace == Some(v)),
+    ]
 }

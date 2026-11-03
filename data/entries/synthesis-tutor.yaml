@@ -35,3 +35,19 @@ claims:
     provenance: measured
     source_id: synthesis-tutor
     checked_on: "2026-11-03"
+  - { field: best_at, value: "game-like, adaptive elementary math tutoring", provenance: inferred, source_id: synthesis-tutor }
+  - { field: most_useful_when, value: "elementary math for ages 5-11, child needs engagement", provenance: inferred, source_id: synthesis-tutor }
+  - { field: skill_levels, value: "covers the standard K-5 math curriculum, and goes much further", provenance: inferred, source_id: synthesis-tutor }
+  - { field: format, value: "online: iPad, Android tablet and desktop/Chromebook apps", provenance: inferred, source_id: synthesis-tutor }
+  - { field: cost_tier, value: "low: individual from $25/month, family $29/month (all monthly plans under $50)", provenance: measured, checked_on: "2026-11-03", source_id: synthesis-tutor }
+  - { field: parent_involvement, value: "Hands-off for parents and teachers; progress reports", provenance: measured, checked_on: "2026-11-03", source_id: synthesis-tutor }
+  - { field: screen_time, value: "medium: every lesson is on a tablet or computer; no session length stated", provenance: inferred, source_id: synthesis-tutor }
+  - { field: pace, value: "child moves on once they demonstrate they have understood", provenance: inferred, source_id: synthesis-tutor }
+best_at: "engaging, adaptive elementary math"
+most_useful_when: "child finds math dull, ages 5-11"
+skill_levels: [beginner, intermediate]
+format: online
+cost_tier: low
+parent_involvement: low
+screen_time: medium
+pace: self_paced
