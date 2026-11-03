@@ -17,3 +17,5 @@ jobs:
       - run: cargo clippy --all-targets -- -D warnings
       - run: cargo test
       - run: cargo run -p project-mercury-cli -- validate
+      - run: cargo run -p mercury-site -- --data data --out dist
+      - run: test -f dist/index.html

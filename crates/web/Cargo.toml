@@ -1,0 +1,18 @@
+[package]
+name = "mercury-site"
+description = "Static website generator for the Project Mercury catalog"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[[bin]]
+name = "mercury-site"
+path = "src/main.rs"
+
+[dependencies]
+project-mercury-core = { path = "../core" }
+anyhow.workspace = true
+clap.workspace = true
+serde_json.workspace = true
