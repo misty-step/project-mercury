@@ -31,9 +31,18 @@ cargo run -p project-mercury-cli -- show math-academy
 cargo run -p project-mercury-cli -- validate
 ```
 
-`search [QUERY] [--subject S] [--age N] [--approach A] [--json]` matches QUERY
-case-insensitively against name, summary and subjects. `--data DIR` overrides the
-default `./data`.
+`search [QUERY] [--subject S] [--age N] [--approach A] [--skill-level L]
+[--format F] [--cost-tier T] [--json]` matches QUERY case-insensitively against
+name, summary and subjects. `--data DIR` overrides the default `./data`.
+
+## Facets
+
+Optional at-a-glance fields: `best_at`, `most_useful_when`, `skill_levels`
+(beginner/intermediate/advanced), `format` (online/in_person/hybrid), `cost_tier`
+(free, low <$50/mo, mid $50-300/mo, high >$300/mo), `parent_involvement`,
+`screen_time` (low/medium/high; screen time low is up to ~30 min/day, high over 2 h)
+and `pace` (self_paced/scheduled). `validate` requires a claim with `field` equal to
+the facet name for every facet that is set.
 
 ## Website
 

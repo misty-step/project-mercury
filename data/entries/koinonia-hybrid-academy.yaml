@@ -49,3 +49,19 @@ claims:
     provenance: measured
     source_id: koinonia-tuition
     checked_on: "2026-11-03"
+  - { field: best_at, value: "Catholic hybrid schooling with parents as co-teachers", provenance: inferred, source_id: koinonia-hybrid-model }
+  - { field: most_useful_when, value: "Nashville families wanting two in-person days a week, Pre-K3 to 6th grade", provenance: inferred, source_id: koinonia-hybrid-model }
+  - { field: skill_levels, value: "elementary only: Pre-K3 - 6th Grade", provenance: inferred, source_id: koinonia-tuition }
+  - { field: format, value: "hybrid: meets in person on Mondays and Thursdays, home days Tuesdays, Wednesdays and Fridays", provenance: measured, checked_on: "2026-11-03", source_id: koinonia-hybrid-model }
+  - { field: cost_tier, value: "mid: $3,100/yr is about $258/mo per student; per-family fees can lift a one-child family near $300/mo", provenance: inferred, source_id: koinonia-tuition }
+  - { field: parent_involvement, value: "Our hybrid model supports parents as the primary educators of their children", provenance: measured, checked_on: "2026-11-03", source_id: koinonia-hybrid-model }
+  - { field: screen_time, value: "low: in-person days plus provided lesson plans and bookwork; no screens mentioned", provenance: inferred, source_id: koinonia-hybrid-model }
+  - { field: pace, value: "meets in person on Mondays and Thursdays", provenance: measured, checked_on: "2026-11-03", source_id: koinonia-hybrid-model }
+best_at: "Catholic hybrid school, parents co-teach"
+most_useful_when: "Nashville family wants part-time Catholic school"
+skill_levels: [beginner, intermediate]
+format: hybrid
+cost_tier: mid
+parent_involvement: high
+screen_time: low
+pace: scheduled

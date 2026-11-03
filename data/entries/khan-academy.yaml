@@ -39,3 +39,19 @@ claims:
     value: "video lessons"
     provenance: guess
     source_id: khan-about
+  - { field: best_at, value: "free personalized practice across core K-12 subjects", provenance: inferred, source_id: khan-about }
+  - { field: most_useful_when, value: "free tool for students, teachers and parents to fill learning gaps", provenance: inferred, source_id: khan-about }
+  - { field: skill_levels, value: "840+ free courses covering core academic subjects for K-12 and early college", provenance: inferred, source_id: khan-about }
+  - { field: format, value: "online: free learning platform", provenance: inferred, source_id: khan-about }
+  - { field: cost_tier, value: "Khan Academy is a free tool for anyone", provenance: measured, checked_on: "2026-11-03", source_id: khan-about }
+  - { field: parent_involvement, value: "medium: a tool that 'can be used by educators or parents', not a managed program", provenance: inferred, source_id: khan-about }
+  - { field: screen_time, value: "medium: platform-based; daily time is up to the family", provenance: inferred, source_id: khan-about }
+  - { field: pace, value: "self-paced: courses are personalized, no class schedule", provenance: inferred, source_id: khan-about }
+best_at: "free practice across K-12 subjects"
+most_useful_when: "filling gaps or extra practice, any budget"
+skill_levels: [beginner, intermediate, advanced]
+format: online
+cost_tier: free
+parent_involvement: medium
+screen_time: medium
+pace: self_paced
