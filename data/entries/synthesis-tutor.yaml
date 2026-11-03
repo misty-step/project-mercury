@@ -1,0 +1,37 @@
+id: synthesis-tutor
+name: Synthesis Tutor
+url: https://www.synthesis.com/tutor
+kind: app
+summary: >-
+  Adaptive one-on-one math tutor app from Synthesis covering elementary math
+  (counting through fractions and algebraic thinking) with micro-assessments,
+  hands-on game-like lessons and parent progress reports; runs on tablets and
+  in the browser.
+subjects: [math]
+ages: { min: 5, max: 11 }
+approaches: [adaptive, one-on-one, game-based, mastery, self-paced]
+cost: >-
+  Subscription; single-child plans from about $29/month billed annually or
+  $45/month, family and lifetime plans also offered; 7-day free trial. Prices
+  shown varied across the page, check at checkout.
+claims:
+  - field: ages
+    value: "Designed for ages 5-11"
+    provenance: measured
+    source_id: synthesis-tutor
+    checked_on: "2026-11-03"
+  - field: subjects
+    value: "K-5 math and beyond: counting, operations, fractions, algebraic thinking"
+    provenance: measured
+    source_id: synthesis-tutor
+    checked_on: "2026-11-03"
+  - field: approaches
+    value: "adapts to each child, feedback on every problem, micro-assessments, gamified"
+    provenance: measured
+    source_id: synthesis-tutor
+    checked_on: "2026-11-03"
+  - field: cost
+    value: "individual $45/month or $300/year; lifetime $999; 7-day free trial"
+    provenance: measured
+    source_id: synthesis-tutor
+    checked_on: "2026-11-03"

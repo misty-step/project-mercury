@@ -1,0 +1,37 @@
+id: math-academy
+name: Math Academy
+url: https://www.mathacademy.com/
+kind: online-course
+summary: >-
+  Adaptive online math platform that starts with a diagnostic, maps each
+  student onto a knowledge graph of prerequisites and builds a custom path,
+  with courses from 4th-grade math through AP Calculus and university topics
+  such as linear algebra and differential equations.
+subjects: [math]
+ages: { min: 9, max: 18 }
+approaches: [adaptive, mastery, self-paced, gamified, spaced-repetition]
+cost: "$49/month per student; no long-term contract; 30-day money-back guarantee"
+claims:
+  - field: subjects
+    value: "4th grade math through AP Calculus BC, plus university courses"
+    provenance: measured
+    source_id: mathacademy-home
+    checked_on: "2026-11-03"
+  - field: ages
+    value: "9-18 (courses start at 4th grade; also serves adults)"
+    provenance: inferred
+    source_id: mathacademy-home
+  - field: approaches
+    value: "adaptive diagnostic, knowledge graph, automated learning path, daily XP goals"
+    provenance: measured
+    source_id: mathacademy-home
+    checked_on: "2026-11-03"
+  - field: approaches
+    value: "spaced repetition (only a third-party quote on the page mentions its repetition system)"
+    provenance: inferred
+    source_id: mathacademy-home
+  - field: cost
+    value: "Only $49/mo per student"
+    provenance: measured
+    source_id: mathacademy-home
+    checked_on: "2026-11-03"

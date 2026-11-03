@@ -1,0 +1,41 @@
+id: khan-academy
+name: Khan Academy
+url: https://www.khanacademy.org/
+kind: online-course
+summary: >-
+  Nonprofit learning platform with 840+ free courses in math, science, reading
+  and writing, social studies, economics and computing for K-12 and early
+  college, with mastery-oriented practice that fills learning gaps.
+subjects: [math, science, reading, writing, social studies, economics, computing]
+ages: { min: 5, max: 18 }
+approaches: [mastery, self-paced, video, practice]
+cost: "Free (donor-funded nonprofit)"
+claims:
+  - field: cost
+    value: "free; mission to provide a free, world-class education to anyone, anywhere"
+    provenance: measured
+    source_id: khan-about
+    checked_on: "2026-11-03"
+  - field: subjects
+    value: "math, science, reading and writing, social studies, economics, computing"
+    provenance: measured
+    source_id: khan-about
+    checked_on: "2026-11-03"
+  - field: ages
+    value: "840+ free courses for K-12 and early college"
+    provenance: measured
+    source_id: khan-about
+    checked_on: "2026-11-03"
+  - field: ages
+    value: "5-18 (K-12; Khan Academy Kids app separately covers ages 2-8)"
+    provenance: inferred
+    source_id: khan-about
+  - field: approaches
+    value: "personalized practice to master key concepts and fill learning gaps"
+    provenance: measured
+    source_id: khan-about
+    checked_on: "2026-11-03"
+  - field: approaches
+    value: "video lessons"
+    provenance: guess
+    source_id: khan-about

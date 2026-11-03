@@ -1,0 +1,51 @@
+id: koinonia-hybrid-academy
+name: Koinonia Hybrid Academy
+url: https://www.koinoniahybrid.org/
+kind: hybrid-school
+summary: >-
+  Catholic hybrid academy in Nashville, TN. Students meet in person on Mondays
+  and Thursdays in a Catholic-school setting and homeschool on Tuesdays,
+  Wednesdays and Fridays from school-provided lesson plans, with parents as
+  co-teachers.
+subjects: [reading, writing, math, religion]
+ages: { min: 3, max: 12 }
+approaches: [hybrid, catholic, classical, charlotte-mason, montessori, parent-co-teaching]
+cost: >-
+  2026-27: $3,100 per student per year (Pre-K3 to 6th grade), plus $50
+  application fee per family, $100 enrollment fee per student (credited to
+  tuition, max $300/family) and $500 supply fee per family; books and uniforms
+  extra.
+claims:
+  - field: approaches
+    value: "meets in person Mondays and Thursdays; families follow provided lesson plans Tuesdays, Wednesdays and Fridays"
+    provenance: measured
+    source_id: koinonia-hybrid-model
+    checked_on: "2026-11-03"
+  - field: approaches
+    value: "blend of Montessori, Charlotte Mason, Classical and Modern methods"
+    provenance: measured
+    source_id: koinonia-academics
+    checked_on: "2026-11-03"
+  - field: subjects
+    value: "English Language Arts and Mathematics named as fundamental subjects"
+    provenance: measured
+    source_id: koinonia-academics
+    checked_on: "2026-11-03"
+  - field: subjects
+    value: "religion (Catholic faith formation is part of the mission)"
+    provenance: inferred
+    source_id: koinonia-home
+  - field: ages
+    value: "Pre-K3 - 6th Grade (2026-2027 tuition grades)"
+    provenance: measured
+    source_id: koinonia-tuition
+    checked_on: "2026-11-03"
+  - field: ages
+    value: "3-12 (Pre-K3 through 6th grade)"
+    provenance: inferred
+    source_id: koinonia-tuition
+  - field: cost
+    value: "$3,100 annually per student; $50 application, $100 enrollment, $500 supply fees"
+    provenance: measured
+    source_id: koinonia-tuition
+    checked_on: "2026-11-03"
