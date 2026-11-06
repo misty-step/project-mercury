@@ -6,6 +6,9 @@
   const age = document.getElementById("age");
   const clear = document.getElementById("clear");
   const on = {};
+  const changed = (axis, value) => document.dispatchEvent(
+    new CustomEvent("mercury:filter_changed", { detail: { axis, value } }),
+  );
   chips.forEach((b) => (on[b.dataset.axis] = new Set()));
   const has = (c, axis, set) =>
     !set.size || c.dataset[axis].split("|").some((v) => set.has(v));
@@ -38,6 +41,7 @@
       set.has(v) ? set.delete(v) : set.add(v);
       b.setAttribute("aria-pressed", set.has(v));
       update();
+      changed(b.dataset.axis, set.has(v) ? v : "");
     }),
   );
   clear.addEventListener("click", () => {
@@ -45,7 +49,11 @@
     Object.values(on).forEach((s) => s.clear());
     chips.forEach((b) => b.setAttribute("aria-pressed", false));
     update();
+    changed("all", "");
   });
-  age.addEventListener("input", update);
+  age.addEventListener("input", () => {
+    update();
+    changed("age", age.value);
+  });
   update();
 })();

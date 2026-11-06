@@ -157,6 +157,7 @@ dependencies = [
  "anyhow",
  "clap",
  "project-mercury-core",
+ "serde",
  "serde_json",
 ]
 

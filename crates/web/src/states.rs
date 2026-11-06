@@ -44,13 +44,13 @@ pub(crate) fn badge(r: Regulation) -> String {
 }
 
 /// Every output file for the states section.
-pub(crate) fn pages(c: &Catalog) -> Vec<(String, String)> {
+pub(crate) fn pages(c: &Catalog, shell: &str) -> Vec<(String, String)> {
     let mut states: Vec<&State> = c.states.iter().collect();
     states.sort_by(|a, b| a.name.cmp(&b.name));
-    let mut files = vec![("states/index.html".to_string(), index(&states))];
+    let mut files = vec![("states/index.html".to_string(), index(&states, shell))];
     for s in states {
         let rel = format!("states/{}/index.html", s.code.to_ascii_lowercase());
-        files.push((rel, state_page(c, s)));
+        files.push((rel, state_page(c, shell, s)));
     }
     files
 }
@@ -65,7 +65,7 @@ fn tile_map(states: &[&State]) -> String {
                 let (r, name, href) = (s.regulation(), esc(&s.name), path(s));
                 let (k, label) = (r.as_str(), r.label());
                 format!(
-                    r#"<li style="{pos}"><a class="tile lv-{k}" href="{href}" title="{name}: {label}"><span aria-hidden="true">{code}</span><span class="sr">{name}, {label}</span></a></li>"#
+                    r#"<li style="{pos}"><a class="tile lv-{k}" href="{href}" data-state-tile="{code}" title="{name}: {label}"><span aria-hidden="true">{code}</span><span class="sr">{name}, {label}</span></a></li>"#
                 )
             }
             None => format!(
@@ -90,7 +90,7 @@ fn yes_no(a: &Availability) -> &'static str {
     ["No", "Yes"][a.available as usize]
 }
 
-fn index(states: &[&State]) -> String {
+fn index(states: &[&State], shell: &str) -> String {
     let n = states.len();
     let mut rows = String::new();
     for s in states {
@@ -114,7 +114,7 @@ fn index(states: &[&State]) -> String {
 </table>"#,
         map = tile_map(states)
     );
-    page("States", "/states/", &body)
+    page(shell, "States", "/states/", &body)
 }
 
 /// Links to every source backing `field`; each tooltip is the quote.
@@ -126,8 +126,9 @@ fn cites(c: &Catalog, s: &State, field: &str) -> String {
         };
         let quote = esc(cl.quote.as_deref().unwrap_or(&cl.value));
         let (url, publisher, ext) = (href(&src.url), esc(&src.publisher), icon("external"));
+        let source_type = esc(&src.kind);
         out += &format!(
-            r#"<a class="cite" href="{url}" title="“{quote}” ({publisher})" aria-label="Source: {publisher}">{ext}</a>"#
+            r#"<a class="cite" href="{url}" data-source-type="{source_type}" title="“{quote}” ({publisher})" aria-label="Source: {publisher}">{ext}</a>"#
         );
     }
     out
@@ -189,7 +190,7 @@ fn field_label(s: &State, field: &str) -> String {
     }
 }
 
-fn state_page(c: &Catalog, s: &State) -> String {
+fn state_page(c: &Catalog, shell: &str, s: &State) -> String {
     let (name, code, summary) = (esc(&s.name), esc(&s.code), esc(&s.summary));
     let r = s.regulation();
     let level = badge(r);
@@ -226,10 +227,11 @@ fn state_page(c: &Catalog, s: &State) -> String {
             "public_school_access",
         );
     let n = s.claims.len();
+    let regulation = s.regulation().as_str();
     let facts = facts(c, &s.claims, |f| field_label(s, f));
     let body = format!(
         r#"<a class="crumb" href="/states/">States</a>
-<div class="hero">
+<div class="hero" data-state-code="{code}" data-regulation="{regulation}">
 <div class="row">{level}<span class="kind">{code}</span></div>
 <h1>{name}</h1>
 <p class="lede">{summary}</p>
@@ -245,7 +247,7 @@ fn state_page(c: &Catalog, s: &State) -> String {
 </details>
 {NOTICE}"#
     );
-    page(&s.name, "/states/", &body)
+    page(shell, &s.name, "/states/", &body)
 }
 
 fn capitalize(s: &str) -> String {
