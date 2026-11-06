@@ -1,6 +1,7 @@
 //! Static site generator for the Project Mercury catalog: plain string
 //! templates, every interpolated value HTML-escaped.
 
+mod release;
 mod states;
 
 use std::collections::{BTreeMap, BTreeSet};
@@ -89,19 +90,50 @@ pub fn build(data: &Path, out: &Path) -> Result<usize> {
 
 /// Every output file as (path relative to the output dir, contents).
 pub fn render(c: &Catalog) -> Result<Vec<(String, String)>> {
+    let identity = release::Release::current();
+    let mut head = format!(
+        r#"<meta name="mercury-version" content="{}">
+<meta name="mercury-commit" content="{}">
+<meta name="mercury-release" content="{}">
+<meta name="mercury-environment" content="{}">
+<script async src="/sentry.js"></script>"#,
+        esc(&identity.version),
+        esc(&identity.commit),
+        esc(&identity.release),
+        esc(&identity.environment)
+    );
+    let posthog_key = release::setting("POSTHOG_KEY");
+    if let Some(key) = &posthog_key {
+        let host =
+            release::setting("POSTHOG_HOST").unwrap_or_else(|| "https://us.i.posthog.com".into());
+        head += &format!(
+            r#"
+<script async src="/posthog.js" data-key="{}" data-host="{}"></script>"#,
+            esc(key),
+            esc(&host)
+        );
+    }
     let all: Vec<&Entry> = c.entries.iter().collect();
-    let resources = listing(c, "Resources", "", &all);
+    let resources = listing(c, &head, "Resources", "", &all);
     let mut files = vec![
-        ("index.html".to_string(), home(c)),
+        ("index.html".to_string(), home(c, &head)),
         ("styles.css".into(), CSS.into()),
+        (
+            "version.json".into(),
+            serde_json::to_string_pretty(&identity)? + "\n",
+        ),
+        ("sentry.js".into(), include_str!("sentry.js").into()),
         ("dump.json".into(), serde_json::to_string_pretty(c)? + "\n"),
         ("llms.txt".into(), llms(c)),
-        ("404.html".into(), page("Not found", "", NOT_FOUND)),
+        ("404.html".into(), page(&head, "Not found", "", NOT_FOUND)),
         ("entries/index.html".into(), resources),
     ];
+    if posthog_key.is_some() {
+        files.push(("posthog.js".into(), include_str!("posthog.js").into()));
+    }
     for e in &c.entries {
         let path = format!("entries/{}/index.html", slug(&e.id));
-        files.push((path, entry_page(c, e)));
+        files.push((path, entry_page(c, &head, e)));
     }
     let mut index = String::from(r#"<h1>Approaches</h1><ul class="list">"#);
     let crumb = r#"<a class="crumb" href="/approaches/">Approaches</a>"#;
@@ -116,11 +148,11 @@ pub fn render(c: &Catalog) -> Result<Vec<(String, String)>> {
         index +=
             &format!(r#"<li><a href="/approaches/{s}/">{name}<span class="n">{n}</span></a></li>"#);
         let path = format!("approaches/{s}/index.html");
-        files.push((path, listing(c, a, crumb, &hits)));
+        files.push((path, listing(c, &head, a, crumb, &hits)));
     }
-    let index = page("Approaches", "/approaches/", &(index + "</ul>"));
+    let index = page(&head, "Approaches", "/approaches/", &(index + "</ul>"));
     files.push(("approaches/index.html".into(), index));
-    files.extend(states::pages(c));
+    files.extend(states::pages(c, &head));
     Ok(files)
 }
 
@@ -128,7 +160,7 @@ const NOT_FOUND: &str = r#"<h1>Page not found</h1>
 <p class="lede"><a href="/">Back to resources</a></p>"#;
 
 /// The shared shell; `here` is the nav path to mark as current.
-fn page(title: &str, here: &str, body: &str) -> String {
+fn page(head: &str, title: &str, here: &str, body: &str) -> String {
     let title = match title {
         "Project Mercury" => title.to_string(),
         t => format!("{} · Project Mercury", esc(t)),
@@ -151,6 +183,7 @@ fn page(title: &str, here: &str, body: &str) -> String {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>{title}</title>
+{head}
 <link rel="stylesheet" href="/styles.css">
 <noscript><style>.js-only{{display:none!important}}</style></noscript>
 </head>
@@ -307,6 +340,11 @@ fn card(c: &Catalog, e: &Entry) -> String {
         data += &format!(r#" data-{k}="{}""#, values(e, axis).join("|"));
     }
     let (id, name, src) = (slug(&e.id), esc(&e.name), href(primary_source(c, e)));
+    let source_type = esc(e
+        .claims
+        .first()
+        .and_then(|claim| c.source(&claim.source_id))
+        .map_or("website", |source| source.kind.as_str()));
     let (best, top) = (
         esc(e.best_at.as_deref().unwrap_or(&e.summary)),
         format_badge(e) + &cost(e),
@@ -316,7 +354,7 @@ fn card(c: &Catalog, e: &Entry) -> String {
     format!(
         r#"
 <li class="card" id="r-{id}" {data} data-age-min="{min}" data-age-max="{max}">
-<div class="row">{top}<a class="src" href="{src}" title="Source" aria-label="Source for {name}">{ext}</a></div>
+<div class="row">{top}<a class="src" href="{src}" data-source-type="{source_type}" title="Source" aria-label="Source for {name}">{ext}</a></div>
 <h3><a href="/entries/{id}/">{name}</a></h3>
 <p class="best">{best}</p>
 {rest}
@@ -331,7 +369,7 @@ fn grid(c: &Catalog, entries: &[&Entry]) -> String {
     format!("<ul class=\"grid\" id=\"grid\">{cards}\n</ul>")
 }
 
-fn listing(c: &Catalog, title: &str, crumb: &str, entries: &[&Entry]) -> String {
+fn listing(c: &Catalog, shell: &str, title: &str, crumb: &str, entries: &[&Entry]) -> String {
     let (t, n, grid) = (esc(title), entries.len(), grid(c, entries));
     let head = format!(r#"<div class="head"><h1>{t}</h1><span class="count">{n}</span></div>"#);
     let here = if crumb.is_empty() {
@@ -339,7 +377,7 @@ fn listing(c: &Catalog, title: &str, crumb: &str, entries: &[&Entry]) -> String 
     } else {
         "/approaches/"
     };
-    page(title, here, &format!("{crumb}{head}{grid}"))
+    page(shell, title, here, &format!("{crumb}{head}{grid}"))
 }
 
 /// A toggle chip; `note` is a tooltip and screen-reader suffix.
@@ -405,7 +443,7 @@ fn coverage(c: &Catalog) -> String {
     )
 }
 
-fn home(c: &Catalog) -> String {
+fn home(c: &Catalog, shell: &str) -> String {
     let all: Vec<&Entry> = c.entries.iter().collect();
     let (n, filters, coverage, grid) = (all.len(), filters(c), coverage(c), grid(c, &all));
     let body = format!(
@@ -419,7 +457,7 @@ fn home(c: &Catalog) -> String {
 <script>
 {FILTER_JS}</script>"#
     );
-    page("Project Mercury", "/", &body)
+    page(shell, "Project Mercury", "/", &body)
 }
 
 /// The sourced facts table; `label` names each claim's field. Quotes show under values.
@@ -428,6 +466,7 @@ fn facts(c: &Catalog, claims: &[Claim], label: impl Fn(&str) -> String) -> Strin
     for cl in claims {
         let src = c.source(&cl.source_id);
         let (url, publisher) = src.map_or(("", &cl.source_id), |s| (s.url.as_str(), &s.publisher));
+        let source_type = esc(src.map_or("unknown", |source| source.kind.as_str()));
         let (p, tip) = match cl.provenance {
             Provenance::Measured => ("measured", "Seen on the cited page on the date checked"),
             Provenance::Inferred => ("inferred", "Derived from the source, not stated verbatim"),
@@ -446,7 +485,7 @@ fn facts(c: &Catalog, claims: &[Claim], label: impl Fn(&str) -> String) -> Strin
         let checked = esc(cl.checked_on.as_deref().unwrap_or("—"));
         rows += &format!(
             r#"
-<tr><td class="mono">{field}</td><td>{value}{quote}</td><td><span class="badge {p}" title="{tip}">{p}</span></td><td><a href="{url}">{publisher}</a></td><td class="mono">{checked}</td></tr>"#
+<tr><td class="mono">{field}</td><td>{value}{quote}</td><td><span class="badge {p}" title="{tip}">{p}</span></td><td><a href="{url}" data-source-type="{source_type}">{publisher}</a></td><td class="mono">{checked}</td></tr>"#
         );
     }
     format!(
@@ -458,7 +497,7 @@ fn facts(c: &Catalog, claims: &[Claim], label: impl Fn(&str) -> String) -> Strin
     )
 }
 
-fn entry_page(c: &Catalog, e: &Entry) -> String {
+fn entry_page(c: &Catalog, shell: &str, e: &Entry) -> String {
     let facts = facts(c, &e.claims, str::to_string);
     let link = |a: &String| format!(r#"<a href="/approaches/{}/">{}</a>"#, slug(a), esc(a));
     let approaches = e.approaches.iter().map(link).collect::<Vec<_>>().join(", ");
@@ -487,7 +526,7 @@ fn entry_page(c: &Catalog, e: &Entry) -> String {
 <h2>Facts</h2>
 {facts}"#
     );
-    page(&e.name, "/", &body)
+    page(shell, &e.name, "/", &body)
 }
 
 fn llms(c: &Catalog) -> String {

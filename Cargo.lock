@@ -345,6 +345,7 @@ dependencies = [
  "project-mercury-core",
  "proptest",
  "scraper",
+ "serde",
  "serde_json",
 ]
 
