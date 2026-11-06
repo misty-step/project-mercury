@@ -1,0 +1,320 @@
+code: "TN"
+name: "Tennessee"
+summary: "Parents may operate an independent home school or educate through a church-related umbrella school. Independent schools file annually, keep attendance, provide four hours daily for 180 days, and test in grades 5, 7, and 9."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "independent"
+    name: "Independent home school"
+    summary: "A parent or guardian is the teacher of record and files directly with the resident school district."
+    notice:
+      required: true
+      detail: "File intent with the resident district before each school year; families may begin during the school year."
+    approval:
+      required: false
+      detail: "No advance district approval; the annual notice is for reporting."
+    assessment:
+      required: true
+      detail: "Standardized tests in grades 5, 7, and 9; low scores can trigger consultation, retesting, or required school enrollment."
+    subjects:
+      required: false
+      detail: "No fixed subject list; report the proposed curriculum in the annual notice."
+    instruction_time:
+      required: true
+      detail: "At least four hours daily for 180 instructional days each school year."
+    teacher_qualifications:
+      required: true
+      detail: "Parent-teacher must hold a high school diploma or state-approved high school equivalency credential."
+    records:
+      required: true
+      detail: "Keep attendance available for inspection and submit it to the local director at year end."
+  -
+    id: "church-affiliated"
+    name: "Church-related school affiliation"
+    summary: "The family enrolls with a church-related school and teaches under its director’s supervision under section 49-6-3050(a)(2)."
+    notice:
+      required: true
+      detail: "The umbrella school reports enrolled students to its local director within 30 days of the school year’s start; no parent intent form."
+    approval:
+      required: false
+      detail: "No separate state or district approval of the family’s program; use a qualifying church-related school."
+    assessment:
+      required: false
+      detail: "The school must administer or offer standardized achievement tests; the statute does not require every student to take them."
+    subjects:
+      required: false
+      detail: "No state subject list; follow the church-related school’s curriculum standards."
+    instruction_time:
+      required: true
+      detail: "Church-related school instruction follows a 180-day term and a 6½-hour instructional day."
+    teacher_qualifications:
+      required: true
+      detail: "Parent-teachers of grades 9–12 need a high school diploma or state-approved equivalency; the school may set other standards."
+    records:
+      required: true
+      detail: "The umbrella school keeps daily attendance open to district inspection; follow its reporting rules."
+  -
+    id: "church-teacher"
+    name: "Parent-teacher in a church-related school"
+    summary: "The parent enrolls the child and participates as a teacher in the church-related school under section 49-6-3050(a)(3)."
+    notice:
+      required: true
+      detail: "The church-related school reports students to its local director within 30 days of the school year’s start; no parent intent form."
+    approval:
+      required: false
+      detail: "No separate state or district approval of the family’s program; qualifying church-school membership is required."
+    assessment:
+      required: false
+      detail: "State law leaves this route’s testing rules to the church-related school."
+    subjects:
+      required: false
+      detail: "No state subject list; the church-related school sets curriculum requirements."
+    instruction_time:
+      required: true
+      detail: "Church-related school instruction follows a 180-day term and a 6½-hour instructional day."
+    teacher_qualifications:
+      required: false
+      detail: "No state minimum for this route; parent-teachers must meet the church-related school’s requirements."
+    records:
+      required: true
+      detail: "The church-related school keeps daily attendance open to district inspection; follow its reporting rules."
+funding:
+  available: true
+  detail: "IEA funds can pay approved homeschool expenses for eligible students with specified disabilities and qualifying enrollment history; extra accountability applies."
+public_school_access:
+  available: true
+  detail: "Eligible home-school students may try out for public-school interscholastic athletics under association and school eligibility rules."
+claims:
+  -
+    field: "pathways.independent.notice"
+    value: "File intent with the resident district before each school year; families may begin during the school year."
+    quote: "To continue operating as an independent home school, a new notice of intent must be submitted before the start of each school year."
+    provenance: "measured"
+    source_id: "tn-doe-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.independent.approval"
+    value: "No advance district approval; the annual notice is for reporting."
+    quote: "and, for purpose of reporting only, submission to the director of schools of the names, number, ages and grade levels of the children to be home schooled"
+    provenance: "inferred"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.independent.assessment"
+    value: "Standardized tests in grades 5, 7, and 9; low scores can trigger consultation, retesting, or required school enrollment."
+    quote: "Independent home school students in grades 5, 7, and 9 must take either a parent-selected nationally normed standardized test or the same state board-approved standardized assessment required of public school students."
+    provenance: "measured"
+    source_id: "tn-doe-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.independent.subjects"
+    value: "No fixed subject list; report the proposed curriculum in the annual notice."
+    quote: "the proposed curriculum to be offered, the proposed hours of instruction and the qualifications of the parent-teacher relative to subdivision (b)(4)."
+    provenance: "inferred"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.independent.instruction_time"
+    value: "At least four hours daily for 180 instructional days each school year."
+    quote: "Instruction for at least four (4) hours per day for the same number of instructional days as are required by state law for public schools;"
+    provenance: "measured"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.independent.teacher_qualifications"
+    value: "Parent-teacher must hold a high school diploma or state-approved high school equivalency credential."
+    quote: "Possession of a high school diploma or high school equivalency credential approved by the state board of education by the parent-teacher;"
+    provenance: "measured"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.independent.records"
+    value: "Keep attendance available for inspection and submit it to the local director at year end."
+    quote: "Maintenance of attendance records, subject to inspection by the local director of schools, and submission of these records to the director of schools at the end of each school year;"
+    provenance: "measured"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.independent.instruction_time"
+    value: "Public schools have 180 classroom-instruction days, establishing the independent home-school day requirement."
+    quote: "One hundred eighty (180) days for classroom instruction;"
+    provenance: "measured"
+    source_id: "tn-49-6-3004"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.notice"
+    value: "The umbrella school reports enrolled students to its local director within 30 days of the school year’s start; no parent intent form."
+    quote: "A principal or head of school of a public, nonpublic, or church-related school must report to the director of schools of the LEA in which the school is located the names, ages, and residences of all students in attendance at the school within thirty (30) days after the beginning of the school year."
+    provenance: "measured"
+    source_id: "tn-49-6-3007"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.approval"
+    value: "No separate state or district approval of the family’s program; use a qualifying church-related school."
+    quote: "Nothing in this section shall be interpreted as prohibiting church-related schools from voluntarily seeking approval by the state board of education nor prohibiting the state board of education from extending such approval when it is voluntarily sought."
+    provenance: "inferred"
+    source_id: "tn-49-50-801"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.assessment"
+    value: "The school must administer or offer standardized achievement tests; the statute does not require every student to take them."
+    quote: "Home schools that teach kindergarten through grade twelve (K-12), where the parents are associated with and where students are enrolled with a church-related school, as defined by § 49-50-801, that are supervised by the church-related school's director and that administer or offer standardized achievement tests, are exempt from this section."
+    provenance: "inferred"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.subjects"
+    value: "No state subject list; follow the church-related school’s curriculum standards."
+    quote: "The state board of education and local boards of education are prohibited from regulating the selection of faculty or textbooks or the establishment of a curriculum in church-related schools."
+    provenance: "inferred"
+    source_id: "tn-49-50-801"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.instruction_time"
+    value: "Follow the church-related school’s term, the same length as public schools: 180 days."
+    quote: "Church-related schools shall be conducted for the same length of term as public schools."
+    provenance: "measured"
+    source_id: "tn-49-50-801"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.teacher_qualifications"
+    value: "Parent-teachers of grades 9–12 need a high school diploma or state-approved equivalency; the school may set other standards."
+    quote: "Parent-teachers who register with an organization, as defined by § 49-50-801, for conducting a home school for students in grades nine through twelve (9-12) must possess at least a high school diploma or high school equivalency credential approved by the state board of education."
+    provenance: "measured"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.records"
+    value: "The umbrella school keeps daily attendance open to district inspection; follow its reporting rules."
+    quote: "All public, nonpublic, and church-related schools shall keep daily reports of attendance, verified by the teacher making the record, that shall be open to inspection at all reasonable times by the director of schools of the LEA in which the school is located, or the director's duly authorized representative."
+    provenance: "measured"
+    source_id: "tn-49-6-3007"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.notice"
+    value: "The church-related school reports students to its local director within 30 days of the school year’s start; no parent intent form."
+    quote: "A principal or head of school of a public, nonpublic, or church-related school must report to the director of schools of the LEA in which the school is located the names, ages, and residences of all students in attendance at the school within thirty (30) days after the beginning of the school year."
+    provenance: "measured"
+    source_id: "tn-49-6-3007"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.approval"
+    value: "No separate state or district approval of the family’s program; qualifying church-school membership is required."
+    quote: "Nothing in this section shall be interpreted as prohibiting church-related schools from voluntarily seeking approval by the state board of education nor prohibiting the state board of education from extending such approval when it is voluntarily sought."
+    provenance: "inferred"
+    source_id: "tn-49-50-801"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.assessment"
+    value: "State law leaves this route’s testing rules to the church-related school."
+    quote: "Such parent-teacher shall be subject to the requirements established by the church-related school for home school teachers and exempt from the rest of this section."
+    provenance: "inferred"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.subjects"
+    value: "No state subject list; the church-related school sets curriculum requirements."
+    quote: "The state board of education and local boards of education are prohibited from regulating the selection of faculty or textbooks or the establishment of a curriculum in church-related schools."
+    provenance: "inferred"
+    source_id: "tn-49-50-801"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.instruction_time"
+    value: "Follow the church-related school’s term, the same length as public schools: 180 days."
+    quote: "Church-related schools shall be conducted for the same length of term as public schools."
+    provenance: "measured"
+    source_id: "tn-49-50-801"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.teacher_qualifications"
+    value: "No state minimum for this route; parent-teachers must meet the church-related school’s requirements."
+    quote: "Such parent-teacher shall be subject to the requirements established by the church-related school for home school teachers and exempt from the rest of this section."
+    provenance: "inferred"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.records"
+    value: "The church-related school keeps daily attendance open to district inspection; follow its reporting rules."
+    quote: "All public, nonpublic, and church-related schools shall keep daily reports of attendance, verified by the teacher making the record, that shall be open to inspection at all reasonable times by the director of schools of the LEA in which the school is located, or the director's duly authorized representative."
+    provenance: "measured"
+    source_id: "tn-49-6-3007"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.instruction_time"
+    value: "The public-school classroom instruction term is 180 days."
+    quote: "One hundred eighty (180) days for classroom instruction;"
+    provenance: "measured"
+    source_id: "tn-49-6-3004"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.instruction_time"
+    value: "The public-school classroom instruction term is 180 days."
+    quote: "One hundred eighty (180) days for classroom instruction;"
+    provenance: "measured"
+    source_id: "tn-49-6-3004"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "General compulsory attendance covers ages 6–17 inclusive, with specific home-school exemptions at 6 or younger after notice and at age 17."
+    quote: "Every parent, guardian or other legal custodian residing within this state having control or charge of any child or children between six (6) years of age and seventeen (17) years of age, both inclusive, shall cause the child or children to attend public or nonpublic school"
+    provenance: "measured"
+    source_id: "tn-49-6-3001"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "A home-school student who has reached 17 is exempt from the general attendance requirement."
+    quote: "A student enrolled in a home school who has reached seventeen (17) years of age."
+    provenance: "measured"
+    source_id: "tn-49-6-3001"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "A child 6 or younger is exempt after a home-school notice is filed with the LEA or church-related school director."
+    quote: "Is six (6) years of age or younger and whose parent or guardian has filed a notice of intent to conduct a home school with the director of the LEA or with the director of a church-related school;"
+    provenance: "measured"
+    source_id: "tn-49-6-3001"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The Individualized Education Account Program supports eligible students’ home schooling."
+    quote: "The IEA Program supports families by providing scholarships for eligible students to attend a participating non-public school or to participate in home schooling."
+    provenance: "measured"
+    source_id: "tn-iea-eligibility"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Eligibility requires qualifying disabilities and one of the specified enrollment conditions."
+    quote: "The student has an active Individualized Education Program (IEP) through a Tennessee public school district at the time of application* that identifies one or more of the following as primary or secondary disabilities."
+    provenance: "measured"
+    source_id: "tn-iea-eligibility"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "IEA students and parents have additional program accountability duties."
+    quote: "Assessment responsibilities"
+    provenance: "measured"
+    source_id: "tn-iea-eligibility"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "LEAs must permit eligible home-school students to participate in interscholastic athletics."
+    quote: "then the LEA shall permit participation in interscholastic athletics at those schools by home school students who satisfy the eligibility requirements established by the organization or association."
+    provenance: "measured"
+    source_id: "tn-49-6-3050"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-affiliated.instruction_time"
+    value: "Church-related schools follow the statutory 6½-hour instructional-day baseline."
+    quote: "A local board of education, private school, or church-related school that exceeds the full six and one-half (6½) hours instructional time required by law by one-half (½) hour daily for the full academic year must be credited with the additional instructional time."
+    provenance: "measured"
+    source_id: "tn-49-6-3004"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.church-teacher.instruction_time"
+    value: "Church-related schools follow the statutory 6½-hour instructional-day baseline."
+    quote: "A local board of education, private school, or church-related school that exceeds the full six and one-half (6½) hours instructional time required by law by one-half (½) hour daily for the full academic year must be credited with the additional instructional time."
+    provenance: "measured"
+    source_id: "tn-49-6-3004"
+    checked_on: "2026-11-05"

@@ -114,8 +114,11 @@ fn run(cli: Cli) -> Result<()> {
                 errors.iter().for_each(|e| eprintln!("{e}"));
                 bail!("{} validation error(s)", errors.len());
             }
-            let n = catalog.entries.len();
-            println!("ok: {n} entries, {} sources", catalog.sources.len());
+            let (n, s) = (catalog.entries.len(), catalog.states.len());
+            println!(
+                "ok: {n} entries, {s} states, {} sources",
+                catalog.sources.len()
+            );
         }
     }
     Ok(())

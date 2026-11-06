@@ -1,0 +1,24 @@
+-
+  id: "ok-home-school"
+  url: "https://oklahoma.gov/education/services/school-choice/home-school.html"
+  publisher: "Oklahoma State Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ok-attendance"
+  url: "https://oscn.net/applications/OCISWeb/DeliverDocument.asp?CiteID=90120"
+  publisher: "Oklahoma State Courts Network"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ok-homeschool-credit"
+  url: "https://oklahoma.gov/tax/individuals/parental-choice-tax-credit/pctc-taxpayers.html"
+  publisher: "Oklahoma Tax Commission"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ok-board-powers"
+  url: "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=438810"
+  publisher: "Oklahoma State Courts Network"
+  type: "statute"
+  checked_on: "2026-11-05"

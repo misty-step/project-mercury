@@ -1,0 +1,260 @@
+code: "VA"
+name: "Virginia"
+summary: "Parents can provide home instruction with annual notice and evidence of progress, use a superintendent-approved qualified tutor, or obtain a school-board religious exemption. The routes have different requirements."
+compulsory_ages:
+  min: 5
+  max: 17
+pathways:
+  - id: "home-instruction"
+    name: "Home instruction"
+    summary: "Parents meet one of four eligibility options and submit annual notice and progress evidence."
+    notice:
+      required: true
+      detail: "Notify the division superintendent by August 15 yearly with curriculum subject list and eligibility evidence; late starters comply within 30 days."
+    approval:
+      required: false
+      detail: "No advance program approval; meet one of the four statutory options and file the required evidence."
+    assessment:
+      required: true
+      detail: "Submit test scores or an accepted evaluation by August 1; exempt if under 6 on September 30 of the school year."
+    subjects:
+      required: false
+      detail: "No fixed subject list; submit a list of the subjects you plan to teach."
+    instruction_time:
+      required: true
+      detail: "Instruction follows the same number of days and hours per day as public schools."
+    teacher_qualifications:
+      required: true
+      detail: "Meet one option: diploma, teaching qualification, curriculum/program, or evidence of ability to provide adequate education."
+    records:
+      required: true
+      detail: "Submit curriculum/eligibility evidence and annual progress evidence; provide immunization proof on request, subject to exemptions."
+  - id: "qualified-tutor"
+    name: "Qualified tutor or teacher"
+    summary: "A qualified, superintendent-approved tutor or teacher, who may be a parent, instructs the child."
+    notice:
+      required: true
+      detail: "Seek approval of the tutor or teacher from the division superintendent; no annual home-instruction notice required."
+    approval:
+      required: true
+      detail: "Division superintendent must approve the qualified tutor or teacher."
+    assessment:
+      required: false
+      detail: "No annual testing or progress evaluation prescribed under this route."
+    subjects:
+      required: false
+      detail: "No particular subjects prescribed by the tutor attendance provision."
+    instruction_time:
+      required: true
+      detail: "Follow the same number of days and hours per day as public schools."
+    teacher_qualifications:
+      required: true
+      detail: "Tutor or teacher must hold qualifications prescribed by the Board of Education."
+    records:
+      required: true
+      detail: "Provide immunization proof to the superintendent on request, unless a religious or medical exception applies."
+  - id: "religious-exemption"
+    name: "Religious exemption"
+    summary: "A school board excuses a child and parents conscientiously opposed to school attendance for bona fide religious reasons."
+    notice:
+      required: true
+      detail: "Request a religious exemption from the local school board; not the annual home-instruction notice."
+    approval:
+      required: true
+      detail: "School board must grant the exemption upon finding the statutory religious grounds."
+    assessment:
+      required: false
+      detail: "No annual academic assessment required under the religious exemption."
+    subjects:
+      required: false
+      detail: "No required subjects under the religious exemption."
+    instruction_time:
+      required: false
+      detail: "No days or hours required once excused under the religious exemption."
+    teacher_qualifications:
+      required: false
+      detail: "No diploma or teaching credential required under the religious exemption."
+    records:
+      required: true
+      detail: "Provide immunization proof on request, or a religious affidavit or medical certification instead."
+funding:
+  available: false
+  detail: "No general homeschool expense benefit; tax-credit scholarships are paid to eligible nonpublic schools, not home programs."
+public_school_access:
+  available: false
+  detail: "No statewide entitlement to part-time classes or interscholastic sports; local class access policies vary."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance applies to children who turn 5 by September 30 until their 18th birthday; parents may defer an unready five-year-old for one year by notice."
+    quote: "any child who will have reached the fifth birthday on or before September 30 of any school year and who has not passed the eighteenth birthday"
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.notice"
+    value: "Notify the division superintendent by August 15 yearly with curriculum subject list and eligibility evidence; late starters comply within 30 days."
+    quote: "Parents electing to provide home instruction shall provide such annual notice no later than August 15."
+    provenance: "measured"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.approval"
+    value: "No advance program approval; meet one of the four statutory options and file the required evidence."
+    quote: "When the requirements of this section have been satisfied, instruction of children by their parents is an acceptable alternative form of education"
+    provenance: "inferred"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.assessment"
+    value: "Submit test scores or an accepted evaluation by August 1; exempt if under 6 on September 30 of the school year."
+    quote: "The parent who elects to provide home instruction shall provide the division superintendent by August 1 following the school year in which the child has received home instruction with either (i) evidence that the child has attained a composite score in or above the fourth stanine on any nationally normed standardized achievement test"
+    provenance: "measured"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.subjects"
+    value: "No fixed subject list; submit a list of the subjects you plan to teach."
+    quote: "provide a description of the curriculum, limited to a list of subjects to be studied during the coming year, and evidence of having met one of the criteria for providing home instruction as required by subsection A."
+    provenance: "inferred"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.instruction_time"
+    value: "Instruction follows the same number of days and hours per day as public schools."
+    quote: "during the period of each year the public schools are in session and for the same number of days and hours per day as the public schools"
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.teacher_qualifications"
+    value: "Meet one option: diploma, teaching qualification, curriculum/program, or evidence of ability to provide adequate education."
+    quote: "if he (i) holds a high school diploma; (ii) is a teacher of qualifications prescribed by the Board; (iii) provides the child with a program of study or curriculum, which may be delivered through a correspondence course or distance learning program or in any other manner; or (iv) provides evidence that he is able to provide an adequate education for the child."
+    provenance: "measured"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.records"
+    value: "Submit curriculum/eligibility evidence and annual progress evidence; provide immunization proof on request, subject to exemptions."
+    quote: "provide a description of the curriculum, limited to a list of subjects to be studied during the coming year, and evidence of having met one of the criteria for providing home instruction as required by subsection A."
+    provenance: "measured"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.records"
+    value: "Annual evidence of progress must reach the division superintendent by August 1."
+    quote: "The parent who elects to provide home instruction shall provide the division superintendent by August 1 following the school year in which the child has received home instruction with either (i) evidence that the child has attained a composite score in or above the fourth stanine on any nationally normed standardized achievement test"
+    provenance: "measured"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.assessment"
+    value: "Annual progress evidence is not required for a child under 6 on September 30."
+    quote: "The requirements of this subsection shall not apply to children who are under the age of six as of September 30 of the school year."
+    provenance: "measured"
+    source_id: "va-254-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.qualified-tutor.notice"
+    value: "Seek approval of the tutor or teacher from the division superintendent; no annual home-instruction notice required."
+    quote: "have such child taught by a tutor or teacher of qualifications prescribed by the Board and approved by the division superintendent"
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.qualified-tutor.approval"
+    value: "Division superintendent must approve the qualified tutor or teacher."
+    quote: "have such child taught by a tutor or teacher of qualifications prescribed by the Board and approved by the division superintendent"
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.qualified-tutor.assessment"
+    value: "No annual testing or progress evaluation prescribed under this route."
+    quote: "have such child taught by a tutor or teacher of qualifications prescribed by the Board and approved by the division superintendent"
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.qualified-tutor.subjects"
+    value: "No particular subjects prescribed by the tutor attendance provision."
+    quote: "have such child taught by a tutor or teacher of qualifications prescribed by the Board and approved by the division superintendent"
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.qualified-tutor.instruction_time"
+    value: "Follow the same number of days and hours per day as public schools."
+    quote: "during the period of each year the public schools are in session and for the same number of days and hours per day as the public schools"
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.qualified-tutor.teacher_qualifications"
+    value: "Tutor or teacher must hold qualifications prescribed by the Board of Education."
+    quote: "have such child taught by a tutor or teacher of qualifications prescribed by the Board and approved by the division superintendent"
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.qualified-tutor.records"
+    value: "Provide immunization proof to the superintendent on request, unless a religious or medical exception applies."
+    quote: "Upon request by the division superintendent, the parent shall submit to such division superintendent documentary proof of immunization in compliance with"
+    provenance: "measured"
+    source_id: "va-271-4"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.notice"
+    value: "Request a religious exemption from the local school board; not the annual home-instruction notice."
+    quote: "Any pupil who, together with his parents, by reason of bona fide religious training or belief is conscientiously opposed to attendance at school."
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.approval"
+    value: "School board must grant the exemption upon finding the statutory religious grounds."
+    quote: "A school board shall excuse from attendance at school:"
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.assessment"
+    value: "No annual academic assessment required under the religious exemption."
+    quote: "Any pupil who, together with his parents, by reason of bona fide religious training or belief is conscientiously opposed to attendance at school."
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.subjects"
+    value: "No required subjects under the religious exemption."
+    quote: "Any pupil who, together with his parents, by reason of bona fide religious training or belief is conscientiously opposed to attendance at school."
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.instruction_time"
+    value: "No days or hours required once excused under the religious exemption."
+    quote: "The provisions of this article shall not apply to:"
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.teacher_qualifications"
+    value: "No diploma or teaching credential required under the religious exemption."
+    quote: "Any pupil who, together with his parents, by reason of bona fide religious training or belief is conscientiously opposed to attendance at school."
+    provenance: "inferred"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.records"
+    value: "Provide immunization proof on request, or a religious affidavit or medical certification instead."
+    quote: "Upon request by the division superintendent, the parent shall submit to such division superintendent documentary proof of immunization in compliance with"
+    provenance: "measured"
+    source_id: "va-271-4"
+    checked_on: "2026-11-05"
+  - field: "pathways.religious-exemption.instruction_time"
+    value: "Children excused under subsection B are exempt from the compulsory attendance article."
+    quote: "Children excused pursuant to subsections B and D."
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No general homeschool expense benefit; tax-credit scholarships are paid to eligible nonpublic schools, not home programs."
+    quote: "Payment of scholarships from tax-credit-derived funds by the eligible scholarship foundation shall be by individual warrant or check made payable to and mailed to the eligible school that the parent or legal guardian of the student or eligible student with a disability indicates."
+    provenance: "inferred"
+    source_id: "va-439-28"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "No statewide entitlement to part-time classes or interscholastic sports; local class access policies vary."
+    quote: "Each such course enrollment by such students shall be counted as 0.25 in the ADM; however, no such nonpublic or home school student shall be counted as more than one-half a student for purposes of such pro rata calculation."
+    provenance: "inferred"
+    source_id: "va-253-13-2"
+    checked_on: "2026-11-05"
+  - field: "compulsory_ages"
+    value: "A parent may defer an unready five-year-old for one year by notifying the school board."
+    quote: "whose parent or guardian notifies the appropriate school board that he does not wish the child to attend school until the following year because the child, in the opinion of the parent or guardian, is not mentally, physically, or emotionally prepared to attend school, may delay the child's attendance for one year."
+    provenance: "measured"
+    source_id: "va-254"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-instruction.records"
+    value: "Provide immunization proof on the division superintendent's request, subject to statutory exemptions."
+    quote: "Upon request by the division superintendent, the parent shall submit to such division superintendent documentary proof of immunization in compliance with"
+    provenance: "measured"
+    source_id: "va-271-4"
+    checked_on: "2026-11-05"

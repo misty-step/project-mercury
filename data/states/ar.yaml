@@ -1,0 +1,122 @@
+code: "AR"
+name: "Arkansas"
+summary: "Parents or legal guardians may homeschool by filing an annual notice with their local superintendent. State law does not prescribe curriculum, instructional hours, parent credentials, or routine homeschool testing; optional funding and activity participation have additional conditions."
+compulsory_ages:
+  min: 5
+  max: 17
+pathways:
+  - id: "home-school"
+    name: "Home school"
+    summary: "A parent or legal guardian takes responsibility for the child’s education and submits the annual notice of intent."
+    notice:
+      required: true
+      detail: "File by August 15 annually; normally 5 school days before public-school withdrawal; new district residents file within 30 days."
+    approval:
+      required: false
+      detail: "No routine program approval; special withdrawal rules apply during disciplinary action or while school property remains outstanding."
+    assessment:
+      required: false
+      detail: "No routine testing or evaluation required; optional EFA funding and public-school activities have separate conditions."
+    subjects:
+      required: false
+      detail: "No state-prescribed subject list for ordinary home schooling."
+    instruction_time:
+      required: false
+      detail: "No state-prescribed days or instructional hours for ordinary home schooling."
+    teacher_qualifications:
+      required: false
+      detail: "No parent diploma or teaching certificate minimum prescribed."
+    records:
+      required: false
+      detail: "No ongoing attendance, portfolio, or grade-record requirement; the annual notice is required."
+funding:
+  available: true
+  detail: "EFA funds can pay homeschool expenses; K–10 participants take approved literacy/math tests and report by June 30, with disability alternatives."
+public_school_access:
+  available: true
+  detail: "Homeschooled students may pursue resident public-school interscholastic activities, with notice, academic eligibility and participation conditions."
+claims:
+  - field: "compulsory_ages"
+    value: "The statute covers children age five through seventeen on the enrollment cutoff date; a signed kindergarten waiver may defer kindergarten."
+    quote: "having custody or charge of a child five (5) years of age through seventeen (17) years of age on or before the date established in § 6-18-207 for the minimum age for enrollment in public school"
+    provenance: "measured"
+    source_id: "ar-compulsory"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "Education Freedom Accounts can pay approved homeschool curriculum and other educational expenses; participating families follow EFA rules."
+    quote: "The Arkansas EFA program provides funding that families can use for approved educational expenses such as private school tuition, homeschool curriculum, tutoring, educational therapies, and other qualifying services."
+    provenance: "measured"
+    source_id: "ar-education-freedom-accounts"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Homeschooled students may pursue resident public-school interscholastic activities, with notice, academic eligibility and participation conditions."
+    quote: "A resident school district shall permit a homeschooled student to pursue participation in an interscholastic activity if:"
+    provenance: "measured"
+    source_id: "ar-activities"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.notice"
+    value: "File by August 15 annually; normally 5 school days before public-school withdrawal; new district residents file within 30 days."
+    quote: "Parents or legal guardians desiring to provide a home school for their children shall give written notice to the superintendent of their local school district of their intent to provide a home school for their children"
+    provenance: "inferred"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.approval"
+    value: "No routine program approval; special withdrawal rules apply during disciplinary action or while school property remains outstanding."
+    quote: "The division and the student's local school district shall not create additional criteria or require additional information for a student to attend a home school beyond that provided in this section."
+    provenance: "inferred"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.assessment"
+    value: "No routine testing or evaluation required; optional EFA funding and public-school activities have separate conditions."
+    quote: "The division and the student's local school district shall not create additional criteria or require additional information for a student to attend a home school beyond that provided in this section."
+    provenance: "inferred"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.subjects"
+    value: "No state-prescribed subject list for ordinary home schooling."
+    quote: "The division and the student's local school district shall not create additional criteria or require additional information for a student to attend a home school beyond that provided in this section."
+    provenance: "inferred"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.instruction_time"
+    value: "No state-prescribed days or instructional hours for ordinary home schooling."
+    quote: "The division and the student's local school district shall not create additional criteria or require additional information for a student to attend a home school beyond that provided in this section."
+    provenance: "inferred"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.teacher_qualifications"
+    value: "No parent diploma or teaching certificate minimum prescribed."
+    quote: "The division and the student's local school district shall not create additional criteria or require additional information for a student to attend a home school beyond that provided in this section."
+    provenance: "inferred"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.records"
+    value: "No ongoing attendance, portfolio, or grade-record requirement; the annual notice is required."
+    quote: "The division and the student's local school district shall not create additional criteria or require additional information for a student to attend a home school beyond that provided in this section."
+    provenance: "inferred"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.notice"
+    value: "Annual notice is due no later than August 15."
+    quote: "At the beginning of each school year but no later than August 15;"
+    provenance: "measured"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.notice"
+    value: "A family ordinarily gives notice five school days before withdrawal; qualifying new residents have 30 calendar days."
+    quote: "five (5) school days before withdrawing the student from the local school district and at the beginning of each school year thereafter."
+    provenance: "measured"
+    source_id: "ar-prerequisites"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "Full-time EFA participants in kindergarten through grade ten must take an approved assessment."
+    quote: "The participating school, parent, or service provider that is responsible for the majority of a student’s academic instruction, shall administer the following to all participating students who are enrolled on a full-time basis in kindergarten through tenth grade (K-10):"
+    provenance: "inferred"
+    source_id: "ar-efa-evaluation"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "Participating homeschool parents report individual assessment results to ADE annually by June 30."
+    quote: "Each participating private school and homeschool parent shall provide the following information to the Department of Education annually by June 30:"
+    provenance: "inferred"
+    source_id: "ar-efa-evaluation"
+    checked_on: "2026-11-05"

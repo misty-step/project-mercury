@@ -1,0 +1,15 @@
+- id: hi-doe-homeschool
+  url: https://hawaiipublicschools.org/enrolling-in-school/homeschool/
+  publisher: Hawaii State Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: hi-attendance
+  url: https://www.capitol.hawaii.gov/hrscurrent/Vol05_Ch0261-0319/HRS0302A/HRS_0302A-1132.HTM
+  publisher: Hawaii State Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: hi-attendance-rules
+  url: https://boe.hawaii.gov/wp-content/uploads/2024/07/12-Compulsory-Attendance-Exceptions.pdf
+  publisher: Hawaii Board of Education
+  type: agency
+  checked_on: "2026-11-05"

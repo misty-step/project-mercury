@@ -1,0 +1,20 @@
+- id: ga-doe-home-study
+  url: https://lor2.gadoe.org/gadoe/file/e89d40ff-e5e7-475a-99a1-e38a6f3afd2e/1/Home%20School%20Overview%20August%202025%20update.pdf
+  publisher: Georgia Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: ga-promise
+  url: https://mygeorgiapromise.org/
+  publisher: Georgia Education Savings Authority
+  type: agency
+  checked_on: "2026-11-05"
+- id: ga-promise-regulations
+  url: https://mygeorgiapromise.org/wp-content/uploads/2026/05/Georgia-Promise-Scholarship-Program-Regulations-Approved-May-2026.pdf
+  publisher: Georgia Education Savings Authority
+  type: agency
+  checked_on: "2026-11-05"
+- id: ga-code-instruction-time
+  url: https://codes.findlaw.com/ga/title-20-education/ga-code-sect-20-2-690/
+  publisher: FindLaw (mirror of Georgia Code)
+  type: statute
+  checked_on: "2026-11-05"

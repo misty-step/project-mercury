@@ -1,7 +1,7 @@
 use std::fs;
 use std::path::Path;
 
-use mercury_site::{build, primary_source, render};
+use mercury_site::{build, esc, primary_source, render};
 use project_mercury_core::{load, Catalog};
 
 fn data_dir() -> &'static Path {
@@ -73,6 +73,7 @@ fn index_has_header_links_and_no_layout_copy() {
         r#"href="https://github.com/misty-step/project-mercury" aria-label="GitHub repository""#;
     assert!(index.contains(repo));
     assert!(index.contains(">Resources<") && index.contains(">Approaches<"));
+    assert!(index.contains(r#"<a href="/states/">States</a>"#));
     for gone in [
         "Answer first",
         "How to read",
@@ -157,6 +158,43 @@ fn every_entry_page_exists_and_links_each_claim_source() {
     let dump: serde_json::Value =
         serde_json::from_str(&fs::read_to_string(out.join("dump.json")).unwrap()).unwrap();
     assert_eq!(dump["entries"].as_array().unwrap().len(), 6);
+    assert_eq!(dump["states"].as_array().unwrap().len(), 51);
+}
+
+#[test]
+fn states_index_maps_every_state_and_each_page_shows_pathways_and_quoted_sources() {
+    let catalog = shipped();
+    let files = render(&catalog).unwrap();
+    let index = file(&files, "states/index.html");
+    assert_eq!(index.matches(r#"<a class="tile lv-"#).count(), 51);
+    assert!(!index.contains("not yet researched"));
+    let rows = index.split("<tbody>").nth(1).unwrap();
+    assert_eq!(rows.matches("<tr>").count(), 51);
+    for s in &catalog.states {
+        let code = s.code.to_ascii_lowercase();
+        let level = format!(
+            r#"class="tile lv-{}" href="/states/{code}/""#,
+            s.regulation().as_str()
+        );
+        assert!(index.contains(&level), "{code} tile");
+        let page = file(&files, &format!("states/{code}/index.html"));
+        assert!(page.contains(r#"aria-current="page">States<"#), "{code}");
+        for p in &s.pathways {
+            assert!(
+                page.contains(&format!(r#"id="p-{}""#, p.id)),
+                "{code} {}",
+                p.id
+            );
+        }
+        let tbody = page.split("<tbody>").nth(1).unwrap();
+        let rows: Vec<&str> = tbody.split("<tr>").skip(1).collect();
+        assert_eq!(rows.len(), s.claims.len(), "{code}");
+        for (row, claim) in rows.iter().zip(&s.claims) {
+            let url = esc(&catalog.source(&claim.source_id).unwrap().url);
+            assert!(row.contains(&format!(r#"href="{url}""#)), "{code}: {row}");
+            assert!(row.contains(r#"<q class="quote">"#), "{code}: {row}");
+        }
+    }
 }
 
 #[test]
@@ -195,6 +233,21 @@ fn text_fields_are_escaped() {
     let entry = file(&files, &format!("entries/{id}/index.html"));
     assert!(entry.contains("&lt;script&gt;x()&lt;/script&gt; &amp; more"));
     assert!(entry.contains("Say &quot;hi&quot; &amp; &lt;b&gt;bye&lt;/b&gt;"));
+
+    let mut catalog = shipped();
+    let s = &mut catalog.states[0];
+    s.pathways[0].name = "<b>path</b>".into();
+    s.pathways[0].notice.detail = "<i>file</i> & wait".into();
+    s.claims[0].quote = Some(r#"<script>q()</script> "quoted""#.into());
+    let page_path = format!("states/{}/index.html", s.code.to_ascii_lowercase());
+    let files = render(&catalog).unwrap();
+    let page = file(&files, &page_path);
+    assert!(!page.contains("<b>path") && !page.contains("<i>file") && !page.contains("<script>q"));
+    assert!(
+        page.contains("&lt;b&gt;path&lt;/b&gt;")
+            && page.contains("&lt;i&gt;file&lt;/i&gt; &amp; wait")
+    );
+    assert!(page.contains("&lt;script&gt;q()&lt;/script&gt; &quot;quoted&quot;"));
 }
 
 #[test]

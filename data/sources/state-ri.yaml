@@ -1,0 +1,24 @@
+-
+  id: "ri-home-instruction"
+  url: "https://ride.ri.gov/students-families/education-programs/home-schooling"
+  publisher: "Rhode Island Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ri-attendance"
+  url: "https://webserver.rilegislature.gov/statutes/TITLE16/16-19/16-19-1.htm"
+  publisher: "Rhode Island General Assembly"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ri-approval-standards"
+  url: "https://webserver.rilegislature.gov/statutes/TITLE16/16-19/16-19-2.htm"
+  publisher: "Rhode Island General Assembly"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ri-scholarship-eligibility"
+  url: "https://webserver.rilegislature.gov/statutes/TITLE44/44-62/44-62-2.htm"
+  publisher: "Rhode Island General Assembly"
+  type: "statute"
+  checked_on: "2026-11-05"

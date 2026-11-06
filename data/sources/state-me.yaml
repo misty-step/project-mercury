@@ -1,0 +1,35 @@
+- id: me-5001a
+  url: https://legislature.maine.gov/statutes/20-A/title20-Asec5001-A.html
+  publisher: Maine Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: me-doe-requirements
+  url: https://www.maine.gov/doe/schools/schoolops/homeinstruction/requirements
+  publisher: Maine Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: me-doe-faq
+  url: https://www.maine.gov/doe/schools/schoolops/homeinstruction/faq
+  publisher: Maine Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: me-doe-equivalent
+  url: https://www.maine.gov/doe/schools/equivalentinstruction
+  publisher: Maine Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: me-equivalent-guidelines
+  url: https://www.maine.gov/doe/sites/maine.gov.doe/files/inline-files/Enrollment%20-%20Equivalent%20Instruction%20Private%20Schools%20Guidelines%20-%204.2.2026.pdf
+  publisher: Maine Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: me-5021
+  url: https://legislature.maine.gov/statutes/20-A/title20-Asec5021.html
+  publisher: Maine Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: me-4772b
+  url: https://legislature.maine.gov/statutes/20-A/title20-Asec4772-B.html
+  publisher: Maine Legislature
+  type: statute
+  checked_on: "2026-11-05"

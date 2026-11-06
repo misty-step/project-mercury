@@ -1,0 +1,109 @@
+code: "KS"
+name: "Kansas"
+summary: "Kansas classifies homeschools as nonaccredited private schools. Families register once, use competent instructors and provide instruction substantially equivalent in time to public schooling."
+compulsory_ages:
+  min: 7
+  max: 17
+pathways:
+  -
+    id: "nonaccredited"
+    name: "Nonaccredited private school"
+    summary: "Families register a nonaccredited private school and provide instruction substantially equivalent in time to public schooling."
+    notice:
+      required: true
+      detail: "Register the school name, address and records custodian with the State Board once; notify the former school when transferring."
+    approval:
+      required: false
+      detail: "No approval or review; registration is not approval."
+    assessment:
+      required: false
+      detail: "No routine state assessment requirement for nonaccredited private schools."
+    subjects:
+      required: false
+      detail: "No mandated subject list; state graduation subjects are recommendations for nonaccredited schools."
+    instruction_time:
+      required: true
+      detail: "Substantially equivalent to public-school time: 186 six-hour days or 1,116 hours in grades 1–11."
+    teacher_qualifications:
+      required: true
+      detail: "Instructors must be competent; no state teaching license is required."
+    records:
+      required: false
+      detail: "No prescribed progress-record requirement; keeping complete progress records is recommended."
+funding:
+  available: false
+  detail: "No general homeschool ESA or homeschool-expense income-tax credit or deduction; scholarships fund qualified private-school tuition."
+public_school_access:
+  available: true
+  detail: "Eligible resident homeschool students may join public-school sports and regulated activities; normal fees, tryouts and eligibility rules apply."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Attendance applies from age 7 until 18, with earlier attendance for some children identified with disabilities."
+    quote: "Compulsory school attendance laws apply to children attending homeschools who have reached age 7 to those who are under 18 years old (may be under 7 for children identified as handicapped)."
+    provenance: "measured"
+    source_id: "ks-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.notice"
+    value: "Register the school with the State Board of Education once."
+    quote: "Nonaccredited private schools are required by law to register the name and address of the private elementary or secondary school (homeschool) with the State Board of Education."
+    provenance: "measured"
+    source_id: "ks-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.approval"
+    value: "Registration does not require state approval."
+    quote: "Registering a school does not mean the school has been “approved” by the State Board of Education."
+    provenance: "measured"
+    source_id: "ks-factsheet"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.assessment"
+    value: "The state guidance lists registration, competent instructors and instructional time, but no routine assessment requirement."
+    quote: "A non-accredited elementary or secondary private school is one that satisfies the state’s compulsory school attendance laws, but which is not accredited by the State Board of Education."
+    provenance: "inferred"
+    source_id: "ks-factsheet"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.subjects"
+    value: "Graduation subjects are recommended rather than mandatory for nonaccredited schools."
+    quote: "Kansas Graduation Requirements-minimum for Accredited Public and Accredited Private Schools and recommended for non-accredited schools:"
+    provenance: "inferred"
+    source_id: "ks-factsheet"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.instruction_time"
+    value: "Instruction must be substantially equivalent to public-school time; grades 1–11 use 186 six-hour days or 1,116 hours."
+    quote: "Classes must be held for a period of time which is substantially equivalent to the time public schools are in session. The time required for public schools is at least 186 days of not less than 6 hours per day, or 1116 hours per year for grades 1-11."
+    provenance: "measured"
+    source_id: "ks-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.teacher_qualifications"
+    value: "Courses require competent instructors but no state license."
+    quote: "Non-accredited private schools are not required to employ teachers who are licensed by the state; however, courses must be taught by competent instructors."
+    provenance: "measured"
+    source_id: "ks-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.records"
+    value: "The state recommends, rather than mandates, complete student-progress records."
+    quote: "It is in the best interest of students attending non-accredited private schools that accurate and complete records of their progress be kept."
+    provenance: "inferred"
+    source_id: "ks-factsheet"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "No general homeschool ESA or homeschool-expense income-tax benefit is identified; the scholarship program pays tuition at qualified schools."
+    quote: "An eligible student may be able to qualify for an educational scholarship to pay all or a portion of tuition to attend a qualified school in Kansas."
+    provenance: "inferred"
+    source_id: "ks-scholarship"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Qualifying homeschool students have a statewide right to association-regulated district activities."
+    quote: "Any student who meets the requirements of this section shall be permitted to participate in any activities offered by a school district that are regulated, supervised, promoted and developed by the activities association referred to in K.S.A. 72-7114, and amendments thereto."
+    provenance: "measured"
+    source_id: "ks-activities"
+    checked_on: "2026-11-05"

@@ -1,0 +1,30 @@
+- id: id-home-school
+  url: https://www.sde.idaho.gov/about-us/departments/school-choice/home-school/
+  publisher: Idaho Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: id-home-school-faq
+  url: https://www.sde.idaho.gov/wp-content/uploads/2025/06/Home-School-FAQ.pdf
+  publisher: Idaho Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: id-code-33-202
+  url: https://legislature.idaho.gov/statutesrules/idstat/title33/t33ch2/sect33-202/
+  publisher: Idaho State Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: id-code-33-203
+  url: https://legislature.idaho.gov/statutesrules/idstat/title33/t33ch2/sect33-203/
+  publisher: Idaho State Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: id-choice-program
+  url: https://myschoolchoice.idaho.gov/about-the-program/
+  publisher: Idaho State Tax Commission
+  type: agency
+  checked_on: "2026-11-05"
+- id: id-choice-expenses
+  url: https://myschoolchoice.idaho.gov/qualifying-expenses/
+  publisher: Idaho State Tax Commission
+  type: agency
+  checked_on: "2026-11-05"

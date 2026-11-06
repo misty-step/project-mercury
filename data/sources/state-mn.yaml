@@ -1,0 +1,25 @@
+- id: mn-120a22
+  url: https://www.revisor.mn.gov/statutes/cite/120A.22
+  publisher: Minnesota Legislature, Office of the Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mn-120a24
+  url: https://www.revisor.mn.gov/statutes/cite/120A.24
+  publisher: Minnesota Legislature, Office of the Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mn-123b49
+  url: https://www.revisor.mn.gov/statutes/cite/123B.49
+  publisher: Minnesota Legislature, Office of the Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mn-doe-faq
+  url: https://education.mn.gov/mdeprod/groups/educ/documents/basic/bwrl/mdg3/~edisp/mde087270.pdf
+  publisher: Minnesota Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: mn-revenue-homeschool
+  url: https://www.revenue.state.mn.us/home-school-expenses
+  publisher: Minnesota Department of Revenue
+  type: agency
+  checked_on: "2026-11-05"

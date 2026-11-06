@@ -1,0 +1,110 @@
+code: "DC"
+name: "District of Columbia"
+summary: "Parents or legal guardians notify OSSE and provide regular instruction in required subjects. They must keep a portfolio for possible review and hold a high school diploma or obtain a qualification waiver."
+compulsory_ages:
+  min: 5
+  max: 17
+pathways:
+  - id: "homeschool"
+    name: "Home schooling"
+    summary: "A parent or legal guardian administers the home program and files notices with OSSE."
+    notice:
+      required: true
+      detail: "File intent with OSSE at least 15 business days before starting; continuation is due August 15 each year."
+    approval:
+      required: false
+      detail: "No separate curriculum approval under the regulation; OSSE verifies notice. A parent without a diploma needs an OSSE qualification waiver."
+    assessment:
+      required: true
+      detail: "OSSE may require portfolio review, at most twice per school year; testing is voluntary. Review requests give at least 30 days’ notice."
+    subjects:
+      required: true
+      detail: "Language arts, mathematics, science, social studies, art, music, health and physical education."
+    instruction_time:
+      required: false
+      detail: "No set number of days or hours; instruction must be thorough, regular and of sufficient duration."
+    teacher_qualifications:
+      required: true
+      detail: "Parent or guardian needs a high school diploma or equivalent, or an OSSE waiver showing ability to provide regular, thorough education."
+    records:
+      required: true
+      detail: "Keep a portfolio showing current work in the required subjects for at least one year; provide it to OSSE on request."
+funding:
+  available: false
+  detail: "No general homeschool ESA, expense reimbursement or homeschool tax benefit is provided."
+public_school_access:
+  available: false
+  detail: "No guaranteed part-time class or sports access; sports participation requires a petition. AP exams at the local DCPS high school are available."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance begins at five by September 30 and continues until the eighteenth birthday."
+    quote: "who has reached the age of 5 years or will become 5 years of age on or before September 30th of the current school year"
+    provenance: "measured"
+    source_id: "dc-attendance-38-202"
+    checked_on: "2026-11-05"
+  - field: "compulsory_ages"
+    value: "Compulsory attendance ends at the eighteenth birthday."
+    quote: "This obligation of the parent, guardian, or other person having custody extends until the minor reaches the age of 18 years."
+    provenance: "measured"
+    source_id: "dc-attendance-38-202"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "The homeschool program is privately parent-directed; the cited framework provides no general homeschool expense account or reimbursement."
+    quote: "Homeschooling is a private, parent/legal guardian-directed education program for children who are subject to the compulsory education laws in their state."
+    provenance: "inferred"
+    source_id: "dc-osse-homeschool"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Sports access is by petition rather than a guaranteed right."
+    quote: "Homeschooled student may petition the DC State Athletic Association to participate in sporting activities."
+    provenance: "inferred"
+    source_id: "dc-osse-family-guide"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Homeschooled students may take AP exams at their local DCPS high school, but this is not part-time class enrollment."
+    quote: "Beginning in the 2023-24 school year, students homeschooled in the District of Columbia are permitted to take Advanced Placement (AP) exams at their local DC Public Schools (DCPS) high school"
+    provenance: "measured"
+    source_id: "dc-osse-homeschool"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.notice"
+    value: "File intent with OSSE at least 15 business days before starting; continuation is due August 15 each year."
+    quote: "To homeschool, parents/legal guardians must complete a Notification of Intent to Homeschool at least 15 business days prior to the first date of home instruction."
+    provenance: "measured"
+    source_id: "dc-osse-homeschool"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.approval"
+    value: "No separate curriculum approval under the regulation; OSSE verifies notice. A parent without a diploma needs an OSSE qualification waiver."
+    quote: "A parent or legal guardian who chooses to provide home schooling in the District of Columbia shall provide written notification on an official form developed by the OSSE"
+    provenance: "inferred"
+    source_id: "dc-homeschool-regulations"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.assessment"
+    value: "OSSE may require portfolio review, at most twice per school year; testing is voluntary. Review requests give at least 30 days’ notice."
+    quote: "At any time, OSSE may request to review the portfolio of educational materials for each student in a homeschooling program."
+    provenance: "measured"
+    source_id: "dc-osse-portfolio"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.subjects"
+    value: "Language arts, mathematics, science, social studies, art, music, health and physical education."
+    quote: "In the District of Columbia, homeschooling programs must provide thorough and regular instruction of sufficient duration and, at a minimum, include language arts, mathematics, science, social studies, art, music, health and physical education."
+    provenance: "measured"
+    source_id: "dc-osse-requirements"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.instruction_time"
+    value: "No set number of days or hours; instruction must be thorough, regular and of sufficient duration."
+    quote: "Provide thorough, regular instruction of sufficient duration to implement the home school program;"
+    provenance: "inferred"
+    source_id: "dc-homeschool-regulations"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.teacher_qualifications"
+    value: "Parent or guardian needs a high school diploma or equivalent, or an OSSE waiver showing ability to provide regular, thorough education."
+    quote: "Parents or legal guardians who wish to be their children’s instructors must have a high school diploma or its equivalent."
+    provenance: "measured"
+    source_id: "dc-homeschool-regulations"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.records"
+    value: "Keep a portfolio showing current work in the required subjects for at least one year; provide it to OSSE on request."
+    quote: "This portfolio must be maintained for at least one year and be available to OSSE for review, upon request."
+    provenance: "measured"
+    source_id: "dc-osse-requirements"
+    checked_on: "2026-11-05"

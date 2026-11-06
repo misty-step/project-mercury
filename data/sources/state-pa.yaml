@@ -1,0 +1,42 @@
+-
+  id: "pa-compulsory-age"
+  url: "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?45&iFrame=true&SESSYR=1949&SESSIND=0&ACTNUM=14&SMTHLWIND=&CHPT=13&SCTN=26&SUBSCTN="
+  publisher: "Pennsylvania General Assembly"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "pa-home-education-law"
+  url: "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?45&iFrame=true&SESSYR=1949&SESSIND=0&ACTNUM=14&SMTHLWIND=&CHPT=13&SCTN=27&SUBSCTN=1"
+  publisher: "Pennsylvania General Assembly"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "pa-attendance-law"
+  url: "https://www.palegis.us/statutes/unconsolidated/law-information/view-statute?45&iFrame=true&SESSYR=1949&SESSIND=0&ACTNUM=14&SMTHLWIND=&CHPT=13&SCTN=27&SUBSCTN="
+  publisher: "Pennsylvania General Assembly"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "pa-home-education-guidance"
+  url: "https://www.pa.gov/agencies/education/resources/policies-acts-and-laws/basic-education-circulars-becs/purdons-statutes/home-education-program"
+  publisher: "Pennsylvania Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "pa-home-tutoring-guide"
+  url: "https://www.pa.gov/content/dam/copapwp-pagov/en/education/documents/instruction/home-education-and-private-tutoring/home%20education%20and%20private%20tutoring%20guide.pdf"
+  publisher: "Pennsylvania Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "pa-private-tutoring-rule"
+  url: "https://www.pacodeandbulletin.gov/Display/pacode?file=%2Fsecure%2Fpacode%2Fdata%2F022%2Fchapter11%2Fs11.31.html"
+  publisher: "Pennsylvania Code and Bulletin"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "pa-opportunity-scholarship"
+  url: "https://dced.pa.gov/programs/opportunity-scholarship-tax-credit-program-ostc/"
+  publisher: "Pennsylvania Department of Community and Economic Development"
+  type: "agency"
+  checked_on: "2026-11-05"

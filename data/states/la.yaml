@@ -1,0 +1,197 @@
+code: "LA"
+name: "Louisiana"
+summary: "Families may use a BESE-approved home study program with annual curriculum review, or operate a nonpublic school not seeking state approval. Both routes require reporting and a 180-day school year."
+compulsory_ages:
+  min: 5
+  max: 18
+pathways:
+  -
+    id: "home-study"
+    name: "BESE-approved home study program"
+    summary: "Parents independently educate under annual BESE approval and document a sustained curriculum equal in quality to public schooling."
+    notice:
+      required: true
+      detail: "Apply to LDOE within 15 days of starting; renew by October 1 or 12 months after initial approval, whichever is later."
+    approval:
+      required: true
+      detail: "Annual BESE approval is required; withdrawal may precede the approval decision."
+    assessment:
+      required: true
+      detail: "For annual renewal, submit a curriculum/work packet for review, qualifying test results or a certified-teacher evaluation."
+    subjects:
+      required: false
+      detail: "No fixed subject list; use a sustained curriculum at least equal in quality to public schools at the same grade level."
+    instruction_time:
+      required: true
+      detail: "Participate in the approved program for at least 180 school days each year."
+    teacher_qualifications:
+      required: false
+      detail: "No teaching certificate is required for the parent or tutor."
+    records:
+      required: true
+      detail: "Submit a birth-certificate copy initially and evidence of curriculum quality or progress with each renewal."
+  -
+    id: "nonpublic"
+    name: "Nonpublic school not seeking state approval"
+    summary: "Parents operate a nonpublic school without BESE approval and report enrollment and maintain attendance records."
+    notice:
+      required: true
+      detail: "Report enrollment to LDOE annually by the 30th school day; notify a previously attended public school within 10 days of enrollment."
+    approval:
+      required: false
+      detail: "Not required; LDOE does not approve or oversee this route."
+    assessment:
+      required: false
+      detail: "No state testing requirement."
+    subjects:
+      required: false
+      detail: "No state-prescribed subject list for this unfunded nonpublic route."
+    instruction_time:
+      required: true
+      detail: "Operate a school session of at least 180 days."
+    teacher_qualifications:
+      required: false
+      detail: "No state credential requirement; an unfunded school or church sets its own staff requirements."
+    records:
+      required: true
+      detail: "Keep attendance records and submit annual enrollment; respond to district enrollment-status inquiries."
+funding:
+  available: true
+  detail: "State income-tax deduction: 50% of qualifying homeschool expenses, up to $6,000 per dependent. Neither homeschool route is eligible for LA GATOR."
+public_school_access:
+  available: true
+  detail: "BESE-approved home study students may try out for public-school sports and extracurriculars in their attendance zone, subject to ordinary eligibility rules."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "The statute says age five by September 30 through eighteen, with kindergarten deferral and early-graduation exceptions."
+    quote: "who is age five, by September thirtieth of the calendar year in which the school year begins, through eighteen shall send the child to a public or nonpublic school"
+    provenance: "measured"
+    source_id: "la-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-study.notice"
+    value: "Initial filing is within 15 days; renew by October 1 or within 12 months of initial approval, whichever is later."
+    quote: "An initial application must be made within fifteen days after commencement of the program. A renewal application must be made by the first of October of the school year, or within twelve months of approval of the initial application, whichever is later."
+    provenance: "measured"
+    source_id: "la-study-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-study.approval"
+    value: "BESE must approve the home study program."
+    quote: "A parent or legal guardian shall apply to the Board of Elementary and Secondary Education for approval of a home study program."
+    provenance: "measured"
+    source_id: "la-study-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-study.assessment"
+    value: "Renewals require state review of a curriculum packet, or qualifying tests or a certified teacher statement."
+    quote: "Parents have the option of providing one out of three types of documentation when applying for an application renewal."
+    provenance: "inferred"
+    source_id: "la-study-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-study.subjects"
+    value: "No fixed subject list is specified; the curriculum must equal public-school quality."
+    quote: "Parents must use a sustained curriculum of quality at least equal to that offered by public schools at the same grade level."
+    provenance: "inferred"
+    source_id: "la-study-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-study.instruction_time"
+    value: "The program must operate for at least 180 days in the school year."
+    quote: "is not participating in a BESE Approved Home Study program for at least 180 days in the school year, then the parents of that child could be in violation of the Compulsory Attendance Law."
+    provenance: "measured"
+    source_id: "la-study-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-study.teacher_qualifications"
+    value: "Parent or tutor instruction does not require teacher certification."
+    quote: "A parent or tutor may be permitted to provide the instruction; there are no teaching certification requirements."
+    provenance: "measured"
+    source_id: "la-study-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-study.records"
+    value: "Retain and submit evidence of curriculum quality for annual renewal."
+    quote: "To substantiate this fact, the parent shall submit with the renewal application a packet of materials which includes such documents as:"
+    provenance: "measured"
+    source_id: "la-study-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonpublic.notice"
+    value: "Report enrollment annually; report total attendance as of the 30th school day."
+    quote: "Pursuant to R.S. 17:232(C), schools shall be required to report to the state Department of Education their total attendance as of the thirtieth day of their school term or session."
+    provenance: "measured"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonpublic.approval"
+    value: "No LDOE approval is required for this route."
+    quote: "Nonpublic schools may, but are not required to, seek state approval."
+    provenance: "measured"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonpublic.assessment"
+    value: "State testing is not required."
+    quote: "are not required to take state testing."
+    provenance: "measured"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonpublic.subjects"
+    value: "The unfunded school provision requires a school session and locally set staff standards but names no subjects."
+    quote: "if a non-public school receives no local, state, or federal funds or support, directly or indirectly, instructional staff members shall meet requirements as may be prescribed by the school or church."
+    provenance: "inferred"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonpublic.instruction_time"
+    value: "A nonpublic school must operate at least 180 days."
+    quote: "Any such school shall operate a minimum session of not less than one hundred eighty days."
+    provenance: "measured"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonpublic.teacher_qualifications"
+    value: "An unfunded nonpublic school or church sets instructor qualifications; no state credential is specified."
+    quote: "if a non-public school receives no local, state, or federal funds or support, directly or indirectly, instructional staff members shall meet requirements as may be prescribed by the school or church."
+    provenance: "inferred"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonpublic.records"
+    value: "Schools must maintain attendance records."
+    quote: "Schools are to maintain student attendance records"
+    provenance: "measured"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The home-education expense deduction is 50% of qualifying expenses, up to $6,000 per dependent."
+    quote: "For 2024 and forward, the deduction is for 50 percent of the actual qualified educational expenses paid for the home-schooling per dependent, limited to $6,000 per dependent."
+    provenance: "measured"
+    source_id: "la-deduction"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "BESE home study students cannot participate in LA GATOR."
+    quote: "A student in a BESE Approved Home Study Program cannot participate in the LA GATOR Scholarship Program."
+    provenance: "measured"
+    source_id: "la-study-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Approved home study students have a right to try out for public-school athletics and extracurriculars in their attendance zone."
+    quote: "A public school shall not disqualify a student from participating in extracurricular activities or interscholastic athletics solely because the student is enrolled in an approved home study program, so long as the student lives in the attendance zone of the public school."
+    provenance: "measured"
+    source_id: "la-study-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Students in nonpublic schools not seeking approval cannot participate in LA GATOR."
+    quote: "cannot participate in the LA GATOR Scholarship Program."
+    provenance: "measured"
+    source_id: "la-nonpublic-guide"
+    checked_on: "2026-11-05"

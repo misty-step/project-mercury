@@ -1,14 +1,16 @@
 //! Static site generator for the Project Mercury catalog: plain string
 //! templates, every interpolated value HTML-escaped.
 
+mod states;
+
 use std::collections::{BTreeMap, BTreeSet};
 use std::fs;
 use std::path::Path;
 
 use anyhow::{bail, Result};
 use project_mercury_core::{
-    facets, load, search, validate, Catalog, Entry, FacetValue, Format, Level, Provenance, Query,
-    SkillLevel,
+    facets, load, search, validate, Catalog, Claim, Entry, FacetValue, Format, Level, Provenance,
+    Query, SkillLevel,
 };
 
 pub const BASE_URL: &str = "https://projectmercury.mistystep.io";
@@ -118,6 +120,7 @@ pub fn render(c: &Catalog) -> Result<Vec<(String, String)>> {
     }
     let index = page("Approaches", "/approaches/", &(index + "</ul>"));
     files.push(("approaches/index.html".into(), index));
+    files.extend(states::pages(c));
     Ok(files)
 }
 
@@ -131,7 +134,11 @@ fn page(title: &str, here: &str, body: &str) -> String {
         t => format!("{} · Project Mercury", esc(t)),
     };
     let mut nav = String::new();
-    for (u, t) in [("/", "Resources"), ("/approaches/", "Approaches")] {
+    for (u, t) in [
+        ("/", "Resources"),
+        ("/approaches/", "Approaches"),
+        ("/states/", "States"),
+    ] {
         let cur = ["", r#" aria-current="page""#][(u == here) as usize];
         nav += &format!(r#"<a href="{u}"{cur}>{t}</a>"#);
     }
@@ -165,6 +172,8 @@ fn page(title: &str, here: &str, body: &str) -> String {
 
 /// 24px-grid line icons, one `name paths` per line (subjects by name); `github` is filled.
 const ICONS: &str = r#"monitor <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+check <path d="M20 6 9 17l-5-5"/>
+minus <path d="M5 12h14"/>
 building <rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/>
 target <circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>
 users <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
@@ -413,9 +422,10 @@ fn home(c: &Catalog) -> String {
     page("Project Mercury", "/", &body)
 }
 
-fn entry_page(c: &Catalog, e: &Entry) -> String {
-    let mut facts = String::new();
-    for cl in &e.claims {
+/// The sourced facts table; `label` names each claim's field. Quotes show under values.
+fn facts(c: &Catalog, claims: &[Claim], label: impl Fn(&str) -> String) -> String {
+    let mut rows = String::new();
+    for cl in claims {
         let src = c.source(&cl.source_id);
         let (url, publisher) = src.map_or(("", &cl.source_id), |s| (s.url.as_str(), &s.publisher));
         let (p, tip) = match cl.provenance {
@@ -423,14 +433,33 @@ fn entry_page(c: &Catalog, e: &Entry) -> String {
             Provenance::Inferred => ("inferred", "Derived from the source, not stated verbatim"),
             Provenance::Guess => ("guess", "Not verified"),
         };
-        let (field, value, url, publisher) =
-            (esc(&cl.field), esc(&cl.value), href(url), esc(publisher));
+        let (field, value, url, publisher) = (
+            esc(&label(&cl.field)),
+            esc(&cl.value),
+            href(url),
+            esc(publisher),
+        );
+        let quote = cl.quote.as_deref().map(esc);
+        let quote = quote
+            .map(|q| format!(r#"<q class="quote">{q}</q>"#))
+            .unwrap_or_default();
         let checked = esc(cl.checked_on.as_deref().unwrap_or("—"));
-        facts += &format!(
+        rows += &format!(
             r#"
-<tr><td class="mono">{field}</td><td>{value}</td><td><span class="badge {p}" title="{tip}">{p}</span></td><td><a href="{url}">{publisher}</a></td><td class="mono">{checked}</td></tr>"#
+<tr><td class="mono">{field}</td><td>{value}{quote}</td><td><span class="badge {p}" title="{tip}">{p}</span></td><td><a href="{url}">{publisher}</a></td><td class="mono">{checked}</td></tr>"#
         );
     }
+    format!(
+        r#"<table class="facts">
+<thead><tr><th>Field</th><th>Value</th><th>Provenance</th><th>Source</th><th>Checked</th></tr></thead>
+<tbody>{rows}
+</tbody>
+</table>"#
+    )
+}
+
+fn entry_page(c: &Catalog, e: &Entry) -> String {
+    let facts = facts(c, &e.claims, str::to_string);
     let link = |a: &String| format!(r#"<a href="/approaches/{}/">{}</a>"#, slug(a), esc(a));
     let approaches = e.approaches.iter().map(link).collect::<Vec<_>>().join(", ");
     let best = e.best_at.as_deref().map(esc);
@@ -456,18 +485,14 @@ fn entry_page(c: &Catalog, e: &Entry) -> String {
 <dt>Website</dt><dd><a href="{url}">{url_text}</a></dd>
 </dl>
 <h2>Facts</h2>
-<table class="facts">
-<thead><tr><th>Field</th><th>Value</th><th>Provenance</th><th>Source</th><th>Checked</th></tr></thead>
-<tbody>{facts}
-</tbody>
-</table>"#
+{facts}"#
     );
     page(&e.name, "/", &body)
 }
 
 fn llms(c: &Catalog) -> String {
     let mut s = format!(
-        "# Project Mercury\n\n> A sourced catalog of homeschool resources. Every fact links to its source.\n> Full data: {BASE_URL}/dump.json\n\n"
+        "# Project Mercury\n\n> A sourced catalog of homeschool resources and of what each US state asks of home educating families. Every fact links to its source.\n> Full data: {BASE_URL}/dump.json\n\n## Resources\n\n"
     );
     for e in &c.entries {
         let summary = e.summary.split_whitespace().collect::<Vec<_>>().join(" ");
@@ -476,6 +501,17 @@ fn llms(c: &Catalog) -> String {
             e.name,
             slug(&e.id)
         );
+    }
+    if !c.states.is_empty() {
+        s += "\n## States\n\nInformational, not legal advice.\n\n";
+        for st in &c.states {
+            let summary = st.summary.split_whitespace().collect::<Vec<_>>().join(" ");
+            let (code, level) = (st.code.to_ascii_lowercase(), st.regulation().label());
+            s += &format!(
+                "- [{}]({BASE_URL}/states/{code}/): {level}. {summary}\n",
+                st.name
+            );
+        }
     }
     s
 }

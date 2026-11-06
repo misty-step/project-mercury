@@ -1,0 +1,110 @@
+code: "NM"
+name: "New Mexico"
+summary: "A parent or guardian operates a home study program with annual state notification, five basic subjects and a diploma-qualified instructor. Families maintain immunization records and meet instructional-time requirements, but do not need curriculum approval or annual standardized testing."
+compulsory_ages:
+  min: 5
+  max: 17
+pathways:
+  - id: "home-school"
+    name: "Home school"
+    summary: "A parent or guardian operates the home study program and ensures that instruction meets state requirements."
+    notice:
+      required: true
+      detail: "Notify NMPED within 30 days of establishment and renew by August 1 each year."
+    approval:
+      required: false
+      detail: "Curriculum approval is not required; NMPED does not approve curricula."
+    assessment:
+      required: false
+      detail: "Annual standardized testing is not required."
+    subjects:
+      required: true
+      detail: "Teach reading, language arts, mathematics, social studies and science."
+    instruction_time:
+      required: true
+      detail: "Provide 1,140 instructional hours annually, excluding lunch; half-day kindergarten requires 550 hours."
+    teacher_qualifications:
+      required: true
+      detail: "The person instructing the child must hold at least a high school diploma or equivalency credential."
+    records:
+      required: true
+      detail: "Keep student immunization records or an approved waiver."
+funding:
+  available: false
+  detail: "No statewide homeschool ESA or homeschool-expense tax benefit; families provide their own curriculum and materials."
+public_school_access:
+  available: true
+  detail: "Home school students may participate in public-school sports and extracurriculars if eligible; part-time classes are at district discretion."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance begins at five before September 1."
+    quote: "at least five years of age prior to 12:01 a.m. on September 1 of the school year;"
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "compulsory_ages"
+    value: "Attendance continues until age 18 unless graduation, equivalency credential or a hardship waiver applies."
+    quote: "a school-age person shall attend public school, private school, home school or a state institution until the school-age person is at least eighteen years of age unless that school-age person has graduated from high school, received a high school equivalency credential or withdrawn from school on a hardship waiver."
+    provenance: "measured"
+    source_id: "nm-ped-notification"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No statewide homeschool ESA or homeschool-expense tax benefit; families provide their own curriculum and materials."
+    quote: "The Public Education Department does not provide books, materials, or computers to home schools."
+    provenance: "inferred"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Home school students may participate in public-school sports and extracurriculars if eligible; part-time classes are at district discretion."
+    quote: "The local public school district is required to allow home school students to participate in sports and extracurricular activities if they meet certain requirements. Participating part-time in courses at the local school is at the discretion of the district."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.notice"
+    value: "Notify NMPED within 30 days of establishment and renew by August 1 each year."
+    quote: "You must notify the NMPED within 30 days of first establishing a home school."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.approval"
+    value: "Curriculum approval is not required; NMPED does not approve curricula."
+    quote: "No, your curriculum does not have to be approved by the NMPED. The NMPED does not approve curriculum."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.assessment"
+    value: "Annual standardized testing is not required."
+    quote: "In New Mexico, home school students are not required to participate in annual standardized testing."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.subjects"
+    value: "Teach reading, language arts, mathematics, social studies and science."
+    quote: "provide instruction in at least reading, language arts, mathematics, social studies, and science."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.instruction_time"
+    value: "Provide 1,140 instructional hours annually, excluding lunch; half-day kindergarten requires 550 hours."
+    quote: "students shall be in school programs, exclusive of lunch, for a minimum of one thousand one hundred forty instructional hours per year, except half-day kindergarten, which shall have five hundred fifty instructional hours per year."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.teacher_qualifications"
+    value: "The person instructing the child must hold at least a high school diploma or equivalency credential."
+    quote: "affirm that the person instructing the child in the home has at least a high school diploma or a high school equivalency credential."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.records"
+    value: "Keep student immunization records or an approved waiver."
+    quote: "maintain records of the student’s immunization records or the approved waiver form:"
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-school.notice"
+    value: "Renew notification by August 1 annually."
+    quote: "You must notify the NMPED in subsequent years by August 1."
+    provenance: "measured"
+    source_id: "nm-ped-faq"
+    checked_on: "2026-11-05"

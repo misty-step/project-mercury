@@ -1,0 +1,137 @@
+code: NC
+name: North Carolina
+summary: >-
+  A home school serving no more than two households elects religious or qualified nonpublic-school status and files a notice with DNPE. Both options require qualified instructors, nine calendar months of operation, attendance and immunization records, and annual testing.
+compulsory_ages: { min: 7, max: 15 }
+pathways:
+  - id: qualified-home-school
+    name: Home school under qualified nonpublic-school provisions
+    summary: A home school elects the nonreligious Part 2 qualifications and follows the home-school modifications in section 115C-564.
+    notice: { required: true, detail: "File one Notice of Intent per school with DNPE before opening; agency says five business days ahead. Notify DNPE on closure." }
+    approval: { required: false, detail: "No program approval required; DNPE acknowledges the Notice of Intent before operation." }
+    assessment: { required: true, detail: "Test every enrolled student annually with a nationally standardized achievement test covering English grammar, reading, spelling, and math." }
+    subjects: { required: false, detail: "No prescribed curriculum subjects; parents choose scope and sequence. Annual tests must cover the four named skills." }
+    instruction_time: { required: true, detail: "Operate on a regular schedule for at least nine calendar months annually, excluding reasonable holidays and vacations; no daily-hour minimum." }
+    teacher_qualifications: { required: true, detail: "Persons providing academic instruction must hold at least a high school diploma or equivalent." }
+    records: { required: true, detail: "Keep annual attendance and immunization records; retain annual standardized test results for at least one year and make them available to DNPE." }
+  - id: religious-home-school
+    name: Home school under private church or religious-charter provisions
+    summary: A religious home school elects Part 1 qualifications with the same home-school testing and instructor requirements.
+    notice: { required: true, detail: "File one Notice of Intent per school with DNPE before opening; agency says five business days ahead. Notify DNPE on closure." }
+    approval: { required: false, detail: "No program approval required; DNPE acknowledges the Notice of Intent before operation." }
+    assessment: { required: true, detail: "Test every enrolled student annually with a nationally standardized achievement test covering English grammar, reading, spelling, and math." }
+    subjects: { required: false, detail: "No prescribed curriculum subjects; parents choose scope and sequence. Annual tests must cover the four named skills." }
+    instruction_time: { required: true, detail: "Operate on a regular schedule for at least nine calendar months annually, excluding reasonable holidays and vacations; no daily-hour minimum." }
+    teacher_qualifications: { required: true, detail: "Persons providing academic instruction must hold at least a high school diploma or equivalent." }
+    records: { required: true, detail: "Keep annual attendance and immunization records; retain annual standardized test results for at least one year and make them available to DNPE." }
+funding: { available: true, detail: "ESA+ supports eligible students with disabilities educated at home: $9,000 annually, or $17,000 for certain disabilities, for allowable expenses." }
+public_school_access: { available: false, detail: "No statewide right to part-time public classes or interscholastic activities; local school policies govern class access." }
+claims:
+  - field: compulsory_ages
+    value: Ordinary compulsory attendance covers age seven until the sixteenth birthday; younger enrolled public K–2 pupils are covered until withdrawal.
+    quote: "Every parent, guardian or custodian in this State having charge or control of a child between the ages of seven and 16 years shall cause the child to attend school continuously"
+    provenance: measured
+    source_id: nc-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.qualified-home-school.notice
+    value: Submit the Notice of Intent to DNPE before opening, with five business days' lead time under agency guidance; notify DNPE when closing.
+    quote: "Submit your Notice of Intent at least five business days before you plan to begin your home school."
+    provenance: measured
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.religious-home-school.notice
+    value: The same DNPE notice process applies to the religious election.
+    quote: "Before you begin operating your home school, you must submit a Notice of Intent to Operate a Home School to DNPE."
+    provenance: measured
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.qualified-home-school.approval
+    value: DNPE acknowledges notice rather than approving the family's educational program.
+    quote: "After DNPE acknowledges your Notice of Intent, you can begin operating your home school."
+    provenance: inferred
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.religious-home-school.approval
+    value: The religious home-school election likewise uses notice acknowledgment rather than program approval.
+    quote: "After DNPE acknowledges your Notice of Intent, you can begin operating your home school."
+    provenance: inferred
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.qualified-home-school.assessment
+    value: Every student must take an annual nationally standardized achievement test in the four named areas.
+    quote: "Have each student take a nationally standardized achievement test each academic year. The test must measure English grammar, reading, spelling, and mathematics."
+    provenance: measured
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.religious-home-school.assessment
+    value: Religious home schools have the same annual standardized achievement test requirement.
+    quote: "Have each student take a nationally standardized achievement test each academic year. The test must measure English grammar, reading, spelling, and mathematics."
+    provenance: measured
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.qualified-home-school.subjects
+    value: The law gives the home school control of academic scope and sequence rather than prescribing a subject curriculum.
+    quote: "where the parents or legal guardians or members of either household determine the scope and sequence of academic instruction, provide academic instruction, and determine additional sources of academic instruction."
+    provenance: inferred
+    source_id: nc-nonpublic-law
+    checked_on: "2026-11-05"
+  - field: pathways.religious-home-school.subjects
+    value: Religious home schools likewise control the curriculum's scope and sequence.
+    quote: "where the parents or legal guardians or members of either household determine the scope and sequence of academic instruction, provide academic instruction, and determine additional sources of academic instruction."
+    provenance: inferred
+    source_id: nc-nonpublic-law
+    checked_on: "2026-11-05"
+  - field: pathways.qualified-home-school.instruction_time
+    value: Nine calendar months on a regular schedule are mandatory; the agency's five-hour day is only a recommendation.
+    quote: "Provide instruction on a regular schedule for at least nine calendar months of the year, excluding holidays and vacations."
+    provenance: measured
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.religious-home-school.instruction_time
+    value: Religious home schools also operate at least nine calendar months, without a statutory daily-hour minimum.
+    quote: "Provide instruction on a regular schedule for at least nine calendar months of the year, excluding holidays and vacations."
+    provenance: measured
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.qualified-home-school.teacher_qualifications
+    value: Academic instructors must have a high school diploma or equivalent.
+    quote: "The persons providing academic instruction in a home school shall hold at least a high school diploma or its equivalent."
+    provenance: measured
+    source_id: nc-nonpublic-law
+    checked_on: "2026-11-05"
+  - field: pathways.religious-home-school.teacher_qualifications
+    value: The same diploma-or-equivalent requirement applies to religious home-school instructors.
+    quote: "The persons providing academic instruction in a home school shall hold at least a high school diploma or its equivalent."
+    provenance: measured
+    source_id: nc-nonpublic-law
+    checked_on: "2026-11-05"
+  - field: pathways.qualified-home-school.records
+    value: Keep attendance and immunization records and annual test results; results must be available to DNPE for at least one year.
+    quote: "Keep standardized test results for at least one year and provide them to DNPE if requested."
+    provenance: measured
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"
+  - field: pathways.religious-home-school.records
+    value: Religious home schools keep the same attendance, immunization, and annual test records.
+    quote: "Each private church school or school of religious charter shall make, and maintain annual attendance and disease immunization records for each pupil enrolled and regularly attending classes."
+    provenance: measured
+    source_id: nc-nonpublic-law
+    checked_on: "2026-11-05"
+  - field: funding
+    value: ESA+ allows home-school enrollment and provides $9,000 annually, or $17,000 for students with certain designated disabilities.
+    quote: "The base level of funding is a $9,000 annual award; students with certain designated disabilities may be eligible to receive a $17,000 annual award."
+    provenance: measured
+    source_id: nc-esa
+    checked_on: "2026-11-05"
+  - field: funding
+    value: ESA+ funds can be used by home school families as well as private school families.
+    quote: "The ESA+ includes a variety of enrollment options, including private schools, home schools, and co-enrollment."
+    provenance: measured
+    source_id: nc-esa
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: Part-time public-school enrollment is a local policy decision, not a statewide entitlement to classes or activities.
+    quote: "Each local education agency (LEA) may have different policies relating to the enrollment of homeschool students in one or more public school courses."
+    provenance: inferred
+    source_id: nc-home-guide
+    checked_on: "2026-11-05"

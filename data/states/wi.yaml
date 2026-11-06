@@ -1,0 +1,98 @@
+code: "WI"
+name: "Wisconsin"
+summary: "Parents file an annual enrollment report for a home-based private educational program. The program must provide 875 hours of instruction and a progressive curriculum in six subjects; testing is not required."
+compulsory_ages:
+  min: 6
+  max: 18
+pathways:
+  - id: "home-based"
+    name: "Home-based private educational program"
+    summary: "A parent or designated person teaches children of one family unit."
+    notice:
+      required: true
+      detail: "File PI-1206 with DPI annually by October 15; after that date, file by withdrawal from school."
+    approval:
+      required: false
+      detail: "Not required; neither DPI nor the district may approve or deny the program."
+    assessment:
+      required: false
+      detail: "No testing or assessment required."
+    subjects:
+      required: true
+      detail: "Provide a progressive curriculum in reading, language arts, mathematics, social studies, science and health."
+    instruction_time:
+      required: true
+      detail: "At least 875 hours of instruction each school year."
+    teacher_qualifications:
+      required: false
+      detail: "No minimum education, teaching certificate or license required."
+    records:
+      required: true
+      detail: "File the annual PI-1206 enrollment report and retain copies; instructional records are recommended, not mandatory."
+funding:
+  available: false
+  detail: "No publicly funded financial assistance for home education."
+public_school_access:
+  available: true
+  detail: "Resident students may join public-school sports and activities; up to two public-school courses per semester, space permitting."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance begins at age 6 and continues through the end of the term, quarter or semester in which the child turns 18; enrolled 5K students also must attend."
+    quote: "any person having under control a child who is between the ages of 6 and 18 years shall cause the child to attend school regularly during the full period and hours, religious holidays excepted, that the public, private, or tribal school in which the child should be enrolled is in session until the end of the school term, quarter or semester of the school year in which the child becomes 18 years of age."
+    provenance: "measured"
+    source_id: "wi-118-15"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.notice"
+    value: "File PI-1206 with DPI annually by October 15; after that date, file by withdrawal from school."
+    quote: "Under current law, homeschooling parents are required to file the online PI-1206 homeschool report annually, on or before October 15."
+    provenance: "measured"
+    source_id: "wi-dpi-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.approval"
+    value: "Not required; neither DPI nor the district may approve or deny the program."
+    quote: "The PI-1206 report is not an application and neither the DPI nor your school district has authority to approve or deny a parent’s homeschool program."
+    provenance: "inferred"
+    source_id: "wi-dpi-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.assessment"
+    value: "No testing or assessment required."
+    quote: "No. Wisconsin’s homeschooling laws do not require any form of testing or assessment."
+    provenance: "inferred"
+    source_id: "wi-dpi-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.subjects"
+    value: "Provide a progressive curriculum in reading, language arts, mathematics, social studies, science and health."
+    quote: "Parents choosing to homeschool must provide at least 875 hours of instruction each school year and include a sequentially progressive curriculum of fundamental instruction in six subject areas - reading, language arts, mathematics, social studies, science and health."
+    provenance: "measured"
+    source_id: "wi-dpi-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.instruction_time"
+    value: "At least 875 hours of instruction each school year."
+    quote: "Parents choosing to homeschool must provide at least 875 hours of instruction each school year and include a sequentially progressive curriculum of fundamental instruction in six subject areas - reading, language arts, mathematics, social studies, science and health."
+    provenance: "measured"
+    source_id: "wi-dpi-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.teacher_qualifications"
+    value: "No minimum education, teaching certificate or license required."
+    quote: "Under Wisconsin law, there are no minimum educational requirements for parents who provide a home-based private educational program. Nor are homeschooling parents required to hold a teaching certificate or license."
+    provenance: "inferred"
+    source_id: "wi-dpi-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.records"
+    value: "File the annual PI-1206 enrollment report and retain copies; instructional records are recommended, not mandatory."
+    quote: "It is the responsibility of the parent to maintain copies of PI-1206 reports."
+    provenance: "measured"
+    source_id: "wi-dpi-faq"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No publicly funded financial assistance for home education."
+    quote: "No. There is no publicly-funded financial assistance for homeschooling families available from either the local school district or from the state."
+    provenance: "measured"
+    source_id: "wi-dpi-faq"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Resident students may join public-school sports and activities; up to two public-school courses per semester, space permitting."
+    quote: "Wis. Stat 118.133(1) requires a school board to permit resident pupils enrolled in a home-based private education program to participate in interscholastic athletics on the same basis and to the same extent as pupils enrolled in the district."
+    provenance: "measured"
+    source_id: "wi-dpi-home"
+    checked_on: "2026-11-05"

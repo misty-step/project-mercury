@@ -1,0 +1,103 @@
+code: NE
+name: Nebraska
+summary: >-
+  Families educate at home through an exempt school, electing not to meet state approval or accreditation requirements for religious or other educational reasons. Annual filings, basic subjects, minimum instructional hours, and restrictions on instructors with certain felony convictions apply, but standardized testing is not required.
+compulsory_ages: { min: 6, max: 17 }
+pathways:
+  - id: exempt-school
+    name: Exempt school
+    summary: A parent, legal guardian, or educational decisionmaker elects exempt private-school status for religious or educational reasons under section 79-1601.
+    notice: { required: true, detail: "File the election and assurances with NDE annually by July 15; late movers or midyear starters file promptly. Supply identity documents at initial enrollment." }
+    approval: { required: false, detail: "Not required; NDE acknowledges filings and does not approve or disapprove exempt schools." }
+    assessment: { required: false, detail: "No mandatory standardized testing or outside evaluation." }
+    subjects: { required: true, detail: "A sequential program must lead to basic skills in language arts, mathematics, science, social studies, and health." }
+    instruction_time: { required: true, detail: "Provide at least 1,032 hours annually in elementary grades K–8 and 1,080 in secondary grades 9–12; partial-year hours may be prorated." }
+    teacher_qualifications: { required: true, detail: "No diploma or certificate required, but instructors/monitors must not have the felony convictions listed in 79-1601(5)(b); parent affirms their qualifications." }
+    records: { required: true, detail: "Submit annual election/assurances and required attendance reports; no prescribed retention of academic records or submission of grades/progress reports." }
+funding: { available: false, detail: "No state homeschool ESA or education-expense tax benefit; NDE provides no funding for exempt schools." }
+public_school_access: { available: true, detail: "Districts must allow resident exempt students part-time classes and extracurriculars; association-regulated activities require five district credit hours per semester." }
+claims:
+  - field: compulsory_ages
+    value: The general rule covers children who turn six before January 1 of the school year until their eighteenth birthday; affidavits can delay homeschool entry to seven.
+    quote: "a child is of mandatory attendance age if the child (a) will reach six years of age prior to January 1 of the then-current school year and (b) has not reached eighteen years of age."
+    provenance: measured
+    source_id: ne-attendance
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: Families may file an affidavit with their resident district to delay exempt-school entry until age seven; statutory withdrawal procedures are available at sixteen.
+    quote: "the parent or guardian intends to provide the Commissioner of Education with a statement pursuant to subsection (3) of section 79-1601 on or before the child's seventh birthday"
+    provenance: measured
+    source_id: ne-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.notice
+    value: The annual filing deadline is July 15.
+    quote: "The deadline is July 15 of each year the school will be in operation, whether using the online system or mailing or dropping off paper documents to NDE."
+    provenance: measured
+    source_id: ne-exempt-faq
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.approval
+    value: Exempt schools receive an acknowledgment, not state program approval.
+    quote: "exempt schools are acknowledged only, they are not approved or disapproved"
+    provenance: measured
+    source_id: ne-exempt-faq
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.assessment
+    value: Exempt students are not required to undergo standardized testing.
+    quote: "Such testing is not required of exempt school students."
+    provenance: measured
+    source_id: ne-exempt-faq
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.subjects
+    value: Teach a sequential program leading to basic skills in the five named areas.
+    quote: "maintain a sequential program of instruction designed to lead to basic skills in the language arts, mathematics, science, social studies, and health"
+    provenance: measured
+    source_id: ne-exempt-law
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.instruction_time
+    value: Annual minimum hours are 1,032 in K–8 and 1,080 in 9–12.
+    quote: "The minimum hours of instruction are 1032 for elementary grades (K-8) and 1080 hours for secondary grades (9-12)."
+    provenance: measured
+    source_id: ne-exempt-faq
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.teacher_qualifications
+    value: No teaching certificate is required, but the parent must be satisfied the instructional monitors are qualified.
+    quote: "Individuals employed or utilized by schools which elect not to meet state accreditation or approval requirements shall not be required to meet the certification requirements prescribed in sections 79-801 to 79-815."
+    provenance: measured
+    source_id: ne-exempt-law
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.teacher_qualifications
+    value: Since July 18, 2026, instructors and monitors may not have convictions for the specified felony offenses.
+    quote: "Individuals monitoring or providing instruction at a school which elects not to meet state accreditation or approval requirements shall not have been convicted of any felony offense under sections 28-319 to 28-322.05 or section 28-316.01, 28-323, 28-703, or 28-707."
+    provenance: measured
+    source_id: ne-exempt-law
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.records
+    value: The statute requires attendance reporting, even though the agency does not prescribe retention of academic records.
+    quote: "report attendance pursuant to section 79-201"
+    provenance: measured
+    source_id: ne-exempt-law
+    checked_on: "2026-11-05"
+  - field: pathways.exempt-school.records
+    value: Rule 13 does not prescribe record retention; NDE does not collect grades or require progress reports.
+    quote: "NDE does not collect grades or require progress reports; the exempt school parent representative is responsible for their own recordkeeping."
+    provenance: measured
+    source_id: ne-exempt-faq
+    checked_on: "2026-11-05"
+  - field: funding
+    value: No state homeschool-cost program was identified, and NDE explicitly says it provides no exempt-school funding.
+    quote: "There is no funding available through NDE."
+    provenance: inferred
+    source_id: ne-exempt-faq
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: Resident exempt-school students have a statutory right to part-time public-school enrollment.
+    quote: "Each school board shall allow the part-time enrollment of students, for all courses selected by the students"
+    provenance: measured
+    source_id: ne-public-access
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: Association-regulated extracurricular activities require five district credit hours in the semester.
+    quote: "to be enrolled in five credit hours offered by the school district in any semester in order to participate in such extracurricular activities"
+    provenance: measured
+    source_id: ne-public-access
+    checked_on: "2026-11-05"

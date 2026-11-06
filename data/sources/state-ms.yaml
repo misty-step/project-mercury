@@ -1,0 +1,20 @@
+- id: ms-home-school
+  url: https://mdek12.org/ocsa/home-school/
+  publisher: Mississippi Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: ms-attendance
+  url: https://law.justia.com/codes/mississippi/title-37/chapter-13/mississippi-compulsory-school-attendance-law/section-37-13-91/
+  publisher: Justia (mirror of Mississippi Code)
+  type: statute
+  checked_on: "2026-11-05"
+- id: ms-esa
+  url: https://codes.findlaw.com/ms/title-37-education/ms-code-sect-37-181-3/
+  publisher: FindLaw (mirror of Mississippi Code)
+  type: statute
+  checked_on: "2026-11-05"
+- id: ms-school-board
+  url: https://codes.findlaw.com/ms/title-37-education/ms-code-sect-37-7-301/
+  publisher: FindLaw (mirror of Mississippi Code)
+  type: statute
+  checked_on: "2026-11-05"

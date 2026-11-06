@@ -1,0 +1,20 @@
+- id: nc-home-guide
+  url: https://www.doa.nc.gov/divisions/non-public-education/home-schools/requirements-recommendations
+  publisher: North Carolina Department of Administration
+  type: agency
+  checked_on: "2026-11-05"
+- id: nc-nonpublic-law
+  url: https://www.ncleg.gov/enactedlegislation/statutes/html/byarticle/chapter_115c/article_39.html
+  publisher: North Carolina General Assembly
+  type: statute
+  checked_on: "2026-11-05"
+- id: nc-attendance
+  url: https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_115C/GS_115C-378.html
+  publisher: North Carolina General Assembly
+  type: statute
+  checked_on: "2026-11-05"
+- id: nc-esa
+  url: https://k12.ncseaa.edu/the-education-student-accounts/
+  publisher: North Carolina State Education Assistance Authority
+  type: agency
+  checked_on: "2026-11-05"

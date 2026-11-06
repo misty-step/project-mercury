@@ -1,0 +1,332 @@
+code: "FL"
+name: "Florida"
+summary: "Families may register a home education program, use a private umbrella school or certified tutor, or join a scholarship-funded personalized education program. The home education route requires a portfolio and annual evaluation; each alternative has different duties."
+compulsory_ages:
+  min: 6
+  max: 15
+pathways:
+  - id: "home-education"
+    name: "Home education program"
+    summary: "A parent registers a parent-directed program with the county superintendent and documents annual educational progress."
+    notice:
+      required: true
+      detail: "Send signed intent to the county superintendent within 30 days of starting; file termination and final evaluation within 30 days of ending."
+    approval:
+      required: false
+      detail: "No prior approval; the superintendent must accept and immediately register a complete notice."
+    assessment:
+      required: true
+      detail: "File annual evaluation: certified-teacher review, approved test, psychologist evaluation or agreed tool. Prior nonattendance may trigger 30-day portfolio reviews."
+    subjects:
+      required: false
+      detail: "No prescribed subject list; instruction must be sequentially progressive."
+    instruction_time:
+      required: false
+      detail: "No minimum days or hours; home education is excluded from school-day requirements."
+    teacher_qualifications:
+      required: false
+      detail: "No Florida teaching certificate or parent diploma required."
+    records:
+      required: true
+      detail: "Keep an educational activity/reading log and work samples for two years; allow superintendent inspection on 15 days’ written notice."
+  - id: "private-school"
+    name: "Private school enrollment"
+    summary: "A family enrolls in a Florida private school offering home-based instruction and follows the school’s requirements."
+    notice:
+      required: true
+      detail: "No parent homeschool notice; the private school registers with FDOE, files its annual survey and submits required attendance reports."
+    approval:
+      required: false
+      detail: "No FDOE approval or accreditation; select a school that offers home-based enrollment."
+    assessment:
+      required: false
+      detail: "No general statewide annual test; the school or a scholarship program may require testing."
+    subjects:
+      required: false
+      detail: "No state-prescribed curriculum; follow the school’s program."
+    instruction_time:
+      required: true
+      detail: "180 school days, or at least 170 days plus 540 hours in kindergarten, 720 in grades 1–3 or 900 in grades 4–12."
+    teacher_qualifications:
+      required: false
+      detail: "No general state teaching-license requirement; school and scholarship-program standards may apply."
+    records:
+      required: true
+      detail: "School keeps enrollment and daily attendance records, required reports and permanent student records."
+  - id: "private-tutor"
+    name: "Private tutoring program"
+    summary: "A Florida-certified teacher provides private instruction, keeps attendance records and meets the statutory school term."
+    notice:
+      required: true
+      detail: "Tutor makes required state and district reports, including regular attendance reports; no home-education intent filing."
+    approval:
+      required: false
+      detail: "No separate program approval specified; tutor must meet certification, reporting and term requirements."
+    assessment:
+      required: false
+      detail: "No annual test or evaluation requirement specified for the tutoring route."
+    subjects:
+      required: false
+      detail: "No separate required subject list; tutor’s Florida certificate must cover the subjects or grades taught."
+    instruction_time:
+      required: true
+      detail: "180 actual teaching days or the hourly equivalent under section 1011.60(2)."
+    teacher_qualifications:
+      required: true
+      detail: "Tutor must hold a valid Florida certificate for the subjects or grades taught."
+    records:
+      required: true
+      detail: "Tutor keeps enrollment and daily attendance registers and makes required state and district reports."
+  - id: "personalized-education"
+    name: "Personalized education program"
+    summary: "A parent directs education while registered with an eligible scholarship-funding organization rather than the district."
+    notice:
+      required: true
+      detail: "Register with a scholarship-funding organization, not the district; the organization submits required scholarship student information to FDOE."
+    approval:
+      required: false
+      detail: "No district curriculum approval; the scholarship organization verifies eligibility and accepts the annual learning plan."
+    assessment:
+      required: true
+      detail: "Take an FDOE-identified nationally norm-referenced test or state assessment; send results to the scholarship organization before renewal."
+    subjects:
+      required: false
+      detail: "No prescribed subjects; parent develops and annually revises a student learning plan."
+    instruction_time:
+      required: false
+      detail: "No minimum days or hours; PEP receives the school-day flexibility of home education."
+    teacher_qualifications:
+      required: false
+      detail: "No parent diploma or teaching certificate required; paid tutors must meet applicable provider qualifications."
+    records:
+      required: true
+      detail: "Submit an annual learning plan, sworn compliance statement and test results; retain documentation for scholarship purchases."
+funding:
+  available: true
+  detail: "Personalized Education Program scholarships fund curriculum and other approved expenses; this is distinct from district-registered home education."
+public_school_access:
+  available: true
+  detail: "Registered home education and PEP students may participate in public-school interscholastic extracurricular activities, subject to eligibility rules."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance generally begins at six, including children turning six by February 1, and continues until sixteen; enrolled public-school students must formally declare withdrawal at sixteen."
+    quote: "All children who have attained the age of 6 years or who will have attained the age of 6 years by February 1 of any school year or who are older than 6 years of age but who have not attained the age of 16 years, except as otherwise provided, are required to attend school regularly during the entire school term."
+    provenance: "measured"
+    source_id: "fl-compulsory-attendance"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "PEP scholarships support parent-directed education outside full-time public or private school and may buy instructional materials and curriculum."
+    quote: "The organization must verify that scholarship funds are used for:"
+    provenance: "inferred"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "Scholarship funds may pay for educational materials and curriculum."
+    quote: "Instructional materials, including digital materials and Internet resources."
+    provenance: "measured"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Registered home education students may participate in interscholastic extracurricular activities under section 1006.15."
+    quote: "Home education students may participate in interscholastic extracurricular student activities in accordance with the provisions of s."
+    provenance: "measured"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "PEP students have the same extracurricular opportunities and school-day flexibility as home education students."
+    quote: "A personalized education student shall be provided the same flexibility and opportunities as provided in s."
+    provenance: "measured"
+    source_id: "fl-education-definitions"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.notice"
+    value: "Send signed intent to the county superintendent within 30 days of starting; file termination and final evaluation within 30 days of ending."
+    quote: "The notice must be filed in the district school superintendent’s office within 30 days of the establishment of the home education program."
+    provenance: "measured"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.approval"
+    value: "No prior approval; the superintendent must accept and immediately register a complete notice."
+    quote: "The district school superintendent shall accept the notice and immediately register the home education program upon receipt of the notice."
+    provenance: "measured"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.assessment"
+    value: "File annual evaluation: certified-teacher review, approved test, psychologist evaluation or agreed tool. Prior nonattendance may trigger 30-day portfolio reviews."
+    quote: "The parent shall provide for an annual educational evaluation in which is documented the student’s demonstration of educational progress at a level commensurate with her or his ability."
+    provenance: "measured"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.subjects"
+    value: "No prescribed subject list; instruction must be sequentially progressive."
+    quote: "nothing in this section shall authorize the state or any school district to oversee or exercise control over the curricula or academic programs of private schools or home education programs."
+    provenance: "inferred"
+    source_id: "fl-compulsory-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.instruction_time"
+    value: "No minimum days or hours; home education is excluded from school-day requirements."
+    quote: "A home education program shall be excluded from meeting the requirements of a school day."
+    provenance: "measured"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.teacher_qualifications"
+    value: "No Florida teaching certificate or parent diploma required."
+    quote: "The parent is not required to hold a valid regular Florida teaching certificate."
+    provenance: "inferred"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.records"
+    value: "Keep an educational activity/reading log and work samples for two years; allow superintendent inspection on 15 days’ written notice."
+    quote: "The parent shall maintain a portfolio of records and materials."
+    provenance: "measured"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.assessment"
+    value: "A child identified with a pattern of nonattendance has committee portfolio reviews every thirty days until compliance."
+    quote: "The first portfolio review must occur within the first 30 calendar days after the establishment of the program."
+    provenance: "measured"
+    source_id: "fl-attendance-enforcement"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.notice"
+    value: "No parent homeschool notice; the private school registers with FDOE, files its annual survey and submits required attendance reports."
+    quote: "each private school shall annually execute and file a database survey form on a date designated by the Department of Education"
+    provenance: "measured"
+    source_id: "fl-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.approval"
+    value: "No FDOE approval or accreditation; select a school that offers home-based enrollment."
+    quote: "It is the intent of the Legislature not to regulate, control, approve, or accredit private educational institutions"
+    provenance: "measured"
+    source_id: "fl-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.assessment"
+    value: "No general statewide annual test; the school or a scholarship program may require testing."
+    quote: "It is the intent of the Legislature not to regulate, control, approve, or accredit private educational institutions"
+    provenance: "inferred"
+    source_id: "fl-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.subjects"
+    value: "No state-prescribed curriculum; follow the school’s program."
+    quote: "nothing in this section shall authorize the state or any school district to oversee or exercise control over the curricula or academic programs of private schools or home education programs."
+    provenance: "measured"
+    source_id: "fl-compulsory-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.instruction_time"
+    value: "180 school days, or at least 170 days plus 540 hours in kindergarten, 720 in grades 1–3 or 900 in grades 4–12."
+    quote: "A minimum of one hundred seventy (170) actual school days and the hourly equivalent of one hundred eighty (180) actual school days"
+    provenance: "measured"
+    source_id: "fl-private-school-term"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.teacher_qualifications"
+    value: "No general state teaching-license requirement; school and scholarship-program standards may apply."
+    quote: "It is the intent of the Legislature not to regulate, control, approve, or accredit private educational institutions"
+    provenance: "inferred"
+    source_id: "fl-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.records"
+    value: "School keeps enrollment and daily attendance records, required reports and permanent student records."
+    quote: "Such records shall include a register of enrollment and attendance"
+    provenance: "measured"
+    source_id: "fl-attendance-records"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.notice"
+    value: "Tutor makes required state and district reports, including regular attendance reports; no home-education intent filing."
+    quote: "makes regular reports on the attendance of students in accordance with the provisions of s."
+    provenance: "measured"
+    source_id: "fl-private-tutoring"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.approval"
+    value: "No separate program approval specified; tutor must meet certification, reporting and term requirements."
+    quote: "Holds a valid Florida certificate to teach the subjects or grades in which instruction is given."
+    provenance: "inferred"
+    source_id: "fl-private-tutoring"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.assessment"
+    value: "No annual test or evaluation requirement specified for the tutoring route."
+    quote: "Holds a valid Florida certificate to teach the subjects or grades in which instruction is given."
+    provenance: "inferred"
+    source_id: "fl-private-tutoring"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.subjects"
+    value: "No separate required subject list; tutor’s Florida certificate must cover the subjects or grades taught."
+    quote: "Holds a valid Florida certificate to teach the subjects or grades in which instruction is given."
+    provenance: "inferred"
+    source_id: "fl-private-tutoring"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.instruction_time"
+    value: "180 actual teaching days or the hourly equivalent under section 1011.60(2)."
+    quote: "Operate all schools for a term of 180 actual teaching days or the equivalent on an hourly basis as specified by rules of the State Board of Education each school year."
+    provenance: "measured"
+    source_id: "fl-school-term"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.teacher_qualifications"
+    value: "Tutor must hold a valid Florida certificate for the subjects or grades taught."
+    quote: "Holds a valid Florida certificate to teach the subjects or grades in which instruction is given."
+    provenance: "measured"
+    source_id: "fl-private-tutoring"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.records"
+    value: "Tutor keeps enrollment and daily attendance registers and makes required state and district reports."
+    quote: "The enrollment register shall show the absence or attendance of each student enrolled for each school day of the year"
+    provenance: "measured"
+    source_id: "fl-attendance-records"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.notice"
+    value: "Register with a scholarship-funding organization, not the district; the organization submits required scholarship student information to FDOE."
+    quote: "an eligible nonprofit scholarship-funding organization must submit in a timely manner the verified list of eligible scholarship students"
+    provenance: "measured"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.approval"
+    value: "No district curriculum approval; the scholarship organization verifies eligibility and accepts the annual learning plan."
+    quote: "nothing in this section authorizes a choice navigator to oversee or exercise control over the curricula or academic programs of a personalized education program."
+    provenance: "measured"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.assessment"
+    value: "Take an FDOE-identified nationally norm-referenced test or state assessment; send results to the scholarship organization before renewal."
+    quote: "Requiring his or her student to take a nationally norm-referenced test identified by the Department of Education, or a statewide assessment under s."
+    provenance: "measured"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.subjects"
+    value: "No prescribed subjects; parent develops and annually revises a student learning plan."
+    quote: "“Student learning plan” means a customized learning plan developed by a parent, at least annually, to guide instruction for his or her student and to identify the goods and services needed to address the academic needs of his or her student."
+    provenance: "inferred"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.instruction_time"
+    value: "No minimum days or hours; PEP receives the school-day flexibility of home education."
+    quote: "A personalized education student shall be provided the same flexibility and opportunities as provided in s."
+    provenance: "inferred"
+    source_id: "fl-education-definitions"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.teacher_qualifications"
+    value: "No parent diploma or teaching certificate required; paid tutors must meet applicable provider qualifications."
+    quote: "A parent whose student will not be enrolled full time in a public or private school must:"
+    provenance: "inferred"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.records"
+    value: "Submit an annual learning plan, sworn compliance statement and test results; retain documentation for scholarship purchases."
+    quote: "Submitting a student learning plan to the organization and revising the plan at least annually before program renewal."
+    provenance: "measured"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-education.records"
+    value: "Keep the portfolio two years and make it available for inspection on fifteen days’ written notice."
+    quote: "The parent shall determine the content of the portfolio, preserve it for 2 years, and make it available for inspection, if requested, by the district school superintendent, or the district school superintendent’s agent, upon 15 days’ written notice."
+    provenance: "measured"
+    source_id: "fl-home-education"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "PEP is the parent-directed scholarship route for a student who is not enrolled full time in public or private school."
+    quote: "A parent whose student will not be enrolled full time in a public or private school must:"
+    provenance: "measured"
+    source_id: "fl-tax-credit-scholarships"
+    checked_on: "2026-11-05"
+  - field: "pathways.personalized-education.notice"
+    value: "PEP registration with an eligible scholarship organization independently satisfies attendance requirements."
+    quote: "while registered with an eligible nonprofit scholarship-funding organization pursuant to s."
+    provenance: "measured"
+    source_id: "fl-education-definitions"
+    checked_on: "2026-11-05"

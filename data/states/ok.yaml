@@ -1,0 +1,116 @@
+code: "OK"
+name: "Oklahoma"
+summary: "Parents may provide home instruction as other means of education for the full district school term. State guidance distinguishes voluntary suggestions from legal requirements and requires no registration, approval or routine state tests."
+compulsory_ages:
+  min: 5
+  max: 17
+pathways:
+  -
+    id: "other-means"
+    name: "Other means of education"
+    summary: "A parent provides good-faith education at home rather than public or private school attendance."
+    notice:
+      required: false
+      detail: "No state or local registration required; notify a former school of withdrawal to avoid attendance confusion."
+    approval:
+      required: false
+      detail: "No state or district approval required."
+    assessment:
+      required: false
+      detail: "No routine state testing required; testing can apply when returning to public school."
+    subjects:
+      required: false
+      detail: "No prescribed homeschool subject list; the department recommends a defined curriculum and core school subjects."
+    instruction_time:
+      required: true
+      detail: "Provide education for the full term that district schools are in session."
+    teacher_qualifications:
+      required: false
+      detail: "A certified teacher is not required."
+    records:
+      required: false
+      detail: "No routine homeschool records mandated; retaining evidence of equivalent instruction is recommended."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Generally ages 5–17. A five-year-old may defer kindergarten by certified-mail notice to the superintendent until the next school year after turning six."
+    quote: "One-half (1/2) day of kindergarten shall be required of all children five (5) years of age or older unless the child is excused from kindergarten attendance as provided in this section."
+    provenance: "measured"
+    source_id: "ok-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "Attendance applies below age eighteen."
+    quote: "under the age of eighteen (18) years"
+    provenance: "measured"
+    source_id: "ok-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.other-means.notice"
+    value: "No state or local registration required; notify a former school of withdrawal to avoid attendance confusion."
+    quote: "Homeschools are not regulated and Oklahoma law does not require parents to register with or seek approval from state or local officials, conduct state testing with their students, or permit public school officials to visit or inspect homes."
+    provenance: "measured"
+    source_id: "ok-home-school"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.other-means.approval"
+    value: "No state or district approval required."
+    quote: "Homeschools are not regulated and Oklahoma law does not require parents to register with or seek approval from state or local officials, conduct state testing with their students, or permit public school officials to visit or inspect homes."
+    provenance: "measured"
+    source_id: "ok-home-school"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.other-means.assessment"
+    value: "No routine state testing required; testing can apply when returning to public school."
+    quote: "Homeschools are not regulated and Oklahoma law does not require parents to register with or seek approval from state or local officials, conduct state testing with their students, or permit public school officials to visit or inspect homes."
+    provenance: "measured"
+    source_id: "ok-home-school"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.other-means.subjects"
+    value: "No prescribed homeschool subject list; the department recommends a defined curriculum and core school subjects."
+    quote: "These recommendations are not required by law; however, following these suggestions would allow a parent to prove they are providing a quality education."
+    provenance: "inferred"
+    source_id: "ok-home-school"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.other-means.instruction_time"
+    value: "Provide education for the full term that district schools are in session."
+    quote: "unless other means of education are provided for the full term the schools of the district are in session"
+    provenance: "measured"
+    source_id: "ok-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.other-means.teacher_qualifications"
+    value: "A certified teacher is not required."
+    quote: "home instruction does not require a certified teacher"
+    provenance: "inferred"
+    source_id: "ok-home-school"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.other-means.records"
+    value: "No routine homeschool records mandated; retaining evidence of equivalent instruction is recommended."
+    quote: "Homeschools are not regulated and Oklahoma law does not require parents to register with or seek approval from state or local officials, conduct state testing with their students, or permit public school officials to visit or inspect homes."
+    provenance: "inferred"
+    source_id: "ok-home-school"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "A refundable Oklahoma income tax credit covers up to $1,000 per eligible homeschooled student in qualified expenses; claim with receipts."
+    quote: "Beginning in tax year 2024, a refundable income tax credit of up to $1,000 per student is allowed for Oklahoma taxpayers who pay qualified expenses on behalf of an eligible student who is homeschooled."
+    provenance: "measured"
+    source_id: "ok-homeschool-credit"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "No homeschool-access entitlement is supplied by the attendance exemption; district boards govern local school options."
+    quote: "Make rules, not inconsistent with the law or rules of the State Board of Education, governing the board and the school system of the district"
+    provenance: "inferred"
+    source_id: "ok-board-powers"
+    checked_on: "2026-11-05"
+funding:
+  available: true
+  detail: "A refundable Oklahoma income tax credit covers up to $1,000 per eligible homeschooled student in qualified expenses; claim with receipts."
+public_school_access:
+  available: false
+  detail: "No statewide right to part-time classes or interscholastic activities; ask the district about local options and activity eligibility."

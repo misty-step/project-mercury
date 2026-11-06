@@ -1,0 +1,122 @@
+code: "VT"
+name: "Vermont"
+summary: "Families enroll in home study by sending annual notice to the Agency of Education. They provide 175 days of instruction and keep an annual assessment of progress."
+compulsory_ages:
+  min: 6
+  max: 15
+pathways:
+  - id: "home-study"
+    name: "Home study program"
+    summary: "Parents provide instruction at home under the state home study enrollment statute."
+    notice:
+      required: true
+      detail: "Send initial and annual notices to the Secretary of Education at least 10 business days before starting."
+    approval:
+      required: false
+      detail: "No program approval; written acknowledgment of a complete notice verifies enrollment."
+    assessment:
+      required: true
+      detail: "Assess annually by test, teacher review, parent report/portfolio, online-school grades or GED evidence; keep the record."
+    subjects:
+      required: true
+      detail: "Teach communication/math, civics/history, literature and science; under age 13 also teach PE/health and fine arts."
+    instruction_time:
+      required: true
+      detail: "Provide the equivalent of at least 175 days each year."
+    teacher_qualifications:
+      required: false
+      detail: "No parent diploma or teaching credential required."
+    records:
+      required: true
+      detail: "Keep annual assessment records; first-time entrants need disability evidence unless previously in Vermont public school."
+funding:
+  available: false
+  detail: "No state or local funding for a home study program."
+public_school_access:
+  available: true
+  detail: "Home study students may take up to two core courses plus electives and activities locally, as space permits."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance generally applies from age 6 until age 16; completing grade 10 is an exception."
+    quote: "The parent or guardian of a child between six and 16 years of age shall cause the child to attend a public school, an approved or recognized independent school, an approved education program, or a home study program for the full number of days for which that school is held, unless the child:"
+    provenance: "measured"
+    source_id: "vt-1121"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.notice"
+    value: "Send initial and annual notices to the Secretary of Education at least 10 business days before starting."
+    quote: "A parent or legal guardian shall send the Secretary notice of intent to enroll the parent’s or legal guardian’s child in a home study program at least 10 business days prior to commencing home study."
+    provenance: "measured"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.approval"
+    value: "No program approval; written acknowledgment of a complete notice verifies enrollment."
+    quote: "Within 10 business days following submission of a complete enrollment notice, the Secretary or designee shall send the home study program a written acknowledgment of receipt, which shall constitute sufficient enrollment verification for purposes of section 1121 of this title."
+    provenance: "inferred"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.assessment"
+    value: "Assess annually by test, teacher review, parent report/portfolio, online-school grades or GED evidence; keep the record."
+    quote: "An attestation that the academic progress of each child enrolled in a home study program will be assessed at the end of each school year and that the parent or guardian will maintain the record of such assessments."
+    provenance: "measured"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.subjects"
+    value: "Teach communication/math, civics/history, literature and science; under age 13 also teach PE/health and fine arts."
+    quote: "An attestation that each child being enrolled in home study will be provided the equivalent of at least 175 days of instruction in the minimum course of study per year, specifically:"
+    provenance: "measured"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.instruction_time"
+    value: "Provide the equivalent of at least 175 days each year."
+    quote: "An attestation that each child being enrolled in home study will be provided the equivalent of at least 175 days of instruction in the minimum course of study per year, specifically:"
+    provenance: "measured"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.teacher_qualifications"
+    value: "No parent diploma or teaching credential required."
+    quote: "A parent or legal guardian shall send the Secretary notice of intent to enroll the parent’s or legal guardian’s child in a home study program at least 10 business days prior to commencing home study."
+    provenance: "inferred"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.records"
+    value: "Keep annual assessment records; first-time entrants need disability evidence unless previously in Vermont public school."
+    quote: "An attestation that the academic progress of each child enrolled in a home study program will be assessed at the end of each school year and that the parent or guardian will maintain the record of such assessments."
+    provenance: "measured"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No state or local funding for a home study program."
+    quote: "There is no money available to pay for a Home Study Program at either the State level or the local level."
+    provenance: "measured"
+    source_id: "vt-aoe-home-study"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Home study students may take up to two core courses plus electives and activities locally, as space permits."
+    quote: "Home study students are permitted to enroll at their local school for up to 2 of the 5 main courses (Math, Science, Reading and Writing, History/Civics/Government, and Literature), as well as electives, athletics, and extra-curricular activities, as space permits."
+    provenance: "measured"
+    source_id: "vt-aoe-home-study"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.subjects"
+    value: "The minimum course includes communication/numbers, civics/history, PE/health, literature, natural sciences and fine arts."
+    quote: "(1) basic communication skills, including reading, writing, and the use of numbers;\n\n(2) citizenship, history, and government in Vermont and the United States;"
+    provenance: "measured"
+    source_id: "vt-906"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.subjects"
+    value: "The remaining minimum-course subjects are PE/health, literature, natural sciences and fine arts."
+    quote: "(3) physical education and comprehensive health education, including the effects of tobacco, alcoholic drinks, and drugs on the human system and on society;\n\n(4) English, American, and other literature;\n\n(5) the natural sciences; and\n\n(6) the fine arts."
+    provenance: "measured"
+    source_id: "vt-906"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.subjects"
+    value: "From age 13 the required course omits the PE/health and fine-arts categories."
+    quote: "(A) for a child who is younger than 13 years of age, the subject areas listed in section 906 of this title;\n\n(B) for a child who is 13 years of age or older, the subject areas listed in subdivisions 906(b)(1), (2), (4), and (5) of this title; or"
+    provenance: "inferred"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-study.records"
+    value: "A child not previously enrolled in Vermont public school or home study needs independent professional evidence about disability."
+    quote: "For each child not previously enrolled in a Vermont public school or Vermont home study program, independent professional evidence regarding whether the child has a documented disability and how the disability may affect the student’s educational progress in a home study program."
+    provenance: "measured"
+    source_id: "vt-166b"
+    checked_on: "2026-11-05"

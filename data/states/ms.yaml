@@ -1,0 +1,85 @@
+code: MS
+name: Mississippi
+summary: >-
+  Families may use a legitimate home instruction program and file an enrollment certificate each year. The state does not prescribe a homeschool curriculum, testing, or parent credentials.
+compulsory_ages: { min: 6, max: 16 }
+pathways:
+  - id: home-instruction
+    name: Legitimate home instruction program
+    summary: Parents educate children in a genuine home instruction program rather than enrolling them in public school.
+    notice: { required: true, detail: "File an enrollment certificate with the local School Attendance Officer annually by August 15; later public-school-to-homeschool transfers are permitted." }
+    approval: { required: false, detail: "Not required; filing the enrollment certificate is notification, not program approval." }
+    assessment: { required: false, detail: "No mandatory standardized test or evaluation." }
+    subjects: { required: false, detail: "No prescribed subjects; parents choose the curriculum." }
+    instruction_time: { required: false, detail: "No fixed homeschool days or hours; the nonpublic school sets its term for grade promotion." }
+    teacher_qualifications: { required: false, detail: "No minimum parent diploma or teaching credential required." }
+    records: { required: false, detail: "No academic or attendance records required beyond the annual enrollment filing; portfolios and retaining the form are recommended." }
+funding: { available: false, detail: "No state homeschool ESA or education-expense tax benefit; Mississippi's special-needs ESA excludes home instruction programs." }
+public_school_access: { available: false, detail: "No statewide right to part-time public classes or activities; ask the district about local policies." }
+claims:
+  - field: compulsory_ages
+    value: Attendance applies from age 6 through age 16 as determined on September 1; enrolled five-year-old public kindergarten students are also covered.
+    quote: "a child who has attained or will attain the age of six (6) years on or before September 1 of the calendar year and who has not attained the age of seventeen (17) years on or before September 1 of the calendar year"
+    provenance: measured
+    source_id: ms-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.notice
+    value: File with the local School Attendance Officer each year by August 15 under current MDE guidance; the older code mirror's September deadline is superseded.
+    quote: "Every family who wishes to home school compulsory school age children must complete an enrollment form with the local School Attendance Officer for every year the child home schools."
+    provenance: measured
+    source_id: ms-home-school
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.notice
+    value: The current annual enrollment deadline is August 15.
+    quote: "Home school enrollment must be completed by August 15 of each school year."
+    provenance: measured
+    source_id: ms-home-school
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.approval
+    value: The statute recognizes legitimate home instruction without requiring state or district program approval.
+    quote: "When a compulsory-school-age child is being educated in a legitimate home instruction program."
+    provenance: inferred
+    source_id: ms-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.assessment
+    value: The agency's required-parent action is enrollment; assessments and portfolios are recommendations rather than mandates.
+    quote: "Complete home school enrollment form with the local School Attendance Officer by August 15."
+    provenance: inferred
+    source_id: ms-home-school
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.subjects
+    value: The attendance law does not authorize the state to control a home instruction curriculum or prescribe subjects.
+    quote: "any right or authority to any state agency or other entity to control, manage, supervise, provide for or affect the operation, management, program, curriculum, admissions policy or discipline of any such school or home instruction program."
+    provenance: inferred
+    source_id: ms-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.instruction_time
+    value: Nonpublic programs set the school term needed for grade promotion, rather than a fixed 180-day homeschool requirement.
+    quote: "except that the “nonpublic” school term shall be the number of days that each school shall require for promotion from grade to grade."
+    provenance: inferred
+    source_id: ms-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.teacher_qualifications
+    value: The required-parent action does not impose a diploma or teaching credential.
+    quote: "Complete home school enrollment form with the local School Attendance Officer by August 15."
+    provenance: inferred
+    source_id: ms-home-school
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.records
+    value: Academic portfolios and assessment records are recommended, not required; the mandatory filing is the annual enrollment certificate.
+    quote: "Complete home school enrollment form with the local School Attendance Officer by August 15."
+    provenance: inferred
+    source_id: ms-home-school
+    checked_on: "2026-11-05"
+  - field: funding
+    value: No general state homeschool funding program was identified; the special-needs ESA expressly excludes home instruction.
+    quote: "An eligible school does not include a home instruction program under Section 37-13-91, Mississippi Code of 1972."
+    provenance: inferred
+    source_id: ms-esa
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: State law delegates operation of public activities to school boards rather than granting homeschoolers a statewide participation right.
+    quote: "To provide athletic programs and other school activities and to regulate the establishment and operation of such programs and activities;"
+    provenance: inferred
+    source_id: ms-school-board
+    checked_on: "2026-11-05"

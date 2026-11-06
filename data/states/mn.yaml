@@ -1,0 +1,179 @@
+code: MN
+name: Minnesota
+summary: >-
+  Home schools are nonpublic schools and must report enrollment and continuation to the resident superintendent and teach required subjects. Unaccredited home schools keep instructional documentation and arrange annual achievement testing; recognized accreditation exempts the statutory testing and documentation duties.
+compulsory_ages: { min: 7, max: 16 }
+pathways:
+  - id: unaccredited
+    name: Unaccredited home school
+    summary: The parent or another qualified instructor teaches a reported home school and arranges achievement testing with the resident superintendent.
+    notice: { required: true, detail: "Report to the resident superintendent by October 1 initially and annually; withdrawal from public school after age 7 or moving out of a district triggers a 15-day report." }
+    approval: { required: false, detail: "No advance program approval; agree with the superintendent on the annual test and its administration and location." }
+    assessment: { required: true, detail: "Annual nationally normed test at ages 7-16; testing also covers 16-17-year-olds first reported after 16. Additional subject testing or evaluation may be required." }
+    subjects: { required: true, detail: "Reading, writing, literature, fine arts, math, science, history, geography, economics, government, citizenship, health, and PE; instruction/materials generally in English." }
+    instruction_time: { required: false, detail: "No fixed homeschool days or hours in the compulsory-instruction requirements." }
+    teacher_qualifications: { required: true, detail: "A tested child's parent may teach without a degree; other instructors need a Minnesota license, licensed supervision, bachelor's degree, or recognized accredited-school instruction." }
+    records: { required: true, detail: "Keep subject-coverage records, schedules, instructional materials, assessment methods and test proof/results; provide required records for public-school entry or enforcement." }
+  - id: accredited
+    name: Accredited home school
+    summary: A home school accredited by a state-recognized accreditor reports enrollment and teaches required subjects, with statutory testing and documentation exemptions.
+    notice: { required: true, detail: "Report enrollment/instructors to the resident superintendent by October 1 and file annual continuation; report a move out within 15 days and to a new district by October 1." }
+    approval: { required: false, detail: "No district program approval; the home school itself must hold accreditation recognized by the state, not merely use an accredited curriculum." }
+    assessment: { required: false, detail: "Exempt from the statutory annual achievement test; comply with the accreditor's own standards." }
+    subjects: { required: true, detail: "Reading, writing, literature, fine arts, math, science, history, geography, economics, government, citizenship, health, and PE; instruction/materials generally in English." }
+    instruction_time: { required: false, detail: "No fixed state homeschool days or hours; the accreditor may impose its own instructional standards." }
+    teacher_qualifications: { required: true, detail: "Instruction in a state-recognized accredited school satisfies an instructor-qualification option; a separate parent degree is not required." }
+    records: { required: false, detail: "Exempt from section 120A.24 subdivision 2 instructional-documentation duties; enrollment reports remain required and the accreditor may require records." }
+funding: { available: true, detail: "Qualifying homeschool expenses may receive Minnesota's K-12 Education Credit or education subtraction; income and expense rules apply." }
+public_school_access: { available: true, detail: "Resident home schools with five or fewer students have equal-basis extracurricular access, including sports; part-time academic classes depend on local policy." }
+claims:
+  - field: compulsory_ages
+    value: "General compulsory instruction runs from age 7 until age 17 unless the child has graduated; public-school enrollment can trigger duties below age 7."
+    quote: "Every child between seven and 17 years of age must receive instruction unless the child has graduated."
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "The department describes the general compulsory-instruction endpoint as age 17, making 16 the last full required age."
+    quote: "Minnesota’s compulsory instruction statute, which requires students to be in school until age 17, only applies to students who have not yet graduated."
+    provenance: measured
+    source_id: mn-doe-faq
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.notice
+    value: "Initial reports are due by October 1 or within 15 days after withdrawal or moving out, with reporting to a new resident district by October 1."
+    quote: "by October 1 of the first school year the child receives instruction after reaching the age of seven;"
+    provenance: measured
+    source_id: mn-120a24
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.notice
+    value: "An annual continuation letter is required by October 1."
+    quote: "must submit, by October 1 of each school year, a letter of intent to continue to provide instruction under this section for all students under the person's or school's supervision and any changes to the information required in paragraph (a) for each student."
+    provenance: measured
+    source_id: mn-120a24
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.notice
+    value: "Withdrawal after age seven triggers a report within 15 days."
+    quote: "within 15 days of when a parent withdraws a child from public school after age seven to provide instruction in a nonpublic school that is not accredited by a state-recognized accredited agency;"
+    provenance: measured
+    source_id: mn-120a24
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.approval
+    value: "The law requires reporting rather than approval of the program, though agreement on testing is required."
+    quote: "The superintendent of the district in which the child receives instruction and the person in charge of the child's instruction must agree about the specific examination to be used and the administration and location of the examination."
+    provenance: inferred
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.assessment
+    value: "Annual nationally norm-referenced testing applies to ages 7-16, with an extension for students first reported after 16."
+    quote: "Each year the performance of every child ages seven through 16 and every child ages 16 through 17 for which an initial report was filed pursuant to section"
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.assessment
+    value: "Testing is annually required unless the school qualifies for accreditation exemption."
+    quote: "must be assessed using a nationally norm-referenced standardized achievement examination."
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.assessment
+    value: "Additional evaluation is needed for performance at or below the 30th percentile or a grade below same-age peers."
+    quote: "the parent must obtain additional evaluation of the child's abilities and performance for the purpose of determining whether the child has learning problems."
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.subjects
+    value: "The statute names communication, fine arts, mathematics, science, social studies, health, and physical education."
+    quote: "Instruction must be provided in at least the following subject areas:"
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.subjects
+    value: "Required subjects include the listed communication, STEM, social-studies, and health/PE areas."
+    quote: "(1) basic communication skills including reading and writing, literature, and fine arts; (2) mathematics and science; (3) social studies including history, geography, economics, government, and citizenship; and (4) health and physical education."
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.instruction_time
+    value: "The homeschool compliance statute defines required instruction but sets no numerical days or hours."
+    quote: "a nonpublic school, church or religious organization, or home school in which a child is provided instruction in compliance with this section and section"
+    provenance: inferred
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.teacher_qualifications
+    value: "A parent of a tested child qualifies without a degree; alternatives include licensure, supervision, accreditation, or a bachelor's degree."
+    quote: "(4) hold a baccalaureate degree; or (5) be the parent of a child who is assessed according to the procedures in subdivision 11."
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.unaccredited.records
+    value: "Keep schedules, instructional materials, and descriptions of assessment methods as part of the required documentation."
+    quote: "This documentation must include class schedules, copies of materials used for instruction, and descriptions of methods used to assess student achievement."
+    provenance: measured
+    source_id: mn-120a24
+    checked_on: "2026-11-05"
+  - field: pathways.accredited.notice
+    value: "Accreditation does not exempt initial enrollment and annual continuation reports."
+    quote: "The person or nonpublic school in charge of providing instruction to a child must submit to the superintendent of the district in which the child resides the name, birth date, and address of the child;"
+    provenance: inferred
+    source_id: mn-120a24
+    checked_on: "2026-11-05"
+  - field: pathways.accredited.approval
+    value: "No district preapproval is prescribed; recognized accreditation must apply to the home school itself."
+    quote: "Using an accredited curriculum does not make one’s homeschool accredited."
+    provenance: inferred
+    source_id: mn-doe-faq
+    checked_on: "2026-11-05"
+  - field: pathways.accredited.assessment
+    value: "Accreditation recognized by the state exempts the home school from the statutory annual testing requirement."
+    quote: "An accredited homeschool is exempt from the testing requirement"
+    provenance: measured
+    source_id: mn-doe-faq
+    checked_on: "2026-11-05"
+  - field: pathways.accredited.subjects
+    value: "Accreditation does not remove the statutory subject requirements."
+    quote: "(1) basic communication skills including reading and writing, literature, and fine arts; (2) mathematics and science; (3) social studies including history, geography, economics, government, and citizenship; and (4) health and physical education."
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.accredited.instruction_time
+    value: "No numerical days or hours are set for home schools by the compulsory-instruction statute."
+    quote: "a nonpublic school, church or religious organization, or home school in which a child is provided instruction in compliance with this section and section"
+    provenance: inferred
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.accredited.teacher_qualifications
+    value: "Providing instruction in a state-recognized accredited school is an instructor-qualification option."
+    quote: "provide instruction in a school that is accredited by an accrediting agency, recognized according to section"
+    provenance: measured
+    source_id: mn-120a22
+    checked_on: "2026-11-05"
+  - field: pathways.accredited.records
+    value: "Recognized accreditation exempts subdivision 2 instructional-documentation rules, not the enrollment-reporting rules."
+    quote: "is exempt from the requirements in subdivision 2."
+    provenance: measured
+    source_id: mn-120a24
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "Qualifying home-school expenses may receive a K-12 education tax credit or subtraction."
+    quote: "You may qualify for the Minnesota K-12 Education Subtraction and Credit if you home school your children."
+    provenance: measured
+    source_id: mn-revenue-homeschool
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Resident homeschool students are eligible for extracurricular activities on the same basis as public students; the statutory definition covers home schools with five or fewer students."
+    quote: "to be eligible to fully participate in extracurricular activities on the same basis as public school students."
+    provenance: measured
+    source_id: mn-123b49
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Extracurricular access applies to home schools and other nonpublic schools with five or fewer students."
+    quote: "Homeschools and other nonpublic schools with five or fewer students may participate in their resident school district’s extracurricular activities"
+    provenance: measured
+    source_id: mn-doe-faq
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Part-time academic shared-time access is determined by local policy."
+    quote: "Nonpublic school students, including homeschool students, without an IEP can request shared time instruction from any public school in Minnesota, but local policy will determine whether the shared time option is available to the student and, if so, what the limitations are."
+    provenance: measured
+    source_id: mn-doe-faq
+    checked_on: "2026-11-05"

@@ -1,0 +1,271 @@
+code: IA
+name: Iowa
+summary: >-
+  Iowa permits parent-provided competent private instruction with no reporting, independent private instruction, and more structured competent private instruction with licensed supervision or annual reporting and evaluation. Public-school dual enrollment is available through reporting CPI options.
+compulsory_ages: { min: 6, max: 15 }
+pathways:
+  - id: cpi-no-reporting
+    name: Competent private instruction — Option 2 with reporting exemption
+    summary: A parent, guardian or custodian provides instruction without filing Form A, licensed supervision or annual evaluation reporting.
+    notice: { required: false, detail: "No Form A or district notification required under the reporting exemption; no dual enrollment through this option." }
+    approval: { required: false, detail: "No prior state or district approval required." }
+    assessment: { required: false, detail: "No required annual test, portfolio review or progress report under the reporting exemption." }
+    subjects: { required: false, detail: "Parent-CPI statute names none; DOE handbook says to teach reading/language arts, mathematics, science and social studies. Follow the agency guidance to avoid dispute." }
+    instruction_time: { required: false, detail: "No minimum days or hours in parent-CPI statute; the 148-day statutory minimum applies to licensed-practitioner CPI." }
+    teacher_qualifications: { required: false, detail: "No parent diploma or teaching license required." }
+    records: { required: false, detail: "No mandatory Form A or annual evaluation records under this option; a plan and course of study still define private instruction." }
+  - id: independent
+    name: Independent private instruction
+    summary: An unaccredited private or religious instructional program teaches the core subjects and answers specified district or department information requests.
+    notice: { required: true, detail: "No initial filing; upon written request, report instructor, location, responsible authority and students to the superintendent or DOE director." }
+    approval: { required: false, detail: "No program approval or accreditation required." }
+    assessment: { required: false, detail: "No mandatory annual testing or progress evaluation." }
+    subjects: { required: true, detail: "Mathematics, reading and language arts, science and social studies in all grade levels." }
+    instruction_time: { required: false, detail: "No minimum instructional days or hours specified for IPI." }
+    teacher_qualifications: { required: false, detail: "No minimum instructor degree or license required." }
+    records: { required: true, detail: "Provide instructor, location, responsible authority and student information if requested in writing; no annual progress records required." }
+  - id: cpi-licensed
+    name: Competent private instruction — Option 1
+    summary: A licensed practitioner provides or supervises instruction, privately retained or through an available homeschool assistance program.
+    notice: { required: true, detail: "File Form A with the district by September 1; HSAP-only enrollment deadline is September 15. Midyear withdrawal/move deadlines apply." }
+    approval: { required: false, detail: "No initial program approval required." }
+    assessment: { required: true, detail: "The supervising practitioner provides formal and informal progress assessments; no statewide annual standardized test required." }
+    subjects: { required: false, detail: "No fixed subject list in the licensed-CPI statute; instruction must produce adequate progress." }
+    instruction_time: { required: true, detail: "At least 148 days each school year, with at least 37 days each quarter." }
+    teacher_qualifications: { required: true, detail: "Instruction or supervision by an Iowa-licensed practitioner qualified for the child's age/grade; may be a licensed parent or HSAP teacher." }
+    records: { required: true, detail: "Submit Form A/course-of-study information; privately retained supervising practitioners keep an annual visitation and assistance log." }
+  - id: cpi-reporting
+    name: Competent private instruction — Option 2 with reporting
+    summary: A parent without a teaching license reports instruction and annual achievement, permitting public-school dual enrollment.
+    notice: { required: true, detail: "Submit Form A to the district by September 1; after midyear withdrawal, file within 14 days, completing it within 30 days." }
+    approval: { required: false, detail: "No initial program approval; inadequate progress may require an approved remediation plan to continue." }
+    assessment: { required: true, detail: "Complete annual approved testing, portfolio review or accredited correspondence-school evaluation by May 31; report results by August 1." }
+    subjects: { required: false, detail: "No fixed subject list in parent-CPI statute; annual evaluation measures reading, language arts and math, plus science/social studies in higher grades." }
+    instruction_time: { required: false, detail: "No minimum days or hours in parent-CPI statute; DOE handbook applies a 148-day/37-per-quarter expectation to CPI generally." }
+    teacher_qualifications: { required: false, detail: "No parent diploma or teaching license required; portfolio evaluators must be appropriately Iowa-licensed." }
+    records: { required: true, detail: "File Form A with course-of-study information and submit annual evaluation results by August 1; portfolio option needs work samples and instructional records." }
+funding: { available: true, detail: "Qualifying homeschool tuition and textbooks can receive Iowa's income-tax credit: 25% of up to $2,000 per dependent. ESA-funded purchases do not qualify." }
+public_school_access: { available: true, detail: "Reporting CPI students may dual enroll for public-school classes and extracurricular activities; IPI and CPI reporting-exemption students cannot ordinarily dual enroll." }
+claims:
+  - field: compulsory_ages
+    value: "A child who is 6 and under 16 by September 15 is compulsory age; enrolled school pupils turning 16 on or after that date finish the school year."
+    quote: "a child who has reached the age of six and is under sixteen years of age by September 15 is of compulsory attendance age."
+    provenance: measured
+    source_id: ia-code-age
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "A school-district or accredited-nonpublic-school enrollee who turns 16 on or after September 15 remains compulsory age until the regular calendar ends."
+    quote: "However, if a child enrolled in a school district or accredited nonpublic school reaches the age of sixteen on or after September 15, the child remains of compulsory age until the end of the regular school calendar."
+    provenance: measured
+    source_id: ia-code-age
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-no-reporting.notice
+    value: "No district notice or Form A is required under the reporting exemption."
+    quote: "If your student(s) are not currently enrolled, or have not ever been enrolled, you are not required to let the district know that you are homeschooling under CPI Option #2 Opt-Out (No) Reporting. No reporting is required."
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-no-reporting.approval
+    value: "The reporting-exemption pathway does not require prior approval."
+    quote: "This pathway does not require the family to file Form A or submit documentation regarding the curriculum being used, or provide proof of adequate annual progress with the local school district or the Iowa Department of Education."
+    provenance: inferred
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-no-reporting.assessment
+    value: "Annual evaluation and progress reporting are optional under parent CPI when the reporting exemption is used."
+    quote: "A parent, guardian, or legal custodian of a child of compulsory attendance age providing competent private instruction to the child may meet all of the following requirements:"
+    provenance: inferred
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-no-reporting.subjects
+    value: "The parent-CPI statute requires private instruction but names no mandatory subjects; the general definition requires a plan and course of study."
+    quote: "“Private instruction” means instruction using a plan and a course of study in a setting other than a public or organized accredited nonpublic school."
+    provenance: inferred
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-no-reporting.instruction_time
+    value: "The separate parent-CPI definition does not incorporate the licensed-practitioner definition's 148 days or 37 days per quarter."
+    quote: "(2) Private instruction provided by a parent, guardian, or legal custodian under section 299A.3."
+    provenance: inferred
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-no-reporting.teacher_qualifications
+    value: "No parent teaching license or minimum degree is specified for parent CPI."
+    quote: "A parent, guardian, or legal custodian without a current Iowa teaching license providing competent private instruction for any child of compulsory age may:"
+    provenance: inferred
+    source_id: ia-private-rules
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-no-reporting.records
+    value: "No Form A, curriculum submission or annual progress proof is required under the exemption."
+    quote: "This pathway does not require the family to file Form A or submit documentation regarding the curriculum being used, or provide proof of adequate annual progress with the local school district or the Iowa Department of Education."
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.independent.notice
+    value: "IPI has no routine filing but must answer a written superintendent or DOE director request with specified identifying information."
+    quote: "provides, upon written request from the superintendent of the school district, in which the IPI is provided or from the director of the Department, a report identifying the primary instructor, location, name of the authority responsible for the IPI, and names of the students receiving the instruction, who need not be related to the primary instructor;"
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.independent.approval
+    value: "IPI does not require program approval or accreditation."
+    quote: "The Independent Private Instruction (IPI) pathway does not require the family to file any forms or submit documentation regarding the curriculum you are using, or provide proof of adequate annual progress with the local school district or the Iowa Department of Education."
+    provenance: inferred
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.independent.assessment
+    value: "IPI has no mandatory annual evaluation or progress report."
+    quote: "An IPI instructor is responsible for their student’s progress, but is not required to report student progress to the district or the Iowa Department of Education."
+    provenance: inferred
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.independent.subjects
+    value: "IPI must teach math, reading and language arts, science and social studies in all grades."
+    quote: "Provides students in all grade levels with instruction in mathematics, reading and language arts, science, and social studies;"
+    provenance: measured
+    source_id: ia-doe-private
+    checked_on: "2026-11-05"
+  - field: pathways.independent.instruction_time
+    value: "The IPI definition exempts it from general school rules and specifies no instructional days or hours."
+    quote: "Is exempt from all state statutes and administrative rules applicable to a school, a school board, or a school district, except as otherwise provided"
+    provenance: inferred
+    source_id: ia-doe-private
+    checked_on: "2026-11-05"
+  - field: pathways.independent.teacher_qualifications
+    value: "The IPI requirements name an instructor but set no diploma, degree or licensing minimum."
+    quote: "provides, upon written request from the superintendent of the school district, in which the IPI is provided or from the director of the Department, a report identifying the primary instructor, location, name of the authority responsible for the IPI, and names of the students receiving the instruction, who need not be related to the primary instructor;"
+    provenance: inferred
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.independent.records
+    value: "A report of instructor, location, authority and students must be supplied on written request."
+    quote: "provides, upon written request from the superintendent of the school district, in which the IPI is provided or from the director of the Department, a report identifying the primary instructor, location, name of the authority responsible for the IPI, and names of the students receiving the instruction, who need not be related to the primary instructor;"
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.notice
+    value: "Option 1 must file Form A; HSAP participation is included."
+    quote: "A parent, guardian or legal custodian who would like to enroll their child/children in CPI Option #1, including HSAP participation, CPI Option #2 with dual enrollment or CPI optional reporting must file Form A"
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.notice
+    value: "The regular filing deadline is September 1; HSAP-only participation has a September 15 deadline."
+    quote: "Families who are filing Form A for the purpose of participating in a HSAP, if offered by the district, have until September 15 to file Form A. If the family would like to dual enroll and participate in the HSAP if offered, they need to file by the September 1 deadline"
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.approval
+    value: "The licensed-CPI provision requires an appropriate license, not prior program approval."
+    quote: "If a licensed practitioner provides competent instruction to a school-age child, the practitioner shall possess a valid license or certificate which has been issued by the state board of educational examiners"
+    provenance: inferred
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.assessment
+    value: "The supervising practitioner must provide formal and informal progress assessments, though a statewide annual test is not required."
+    quote: "Providing formal and informal assessments of the student’s progress to the student and the student’s parent, guardian, or legal or actual custodian."
+    provenance: measured
+    source_id: ia-private-rules
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.subjects
+    value: "Licensed CPI has no fixed statutory subject list; its instruction must result in adequate progress."
+    quote: "Private instruction provided on a daily basis for at least one hundred forty-eight days during a school year, to be met by attendance for at least thirty-seven days each school quarter, by or under the supervision of a licensed practitioner in the manner provided under section 299A.2, which results in the student making adequate progress."
+    provenance: inferred
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.instruction_time
+    value: "Licensed CPI requires at least 148 instructional days, including 37 in each quarter."
+    quote: "Private instruction provided on a daily basis for at least one hundred forty-eight days during a school year, to be met by attendance for at least thirty-seven days each school quarter"
+    provenance: measured
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.teacher_qualifications
+    value: "The supervising practitioner must hold a valid Iowa license or certificate."
+    quote: "the practitioner shall possess a valid license or certificate which has been issued by the state board of educational examiners under chapter 256, subchapter VII, part 3"
+    provenance: measured
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-licensed.records
+    value: "Privately retained supervising practitioners maintain an annual visitation and assistance log."
+    quote: "Annually maintaining a diary, record, or log of visitations and assistance provided."
+    provenance: measured
+    source_id: ia-private-rules
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-reporting.notice
+    value: "File Form A by September 1, or within 14 days after withdrawal/move, completing it within 30 days."
+    quote: "By September 1 or within 14 calendar days of moving or removing the student from an accredited school, complete as fully as possible AND within 30 calendar days, fully completed."
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-reporting.approval
+    value: "Initial parent CPI requires no approval, but after inadequate progress an approved remediation plan can be required to continue."
+    quote: "the director or director’s designee grants approval for competent private instruction to continue under a plan for remediation."
+    provenance: inferred
+    source_id: ia-private-rules
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-reporting.assessment
+    value: "Reporting CPI Option 2 requires annual assessment completed by May 31."
+    quote: "the deadline to complete the assessment of choice for proof of adequate annual progress is May 31 of the current school year."
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-reporting.subjects
+    value: "The parent-CPI statute does not prescribe subjects, but annual evaluation requires progress in named areas."
+    quote: "For children in grade levels six and above, “adequate progress” also means that the child has achieved evaluation scores in both science and social studies which are above the thirtieth percentile"
+    provenance: inferred
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-reporting.instruction_time
+    value: "The parent-CPI definition is separate from licensed CPI and incorporates no days or hours."
+    quote: "(2) Private instruction provided by a parent, guardian, or legal custodian under section 299A.3."
+    provenance: inferred
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-reporting.teacher_qualifications
+    value: "No current Iowa teaching license or minimum parent degree is required for Option 2."
+    quote: "A parent, guardian, or legal custodian without a current Iowa teaching license providing competent private instruction for any child of compulsory age may:"
+    provenance: inferred
+    source_id: ia-private-rules
+    checked_on: "2026-11-05"
+  - field: pathways.cpi-reporting.records
+    value: "Annual evaluation results must be reported to the district and department by August 1."
+    quote: "Ensure that the results of the child’s annual evaluation are reported to the school district of residence of the child and to the department of education by a date not later than August 1"
+    provenance: measured
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "Homeschool dependents are eligible for the tuition and textbook credit."
+    quote: "Taxpayers who have one or more dependents receiving private instruction in Iowa, as defined in section 422.12 (also referred to as homeschooling), or attending kindergarten through 12th grade in an accredited Iowa school"
+    provenance: measured
+    source_id: ia-revenue-credit
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The credit is 25% of the first $2,000 of qualifying expenses per dependent."
+    quote: "The credit amount is 25% of the first $2,000 of qualifying expenses paid for each dependent’s tuition and textbooks."
+    provenance: measured
+    source_id: ia-revenue-credit
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "ESA-funded purchases cannot also earn the credit."
+    quote: "Purchases made from Students First Educational Savings Account (ESA) funds authorized under Iowa Code section 257.11B are not eligible for the tuition and textbook credit."
+    provenance: measured
+    source_id: ia-revenue-credit
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Dual-enrolled CPI children have statutory access to district academics and extracurricular activities on the public-school basis."
+    quote: "the child shall be permitted to participate in any academic activities in the district and shall also be permitted to participate on the same basis as public school children in any extracurricular activities available to children in the child’s grade or group."
+    provenance: measured
+    source_id: ia-code-299a
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "CPI no-reporting families give up ordinary dual enrollment."
+    quote: "When a family chooses this option, they relinquish the ability to dual enroll for academics, activities or special education services. Dual enrollment requires compliance with the reporting and assessment requirements of Iowa Code 299.4."
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "IPI families cannot ordinarily dual enroll for academics, activities or special education."
+    quote: "Your student(s) may not dual enroll for academics, activities or special education services."
+    provenance: measured
+    source_id: ia-private-handbook
+    checked_on: "2026-11-05"

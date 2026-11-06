@@ -1,0 +1,15 @@
+- id: il-isbe-homeschool
+  url: https://www.isbe.net/Documents/Illinois-Homeschooling.pdf
+  publisher: Illinois State Board of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: il-attendance
+  url: https://law.justia.com/codes/illinois/chapter-105/act-105-ilcs-5/article-26/
+  publisher: Justia (mirror of Illinois Compiled Statutes)
+  type: statute
+  checked_on: "2026-11-05"
+- id: il-education-credit
+  url: https://tax.illinois.gov/research/publications/pubs/education-expense-credit-general-rules.html
+  publisher: Illinois Department of Revenue
+  type: agency
+  checked_on: "2026-11-05"

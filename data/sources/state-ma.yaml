@@ -1,0 +1,24 @@
+-
+  id: "ma-attendance"
+  url: "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXII/Chapter76/Section1"
+  publisher: "Massachusetts General Court"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ma-law-library"
+  url: "https://www.mass.gov/info-details/massachusetts-law-about-home-schooling"
+  publisher: "Massachusetts Trial Court Law Libraries"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ma-age"
+  url: "https://www.law.cornell.edu/regulations/massachusetts/603-CMR-8-02"
+  publisher: "Cornell Legal Information Institute (mirror of Massachusetts regulations)"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ma-tax"
+  url: "https://www.mass.gov/info-details/education-related-tax-deductions"
+  publisher: "Massachusetts Department of Revenue"
+  type: "agency"
+  checked_on: "2026-11-05"

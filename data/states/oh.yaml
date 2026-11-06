@@ -1,0 +1,218 @@
+code: "OH"
+name: "Ohio"
+summary: "Parents may direct home education by notifying the district and teaching six subject areas, without routine testing or hour requirements. A religious nonchartered school is a separate option with school standards and reporting."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "home-education"
+    name: "Home education"
+    summary: "A parent directs education and files notice with the resident district superintendent."
+    notice:
+      required: true
+      detail: "Notify the resident superintendent within five calendar days of starting, moving districts or withdrawal; renew by August 30."
+    approval:
+      required: false
+      detail: "No approval required; exemption begins when notice is received."
+    assessment:
+      required: false
+      detail: "No routine tests or evaluations required under the home education statute."
+    subjects:
+      required: true
+      detail: "Teach English language arts, mathematics, science, history, government and social studies."
+    instruction_time:
+      required: false
+      detail: "No minimum days or hours specified."
+    teacher_qualifications:
+      required: false
+      detail: "No diploma or teaching license required."
+    records:
+      required: false
+      detail: "No attendance log or portfolio required; submit the notice."
+  -
+    id: "nonchartered-religious-school"
+    name: "Nonchartered nonpublic school"
+    summary: "A family may operate a nonchartered school because of truly held religious beliefs, meeting the statutory school standards."
+    notice:
+      required: true
+      detail: "Report enrollment to the district treasurer within the first two school weeks; file annual standards certification with the state by September 30."
+    approval:
+      required: false
+      detail: "No charter approval required for a school not seeking a charter because of truly held religious beliefs."
+    assessment:
+      required: false
+      detail: "No standardized test or external evaluation required by these minimum standards."
+    subjects:
+      required: true
+      detail: "Language arts; geography, U.S./Ohio history and government; math; science; health; PE; fine arts/music; first aid, safety and fire prevention."
+    instruction_time:
+      required: true
+      detail: "Annual minimum: K 455 hours (910 all-day); grades 1–6 910; grades 7–12 1,001 under the statute."
+    teacher_qualifications:
+      required: true
+      detail: "Teachers and administrators need a bachelor's degree or equivalent from a recognized college or university."
+    records:
+      required: true
+      detail: "Submit pupil name, age and residence in enrollment/withdrawal reports and the annual minimum-standards certification."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Generally ages 6–17; an enrolled kindergartner under six is also covered unless formally withdrawn. Compulsory age starts with the district term."
+    quote: "A child between six and eighteen years of age is \"of compulsory school age\""
+    provenance: "measured"
+    source_id: "oh-compulsory-age"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.notice"
+    value: "Notify the resident superintendent within five calendar days of starting, moving districts or withdrawal; renew by August 30."
+    quote: "Within five calendar days after commencing home education, moving into a new school district, or withdrawing from a public or nonpublic school, and by the thirtieth day of August each year thereafter, the parent or guardian of a child receiving a home education shall transmit a notice to the superintendent of the child's school district of residence."
+    provenance: "measured"
+    source_id: "oh-home-education"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.approval"
+    value: "No approval required; exemption begins when notice is received."
+    quote: "The child's exemption under this section is effective immediately upon receipt of notice."
+    provenance: "inferred"
+    source_id: "oh-home-education"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.assessment"
+    value: "No routine tests or evaluations required under the home education statute."
+    quote: "A child receiving home education in the subject areas of English language arts, mathematics, science, history, government, and social studies is exempt from section"
+    provenance: "inferred"
+    source_id: "oh-home-education"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.instruction_time"
+    value: "No minimum days or hours specified."
+    quote: "A child receiving home education in the subject areas of English language arts, mathematics, science, history, government, and social studies is exempt from section"
+    provenance: "inferred"
+    source_id: "oh-home-education"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.teacher_qualifications"
+    value: "No diploma or teaching license required."
+    quote: "A child receiving home education in the subject areas of English language arts, mathematics, science, history, government, and social studies is exempt from section"
+    provenance: "inferred"
+    source_id: "oh-home-education"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.records"
+    value: "No attendance log or portfolio required; submit the notice."
+    quote: "A child receiving home education in the subject areas of English language arts, mathematics, science, history, government, and social studies is exempt from section"
+    provenance: "inferred"
+    source_id: "oh-home-education"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.subjects"
+    value: "Teach English language arts, mathematics, science, history, government and social studies."
+    quote: "A child receiving home education in the subject areas of English language arts, mathematics, science, history, government, and social studies is exempt from section"
+    provenance: "measured"
+    source_id: "oh-home-education"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.notice"
+    value: "Report enrollment to the district treasurer within the first two school weeks; file annual standards certification with the state by September 30."
+    quote: "A copy of the report shall be filed with the department of education and workforce on or before the thirtieth day of September of each year."
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.notice"
+    value: "Report enrollment to the district treasurer within the first two school weeks; file annual standards certification with the state by September 30."
+    quote: "The report shall be made within the first two weeks of the beginning of each school year."
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.approval"
+    value: "No charter approval required for a school not seeking a charter because of truly held religious beliefs."
+    quote: "A nonchartered nonpublic school that is not seeking a charter from the department of education and workforce because of truly held religious beliefs shall annually certify in a report to the parents of its pupils that the school meets minimum education standards for nonchartered nonpublic schools as described in this section."
+    provenance: "inferred"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.assessment"
+    value: "No standardized test or external evaluation required by these minimum standards."
+    quote: "Each nonchartered nonpublic school shall follow regular procedures for promotion from grade to grade for pupils who have met the school's educational requirements."
+    provenance: "inferred"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.subjects"
+    value: "Language arts; geography, U.S./Ohio history and government; math; science; health; PE; fine arts/music; first aid, safety and fire prevention."
+    quote: "The curriculum of each nonchartered nonpublic school shall include the study of the following subjects:"
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.instruction_time"
+    value: "Annual minimum: K 455 hours (910 all-day); grades 1–6 910; grades 7–12 1,001 under the statute."
+    quote: "nine hundred ten hours in the case of pupils in grades one through six; and one thousand one hours in the case of pupils in grades seven through twelve in each school year."
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.instruction_time"
+    value: "Annual minimum: K 455 hours (910 all-day); grades 1–6 910; grades 7–12 1,001 under the statute."
+    quote: "four hundred fifty-five hours in the case of pupils in kindergarten unless such pupils are provided all-day kindergarten, in which case the pupils shall be in attendance for nine hundred ten hours"
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.teacher_qualifications"
+    value: "Teachers and administrators need a bachelor's degree or equivalent from a recognized college or university."
+    quote: "Teachers and administrators at nonchartered nonpublic schools shall hold at least a bachelor's degree, or the equivalent, from a recognized college or university."
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.records"
+    value: "Submit pupil name, age and residence in enrollment/withdrawal reports and the annual minimum-standards certification."
+    quote: "The attendance report shall include the name, age, and place of residence of each pupil below eighteen years of age."
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Home-education taxpayers may claim a nonrefundable credit up to $250 per qualifying student for eligible expenses; computers are excluded."
+    quote: "equal to the lesser of two hundred fifty dollars multiplied by the number of the taxpayer's qualifying students or the amount of education expenses incurred by the taxpayer in the taxable year"
+    provenance: "measured"
+    source_id: "oh-home-tax-credit"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The credit is nonrefundable and applies to students exempt under the home education statute."
+    quote: "There is hereby allowed a nonrefundable credit"
+    provenance: "measured"
+    source_id: "oh-home-tax-credit"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Home-education students have a right to resident-district extracurricular activities, subject to age, grade and eligibility requirements."
+    quote: "the opportunity to participate in any extracurricular activity offered at the district school to which the student otherwise would be assigned during that school year."
+    provenance: "measured"
+    source_id: "oh-activities"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonchartered-religious-school.subjects"
+    value: "Language arts; geography, U.S./Ohio history and government; math; science; health; PE; fine arts/music; first aid, safety and fire prevention."
+    quote: "(1) Language arts;\n\n(2) Geography, the history of the United States and Ohio, and national, state, and local government;\n\n(3) Mathematics;\n\n(4) Science;\n\n(5) Health;\n\n(6) Physical education;\n\n(7) The fine arts, including music;\n\n(8) First aid, safety, and fire prevention;"
+    provenance: "measured"
+    source_id: "oh-nonchartered-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Computers, similar devices and their accessories do not qualify."
+    quote: "\"Education expenses\" does not include expenses or fees for computers or similar electronic devices or accessories thereto."
+    provenance: "measured"
+    source_id: "oh-home-tax-credit"
+    checked_on: "2026-11-05"
+funding:
+  available: true
+  detail: "Home-education taxpayers may claim a nonrefundable credit up to $250 per qualifying student for eligible expenses; computers are excluded."
+public_school_access:
+  available: true
+  detail: "Home-education students have a right to resident-district extracurricular activities, subject to age, grade and eligibility requirements."

@@ -1,0 +1,116 @@
+code: "KY"
+name: "Kentucky"
+summary: "Kentucky treats a family homeschool as a private school. Families send annual notice and keep attendance and course-grade records; ordinary uncertified homeschools do not need state approval or a fixed minimum term."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "private-school"
+    name: "Homeschool as a private school"
+    summary: "Families establish a bona fide private homeschool, notify the local superintendent annually and keep attendance and scholarship records."
+    notice:
+      required: true
+      detail: "Notify the local superintendent annually within two weeks of the school-year start or public-school withdrawal; include names, ages and address."
+    approval:
+      required: false
+      detail: "Not required; districts must accept the notice. State certification is optional."
+    assessment:
+      required: false
+      detail: "No mandatory standardized test or external evaluation for an uncertified homeschool."
+    subjects:
+      required: false
+      detail: "No prescribed subject list for uncertified homeschools; certified schools must teach public-school subjects in English."
+    instruction_time:
+      required: false
+      detail: "No minimum for uncertified homeschools. Certified schools need 170 instructional days and 1,062 hours."
+    teacher_qualifications:
+      required: false
+      detail: "No parent teacher-certification requirement."
+    records:
+      required: true
+      detail: "Keep attendance and scholarship reports showing completed courses and grades; attendance records are open to state and district inspection."
+funding:
+  available: false
+  detail: "No statewide homeschool ESA, scholarship or homeschool-expense income-tax benefit."
+public_school_access:
+  available: false
+  detail: "No statewide right to public-school extracurricular participation; local districts decide."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Attendance is required from age 6 until 18; the last full age is 17."
+    quote: "Kentucky law requires school attendance for every child between the ages of 6-18 either in a public school or a non-public, which may include a private school chosen by the parent or a homeschool."
+    provenance: "measured"
+    source_id: "ky-nonpublic"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-school.notice"
+    value: "Notify the local superintendent within two weeks of the school-year start or withdrawal, and renew annually."
+    quote: "you must notify the superintendent of the local board of education in the community in which you reside of your intent to homeschool within the first two weeks of the beginning of the school year or within two weeks of withdrawal from the public school. This notification must be resubmitted annually."
+    provenance: "measured"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-school.approval"
+    value: "Notification is not discretionary program approval; the district must accept it."
+    quote: "The public school district is required to accept a homeschool notification letter."
+    provenance: "inferred"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-school.assessment"
+    value: "Uncertified homeschoolers have no mandatory external assessment; scholarship reports record courses and grades."
+    quote: "In addition to attendance records, homeschools must keep scholarship reports for students in attendance. These reports should document the courses the student completed and the grade he/she was awarded."
+    provenance: "inferred"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-school.subjects"
+    value: "The statutory English-language and public-school-subject mandate applies to certified private schools, not ordinary uncertified homeschools."
+    quote: "Private and parochial schools certified in accordance with KRS 156.160(2) shall:"
+    provenance: "inferred"
+    source_id: "ky-courses"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-school.instruction_time"
+    value: "Uncertified homeschools have no minimum school term; the department recommends certified-school minimums."
+    quote: "While there is not a minimum school term required for non-certified homeschools, the KDE recommends that all homeschools meet the day and hour of instruction minimums outlined above."
+    provenance: "measured"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-school.teacher_qualifications"
+    value: "The department cannot prescribe homeschool teacher certification."
+    quote: "the Kentucky Department of Education (KDE) may not prescribe curriculum, teacher certification, or accreditation standards for homeschooling."
+    provenance: "measured"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-school.records"
+    value: "Keep attendance records and scholarship reports."
+    quote: "In addition to attendance records, homeschools must keep scholarship reports for students in attendance."
+    provenance: "measured"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Kentucky provides no general financial assistance to homeschools."
+    quote: "The KDE does not accredit homeschools and does not provide any financial assistance"
+    provenance: "measured"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Extracurricular participation is local, not a statewide right."
+    quote: "Participation in extracurricular activities is governed at the local school district level."
+    provenance: "measured"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "The homeschool notification requirement starts for children who are six by August 1."
+    quote: "Families who seek to homeschool must notify the school district within the first two weeks of the school year or within two weeks of withdrawal from the public school of their intent to homeschool if their child is six years of age by August 1."
+    provenance: "measured"
+    source_id: "ky-homeschool"
+    checked_on: "2026-11-05"

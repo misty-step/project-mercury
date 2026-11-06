@@ -1,0 +1,123 @@
+code: "IN"
+name: "Indiana"
+summary: "Indiana treats homeschools as nonpublic, non-accredited schools. Families provide equivalent instruction for 180 days and keep attendance records, without mandatory homeschool registration or testing."
+compulsory_ages:
+  min: 7
+  max: 17
+pathways:
+  -
+    id: "nonaccredited"
+    name: "Nonpublic, non-accredited school"
+    summary: "Parents educate at home as a nonpublic, non-accredited school with equivalent instruction and attendance records."
+    notice:
+      required: false
+      detail: "No homeschool registration required. Notify the former school when withdrawing; high-school withdrawals use a signed form."
+    approval:
+      required: false
+      detail: "Not required; parents select and implement the program."
+    assessment:
+      required: false
+      detail: "No state or other testing required."
+    subjects:
+      required: false
+      detail: "No prescribed subjects; provide instruction equivalent to public school instruction."
+    instruction_time:
+      required: true
+      detail: "180 days per year; parents set the daily hours and calendar."
+    teacher_qualifications:
+      required: false
+      detail: "No specified parent diploma or teaching license requirement."
+    records:
+      required: true
+      detail: "Keep daily attendance records; provide them when requested by state or local attendance officials."
+funding:
+  available: true
+  detail: "Eligible families may claim a $1,000 state income-tax deduction per homeschooled dependent."
+public_school_access:
+  available: false
+  detail: "No statewide right to classes or extracurriculars; local schools decide."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Homeschool instruction begins no later than the seventh birthday."
+    quote: "Homeschooled children are to begin school no later than their seventh birthday."
+    provenance: "measured"
+    source_id: "in-help"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "Compulsory schooling ends at 18; the last full age is 17."
+    quote: "Homeschooled students complete schooling at age 18."
+    provenance: "measured"
+    source_id: "in-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.notice"
+    value: "Registering a homeschool with IDOE is optional."
+    quote: "Reporting homeschool enrollment (registering a homeschool) is not required in Indiana."
+    provenance: "measured"
+    source_id: "in-information"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.approval"
+    value: "No program approval is required; parents choose and operate it."
+    quote: "IDOE does not review or endorse any homeschool programs."
+    provenance: "inferred"
+    source_id: "in-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.assessment"
+    value: "Neither state nor other testing is required."
+    quote: "State law does not require state testing, or any other testing, for children in homeschools."
+    provenance: "measured"
+    source_id: "in-help"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.subjects"
+    value: "The state prescribes no homeschool subjects; equivalent instruction is required."
+    quote: "State law exempts home schools from the curriculum and program requirements which public schools must follow."
+    provenance: "inferred"
+    source_id: "in-help"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.instruction_time"
+    value: "180 instructional days are required; daily hours are parent-determined."
+    quote: "180 days of instruction: You decide which days your school will be in session, and how long to teach each day."
+    provenance: "measured"
+    source_id: "in-help"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.teacher_qualifications"
+    value: "The agency’s list of homeschool legal duties specifies no parent credential."
+    quote: "Instruction equivalent to that given in the public schools: State law does not define equivalency of instruction for non-public non-accredited schools."
+    provenance: "inferred"
+    source_id: "in-help"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.nonaccredited.records"
+    value: "Attendance records must be kept and made available to attendance officials."
+    quote: "Please note that the law allows local public school superintendents and the State Attendance Officer to request copies of your child's attendance records to verify attendance."
+    provenance: "measured"
+    source_id: "in-help"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Eligible families can deduct $1,000 per qualifying privately schooled or homeschooled child."
+    quote: "If you have education expenditures for each dependent child who is enrolled in a private school or homeschooled, you may qualify for a $1,000 deduction per qualified child."
+    provenance: "measured"
+    source_id: "in-deductions"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "No statewide right to public-school extracurriculars or sports; participation is local."
+    quote: "Participation in public school extracurricular activities and sports is at the discretion of the public school and is a local decision."
+    provenance: "measured"
+    source_id: "in-help"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Public-school class enrollment is a local decision."
+    quote: "This is a local decision. Check with your local school corporation to inquire about enrolling in classes."
+    provenance: "measured"
+    source_id: "in-faq"
+    checked_on: "2026-11-05"

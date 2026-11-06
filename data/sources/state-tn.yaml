@@ -1,0 +1,42 @@
+-
+  id: "tn-doe-home"
+  url: "https://www.tn.gov/education/families/school-options/home-schooling-in-tn.html"
+  publisher: "Tennessee Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "tn-49-6-3050"
+  url: "https://law.justia.com/codes/tennessee/title-49/chapter-6/part-30/section-49-6-3050/"
+  publisher: "Justia (mirror of Tennessee Code Annotated)"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "tn-49-6-3001"
+  url: "https://law.justia.com/codes/tennessee/title-49/chapter-6/part-30/section-49-6-3001/"
+  publisher: "Justia (mirror of Tennessee Code Annotated)"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "tn-49-6-3004"
+  url: "https://law.justia.com/codes/tennessee/title-49/chapter-6/part-30/section-49-6-3004/"
+  publisher: "Justia (mirror of Tennessee Code Annotated)"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "tn-49-6-3007"
+  url: "https://law.justia.com/codes/tennessee/title-49/chapter-6/part-30/section-49-6-3007/"
+  publisher: "Justia (mirror of Tennessee Code Annotated)"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "tn-49-50-801"
+  url: "https://law.justia.com/codes/tennessee/title-49/chapter-50/part-8/section-49-50-801/"
+  publisher: "Justia (mirror of Tennessee Code Annotated)"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "tn-iea-eligibility"
+  url: "https://www.tn.gov/education/iea/iea-parents-students.html"
+  publisher: "Tennessee Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"

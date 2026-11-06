@@ -1,0 +1,167 @@
+code: ND
+name: North Dakota
+summary: >-
+  Most families use parent-supervised home education with annual district notice, required subjects and hours, academic records, and testing or an exemption. A licensed teacher may instead operate an approved nonpublic school under the school laws.
+compulsory_ages: { min: 7, max: 15 }
+pathways:
+  - id: home-education
+    name: Home education
+    summary: A parent or legal guardian selects materials and supervises instruction under Chapter 15.1-23, including its provisions for children with disabilities.
+    notice: { required: true, detail: "File intent with the resident district superintendent at least five days before starting and annually; new residents have 14 days. Include identity and immunization documents." }
+    approval: { required: false, detail: "No routine program approval; districts may not deny compliant home education. Disability services or remediation plans can be required." }
+    assessment: { required: true, detail: "Standardized tests in grades 4, 6, 8, 10 unless a statutory opt-out is filed with annual intent. Low scores trigger evaluation and possible remediation." }
+    subjects: { required: true, detail: "Teach the subjects required by law for public-school students." }
+    instruction_time: { required: true, detail: "At least four hours each day for at least 175 days annually." }
+    teacher_qualifications: { required: true, detail: "Parent needs a diploma or GED, or licensed/approved teacher monitoring for the first two years; monitoring can continue after low scores." }
+    records: { required: true, detail: "Keep annual courses, progress and test results; file test results with district. Developmental-disability services-plan route requires Nov. 1, Feb. 1, May 1 reports." }
+  - id: approved-nonpublic
+    name: Approved nonpublic school
+    summary: A family may establish an approved nonpublic school with licensed or approved teachers rather than use the home education chapter.
+    notice: { required: true, detail: "Apply to NDDPI before opening; initial approval forms are due April 1 before the school year. File the annual compliance report by 5 p.m. October 1." }
+    approval: { required: true, detail: "NDDPI approval is required; comply with nonpublic-school curriculum, teacher, background-check, and fire-safety requirements." }
+    assessment: { required: true, detail: "Follow nonpublic-school curriculum assessment rules, including regular formative math assessments and reading diagnostic instruments." }
+    subjects: { required: true, detail: "Meet Chapter 15.1-21 curricular requirements for approved nonpublic schools, including language arts, math, social studies, science, health, PE and computer science." }
+    instruction_time: { required: true, detail: "Attendance must be for the same length of time as required at public school, rather than the home-education chapter's 175-day minimum." }
+    teacher_qualifications: { required: true, detail: "Classroom teachers must be licensed or approved by the Education Standards and Practices Board and teach within their authorized fields; background-check rules apply." }
+    records: { required: true, detail: "Keep NDDPI-required records supporting the annual compliance report for the retention period NDDPI specifies; records are subject to examination." }
+funding: { available: false, detail: "No general homeschool ESA or education-expense tax benefit. District-funded required testing and monitoring are services, not a family education account." }
+public_school_access: { available: true, detail: "Home-educated children may participate in resident public-school extracurricular activities under the same participation standards as full-time students." }
+claims:
+  - field: compulsory_ages
+    value: Ordinary compulsory attendance covers children age seven until age sixteen; six-year-olds enrolled in public school are covered until withdrawn.
+    quote: "Any person having responsibility for a child between the ages of seven and sixteen years shall ensure the child attends a public school for the duration of each school year."
+    provenance: measured
+    source_id: nd-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.notice
+    value: File annually with the resident district superintendent, at least five days before beginning or within fourteen days after establishing residence.
+    quote: "At least five days before beginning home education or within fourteen days of establishing a child's residence in a school district, and once each year thereafter, a parent intending to supervise or supervising home education shall file a statement"
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.notice
+    value: The statement must include immunization and identity documentation.
+    quote: "The statement must be accompanied by a copy of the child's immunization record and proof of the child's identity as required by section 12-60-26."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.approval
+    value: Routine home education is not subject to discretionary district approval after filing the required information.
+    quote: "Districts cannot deny home education or ask for extra documentation beyond the Statement of Intent requirements."
+    provenance: measured
+    source_id: nd-parent-guide
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.assessment
+    value: Standardized testing is required in grades four, six, eight and ten, subject to statutory parental opt-outs.
+    quote: "While in grades four, six, eight, and ten, each child receiving home education shall take:"
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.assessment
+    value: Parents may opt out for philosophical, moral or religious objections, or specified education/teacher qualifications, when notice and documentation accompany the intent filing.
+    quote: "The requirement of subsection 1 does not apply if the parent notifies the school district in which the child resides that the parent has a philosophical, moral, or religious objection to the use of standardized achievement tests"
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.subjects
+    value: Home instruction must include the legally required public-school subjects.
+    quote: "A parent supervising home education shall include instruction in those subjects required by law to be taught to public school students."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.instruction_time
+    value: Teach at least four hours daily for at least 175 days per year.
+    quote: "The instruction must have a duration of at least four hours each day for a minimum of one hundred seventy-five days each year."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.teacher_qualifications
+    value: A parent needs a high school diploma or GED, or must satisfy the statutory monitoring alternative.
+    quote: "A parent may supervise home education if the parent: 1. Holds a high school diploma or a general educational development diploma; or 2. Meets the requirements of section 15.1-23-06."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.teacher_qualifications
+    value: Parents without the diploma/GED qualification must initially be monitored for two years.
+    quote: "A parent who does not meet the qualifications provided in section 15.1-23-03 may supervise home education but must be monitored in accordance with section 15.1-23-07 for the first two years."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.records
+    value: Maintain annual course and academic progress records, including standardized test results.
+    quote: "A parent supervising home education shall maintain an annual record of courses taken by the child and the child's academic progress assessments, including any standardized achievement test results."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.records
+    value: Submit standardized achievement test results to the district or county superintendent.
+    quote: "A parent supervising home education shall file the results of the child's standardized achievement test with the superintendent of the district in which the child resides or with the county superintendent if the district does not employ a superintendent."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.home-education.records
+    value: Home education under the developmental-disability services-plan provisions additionally requires three progress reports annually.
+    quote: "On or before November first, February first, and May first of each school year, a parent supervising home education for a child with a developmental disability under section 15.1-23-14 shall file with the superintendent of the child's school district of residence progress reports"
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: funding
+    value: The home education chapter provides district-paid required testing rather than a general family education account; no homeschool ESA or education-expense tax benefit was identified.
+    quote: "If a child receiving home education takes the standardized achievement test used by the school district in which the child resides, the school district is responsible for the cost of the test and for the cost of administering the test."
+    provenance: inferred
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: Resident public-school extracurricular participation is allowed, subject to the standards applicable to enrolled students.
+    quote: "A child receiving home education may participate in extracurricular activities either: a. Under the auspices of the child's school district of residence; or b. Under the auspices of an approved nonpublic school, if permitted by the administrator of the school."
+    provenance: measured
+    source_id: nd-home-education
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.notice
+    value: New nonpublic schools apply to NDDPI before opening, with initial approval forms due April 1.
+    quote: "Completed approval forms must be submitted to the Office of School Approval & Opportunity by April 1 prior to the start of the upcoming school year with no exceptions."
+    provenance: measured
+    source_id: nd-school-approval
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.approval
+    value: Approval is required for a nonpublic school; the annual compliance report verifies the statutory conditions.
+    quote: "In order to obtain certification that a nonpublic school is approved, the administrator of a nonpublic school shall submit to the superintendent of public instruction a compliance report"
+    provenance: measured
+    source_id: nd-school-law
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.assessment
+    value: Approved nonpublic schools must implement regular formative mathematics assessments and required reading diagnostic instruments.
+    quote: "Implement formative assessments at regular intervals, adjust teaching practices accordingly, and provide targeted interventions for each student who needs additional support."
+    provenance: measured
+    source_id: nd-curriculum
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.assessment
+    value: Nonpublic school approval includes integrated instruments to diagnose reading development and comprehension.
+    quote: "Has integrated reading instruments used to diagnose reading development and comprehension;"
+    provenance: measured
+    source_id: nd-curriculum
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.subjects
+    value: Approved nonpublic schools must satisfy the curricular requirements in Chapter 15.1-21.
+    quote: "The school meets all curricular requirements set forth in chapter 15.1-21;"
+    provenance: measured
+    source_id: nd-school-law
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.instruction_time
+    value: The nonpublic-school compulsory-attendance exemption requires attendance for the same length of time as public school.
+    quote: "The child is in attendance for the same length of time at an approved nonpublic school;"
+    provenance: measured
+    source_id: nd-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.teacher_qualifications
+    value: Each classroom teacher must be licensed or approved by the state board and teach within authorized fields.
+    quote: "Each classroom teacher is licensed to teach by the education standards and practices board or approved to teach by the education standards and practices board;"
+    provenance: measured
+    source_id: nd-school-law
+    checked_on: "2026-11-05"
+  - field: pathways.approved-nonpublic.records
+    value: Schools must retain the records NDDPI identifies as necessary to verify the annual compliance report.
+    quote: "The superintendent of public instruction shall notify each school and school district of the records that must be maintained in order to allow the superintendent of public instruction to verify the information contained in each compliance report."
+    provenance: measured
+    source_id: nd-school-law
+    checked_on: "2026-11-05"

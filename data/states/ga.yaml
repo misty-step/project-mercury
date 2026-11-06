@@ -1,0 +1,133 @@
+code: GA
+name: Georgia
+summary: >-
+  Families may operate a home study program with an annual declaration to the Department of Education. The law requires a qualified instructor, five core subjects, instructional time, periodic testing and annual progress reports.
+compulsory_ages: { min: 6, max: 15 }
+pathways:
+  - id: home-study
+    name: Home study program
+    summary: A parent or guardian teaches their own children or employs a qualified tutor under Georgia's home study law.
+    notice: { required: true, detail: "File a declaration with GaDOE within 30 days of starting and by September 1 each year thereafter." }
+    approval: { required: false, detail: "No program approval required; file the declaration of intent." }
+    assessment: { required: true, detail: "Nationally standardized testing every three years starting at the end of grade 3; annual progress assessment report." }
+    subjects: { required: true, detail: "Reading, language arts, mathematics, social studies and science." }
+    instruction_time: { required: true, detail: "180 days annually, with at least 4.5 hours per school day, unless the child is physically unable to comply." }
+    teacher_qualifications: { required: true, detail: "Teaching parent, guardian or hired tutor must hold a high school diploma or state-approved equivalency diploma." }
+    records: { required: true, detail: "Retain test scores and assessment records; keep annual subject-by-subject progress reports for at least three years." }
+funding: { available: true, detail: "Georgia Promise: up to $6,500 in 2026–27 for eligible home study students; zone, residency and prior public-school/kindergarten conditions; annual testing required." }
+public_school_access: { available: true, detail: "Grades 6–12 may join resident public-school extracurricular and interscholastic activities under the Dexter Mosely Act, with notice and course-enrollment conditions." }
+claims:
+  - field: compulsory_ages
+    value: "Attendance is required from the sixth birthday until the sixteenth birthday (ages 6–15)."
+    quote: "requires mandatory attendance in a public school, private school, or home school program for children between their sixth and sixteenth birthdays."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.notice
+    value: "File with GaDOE within 30 days of beginning and by September 1 in following years."
+    quote: "The Declaration of Intent must be submitted within 30 days of beginning a home school program, and by September 1 each year thereafter for the duration of the student’s attendance in a home school program."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.approval
+    value: "The filing is a declaration, not an application for approval of the home study program."
+    quote: "The Declaration of Intent is the official document a parent/guardian must submit to the Georgia Department of Education to begin or continue a home school program."
+    provenance: inferred
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.assessment
+    value: "A nationally standardized test is required at least every three years beginning at the end of grade 3."
+    quote: "Students in home study programs must participate in an appropriate nationally standardized testing program at least every three years beginning at the end of the third grade."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.assessment
+    value: "The instructor must also write an annual progress assessment report."
+    quote: "The home study program instructor must write an annual progress assessment report for each home study student."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "Promise Scholarship home study recipients must complete annual testing."
+    quote: "Participating students who do not attend a participating school shall annually complete a nationally norm-referenced test approved by the Authority or a statewide assessment administered pursuant to O.C.G.A. § 20-2-281."
+    provenance: measured
+    source_id: ga-promise-regulations
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.subjects
+    value: "The required basic program includes reading, language arts, mathematics, social studies and science."
+    quote: "A home study program must provide a basic academic educational program which includes, but is not limited to, reading, language arts, mathematics, social studies, and science."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.instruction_time
+    value: "Provide 180 school days annually with at least four and one-half hours each day."
+    quote: "A home study program must provide annual instruction for a period of time equal to 180 school days of education with each school day consisting of at least four and one-half school hours."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.teacher_qualifications
+    value: "A teaching parent or guardian must have a high school diploma or state-approved equivalency."
+    quote: "Parents or guardians may teach only their own children in the home study program, provided the teaching parent or guardian possesses at least a high school diploma or a state approved high school equivalency diploma."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.teacher_qualifications
+    value: "An employed tutor must also hold a diploma or state-approved equivalency."
+    quote: "Alternately, parents or guardians may employ a tutor who holds a high school diploma or a state approved high school equivalency diploma to teach the home study program students."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.records
+    value: "Keep annual progress reports for at least three years."
+    quote: "Progress reports must be retained by the parent/guardian of children in the home study program for a period of at least three years."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.records
+    value: "Retain testing scores and assessment records."
+    quote: "The resulting scores and records of these assessments must be retained by the parent/guardian."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The Georgia Promise Scholarship includes eligible home study students."
+    quote: "Signed into law in 2024 through Senate Bill 233, the Georgia Promise Scholarship Program is aimed to empower families to pursue exceptional educational programs through nonpublic schooling, including private school and home study."
+    provenance: measured
+    source_id: ga-promise
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The 2026–27 award is up to $6,500 per eligible student."
+    quote: "For the 2026-2027 academic year, the scholarship provides up to $6,500 per eligible student, paid in four quarterly installments."
+    provenance: measured
+    source_id: ga-promise
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "New applicants generally need two prior public-school enrollment counts or kindergarten eligibility; recently stationed active-duty military families have an exception."
+    quote: "Except for active-duty military service members stationed in Georgia within the previous year, the student is currently enrolled and has been continuously enrolled in a Georgia public school for a period of time that includes at least two consecutive enrollment counts"
+    provenance: measured
+    source_id: ga-promise-regulations
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The initial application also has an eligible attendance-zone condition."
+    quote: "The student is domiciled in the attendance zone of a public school that is included on the list of public schools provided for in O.C.G.A. § 20-2B-29;"
+    provenance: measured
+    source_id: ga-promise-regulations
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "A parent normally must have been a Georgia resident for one year, with a military exception."
+    quote: "The student’s parent resides within Georgia and has been a Georgia resident for at least one year or the student’s parent is an active-duty military service member stationed in Georgia within the previous year;"
+    provenance: measured
+    source_id: ga-promise-regulations
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "The Dexter Mosely Act gives grades 6–12 home study students access to resident public-school activities subject to notice and course enrollment."
+    quote: "The Dexter Mosely Act (codified in O.C.G.A. § 20-2-319.6) authorizes home study students in grades 6-12 to participate in extracurricular and interscholastic activities in the student’s resident public school system, with the requirement of certain notification and course enrollment provisions."
+    provenance: measured
+    source_id: ga-doe-home-study
+    checked_on: "2026-11-05"
+  - field: pathways.home-study.instruction_time
+    value: "The instructional-time rule has an exception where the child is physically unable to comply."
+    quote: "The home study program must provide instruction each 12 months to home study students equivalent to 180 school days of education with each school day consisting of at least four and one-half school hours unless the child is physically unable to comply with the rule provided for in this paragraph;"
+    provenance: measured
+    source_id: ga-code-instruction-time
+    checked_on: "2026-11-05"

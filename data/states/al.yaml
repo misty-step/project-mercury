@@ -1,0 +1,242 @@
+code: "AL"
+name: "Alabama"
+summary: "Families may use a church-school home program, a private-school home program, or a certified private tutor. Enrollment reporting and attendance records apply; the tutor route also sets instructional time and subjects."
+compulsory_ages:
+  min: 6
+  max: 16
+pathways:
+  - id: "church-school"
+    name: "Church school home program"
+    summary: "A family enrolls in a church school that offers a home program and follows the school’s requirements."
+    notice:
+      required: true
+      detail: "Parent files enrollment and attendance form with local superintendent, countersigned by church-school administrator."
+    approval:
+      required: false
+      detail: "No state or local program approval required."
+    assessment:
+      required: false
+      detail: "No state-required assessment; the church school may set its own requirements."
+    subjects:
+      required: false
+      detail: "No state-prescribed subjects for church schools."
+    instruction_time:
+      required: false
+      detail: "No statewide numerical days or hours minimum for church schools; follow the church school’s calendar."
+    teacher_qualifications:
+      required: false
+      detail: "No state diploma or certificate minimum for the parent."
+    records:
+      required: true
+      detail: "Church school keeps an enrollment and attendance register, recording absences of a half day or more."
+  - id: "private-school"
+    name: "Private school home program"
+    summary: "A family operates a private home school or enrolls in an existing private school’s home program."
+    notice:
+      required: true
+      detail: "School reports enrollment to local superintendent by public school’s fifth opening day; report new enrollments and unexplained absences weekly."
+    approval:
+      required: false
+      detail: "No state or local program approval required."
+    assessment:
+      required: false
+      detail: "No state-required assessment; private schools may set their own requirements."
+    subjects:
+      required: true
+      detail: "Private schools must provide physical education conforming to the Department of Education’s program."
+    instruction_time:
+      required: false
+      detail: "No statewide numerical days or hours minimum; follow the private school’s term."
+    teacher_qualifications:
+      required: false
+      detail: "No state diploma or certificate minimum for private-school teachers."
+    records:
+      required: true
+      detail: "School keeps enrollment and attendance register, noting absences of a half day or more."
+  - id: "private-tutor"
+    name: "Private tutor"
+    summary: "A state-certified tutor supplies instruction under the private-tutor exemption."
+    notice:
+      required: true
+      detail: "Tutor files students, subjects, and instructional period with local superintendent before teaching; enrollment and weekly reporting also apply."
+    approval:
+      required: false
+      detail: "No separate program approval; tutor must hold a state certificate."
+    assessment:
+      required: false
+      detail: "No standardized assessment required by the tutor provision."
+    subjects:
+      required: true
+      detail: "Teach the public-school branches of study, in English."
+    instruction_time:
+      required: true
+      detail: "At least 3 hours daily for 140 days each calendar year, between 8 a.m. and 4 p.m."
+    teacher_qualifications:
+      required: true
+      detail: "Tutor must hold a certificate issued by the State Superintendent of Education."
+    records:
+      required: true
+      detail: "Keep daily instructional hours, work and attendance; furnish required reports."
+funding:
+  available: true
+  detail: "CHOOSE offers eligible home educators $2,000 per child, capped at $4,000 per family; new 2026–27 applicants face a 300%-of-poverty income limit."
+public_school_access:
+  available: false
+  detail: "No statewide statutory right to part-time classes or sports; local district and athletic-association eligibility policies apply."
+claims:
+  - field: "compulsory_ages"
+    value: "Generally age 6 until 17; parents may defer age-six enrollment to seven by written notice to the local board. Church-school exemptions also apply."
+    quote: "every child between the ages of six and 17 years shall be required to attend a public school, private school, church school, or be instructed by a competent private tutor for the entire length of the school term in every scholastic year"
+    provenance: "inferred"
+    source_id: "al-compulsory"
+    checked_on: "2026-11-05"
+  - field: "compulsory_ages"
+    value: "A parent may opt out of enrollment at six by notifying the local board in writing that school will begin at seven."
+    quote: "The parent, legal custodian, or guardian of a child who is six years of age, may opt out of enrolling his or her child in school at the age of six years by notifying the local school board of education, in writing, that the child will not be enrolled in school until he or she is seven years of age."
+    provenance: "measured"
+    source_id: "al-compulsory"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "CHOOSE offers $2,000 per home-educated child, capped at $4,000 per family."
+    quote: "$2,000 per participating student who is participating in a home education program (this includes an individual or group program, homeschool, co-op, etc.) and is capped at $4,000 per family"
+    provenance: "measured"
+    source_id: "al-choose"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "New 2026–27 families must have prior-year AGI no higher than 300% of federal poverty."
+    quote: "For the 2026-2027 academic year, the program is open to new families with an adjusted gross income (AGI) not exceeding 300 percent of the federal poverty level for the preceding tax year."
+    provenance: "measured"
+    source_id: "al-choose-2026"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "The compulsory-attendance statute provides admission under local board rules, not a statewide home-educator right to partial enrollment or activities."
+    quote: "Admission to public school shall be on an individual basis on the application of the parents, legal custodian, or guardian of the child to the local board of education at the beginning of each school year, under the rules as the board may prescribe;"
+    provenance: "inferred"
+    source_id: "al-compulsory"
+    checked_on: "2026-11-05"
+  - field: "pathways.church-school.notice"
+    value: "Parent files enrollment and attendance form with local superintendent, countersigned by church-school administrator."
+    quote: "The enrollment and attendance of a child in a church school shall be filed with the local public school superintendent by the parent, guardian, or other person in charge or control of the child on a form provided by the superintendent or his or her agent which shall be countersigned by the administrator of the church school and returned to the public school superintendent by the parent."
+    provenance: "measured"
+    source_id: "al-enrollment"
+    checked_on: "2026-11-05"
+  - field: "pathways.church-school.approval"
+    value: "No state or local program approval required."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.church-school.assessment"
+    value: "No state-required assessment; the church school may set its own requirements."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.church-school.subjects"
+    value: "No state-prescribed subjects for church schools."
+    quote: "Every public school and private school, except church schools as defined in Section 16-28-1, shall carry out a system of physical education, the character of which shall conform to the program or course outlined by the Department of Education."
+    provenance: "inferred"
+    source_id: "al-physical-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.church-school.instruction_time"
+    value: "No statewide numerical days or hours minimum for church schools; follow the church school’s calendar."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.church-school.teacher_qualifications"
+    value: "No state diploma or certificate minimum for the parent."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.church-school.records"
+    value: "Church school keeps an enrollment and attendance register, recording absences of a half day or more."
+    quote: "The principal teacher of each public school, private school, church school and each private tutor shall keep an attendance register showing the enrollment of the school and every absence of each enrolled child from school for a half day or more during each school day of the year."
+    provenance: "measured"
+    source_id: "al-attendance-records"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.notice"
+    value: "School reports enrollment to local superintendent by public school’s fifth opening day; report new enrollments and unexplained absences weekly."
+    quote: "At the end of the fifth day from the opening of the public school, the principal teacher of each public school, private school, and each private tutor, but not church school, shall report on forms prescribed by the State Superintendent of Education"
+    provenance: "measured"
+    source_id: "al-enrollment"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.approval"
+    value: "No state or local program approval required."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.assessment"
+    value: "No state-required assessment; private schools may set their own requirements."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.subjects"
+    value: "Private schools must provide physical education conforming to the Department of Education’s program."
+    quote: "Every public school and private school, except church schools as defined in Section 16-28-1, shall carry out a system of physical education, the character of which shall conform to the program or course outlined by the Department of Education."
+    provenance: "measured"
+    source_id: "al-physical-education"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.instruction_time"
+    value: "No statewide numerical days or hours minimum; follow the private school’s term."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.teacher_qualifications"
+    value: "No state diploma or certificate minimum for private-school teachers."
+    quote: "Nonpublic schools, including private, church, parochial, and religious schools, offering educational instruction in grades K-12, as well as home-schooled students, are not subject to licensure or regulation by the state or any political subdivision of the state, including the State Department of Education."
+    provenance: "inferred"
+    source_id: "al-autonomy"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.records"
+    value: "School keeps enrollment and attendance register, noting absences of a half day or more."
+    quote: "The principal teacher of each public school, private school, church school and each private tutor shall keep an attendance register showing the enrollment of the school and every absence of each enrolled child from school for a half day or more during each school day of the year."
+    provenance: "measured"
+    source_id: "al-attendance-records"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.notice"
+    value: "Tutor files students, subjects, and instructional period with local superintendent before teaching; enrollment and weekly reporting also apply."
+    quote: "a statement showing the child or children to be instructed, the subjects to be taught and the period of time such instruction is proposed to be given."
+    provenance: "inferred"
+    source_id: "al-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.approval"
+    value: "No separate program approval; tutor must hold a state certificate."
+    quote: "Instruction by a private tutor means and includes only instruction by a person who holds a certificate issued by the State Superintendent of Education"
+    provenance: "inferred"
+    source_id: "al-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.assessment"
+    value: "No standardized assessment required by the tutor provision."
+    quote: "for at least three hours a day for 140 days each calendar year, between the hours of 8:00 A.M. and 4:00 P.M., and who uses the English language in giving instruction."
+    provenance: "inferred"
+    source_id: "al-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.subjects"
+    value: "Teach the public-school branches of study, in English."
+    quote: "who offers instruction in the several branches of study required to be taught in the public schools of this state,"
+    provenance: "measured"
+    source_id: "al-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.instruction_time"
+    value: "At least 3 hours daily for 140 days each calendar year, between 8 a.m. and 4 p.m."
+    quote: "for at least three hours a day for 140 days each calendar year, between the hours of 8:00 A.M. and 4:00 P.M., and who uses the English language in giving instruction."
+    provenance: "measured"
+    source_id: "al-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.teacher_qualifications"
+    value: "Tutor must hold a certificate issued by the State Superintendent of Education."
+    quote: "Instruction by a private tutor means and includes only instruction by a person who holds a certificate issued by the State Superintendent of Education"
+    provenance: "measured"
+    source_id: "al-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-tutor.records"
+    value: "Keep daily instructional hours, work and attendance; furnish required reports."
+    quote: "Such tutor shall keep a register of work, showing daily the hours used for instruction and the presence or absence of any child being instructed and shall make such reports as the State Board of Education may require."
+    provenance: "measured"
+    source_id: "al-tutor"
+    checked_on: "2026-11-05"

@@ -1,0 +1,20 @@
+- id: ne-exempt-faq
+  url: https://www.education.ne.gov/wp-content/uploads/2026/06/2627ESP_FAQs.pdf
+  publisher: Nebraska Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: ne-exempt-law
+  url: https://nebraskalegislature.gov/laws/statutes.php?statute=79-1601
+  publisher: Nebraska Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: ne-attendance
+  url: https://nebraskalegislature.gov/laws/statutes.php?statute=79-201
+  publisher: Nebraska Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: ne-public-access
+  url: https://nebraskalegislature.gov/laws/statutes.php?statute=79-2%2C136
+  publisher: Nebraska Legislature
+  type: statute
+  checked_on: "2026-11-05"

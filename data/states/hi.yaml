@@ -1,0 +1,167 @@
+code: HI
+name: Hawaii
+summary: >-
+  Parents may homeschool after notifying the child's local public school, keeping a planned curriculum and reporting progress annually. Tutoring by someone other than the parent falls under the separate approved alternative educational program route.
+compulsory_ages: { min: 5, max: 17 }
+pathways:
+  - id: homeschool
+    name: Home schooling
+    summary: A parent instructs their own child after filing notice with the local public-school principal.
+    notice: { required: true, detail: "Submit Form 4140 or a signed letter to the local public-school principal before starting; file anew when changing geographic schools or school levels." }
+    approval: { required: false, detail: "No prior approval; the principal and superintendent acknowledge the notice." }
+    assessment: { required: true, detail: "Annual progress report; standardized scores in grades 3, 5, 8 and 10, or principal-approved alternative evaluation." }
+    subjects: { required: false, detail: "No mandatory subject list; use a structured, cumulative, sequential curriculum suited to the child. Rules suggest elementary and secondary subjects." }
+    instruction_time: { required: false, detail: "No minimum hours or days for parent homeschooling; record weekly instructional hours." }
+    teacher_qualifications: { required: false, detail: "A parent teaching their own child is deemed qualified; no degree or teaching certificate required." }
+    records: { required: true, detail: "Keep the planned curriculum, dates, weekly hours, subjects, mastery methods and materials; submit an annual progress report." }
+  - id: alternative-program
+    name: Alternative educational program other than home schooling
+    summary: Instruction by a tutor or another non-school alternative program requires an approved compulsory-attendance exception.
+    notice: { required: true, detail: "Submit Form 4140 and planned curriculum to the local public school; renew the exception annually." }
+    approval: { required: true, detail: "The superintendent or designee must approve the alternative educational program." }
+    assessment: { required: true, detail: "Testing in statewide-program grades; submit a narrative progress report and report card at each school year's end." }
+    subjects: { required: false, detail: "No fixed mandatory subject list; planned curriculum must be structured, cumulative and sequential. Rules suggest grade-appropriate subjects." }
+    instruction_time: { required: true, detail: "Planned instruction must average approximately three hours per school day." }
+    teacher_qualifications: { required: true, detail: "Professional staff or tutors must hold at least a bachelor's degree from an accredited college or university and document qualifications." }
+    records: { required: true, detail: "Submit curriculum, instructor qualifications, annual narrative progress report and report card; principal may request reports more often." }
+funding: { available: false, detail: "No statewide homeschool ESA, scholarship or expense tax benefit identified; families provide materials and instruction." }
+public_school_access: { available: false, detail: "No statewide right to part-time classes or school sports; parents are responsible for athletics and co-curricular activities." }
+claims:
+  - field: compulsory_ages
+    value: "Attendance covers children age 5 by July 31 who will not be 18 by January 1 of the school year."
+    quote: "all children who will have arrived at the age of at least five years on or before July 31 of the school year, and who will not have arrived at the age of eighteen years, by January 1 of any school year"
+    provenance: measured
+    source_id: hi-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.notice
+    value: "Give the principal notice before initiating home schooling."
+    quote: "The parent shall provide the local public school principal with a notice of intent to home educate the child before initiating home schooling."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.notice
+    value: "Notice is not annual, but must be renewed when changing geographic schools or school levels."
+    quote: "You must submit a new notice of intent to the principal of the new school if: Your family moves to another school’s geographic area; or Your child transitions to a different school level (for example, from elementary to middle school)."
+    provenance: measured
+    source_id: hi-doe-homeschool
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.approval
+    value: "The notice is acknowledged for recordkeeping, not approved as a program application."
+    quote: "The notice of intent shall be acknowledged by the principal and the district superintendent. The notice of intent is for record keeping purposes and to protect families from unfounded accusations of educational neglect or truancy."
+    provenance: inferred
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.assessment
+    value: "An annual progress report is required."
+    quote: "The parent shall submit to the principal an annual report of a child's progress. One of the following methods shall be used to demonstrate satisfactory progress:"
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.assessment
+    value: "Grades 3, 5, 8 and 10 require testing, with other evaluation possible on principal approval."
+    quote: "Test scores shall be required for grades identified in the Statewide Testing Program, grades three, five, eight, and ten."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.assessment
+    value: "A principal can approve another means of evaluation in place of statewide-program testing."
+    quote: "The parent may request and the principal may approve other means of evaluation to meet the Statewide Testing Program requirements."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.subjects
+    value: "The subject lists are permissive, not a fixed mandated list."
+    quote: "An elementary school curriculum may include the areas of language arts, mathematics, social studies, science, art, music, health and physical education to be offered at the appropriate development stage of the child;"
+    provenance: inferred
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.instruction_time
+    value: "The parent-home-school curriculum rule requires recording hours but sets no minimum."
+    quote: "The commencement date and ending date of the program; (2) A record of the number of hours per week the child spends in instruction;"
+    provenance: inferred
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.teacher_qualifications
+    value: "A parent teaching their own child is deemed qualified without a degree or certification requirement."
+    quote: "A parent teaching the parent's child at home shall be deemed a qualified instructor."
+    provenance: inferred
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.homeschool.records
+    value: "Keep a planned curriculum record."
+    quote: "The parent submitting a notice of intent to home school shall keep a record of the planned curriculum for the child."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.notice
+    value: "Apply through the local public school using Form 4140."
+    quote: "The parent of a child requesting a compulsory attendance exception for an alternative educational program other than home schooling shall complete and submit Form 4140, Exceptions to Compulsory Education, to the local public school."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.notice
+    value: "Renew the alternative-program exception each year."
+    quote: "A request for an exception for an alternative educational program other than home schooling shall be renewed annually."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.approval
+    value: "The superintendent or designee must approve the alternative program."
+    quote: "The superintendent or the superintendent's designee may approve withdrawal from school where an appropriate educational program other than home schooling is developed for the child in accordance with the plans and policies of the department."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.assessment
+    value: "Statewide-testing-program grades require test scores."
+    quote: "Test scores are required for grades identified in the Statewide Testing Program. A child is eligible and required to participate in the Statewide Testing Program at the local public school."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.assessment
+    value: "Annual narrative progress reports and report cards are required, with more frequent reports possible."
+    quote: "A narrative progress report and report card from the professional staff or tutor of a child's alternative educational program shall be submitted by the family to the local public school principal at the end of each school year. More frequent progress reports may be requested by the principal."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.subjects
+    value: "Alternative-program subject lists use may include, rather than mandating each listed subject."
+    quote: "A secondary school curriculum may include the subject areas of social studies, English, mathematics, science, health, physical education and guidance."
+    provenance: inferred
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.instruction_time
+    value: "Alternative-program instruction averages approximately three hours each school day."
+    quote: "The number of hours per week the child will spend in instruction which shall average approximately three hours per school day;"
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.teacher_qualifications
+    value: "Tutors or professional staff must have at least a bachelor's degree."
+    quote: "Professional staff members or tutors, or both, providing instruction shall be persons who have at a minimum earned a bachelor's degree from an accredited"
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.records
+    value: "The curriculum must be submitted with Form 4140."
+    quote: "The parent requesting an exception under this section shall submit to the local public school principal a planned curriculum for the child along with the Form 4140."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: pathways.alternative-program.records
+    value: "Submit annual narrative reports and report cards to the principal."
+    quote: "A narrative progress report and report card from the professional staff or tutor of a child's alternative educational program shall be submitted by the family to the local public school principal at the end of each school year."
+    provenance: measured
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The agency assigns materials and instruction to the family; no statewide homeschool ESA, scholarship or expense tax benefit is identified."
+    quote: "You are fully responsible for all your child’s education. You must provide all of the materials and instruction."
+    provenance: inferred
+    source_id: hi-doe-homeschool
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "The homeschool rules place athletics and co-curricular responsibility on parents rather than granting a general public-school participation right."
+    quote: "The parent(s) submitting a notice to home school a child shall be responsible for the child's total educational program including athletics and other co-curricular activities."
+    provenance: inferred
+    source_id: hi-attendance-rules
+    checked_on: "2026-11-05"

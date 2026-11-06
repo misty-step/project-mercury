@@ -1,0 +1,116 @@
+code: "RI"
+name: "Rhode Island"
+summary: "Families must obtain local school committee approval before home instruction begins, teach required subjects, and maintain attendance comparable to public schools. The family and committee agree how to evaluate progress."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "at-home-instruction"
+    name: "At-home instruction"
+    summary: "The local school committee approves a plan showing thorough and efficient instruction and monitors attendance and progress."
+    notice:
+      required: true
+      detail: "Present a home-instruction plan to the resident town school committee before starting; consult the district for its submission process."
+    approval:
+      required: true
+      detail: "Obtain local school committee approval before withdrawing for home instruction."
+    assessment:
+      required: false
+      detail: "No uniform testing or evaluation mandate; agree with the school committee on how progress will be evaluated in the approved plan."
+    subjects:
+      required: true
+      detail: "Teach reading, writing, geography, arithmetic, U.S./RI history and government in English; RIDE also lists civics, health and PE."
+    instruction_time:
+      required: true
+      detail: "Attendance must be substantially equal to public schools; RIDE cites 1,080 hours per school year, without matching the public calendar."
+    teacher_qualifications:
+      required: false
+      detail: "No teaching certificate, special qualification or minimum parent education required."
+    records:
+      required: true
+      detail: "Keep attendance records and submit regular reports locally; retain scores/progress reports if testing at home is agreed."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Ages 6–17, with six measured by September 1; enrolled kindergarten students are also covered."
+    quote: "Every child who has completed, or will have completed, six (6) years of life on or before September 1 of any school year, or is enrolled in kindergarten, and has not completed eighteen (18) years of life"
+    provenance: "measured"
+    source_id: "ri-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.notice"
+    value: "Present a home-instruction plan to the resident town school committee before starting; consult the district for its submission process."
+    quote: "you must contact your local school committee of the town where your child resides and present an at-home instruction plan that complies with R.I. Gen. Laws § 16-19-2."
+    provenance: "measured"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.approval"
+    value: "Obtain local school committee approval before withdrawing for home instruction."
+    quote: "R.I. Gen. Laws § 16-19-1(a) requires that your at-home instruction plan be approved by your local school committee before you begin at-home instruction."
+    provenance: "measured"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.assessment"
+    value: "No uniform testing or evaluation mandate; agree with the school committee on how progress will be evaluated in the approved plan."
+    quote: "The parent and school committee should agree on a way of evaluating your child’s progress in all the required at-home instruction subjects. This may include testing in the required subjects at regular intervals, but should ultimately be decided during the process of approving your at-home instruction plan."
+    provenance: "inferred"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.subjects"
+    value: "Teach reading, writing, geography, arithmetic, U.S./RI history and government in English; RIDE also lists civics, health and PE."
+    quote: "Rhode Island law requires that you teach reading, writing, geography, arithmetic, the history of the United States, the history of Rhode Island, the principles of American Government, civics, health and physical education."
+    provenance: "measured"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.instruction_time"
+    value: "Attendance must be substantially equal to public schools; RIDE cites 1,080 hours per school year, without matching the public calendar."
+    quote: "the period of attendance of the pupils in the school or in the home instruction is substantially equal to that required by law in public schools"
+    provenance: "measured"
+    source_id: "ri-approval-standards"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.instruction_time"
+    value: "Attendance must be substantially equal to public schools; RIDE cites 1,080 hours per school year, without matching the public calendar."
+    quote: "School districts in Rhode Island are currently required to provide a minimum of one thousand eighty (1,080) school hours during each school year"
+    provenance: "measured"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.teacher_qualifications"
+    value: "No teaching certificate, special qualification or minimum parent education required."
+    quote: "There is no minimum education requirement for parents seeking to homeschool their student."
+    provenance: "measured"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.at-home-instruction.records"
+    value: "Keep attendance records and submit regular reports locally; retain scores/progress reports if testing at home is agreed."
+    quote: "You must keep attendance records. If you and your school committee agree that you will test at home, you must also keep progress reports/test scores. Regular reports must be submitted to your local superintendent, or whoever else may be designated as the point person for your at-home instruction."
+    provenance: "measured"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The scholarship tax-credit program supports nonpublic school tuition, not independent home-instruction costs; no homeschool expense benefit is established here."
+    quote: "“Scholarship program” means a program to provide tuition assistance grants to eligible students to attend a nonpublic school located in this state."
+    provenance: "inferred"
+    source_id: "ri-scholarship-eligibility"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "No statewide right to classes or extracurricular activities; the local school committee decides whether to permit participation."
+    quote: "However, each school committee has authority to decide whether or not to allow a homeschooled child to participate in public school programs extracurricular activities."
+    provenance: "measured"
+    source_id: "ri-home-instruction"
+    checked_on: "2026-11-05"
+funding:
+  available: false
+  detail: "No homeschool ESA or expense tax credit; tax-credit scholarships pay tuition at qualifying nonpublic schools, not independent home instruction."
+public_school_access:
+  available: false
+  detail: "No statewide right to classes or extracurricular activities; the local school committee decides whether to permit participation."
