@@ -16,3 +16,7 @@ project-mercury-core = { path = "../core" }
 anyhow.workspace = true
 clap.workspace = true
 serde_json.workspace = true
+
+[dev-dependencies]
+proptest = { version = "=1.8.0", default-features = false, features = ["std"] }
+scraper = { version = "=0.24.0", default-features = false }
