@@ -15,7 +15,8 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - run: cargo fmt --all --check
       - run: cargo clippy --all-targets -- -D warnings
-      - run: cargo test
+      - name: Check workspace tests and HTML safety properties
+        run: cargo test --locked
       - run: cargo run -p project-mercury-cli -- validate
       - run: cargo run -p mercury-site -- --data data --out dist
       - run: test -f dist/index.html
