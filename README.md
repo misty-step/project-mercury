@@ -94,6 +94,18 @@ python3 -m http.server --directory dist 8000   # local preview
 
 For running-app proof, use [verify-mercury](.agents/skills/verify-mercury/SKILL.md) to launch the site and CLI, drive mapped journeys, and retain evidence.
 
+### HTML safety
+
+Run the bounded HTML escaping and external-link properties with:
+
+```sh
+cargo test --locked -p mercury-site --test html_safety
+```
+
+The [HTML safety skill](.agents/skills/verify-html-safety/SKILL.md) records the
+covered renderer functions, input bounds, tool versions, and scratch defects the
+check must reject. These properties supplement the real-site checks.
+
 ### Deploy
 
 `wrangler.jsonc` configures an assets-only Cloudflare Worker named
