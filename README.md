@@ -1,11 +1,13 @@
 # Project Mercury
 
-A navigable, sourced catalog of favorite homeschool resources, written in Rust.
-Every factual claim in the catalog cites a source and says how it was obtained.
+A navigable, sourced catalog of favorite homeschool resources, plus what each US
+state and DC asks of home educating families, written in Rust. Every factual claim
+cites a source and says how it was obtained.
 
 ## Layout
 
 - `data/entries/*.yaml`: one catalog entry per file
+- `data/states/<xx>.yaml`: one record per state or DC (`xx` is the lowercase USPS code)
 - `data/sources/*.yaml`: a list of cited sources per file (usually one file per publisher)
 - `crates/core` (`project-mercury-core`): types, YAML loading, `validate()`, and a pure `search()`
 - `crates/cli` (`project-mercury-cli`, binary `project-mercury`): command-line interface
@@ -44,6 +46,34 @@ Optional at-a-glance fields: `best_at`, `most_useful_when`, `skill_levels`
 and `pace` (self_paced/scheduled). `validate` requires a claim with `field` equal to
 the facet name for every facet that is set.
 
+## States
+
+Each state record has `compulsory_ages`, `funding` and `public_school_access`
+(`{ available, detail }`), and one or more `pathways`: the legal routes to home
+educating (home school statute, umbrella or church school, tutor, an ESA that
+satisfies attendance on its own). Each pathway lists seven duties as
+`{ required, detail }`: `notice`, `approval`, `assessment`, `subjects`,
+`instruction_time`, `teacher_qualifications` and `records`.
+
+A duty that applies only in some cases (certain grades, some families) is
+`required: true` with the conditions in `detail`. The exception is notice: a
+filing owed only on withdrawal from public school, on request, or to join public
+school activities is `required: false`, with the condition in `detail`.
+
+`validate` requires a claim for `compulsory_ages`, `funding`,
+`public_school_access` and every `pathways.<id>.<duty>`. State claims must quote
+the cited page verbatim (`quote`), carry `checked_on` as `YYYY-MM-DD`, be
+`measured` or `inferred` (not `guess`), and cite a source of type `statute` or
+`agency`. Advocacy summaries are never cited.
+
+Regulation is computed, not stored. A pathway is **high** if the program must be
+approved, otherwise **moderate** if it requires assessment, otherwise **low** if
+it requires notice or a teacher qualification, otherwise **no notice**. A state
+takes its least regulated pathway's level. Optional funding programs' strings
+(tests, reports) go in `funding.detail`; they do not change a pathway's duties.
+
+State pages are informational, not legal advice.
+
 ## Website
 
 `mercury-site` renders the catalog to a static site in `dist/` (gitignored): a home
@@ -51,8 +81,10 @@ page of resource cards (best at, most useful when, age bar, involvement and scre
 meters, cost tier, skill levels) with an age-coverage chart and a faceted filter bar
 (age, subject and each facet, with counts; a small inline script filters live, and
 without JS every card shows), one page per entry with a sourced facts table, one page
-per approach, plus `styles.css`, `404.html`, `llms.txt` and `dump.json` (the whole
-catalog as JSON). Light and dark follow `prefers-color-scheme`.
+per approach, a states page (tile map by regulation level and a summary table) with
+one page per state (pathways and duties with inline source links, quotes in a
+collapsible table), plus `styles.css`, `404.html`, `llms.txt` and `dump.json` (the
+whole catalog as JSON). Light and dark follow `prefers-color-scheme`.
 The catalog is validated first; the build fails on any validation error.
 
 ```sh

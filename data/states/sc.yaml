@@ -1,0 +1,394 @@
+code: "SC"
+name: "South Carolina"
+summary: "Families may use a qualifying home-school association or obtain district approval, with 180 instructional days and required subjects. An income-eligible family may instead educate at home through the separate Education Scholarship Trust Fund program."
+compulsory_ages:
+  min: 5
+  max: 16
+pathways:
+  -
+    id: "association"
+    name: "Option 3: Association for home schools"
+    summary: "Parents join a qualifying association with at least 50 members and follow its academic standards."
+    notice:
+      required: true
+      detail: "Join a qualifying association; it reports student counts and grades to each district by January 30."
+    approval:
+      required: false
+      detail: "No district or state approval of the individual program; association membership and compliance are required."
+    assessment:
+      required: false
+      detail: "No standardized test or independent evaluation required; parents document progress in semiannual reports."
+    subjects:
+      required: true
+      detail: "Reading, writing, mathematics, science, social studies; add composition and literature in grades 7–12."
+    instruction_time:
+      required: true
+      detail: "At least 180 instructional days annually; no daily minimum hours under Option 3."
+    teacher_qualifications:
+      required: true
+      detail: "The parent must hold at least a high school diploma or GED."
+    records:
+      required: true
+      detail: "Keep a lesson/activity record, work-sample portfolio, and semiannual progress reports with attendance."
+  -
+    id: "scaihs"
+    name: "Option 2: South Carolina Association of Independent Home Schools"
+    summary: "Parents teach through SCAIHS and comply with its continuing academic standards."
+    notice:
+      required: true
+      detail: "Join SCAIHS; it reports student counts and grade levels to the districts by January 30."
+    approval:
+      required: false
+      detail: "No district or state approval of the individual program; maintain SCAIHS membership and compliance."
+    assessment:
+      required: false
+      detail: "No state-mandated testing or evaluation; SCAIHS may impose its own academic requirements."
+    subjects:
+      required: true
+      detail: "Reading, writing, mathematics, science, social studies; add composition and literature in grades 7–12."
+    instruction_time:
+      required: true
+      detail: "At least 180 instructional days annually; no statutory daily-hour minimum for this option."
+    teacher_qualifications:
+      required: true
+      detail: "The parent must hold at least a high school diploma or GED."
+    records:
+      required: false
+      detail: "No separate state recordkeeping list under Option 2; comply with SCAIHS standards and its reporting requirements."
+  -
+    id: "district"
+    name: "Option 1: District-approved home schooling"
+    summary: "The resident district board approves and supervises a home-school program meeting statutory standards."
+    notice:
+      required: true
+      detail: "Apply to the resident district board with program, materials, evaluation methods, and instruction location."
+    approval:
+      required: true
+      detail: "Resident district board approval is required before using this route."
+    assessment:
+      required: true
+      detail: "Annual statewide grade-level tests, semiannual progress assessments, and first-grade readiness testing where applicable."
+    subjects:
+      required: true
+      detail: "Reading, writing, mathematics, science, social studies; add composition and literature in grades 7–12. Library access is required."
+    instruction_time:
+      required: true
+      detail: "At least 180 days; each day at least 4½ hours, excluding lunch and recess."
+    teacher_qualifications:
+      required: true
+      detail: "Parent must have at least a high school diploma or GED, or a bachelor’s degree."
+    records:
+      required: true
+      detail: "Keep lesson records, work portfolio, and evaluations for inspection; submit semiannual attendance and progress reports."
+  -
+    id: "estf"
+    name: "Education Scholarship Trust Fund"
+    summary: "Income-eligible families may educate at home through an approved ESTF account instead of Options 1–3."
+    notice:
+      required: true
+      detail: "Apply to the Department of Education for ESTF; annually attest to instruction, testing, and program conditions."
+    approval:
+      required: true
+      detail: "The department must approve scholarship eligibility and available funding; the signed parent agreement then satisfies attendance."
+    assessment:
+      required: true
+      detail: "Required academic progress assessments in grades 3–12, with disability exceptions; report scores to the department."
+    subjects:
+      required: true
+      detail: "English/language arts including writing, mathematics, social studies, and science."
+    instruction_time:
+      required: false
+      detail: "No fixed annual days or daily hours specified for the ESTF home-education agreement."
+    teacher_qualifications:
+      required: false
+      detail: "No parent degree or credential specified; education service providers have separate eligibility rules."
+    records:
+      required: true
+      detail: "Report required assessment results to the department and complete the ESTF testing report form."
+funding:
+  available: true
+  detail: "ESTF supports eligible home education outside Options 1–3: $7,634 for 2026–27, household income up to 500% of federal poverty guidelines; assessments required."
+public_school_access:
+  available: true
+  detail: "Options 1–3 students have access to eligible resident-school interscholastic activities after a full homeschool year; notify the superintendent before the season."
+claims:
+  -
+    field: "pathways.association.notice"
+    value: "Join a qualifying association; it reports student counts and grades to each district by January 30."
+    quote: "By January thirtieth of each year, all associations shall report the number and grade level of children home schooled through the association to the children's respective school districts."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.association.approval"
+    value: "No district or state approval of the individual program; association membership and compliance are required."
+    quote: "Bona fide membership and continuing compliance with the academic standards of the associations exempts the home school from the further requirements of Section 59-65-40 or Section 59-65-45."
+    provenance: "inferred"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.association.assessment"
+    value: "No standardized test or independent evaluation required; parents document progress in semiannual reports."
+    quote: "a semiannual progress report including attendance records and individualized documentation of the student's academic progress in each of the basic instructional areas specified in item (c) above."
+    provenance: "inferred"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.association.subjects"
+    value: "Reading, writing, mathematics, science, social studies; add composition and literature in grades 7–12."
+    quote: "the curriculum includes, but is not limited to, the basic instructional areas of reading, writing, mathematics, science, and social studies, and in grades seven through twelve, composition and literature."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.association.instruction_time"
+    value: "At least 180 instructional days annually; no daily minimum hours under Option 3."
+    quote: "the instructional year is at least one hundred eighty days;"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.association.teacher_qualifications"
+    value: "The parent must hold at least a high school diploma or GED."
+    quote: "a parent must hold at least a high school diploma or the equivalent general educational development (GED) certificate;"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.association.records"
+    value: "Keep a lesson/activity record, work-sample portfolio, and semiannual progress reports with attendance."
+    quote: "a semiannual progress report including attendance records and individualized documentation of the student's academic progress in each of the basic instructional areas specified in item (c) above."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.scaihs.notice"
+    value: "Join SCAIHS; it reports student counts and grade levels to the districts by January 30."
+    quote: "By January thirtieth of each year, the South Carolina Association of Independent Home Schools shall report the number and grade level of children home schooled through the association to the children's respective school districts."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.scaihs.approval"
+    value: "No district or state approval of the individual program; maintain SCAIHS membership and compliance."
+    quote: "Bona fide membership and continuing compliance with the academic standards of South Carolina Association of Independent Home Schools exempts the home school from the further requirements of Section 59-65-40."
+    provenance: "inferred"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.scaihs.assessment"
+    value: "No state-mandated testing or evaluation; SCAIHS may impose its own academic requirements."
+    quote: "Bona fide membership and continuing compliance with the academic standards of South Carolina Association of Independent Home Schools exempts the home school from the further requirements of Section 59-65-40."
+    provenance: "inferred"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.scaihs.subjects"
+    value: "Reading, writing, mathematics, science, social studies; add composition and literature in grades 7–12."
+    quote: "the curriculum includes, but is not limited to, the basic instructional areas of reading, writing, mathematics, science, and social studies, and in grades seven through twelve, composition and literature."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.scaihs.instruction_time"
+    value: "At least 180 instructional days annually; no statutory daily-hour minimum for this option."
+    quote: "the instructional year is at least one hundred eighty days;"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.scaihs.teacher_qualifications"
+    value: "The parent must hold at least a high school diploma or GED."
+    quote: "a parent must hold at least a high school diploma or the equivalent general educational development (GED) certificate;"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.scaihs.records"
+    value: "No separate state recordkeeping list under Option 2; comply with SCAIHS standards and its reporting requirements."
+    quote: "Bona fide membership and continuing compliance with the academic standards of South Carolina Association of Independent Home Schools exempts the home school from the further requirements of Section 59-65-40."
+    provenance: "inferred"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.notice"
+    value: "Apply to the resident district board with program, materials, evaluation methods, and instruction location."
+    quote: "The district board of trustees shall provide for an application process which elicits the information necessary for processing the home schooling request"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.approval"
+    value: "Resident district board approval is required before using this route."
+    quote: "Parents or guardians may teach their children at home if the instruction is approved by the district board of trustees of the district in which the children reside."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.assessment"
+    value: "Annual statewide grade-level tests, semiannual progress assessments, and first-grade readiness testing where applicable."
+    quote: "students must participate in the annual statewide testing program and the Basic Skills Assessment Program approved by the State Board of Education for their appropriate grade level."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.subjects"
+    value: "Reading, writing, mathematics, science, social studies; add composition and literature in grades 7–12. Library access is required."
+    quote: "the curriculum includes, but is not limited to, the basic instructional areas of reading, writing, mathematics, science, and social studies and in grades seven through twelve, composition and literature;"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.instruction_time"
+    value: "At least 180 days; each day at least 4½ hours, excluding lunch and recess."
+    quote: "the instructional day is at least four and one-half hours, excluding lunch and recesses, and the instructional year is at least one hundred eighty days;"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.teacher_qualifications"
+    value: "Parent must have at least a high school diploma or GED, or a bachelor’s degree."
+    quote: "holds at least a high school diploma or the equivalent general educational development (GED) certificate"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.records"
+    value: "Keep lesson records, work portfolio, and evaluations for inspection; submit semiannual attendance and progress reports."
+    quote: "A semiannual progress report including attendance records and individualized assessments of the student's academic progress in each of the basic instructional areas specified in item (3) must be submitted to the school district."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.district.subjects"
+    value: "Students must have access to library facilities."
+    quote: "students must have access to library facilities;"
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.notice"
+    value: "Apply to the Department of Education for ESTF; annually attest to instruction, testing, and program conditions."
+    quote: "the parent submits an application for a scholarship in accordance with the application and procedures established by the department;"
+    provenance: "measured"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.approval"
+    value: "The department must approve scholarship eligibility and available funding; the signed parent agreement then satisfies attendance."
+    quote: "The department shall approve an initial application for scholarship if:"
+    provenance: "measured"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.assessment"
+    value: "Required academic progress assessments in grades 3–12, with disability exceptions; report scores to the department."
+    quote: "to ensure the scholarship student takes assessments as referenced in Section 59-8-150 or provides assessments in a similar manner through other means if the scholarship student does not receive full-time instruction from an education service provider;"
+    provenance: "measured"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.subjects"
+    value: "English/language arts including writing, mathematics, social studies, and science."
+    quote: "to provide, at a minimum, a program of academic instruction for the eligible student in at least the subjects of English/language arts to include writing, mathematics, social studies, and science;"
+    provenance: "measured"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.instruction_time"
+    value: "No fixed annual days or daily hours specified for the ESTF home-education agreement."
+    quote: "to provide, at a minimum, a program of academic instruction for the eligible student in at least the subjects of English/language arts to include writing, mathematics, social studies, and science;"
+    provenance: "inferred"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.teacher_qualifications"
+    value: "No parent degree or credential specified; education service providers have separate eligibility rules."
+    quote: "to provide, at a minimum, a program of academic instruction for the eligible student in at least the subjects of English/language arts to include writing, mathematics, social studies, and science;"
+    provenance: "inferred"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.records"
+    value: "Report required assessment results to the department and complete the ESTF testing report form."
+    quote: "After you receive your child’s test results, email a PDF copy of the score report to ESTFProgram@ed.sc.gov."
+    provenance: "measured"
+    source_id: "sc-estf-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.notice"
+    value: "Parents annually attest to the program conditions."
+    quote: "the parent annually attests to the following:"
+    provenance: "measured"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.approval"
+    value: "The ESTF parent agreement is a separate way of meeting attendance law. "
+    quote: "A parent's signed agreement under subsection (D)(4) satisfies the state's compulsory attendance law pursuant to Section 59-65-10."
+    provenance: "measured"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.estf.assessment"
+    value: "Grades 9–12 require an approved assessment, with exceptions for disabilities when standardized testing is inappropriate."
+    quote: "ensure that each scholarship student in grades nine through twelve takes a department-approved, nationally norm-referenced assessment, formative assessment, or assessment that demonstrates the student's college or career readiness. Students with disabilities for whom standardized testing is not appropriate are exempt from this requirement;"
+    provenance: "measured"
+    source_id: "sc-59-8"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "Attendance begins in the school year the child is 5 before September 1 and ends at the 17th birthday or graduation; kindergarten may be waived by signed district election."
+    quote: "from the school year in which the child is five years of age before September first until the child attains his seventeenth birthday or graduates from high school."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "Parents may elect against kindergarten for a child not 6 by September 1 by signing a district form."
+    quote: "A parent or guardian whose child is not six years of age on or before the first day of September of a particular school year may elect for their child or ward not to attend kindergarten."
+    provenance: "measured"
+    source_id: "sc-59-65"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "ESTF home education is available as a separate route, not alongside Options 1–3."
+    quote: "Some families are choosing to educate at home and take advantage of ESTF to purchase curricular materials, technology, tutoring, and educational therapies."
+    provenance: "measured"
+    source_id: "sc-estf-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The ESTF award is $7,634 for 2026–27."
+    quote: "The award amount increases to $7,634 for the 2026-2027 school year."
+    provenance: "measured"
+    source_id: "sc-estf-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The 2026–27 income limit is 500% of federal poverty guidelines."
+    quote: "Have a household income that does not exceed 500% of the federal poverty guidelines"
+    provenance: "measured"
+    source_id: "sc-estf-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Home-school students meeting statutory eligibility cannot be denied interscholastic opportunities."
+    quote: "Individual Governor's school students and home school students may not be denied by a school district the opportunity to participate in interscholastic activities if the:"
+    provenance: "measured"
+    source_id: "sc-59-63"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "The access rule requires a full prior academic year under Option 1, 2, or 3."
+    quote: "\"Home school student\" is a child taught in accordance with Section 59-65-40, 59-65-45, or 59-65-47 and has been taught in accordance with one of these sections for a full academic year prior to participating in an interscholastic activity pursuant to this section."
+    provenance: "measured"
+    source_id: "sc-59-63"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Notify the district superintendent in writing before the activity season begins."
+    quote: "student notifies the superintendent of the school district in writing of his intent to participate in the interscholastic activity as a representative of the school before the beginning date of the season for the activity in which he wishes to participate."
+    provenance: "measured"
+    source_id: "sc-59-63"
+    checked_on: "2026-11-05"

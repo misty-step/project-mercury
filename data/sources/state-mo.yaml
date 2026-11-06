@@ -1,0 +1,45 @@
+- id: mo-167012
+  url: https://revisor.mo.gov/main/OneSection.aspx?section=167.012
+  publisher: Missouri Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mo-167013
+  url: https://revisor.mo.gov/main/OneSection.aspx?section=167.013
+  publisher: Missouri Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mo-167031
+  url: https://revisor.mo.gov/main/OneSection.aspx?section=167.031
+  publisher: Missouri Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mo-167042
+  url: https://revisor.mo.gov/main/OneSection.aspx?section=167.042&bid=57176
+  publisher: Missouri Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mo-167790
+  url: https://revisor.mo.gov/main/OneSection.aspx?section=167.790&bid=57177
+  publisher: Missouri Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mo-166705
+  url: https://revisor.mo.gov/main/OneSection.aspx?section=166.705&bid=49830
+  publisher: Missouri Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mo-135714
+  url: https://revisor.mo.gov/main/OneSection.aspx?section=135.714
+  publisher: Missouri Revisor of Statutes
+  type: statute
+  checked_on: "2026-11-05"
+- id: mo-treasurer-schools
+  url: https://treasurer.mo.gov/MOScholars/Schools
+  publisher: Missouri State Treasurer
+  type: agency
+  checked_on: "2026-11-05"
+- id: mo-treasurer-parents
+  url: https://www.treasurer.mo.gov/MOScholars/ParentsStudents
+  publisher: Missouri State Treasurer
+  type: agency
+  checked_on: "2026-11-05"

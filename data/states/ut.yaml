@@ -1,0 +1,165 @@
+code: "UT"
+name: "Utah"
+summary: "Parents give their resident school board a one-time notice and control curriculum, schedule, and instruction without district approval. Families using Utah Fits All scholarships must also satisfy the scholarship’s annual accountability rules."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "home-school"
+    name: "Home school"
+    summary: "Parents provide home education after a one-time notification to their district of residence."
+    notice:
+      required: true
+      detail: "Give the resident school board a one-time initial notice; no annual affidavit. Earlier notices remain valid."
+    approval:
+      required: false
+      detail: "Not required; the board acknowledges the notice within 30 days rather than approving instruction."
+    assessment:
+      required: false
+      detail: "No required standardized tests or district evaluations for unfunded home schools."
+    subjects:
+      required: false
+      detail: "No mandated subjects or curriculum; parents choose materials and learning goals."
+    instruction_time:
+      required: false
+      detail: "No required number of days or instructional hours."
+    teacher_qualifications:
+      required: false
+      detail: "No teaching license, degree, or special training required."
+    records:
+      required: false
+      detail: "Districts may not require instruction or attendance records."
+funding:
+  available: true
+  detail: "Utah Fits All offers up to $4,000 at ages 5–11 or $6,000 at ages 12–18 (September 1 ages). Renewal requires a portfolio or assessment, normally by May 31; funds are limited."
+public_school_access:
+  available: true
+  detail: "Home-school students may enroll in public school part-time and join academic activities on the same terms as their grade or age group."
+claims:
+  -
+    field: "pathways.home-school.notice"
+    value: "Give the resident school board a one-time initial notice; no annual affidavit. Earlier notices remain valid."
+    quote: "When a parent withdraws an enrolled school-age child from school for the purpose of home-schooling, or chooses not to enroll a school-age child, the parent shall provide a one-time initial notification, that may include a letter of intent, to the local school board of the school-age child's district of residence."
+    provenance: "measured"
+    source_id: "ut-53g-6-204"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.approval"
+    value: "Not required; the board acknowledges the notice within 30 days rather than approving instruction."
+    quote: "acknowledge receipt of the notification to the parent within 30 days"
+    provenance: "inferred"
+    source_id: "ut-53g-6-204"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.assessment"
+    value: "No required standardized tests or district evaluations for unfunded home schools."
+    quote: "require standardized or other testing of home school students."
+    provenance: "inferred"
+    source_id: "ut-53g-6-204"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.subjects"
+    value: "No mandated subjects or curriculum; parents choose materials and learning goals."
+    quote: "Utah does not require homeschool families to use a certain curriculum, textbook, or program. Parents may choose the learning materials and subjects that work best for their child."
+    provenance: "inferred"
+    source_id: "ut-usbe-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.instruction_time"
+    value: "No required number of days or instructional hours."
+    quote: "Utah law does not require homeschool families to follow a set number of school days or instructional hours."
+    provenance: "inferred"
+    source_id: "ut-usbe-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.teacher_qualifications"
+    value: "No teaching license, degree, or special training required."
+    quote: "Parents do not need a teaching license, college degree, or special training to homeschool their children."
+    provenance: "inferred"
+    source_id: "ut-usbe-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.records"
+    value: "Districts may not require instruction or attendance records."
+    quote: "require a parent or legal guardian of a school-age child who attends a home school to maintain records of instruction or attendance;"
+    provenance: "inferred"
+    source_id: "ut-53g-6-204"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "To renew, submit a portfolio or assessment results by May 31 or the manager-approved assessment schedule."
+    quote: "complete and deliver to the program manager a portfolio describing the scholarship student's educational opportunities and achievements under the program for the given year; or"
+    provenance: "measured"
+    source_id: "ut-53f-6-402"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "A scholarship application or renewal is required for each funded school year."
+    quote: "An eligible student or a public education student shall submit an application for an initial scholarship or renewal for each school year that the student intends to receive scholarship funds."
+    provenance: "measured"
+    source_id: "ut-53f-6-402"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Assessment results are an alternative to a portfolio."
+    quote: "submit results from an assessment as described in Section 53F-6-410."
+    provenance: "measured"
+    source_id: "ut-53f-6-402"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The standard portfolio or assessment submission deadline is May 31."
+    quote: "no later than May 31;"
+    provenance: "measured"
+    source_id: "ut-53f-6-402"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Reimbursement claims must document the cost, kind of purchase, and provider."
+    quote: "the parent or scholarship student submits a receipt that shows the cost and type of service or good and the name of provider;"
+    provenance: "measured"
+    source_id: "ut-53f-6-402"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "A nonemancipated minor at least 6 but younger than 18 is school-age."
+    quote: "is at least six years old but younger than 18 years old;"
+    provenance: "measured"
+    source_id: "ut-53g-6-201"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "The parent must enroll a school-age child unless an attendance exemption or dual-enrollment provision applies."
+    quote: "the parent of a school-age child shall enroll and send the school-age child to a public or regularly established private school."
+    provenance: "measured"
+    source_id: "ut-53g-6-202"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Utah Fits All home-based awards are capped at $4,000 for ages 5–11 and $6,000 for ages 12–18 as of September 1."
+    quote: "for a home-based scholarship student age 5-11 as of September 1 of the scholarship year, $4,000; and"
+    provenance: "measured"
+    source_id: "ut-53f-6-402"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Utah Fits All awards up to $6,000 for a home-based scholarship student aged 12–18 as of September 1."
+    quote: "for a home-based scholarship student age 12-18 as of September 1 of the scholarship year, $6,000."
+    provenance: "measured"
+    source_id: "ut-53f-6-402"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Parents may dual-enroll a home-schooled child in public school."
+    quote: "A person having control of a minor who is enrolled in a regularly established private school or a home school may also enroll the minor in a public school for dual enrollment purposes."
+    provenance: "measured"
+    source_id: "ut-53g-6-702"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Academic activities are available under the same rules as for full-time students."
+    quote: "The minor may participate in any academic activity in the public school available to students in the minor's grade or age group, subject to compliance with the same rules and requirements that apply to a full-time student's participation in the activity."
+    provenance: "measured"
+    source_id: "ut-53g-6-702"
+    checked_on: "2026-11-05"

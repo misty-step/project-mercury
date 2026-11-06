@@ -1,0 +1,167 @@
+code: MI
+name: Michigan
+summary: >-
+  Parents may educate at home under exemption (f) without reporting to the state, using an organized program in named subjects. Alternatively, a home school may operate as a nonpublic school under exemption (a), with reporting and instructor-qualification rules.
+compulsory_ages: { min: 6, max: 17 }
+pathways:
+  - id: exemption-f
+    name: Exemption (f) home school
+    summary: A parent or legal guardian provides an organized educational program at the child's home under MCL 380.1561(3)(f).
+    notice: { required: false, detail: "No state or district notice required for this exemption. Reporting for eligible special education services is a separate nonpublic-school process." }
+    approval: { required: false, detail: "No state or district program approval required; MDE plays no role under exemption (f)." }
+    assessment: { required: false, detail: "No required standardized testing or outside evaluation; parents determine testing. State testing is optional." }
+    subjects: { required: true, detail: "Reading, spelling, mathematics, science, history, civics, literature, writing, and English grammar." }
+    instruction_time: { required: false, detail: "No fixed number of instructional days or hours required for home schools." }
+    teacher_qualifications: { required: false, detail: "No minimum credential; the instructor under exemption (f) must be the child's parent or legal guardian." }
+    records: { required: false, detail: "No mandatory progress-record filing or retention under exemption (f); MDE encourages parents to keep student progress records." }
+  - id: exemption-a
+    name: Exemption (a) nonpublic home school
+    summary: A home school operates under the nonpublic-school law and reports to MDE, including when seeking eligible special education services.
+    notice: { required: true, detail: "Report annually to MDE as a nonpublic home school; the Nonpublic School Membership Report is due October 31. Register each year to continue special education services." }
+    approval: { required: false, detail: "No separate advance program authorization; satisfy nonpublic-school requirements and reporting, subject to state compliance investigation." }
+    assessment: { required: false, detail: "No mandated home-school standardized test or outside evaluation; state assessments are optional." }
+    subjects: { required: true, detail: "Curriculum comparable to local public schools: math, reading, English, science, social studies; US/Michigan constitutions and government/history in high school." }
+    instruction_time: { required: false, detail: "No fixed days or hours; the public-school 180-day rule does not apply to nonpublic schools." }
+    teacher_qualifications: { required: true, detail: "A reporting parent needs at least a bachelor's degree, unless sincerely held religious beliefs oppose teacher certification." }
+    records: { required: true, detail: "Report enrollment, teacher qualifications, and courses annually; enrollment records, courses, and teacher qualifications are subject to MDE examination." }
+funding: { available: false, detail: "No general public funding or homeschool expense tax benefit; families buy their own curriculum and materials." }
+public_school_access: { available: true, detail: "Home-schooled students may enroll in nonessential elective classes at their resident public school, subject to enrollment policy; sports access is not guaranteed." }
+claims:
+  - field: compulsory_ages
+    value: "Current school-age children generally must attend from age 6 until their 18th birthday; parents may give written permission to stop at 16."
+    quote: "shall send the child to a public school during the entire school year from the age of 6 to the child's eighteenth birthday."
+    provenance: measured
+    source_id: mi-3801561
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "Children turning 6 before December 1 enroll that school year; later birthdays start the following school year."
+    quote: "A child becoming 6 years of age before December 1 shall be enrolled on the first school day of the school year in which the child's sixth birthday occurs"
+    provenance: measured
+    source_id: mi-3801561
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "Written parental permission permits stopping attendance at age 16 or older."
+    quote: "this section does not apply to the child if the child is at least age 16 and the child's parent or legal guardian has provided to school officials of the school district in which the child resides a written notice that the child has the permission of the parent or legal guardian to stop attending school."
+    provenance: measured
+    source_id: mi-3801561
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.notice
+    value: "Exemption (f) families do not report as nonpublic schools to MDE."
+    quote: "The home school family does not report as a nonpublic school to the Michigan Department of Education."
+    provenance: measured
+    source_id: mi-mde-exemption-f
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.notice
+    value: "Parents need not notify their local school of the choice to home school."
+    quote: "It is not required that a parent inform their local school of the decision to home school, however, it is suggested."
+    provenance: measured
+    source_id: mi-mde-home-schooling
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.approval
+    value: "This exemption requires no MDE approval."
+    quote: "The Michigan Department of Education plays no role with the home school family."
+    provenance: inferred
+    source_id: mi-mde-exemption-f
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.assessment
+    value: "There are no required tests for home-school students."
+    quote: "There are no required tests for a home-schooled student."
+    provenance: measured
+    source_id: mi-mde-home-schooling
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.subjects
+    value: "The organized program must include the nine named subjects."
+    quote: "The child is being educated at the child's home by his or her parent or legal guardian in an organized educational program in the subject areas of reading, spelling, mathematics, science, history, civics, literature, writing, and English grammar."
+    provenance: measured
+    source_id: mi-3801561
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.instruction_time
+    value: "The home-school exemption specifies an organized program in subjects but no fixed days or hours."
+    quote: "The child is being educated at the child's home by his or her parent or legal guardian in an organized educational program in the subject areas of reading, spelling, mathematics, science, history, civics, literature, writing, and English grammar."
+    provenance: inferred
+    source_id: mi-3801561
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.teacher_qualifications
+    value: "There is no credential minimum for a parent or legal guardian under exemption (f)."
+    quote: "There are no minimum qualifications for teachers except that they must be the parents or legal guardians of the children."
+    provenance: measured
+    source_id: mi-mde-exemption-f
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-f.records
+    value: "Progress records are encouraged rather than required for exemption (f)."
+    quote: "Parents are encouraged to maintain student records of progress throughout the year."
+    provenance: inferred
+    source_id: mi-mde-home-schooling
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.notice
+    value: "A home school choosing exemption (a) reports to MDE."
+    quote: "If a home school family chooses to operate under exemption (a), it reports to the Michigan Department of Education (MDE)."
+    provenance: measured
+    source_id: mi-mde-manual
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.notice
+    value: "The annual nonpublic membership report is available October 15 and due October 31."
+    quote: "The Nonpublic School Membership Report is available within the NexSys system on October 15, at the start of the school year, with an October 31 due date annually."
+    provenance: measured
+    source_id: mi-mde-manual
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.approval
+    value: "Operation under exemption (a) requires legal compliance and reporting, not a separate preopening authorization process."
+    quote: "A home school operating under Section 1561(3)(a) of the Revised School Code (MCL 380.1561) as described above is considered a nonpublic school if in compliance with the Private, Denominational and Parochial Schools Act, PA 302 of 1921."
+    provenance: inferred
+    source_id: mi-mde-manual
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.assessment
+    value: "Home-school students are not required to take standardized tests."
+    quote: "There are no required tests for a home-schooled student."
+    provenance: measured
+    source_id: mi-mde-home-schooling
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.subjects
+    value: "Nonpublic schools must provide curriculum comparable to local public schools, including specified core and high-school civics subjects."
+    quote: "Nonpublic schools shall provide curricula comparable to those provided in local school districts."
+    provenance: measured
+    source_id: mi-mde-manual
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.subjects
+    value: "Core subjects and US/Michigan constitutional and governmental studies are required."
+    quote: "This curricula includes mathematics, reading, English, science, social studies in all grades, and the Constitution of the United States, the Constitution of Michigan, and the history and present form of civil government of the United States, the State of Michigan, and the political subdivisions and municipalities of the State of Michigan in high school."
+    provenance: measured
+    source_id: mi-mde-manual
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.instruction_time
+    value: "The nonpublic law does not impose the public-school 180-day rule; no fixed homeschool days or hours are prescribed."
+    quote: "ruled that the Nonpublic School Act did not require a nonpublic school to be in session for 180 days required for public schools."
+    provenance: inferred
+    source_id: mi-mde-manual
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.teacher_qualifications
+    value: "A reporting parent needs a bachelor's degree unless a sincere religious objection to teacher certification applies."
+    quote: "A parent or legal guardian reporting to MDE must have a minimum bachelor’s degree to be approved unless they claim a sincerely held religious belief against teacher certification"
+    provenance: measured
+    source_id: mi-mde-home-schooling
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.records
+    value: "The annual report includes enrollment, instructor qualifications, and course of study."
+    quote: "The Nonpublic School Membership Report is an annual report used by MDE. Information requested on the form includes the number of students in each grade, teacher qualifications, and the course of study offered."
+    provenance: measured
+    source_id: mi-mde-manual
+    checked_on: "2026-11-05"
+  - field: pathways.exemption-a.records
+    value: "The nonpublic-school law permits examination of enrollment, courses, and teacher qualifications."
+    quote: "the records of enrollment of pupils, its courses of studies as set forth in section 1 of this act and the qualifications of its teachers."
+    provenance: measured
+    source_id: mi-388555
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "Michigan offers no public funding for ordinary home schooling."
+    quote: "There are no public funds available for home schooling."
+    provenance: measured
+    source_id: mi-mde-home-schooling
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Home-school students may enroll in nonessential electives at the resident public school under district enrollment policy."
+    quote: "may enroll in nonessential elective classes at the resident public"
+    provenance: measured
+    source_id: mi-mde-home-schooling
+    checked_on: "2026-11-05"

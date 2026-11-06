@@ -1,0 +1,237 @@
+code: MO
+name: Missouri
+summary: >-
+  Families may operate an unfunded home school or a Family Paced Education school; both keep evidence of instruction and meet subject-hour requirements for children under 16. Eligible FPE students may instead use a MOScholars agreement, which satisfies compulsory attendance and adds scholarship reporting and testing conditions.
+compulsory_ages: { min: 7, max: 16 }
+pathways:
+  - id: home-school
+    name: Home school
+    summary: A private or religious home school that charges no tuition and enrolls no MOScholars participants teaches the child under sections 167.012 and 167.031.
+    notice: { required: false, detail: "No annual homeschool registration or intent filing; a written withdrawal request makes a public district remove the child promptly from its rolls." }
+    approval: { required: false, detail: "No state or district approval; home education enforcement and records review belong to the local prosecuting attorney." }
+    assessment: { required: false, detail: "No required standardized test or outside evaluation; keep evidence of academic progress for children under 16, such as evaluation records or equivalent evidence." }
+    subjects: { required: true, detail: "Under age 16, at least 600 hours in reading, language arts, mathematics, social studies, science, or related age-appropriate academic courses." }
+    instruction_time: { required: true, detail: "Under age 16, at least 1,000 instructional hours yearly, including 600 core-subject hours; at least 400 of the 600 at the regular home school location." }
+    teacher_qualifications: { required: false, detail: "No parent teaching certificate or degree required." }
+    records: { required: true, detail: "Under age 16, keep a plan book/diary, work portfolio, and progress-evaluation records, or equivalent written or credible evidence. Retain a daily log as a legal defense." }
+  - id: fpe-school
+    name: Family Paced Education school
+    summary: A tuition-free private or religious FPE school may teach at home and may accept MOScholars participants, but scholarship participation is not required.
+    notice: { required: false, detail: "No general annual FPE registration with the state or district; use written notice when requesting removal from public-school rolls." }
+    approval: { required: false, detail: "No state or district approval of an ordinary FPE program; scholarship participation has separate eligibility conditions." }
+    assessment: { required: false, detail: "No standardized test or outside evaluation for non-scholarship students; keep progress-evaluation records or equivalent evidence for children under 16." }
+    subjects: { required: true, detail: "Under age 16, at least 600 hours in reading, language arts, mathematics, social studies, science, or related age-appropriate academic courses." }
+    instruction_time: { required: true, detail: "Under age 16, at least 1,000 instructional hours yearly, including 600 core-subject hours; at least 400 of the 600 at the regular FPE school location." }
+    teacher_qualifications: { required: false, detail: "No parent teaching certificate or degree required." }
+    records: { required: true, detail: "Under age 16, keep a plan book/diary, work portfolio, and progress-evaluation records, or equivalent written or credible evidence." }
+  - id: moscholars-fpe
+    name: MOScholars agreement with an FPE school
+    summary: An eligible student's parent signs an agreement with an educational assistance organization and uses a scholarship account at a partnered FPE school.
+    notice: { required: true, detail: "Apply through an EAO and sign the account agreement; the EAO reports student information and test results to state agencies." }
+    approval: { required: false, detail: "No district program approval; the EAO must accept the eligible student and partner with the FPE school before scholarship use." }
+    assessment: { required: true, detail: "State achievement or nationally normed math/English tests in the grades tested statewide; the EAO reports annual results to state agencies." }
+    subjects: { required: true, detail: "English language arts, mathematics, social studies, and science; FPE core-subject hour requirements also apply below age 16." }
+    instruction_time: { required: true, detail: "FPE students under 16 receive 1,000 hours yearly, including 600 core hours, at least 400 of them at the regular FPE location." }
+    teacher_qualifications: { required: false, detail: "No parent degree or teaching certificate required under the FPE definition; scholarship funds cannot pay relatives within the third degree." }
+    records: { required: true, detail: "Maintain required FPE instructional evidence below age 16 and produce it on request; the EAO records and reports scholarship student information and test results." }
+funding: { available: true, detail: "MOScholars accounts can fund eligible FPE students' curriculum, tutoring, and other approved costs through a partnered EAO; income/IEP eligibility and testing apply." }
+public_school_access: { available: true, detail: "Home and FPE students may try out for resident public/charter athletics, fine arts, and integrated cocurriculars under equal rules; some course-linked activities require class participation." }
+claims:
+  - field: compulsory_ages
+    value: "Attendance generally begins at 7 and ends at 17, or after 16 completed high-school credits; metropolitan districts may set a different statutory endpoint."
+    quote: "between the ages of seven years and the compulsory attendance age for the district."
+    provenance: measured
+    source_id: mo-167031
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "In nonmetropolitan cases the endpoint is age 17 or successful completion of 16 high-school credits."
+    quote: "Seventeen years of age or having successfully completed sixteen credits towards high school graduation in all other cases."
+    provenance: measured
+    source_id: mo-167031
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "A metropolitan district may lower its compulsory attendance age from 17 to 16 by resolution."
+    quote: "The school board of a metropolitan school district for which the compulsory attendance age is seventeen years may adopt a resolution to lower the compulsory attendance age to sixteen years;"
+    provenance: measured
+    source_id: mo-167031
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.notice
+    value: "No general homeschool notice is required; a written withdrawal request triggers prompt removal from public rolls."
+    quote: "If a parent, guardian, or other person having charge, control, or custody of the child makes a written notification of their intent to pursue other educational options"
+    provenance: inferred
+    source_id: mo-167042
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.approval
+    value: "The home-school definition requires no state or district program approval; enforcement is limited to the local prosecutor."
+    quote: "shall be subject to review only by the local prosecuting attorney."
+    provenance: inferred
+    source_id: mo-167012
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.assessment
+    value: "There is no prescribed standardized test or external review; progress-evaluation records can be replaced with equivalent credible evidence."
+    quote: "Other written or credible evidence equivalent to subparagraphs a. to c. of paragraph (a) of this subdivision; and"
+    provenance: inferred
+    source_id: mo-167012
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.subjects
+    value: "At least 600 hours cover the five named subject areas or related age-appropriate courses for children under 16."
+    quote: "at least six hundred hours of which shall be in reading, language arts, mathematics, social studies, science, or academic courses that are related to such subject areas and consonant with the child's age and ability."
+    provenance: measured
+    source_id: mo-167012
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.instruction_time
+    value: "The under-16 requirement is 1,000 hours, including 600 core hours and at least 400 core hours at the regular home school location."
+    quote: "Offer at least one thousand hours of instruction, at least six hundred hours of which shall be in reading, language arts, mathematics, social studies, science, or academic courses that are related to such subject areas and consonant with the child's age and ability. At least four hundred of the six hundred hours shall occur at the regular home school location."
+    provenance: measured
+    source_id: mo-167012
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.instruction_time
+    value: "Hours and evidence requirements in subsection 2 do not apply from age 16 onward."
+    quote: "The requirements of subsection 2 of this section shall not apply to any pupil sixteen years of age or older."
+    provenance: measured
+    source_id: mo-167012
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.teacher_qualifications
+    value: "The home-school statute prescribes educational evidence and hours, not a parent degree or teaching certificate."
+    quote: "as evidence that a child is receiving regular instruction, the child's parent, guardian, or other person having control or custody of the child shall:"
+    provenance: inferred
+    source_id: mo-167012
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.records
+    value: "Under-16 families keep written instructional records, work samples, and progress evaluations, or equivalent evidence."
+    quote: "A plan book, diary, or other written record indicating subjects taught and activities engaged in; b. A portfolio of samples of the child's academic work; and c. A record of evaluations of the child's academic progress; or"
+    provenance: measured
+    source_id: mo-167012
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.notice
+    value: "The FPE definition imposes no general annual notice filing; the public-roll withdrawal request is a separate conditional process."
+    quote: "If a parent, guardian, or other person having charge, control, or custody of the child makes a written notification of their intent to pursue other educational options"
+    provenance: inferred
+    source_id: mo-167042
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.approval
+    value: "Ordinary FPE operation has no state or district approval requirement; records enforcement is reserved to the local prosecutor."
+    quote: "shall be subject to review only by the local prosecuting attorney."
+    provenance: inferred
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.assessment
+    value: "No prescribed standardized test or external review applies outside MOScholars; equivalent credible evidence may replace the listed progress records."
+    quote: "Other written or credible evidence equivalent to subparagraphs a. to c. of paragraph (a) of this subdivision; and"
+    provenance: inferred
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.subjects
+    value: "For children under 16, 600 hours must cover the specified core subjects or related academic courses."
+    quote: "at least six hundred hours of which shall be in reading, language arts, mathematics, social studies, science, or academic courses that are related to such subject areas and consonant with the child's age and ability."
+    provenance: measured
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.instruction_time
+    value: "FPE students under 16 need 1,000 annual hours, 600 core, with at least 400 core hours at the FPE location."
+    quote: "Offer at least one thousand hours of instruction, at least six hundred hours of which shall be in reading, language arts, mathematics, social studies, science, or academic courses that are related to such subject areas and consonant with the child's age and ability. At least four hundred of the six hundred hours shall occur at the regular FPE school location."
+    provenance: measured
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.teacher_qualifications
+    value: "The FPE statute prescribes evidence and instruction but no parent teaching certificate or degree."
+    quote: "as evidence that a child is receiving regular instruction, the child's parent, guardian, or other person having control or custody of the child shall:"
+    provenance: inferred
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.records
+    value: "FPE families keep a diary/plan book, work portfolio, and progress-evaluation records or equivalent evidence for students under 16."
+    quote: "A plan book, diary, or other written record indicating subjects taught and activities engaged in; b. A portfolio of samples of the child's academic work; and c. A record of evaluations of the child's academic progress; or"
+    provenance: measured
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.fpe-school.records
+    value: "The subsection 2 documentation and hours rules end at age 16."
+    quote: "The requirements of subsection 2 of this section shall not apply to any pupil sixteen years of age or older."
+    provenance: measured
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.notice
+    value: "A parent signs an EAO agreement, and the organization reports student information to the treasurer and education department."
+    quote: "A parent of a qualified student may establish a Missouri empowerment scholarship account for the student by entering into a written agreement with an educational assistance organization."
+    provenance: measured
+    source_id: mo-166705
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.notice
+    value: "The EAO reports scholarship student information to state agencies."
+    quote: "Report student information that would allow the state treasurer, the department of elementary and secondary education, and the board established in section"
+    provenance: measured
+    source_id: mo-135714
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.approval
+    value: "The scholarship depends on a partnered EAO and eligibility, not district approval of the home instruction program."
+    quote: "All schools must be partnered with a certified Educational Assistance Organization (EAO)."
+    provenance: inferred
+    source_id: mo-treasurer-schools
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.assessment
+    value: "Scholarship students take state achievement or nationally norm-referenced math and English tests in grades tested statewide."
+    quote: "Ensure that participating students take the state achievement tests or nationally norm-referenced tests that measure learning gains in math and English language arts, and provide for value-added assessment, in grades that require testing under the statewide assessment system"
+    provenance: measured
+    source_id: mo-135714
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.subjects
+    value: "The account agreement requires English language arts, mathematics, social studies, and science."
+    quote: "The qualified student shall enroll in a qualified school and receive an education in at least the subjects of English language arts, mathematics, social studies, and science;"
+    provenance: measured
+    source_id: mo-166705
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.instruction_time
+    value: "Participating FPE schools retain their under-16 instructional hour obligations."
+    quote: "Offer at least one thousand hours of instruction, at least six hundred hours of which shall be in reading, language arts, mathematics, social studies, science, or academic courses that are related to such subject areas and consonant with the child's age and ability. At least four hundred of the six hundred hours shall occur at the regular FPE school location."
+    provenance: measured
+    source_id: mo-167013
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.teacher_qualifications
+    value: "The FPE statute imposes no parent teaching credential; scholarship payments to close relatives are prohibited."
+    quote: "Payments or reimbursements to any person related within the third degree of consanguinity or affinity to a qualified student."
+    provenance: inferred
+    source_id: mo-166705
+    checked_on: "2026-11-05"
+  - field: pathways.moscholars-fpe.records
+    value: "Participating FPE schools must produce their required instructional records when requested."
+    quote: "When requested, produce the records required to be maintained under"
+    provenance: measured
+    source_id: mo-treasurer-schools
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "MOScholars is open to eligible students attending FPE schools."
+    quote: "MOScholars scholarships can be used by students attending eligible Missouri schools. Per statute, eligible schools include a Family Paced Education (FPE) school as defined in"
+    provenance: measured
+    source_id: mo-treasurer-schools
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The statutory account agreement itself satisfies compulsory attendance, supporting a separate scholarship pathway."
+    quote: "A signed agreement under this section shall satisfy the compulsory school attendance requirements of section"
+    provenance: measured
+    source_id: mo-166705
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "Scholarship eligibility includes IEP or income-based pathways, with additional requirements."
+    quote: "These EAOs use the contributions to award scholarships to Missouri students with Individual Education Plans (IEPs) and students living in low-income households."
+    provenance: measured
+    source_id: mo-treasurer-parents
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "MOScholars funds may pay for tutoring and curriculum."
+    quote: "(d) Tutoring services; (e) Curriculum;"
+    provenance: measured
+    source_id: mo-166705
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Since August 28, 2025, home and FPE students have an opportunity to participate in resident district/charter activities, subject to tryouts and equal eligibility rules."
+    quote: "in any event or activity offered by the charter school or by the school district or an attendance center of the school district in which the student resides for any reason relating to such student's FPE, home, or virtual instruction; or"
+    provenance: inferred
+    source_id: mo-167790
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Certain course-linked fine arts, career/technical organizations, and integrated cocurriculars may require associated instruction."
+    quote: "The provisions of subsection 3 of this section shall not be construed to prohibit a school district or charter school from requiring students to participate in any components of instruction required for participation in:"
+    provenance: measured
+    source_id: mo-167790
+    checked_on: "2026-11-05"

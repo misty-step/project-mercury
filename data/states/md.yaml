@@ -1,0 +1,213 @@
+code: MD
+name: Maryland
+summary: >-
+  Families provide regular, thorough home instruction under local school-system review or a registered nonpublic supervising school or church institution. All routes require advance notice; local supervision requires a portfolio and semester reviews.
+compulsory_ages: { min: 5, max: 17 }
+pathways:
+  - id: local-review
+    name: Home instruction under local school-system supervision
+    summary: The parent provides instruction and maintains a portfolio reviewed by the local superintendent or designee.
+    notice: { required: true, detail: "File the state-prescribed form with the local superintendent at least 15 days before starting; verify continuation before each school year and report status changes." }
+    approval: { required: false, detail: "No advance program approval; the district reviews compliance and may require correction of deficiencies." }
+    assessment: { required: true, detail: "Portfolio reviews at each semester's end, at mutually agreed times and places; no more than three reviews yearly. Standardized tests are optional." }
+    subjects: { required: true, detail: "English, mathematics, science, social studies, art, music, health, and physical education." }
+    instruction_time: { required: false, detail: "No fixed days or hours; instruction must occur regularly during the school year and last long enough to implement the program." }
+    teacher_qualifications: { required: false, detail: "No teacher certification or minimum educational credential required." }
+    records: { required: true, detail: "Keep a portfolio demonstrating instruction, with relevant materials and work samples. College report cards or transcripts may replace the portfolio for those courses." }
+  - id: church-supervised
+    name: Home instruction supervised by a church school or institution
+    summary: A registered school or educational institution operated by a bona fide church supervises instruction through materials and parent conferences.
+    notice: { required: true, detail: "File with the local superintendent at least 15 days before starting; the supervisor annually reports continuing, newly added, and departing students and status changes." }
+    approval: { required: false, detail: "No district approval of the family's program; use a church supervising entity registered with MSDE." }
+    assessment: { required: false, detail: "No state-required test or portfolio review; the supervisor holds preenrollment and periodic parent conferences and may set its own requirements." }
+    subjects: { required: false, detail: "No separate enumerated subject list for this route; provide regular, thorough instruction in studies usually taught to same-age public school children." }
+    instruction_time: { required: false, detail: "No fixed days or hours; regular, thorough instruction during the school year is required." }
+    teacher_qualifications: { required: false, detail: "No parent teacher certification or minimum educational credential required." }
+    records: { required: true, detail: "The supervisor must report student rosters and status changes to the local superintendent; no state-required parent portfolio under this route." }
+  - id: nonpublic-supervised
+    name: Home instruction supervised by an approved nonpublic school
+    summary: An MSDE-approved nonpublic school supplies materials and assigns a school-based teacher to assist the family and document progress.
+    notice: { required: true, detail: "File with the local superintendent at least 15 days before starting; the supervisor annually reports continuing, newly added, and departing students and status changes." }
+    approval: { required: false, detail: "No separate approval of the family's program; the supervising nonpublic school must hold a State Board certificate of approval and register to supervise." }
+    assessment: { required: true, detail: "An assigned school-based teacher assists by issuing progress reports, marking papers, and grading tests; no required state standardized test." }
+    subjects: { required: false, detail: "No separate enumerated subject list for this route; provide regular, thorough instruction in studies usually taught to same-age public school children." }
+    instruction_time: { required: false, detail: "No fixed days or hours; regular, thorough instruction during the school year is required." }
+    teacher_qualifications: { required: false, detail: "No parent credential required; the supervising school assigns a school-based teacher to assist." }
+    records: { required: true, detail: "The school-based teacher issues progress reports and marks papers and tests; the supervisor reports student rosters and changes to the superintendent." }
+funding: { available: false, detail: "No general homeschool ESA or tax benefit identified; BOOST scholarships pay tuition at participating nonpublic schools, not a family's home instruction costs." }
+public_school_access: { available: false, detail: "No statewide right to public school classes or sports. State testing is available on request; federal law separately allows eligible students to join JROTC." }
+claims:
+  - field: compulsory_ages
+    value: "Compulsory attendance generally covers ages 5 through 17; review is not required for children turning 5 after September 1 of that school year."
+    quote: "It states that each child who resides in Maryland and is 5 years old or older and under 18 shall attend a public school regularly during the entire school year."
+    provenance: measured
+    source_id: md-msde-faq
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "A child turning 5 after September 1 need not have home instruction reviewed that school year."
+    quote: "Local school systems and supervising entities are not required to review the home instruction program of a child who turns 5 years old after September 1 of the school year in which the parent or guardian seeks to begin a home instruction program."
+    provenance: measured
+    source_id: md-msde-faq
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: "The statute requires attendance from age 5 until the 18th birthday, subject to its exemptions."
+    quote: "Except as otherwise provided in this section, each child who resides in this State and is 5 years old or older and under 18 shall attend a public school regularly during the entire school year."
+    provenance: measured
+    source_id: md-7-301
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.notice
+    value: "Initial notice goes to the local superintendent at least 15 days before instruction begins; continuation is verified annually."
+    quote: "Annually thereafter, before the beginning of the school year, a parent or guardian shall verify the continuation of home schooling for his or her child with the local school superintendent or with the supervising nonpublic school or institution described in Regulation .05 of this chapter."
+    provenance: measured
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.notice
+    value: "The initial prescribed form is due at least 15 days before starting."
+    quote: "Shall be submitted to the local superintendent at least 15 days before the beginning of a home instruction program."
+    provenance: measured
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.approval
+    value: "The regulation requires consent and subsequent compliance review, not advance approval of the family's program."
+    quote: "A parent or guardian who chooses to provide a home instruction program for his or her child shall initially sign a statement on a form prescribed by the State Department of Education"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.assessment
+    value: "The superintendent reviews the portfolio at each semester's end; at most three reviews may occur yearly."
+    quote: "Portfolio reviews occur at the end of each semester. No more than three reviews can occur during a school year."
+    provenance: measured
+    source_id: md-msde-faq
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.subjects
+    value: "English, mathematics, science, social studies, art, music, health, and physical education are required."
+    quote: "Include instruction in English, mathematics, science, social studies, art, music, health, and physical education; and"
+    provenance: measured
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.instruction_time
+    value: "There is no numerical day or hour requirement; instruction must be regular and sufficiently long during the school year."
+    quote: "Take place on a regular basis during the school year and be of sufficient duration to implement the instruction program."
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.teacher_qualifications
+    value: "Home instructors need no teacher certification; the rules set no minimum educational credential."
+    quote: "The home instruction regulations do not require the parent, guardian, or other instructor to have teacher certification in order to deliver home instruction."
+    provenance: inferred
+    source_id: md-msde-faq
+    checked_on: "2026-11-05"
+  - field: pathways.local-review.records
+    value: "The parent must maintain a portfolio demonstrating regular, thorough instruction."
+    quote: "A parent or guardian who chooses to provide a home instruction program for his or her child shall maintain a portfolio of materials which:"
+    provenance: measured
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.notice
+    value: "Initial notice to the superintendent still applies when a nonpublic entity supervises."
+    quote: "without compliance with the requirements of this regulation, other than the requirements of Regulations .01B (1)(b) and .04 of this chapter"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.notice
+    value: "The supervising entity annually reports the identities of continuing, newly added, and departing students."
+    quote: "The supervising nonpublic school or institution must annually verify with the local superintendent the identification of home schooled students whose instruction is continuing, newly added, or no longer under its supervision."
+    provenance: measured
+    source_id: md-msde-fact-sheet
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.approval
+    value: "The supervising church entity registers with MSDE; the family's program does not require separate district preapproval."
+    quote: "Before beginning to supervise home instruction, the head of the legal authority of a nonpublic school or the chief officer of a bona fide church organization that elects to supervise home instruction must contact the Maryland State Department of Education for registration procedures."
+    provenance: inferred
+    source_id: md-msde-faq
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.assessment
+    value: "Church supervision requires conferences, not state-mandated tests or portfolio reviews."
+    quote: "Conferences with parents or guardians at appropriate intervals during the period of enrollment; or"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.subjects
+    value: "This alternative requires the usual public school studies generally, without a separate enumerated subject list."
+    quote: "if that program offers regular, thorough instruction during the school year in the studies usually taught in the public schools to children of the same age"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.instruction_time
+    value: "Regular, thorough instruction during the school year is required, with no fixed days or hours."
+    quote: "if that program offers regular, thorough instruction during the school year in the studies usually taught in the public schools to children of the same age"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.teacher_qualifications
+    value: "Parents need no teaching certificate or minimum educational credential."
+    quote: "The home instruction regulations do not require the parent, guardian, or other instructor to have teacher certification in order to deliver home instruction."
+    provenance: inferred
+    source_id: md-msde-faq
+    checked_on: "2026-11-05"
+  - field: pathways.church-supervised.records
+    value: "The supervisor reports student identities and status changes; this route exempts the family from the local-review portfolio rule."
+    quote: "The supervising nonpublic school or institution must annually verify with the local superintendent the identification of home schooled students whose instruction is continuing, newly added, or no longer under its supervision."
+    provenance: inferred
+    source_id: md-msde-fact-sheet
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.notice
+    value: "Initial notice remains required and the school makes annual student reports and reports status changes."
+    quote: "The supervising nonpublic school or institution must annually verify with the local superintendent the identification of home schooled students whose instruction is continuing, newly added, or no longer under its supervision."
+    provenance: measured
+    source_id: md-msde-fact-sheet
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.notice
+    value: "The initial notice exception is not waived for supervised programs."
+    quote: "without compliance with the requirements of this regulation, other than the requirements of Regulations .01B (1)(b) and .04 of this chapter"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.approval
+    value: "Approval applies to the supervising school, not separately to each family's program."
+    quote: "Nonpublic school with a certificate of approval from the State Board of Education, and the supervision includes at a minimum all of the following components:"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.assessment
+    value: "The school-based teacher assists through progress reports, marked papers, and graded tests."
+    quote: "Assignment of a school-based teacher to assist the home teacher in implementing the home instruction program and to assist the pupil by issuing progress reports, marking papers, and grading tests."
+    provenance: measured
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.subjects
+    value: "The alternative requires regular, thorough instruction in usual public school studies, without a separate enumerated list."
+    quote: "if that program offers regular, thorough instruction during the school year in the studies usually taught in the public schools to children of the same age"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.instruction_time
+    value: "No numerical days or hours are set for this alternative."
+    quote: "if that program offers regular, thorough instruction during the school year in the studies usually taught in the public schools to children of the same age"
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.teacher_qualifications
+    value: "No parent teaching credential is required, although a school-based teacher must assist."
+    quote: "Assignment of a school-based teacher to assist the home teacher in implementing the home instruction program and to assist the pupil by issuing progress reports, marking papers, and grading tests."
+    provenance: inferred
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: pathways.nonpublic-supervised.records
+    value: "Supervision includes progress reports and graded work; the supervisor also reports student rosters."
+    quote: "Assignment of a school-based teacher to assist the home teacher in implementing the home instruction program and to assist the pupil by issuing progress reports, marking papers, and grading tests."
+    provenance: measured
+    source_id: md-comar-home-instruction
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "No general homeschool funding program is identified; BOOST is a participating nonpublic-school tuition scholarship, not a home instruction account."
+    quote: "No, the scholarship may only be used at a nonpublic school that has decided to participate in BOOST."
+    provenance: inferred
+    source_id: md-boost
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "There is no statewide entitlement to public classes or sports; testing and federally allowed JROTC are exceptions."
+    quote: "The home instruction regulations do not include a provision to allow children receiving home instruction to participate in courses or activities offered by the local school system other than the standardized testing programs and federally allowed JROTC."
+    provenance: measured
+    source_id: md-msde-fact-sheet
+    checked_on: "2026-11-05"

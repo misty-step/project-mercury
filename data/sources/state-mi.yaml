@@ -1,0 +1,25 @@
+- id: mi-3801561
+  url: https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-380-1561
+  publisher: Michigan Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: mi-mde-exemption-f
+  url: https://www.michigan.gov/mde/services/flexible-learning/options/nonpub-home/home-school-information/exemption-f-home-school
+  publisher: Michigan Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: mi-mde-home-schooling
+  url: https://www.michigan.gov/mde/-/media/Project/Websites/mde/OFM/Grants/NonPublic--Home-Schools/home_schools_122555_7.pdf?rev=d1a9f867700c4f6f82c5e0b291a2f5c5
+  publisher: Michigan Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: mi-mde-manual
+  url: https://www.michigan.gov/mde/-/media/Project/Websites/mde/OFM/Grants/NonPublic--Home-Schools/2025-2026-Docs/2025---2026-Nonpublic-and-Homeschool-Manual--103025.pdf?rev=310f1ab19cb349c9b242f81f297cce64
+  publisher: Michigan Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: mi-388555
+  url: https://www.legislature.mi.gov/Laws/MCL?objectName=MCL-388-555
+  publisher: Michigan Legislature
+  type: statute
+  checked_on: "2026-11-05"

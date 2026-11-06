@@ -1,0 +1,103 @@
+code: ID
+name: Idaho
+summary: >-
+  A parent or guardian may direct private instruction without registering a homeschool or obtaining state approval. Instruction must cover subjects commonly taught in Idaho public schools; the state does not monitor the program or require homeschool testing.
+compulsory_ages: { min: 7, max: 15 }
+pathways:
+  - id: private-instruction
+    name: Private instruction
+    summary: A child is instructed privately by, or at the direction of, the parent or guardian instead of enrolling full-time in school.
+    notice: { required: false, detail: "No registration or notice to the state required; officially withdraw a child leaving public school." }
+    approval: { required: false, detail: "No state or district approval of the homeschool program required." }
+    assessment: { required: false, detail: "No required homeschool testing; separate eligibility rules apply to optional public-school activities." }
+    subjects: { required: true, detail: "Subjects commonly and usually taught in Idaho public schools; the state does not prescribe a particular homeschool curriculum." }
+    instruction_time: { required: false, detail: "No fixed homeschool days or hours specified; the school-attendance calendar clause applies to school enrollment." }
+    teacher_qualifications: { required: false, detail: "No parent teaching license or minimum diploma specified." }
+    records: { required: false, detail: "No homeschool reporting or mandatory attendance/progress records; keeping records is recommended." }
+funding: { available: true, detail: "Eligible families can apply for a refundable Parental Choice Tax Credit up to $5,000 per child ($7,500 with a qualifying disability) for qualifying nonpublic instruction." }
+public_school_access: { available: true, detail: "Dual enrollment permits public-school classes and activities, subject to capacity, residency and activity eligibility requirements." }
+claims:
+  - field: compulsory_ages
+    value: "The law covers children who are 7 but not yet 16 at the commencement of school in their district."
+    quote: "who has attained the age of seven (7) years at the time of the commencement of school in his district, but not the age of sixteen (16) years"
+    provenance: measured
+    source_id: id-code-33-202
+    checked_on: "2026-11-05"
+  - field: pathways.private-instruction.notice
+    value: "No state homeschool registration or sign-up is required."
+    quote: "There is no registration or sign up procedure required and the state of Idaho does not have a set curriculum to be followed for homeschool education."
+    provenance: measured
+    source_id: id-home-school
+    checked_on: "2026-11-05"
+  - field: pathways.private-instruction.approval
+    value: "The state does not approve individual homeschool programs."
+    quote: "Since Idaho does not regulate or monitor homeschool education, it is up to the parent/guardian to select the curriculum they wish to use."
+    provenance: inferred
+    source_id: id-home-school
+    checked_on: "2026-11-05"
+  - field: pathways.private-instruction.assessment
+    value: "State testing is not required of homeschool families."
+    quote: "There are no requirements for state testing for homeschooling families."
+    provenance: measured
+    source_id: id-home-school-faq
+    checked_on: "2026-11-05"
+  - field: pathways.private-instruction.subjects
+    value: "The compulsory-attendance law requires subjects commonly taught in Idaho public schools."
+    quote: "shall cause the child to be instructed in subjects commonly and usually taught in the public schools of the state of Idaho."
+    provenance: measured
+    source_id: id-code-33-202
+    checked_on: "2026-11-05"
+  - field: pathways.private-instruction.instruction_time
+    value: "The statute separates private instruction from school enrollment; it specifies no number of days or hours for parent-directed instruction."
+    quote: "a parent or guardian shall either cause the child to be privately instructed by, or at the direction of, his parent or guardian; or enrolled in a public school or public charter school, including an on-line or virtual charter school or private or parochial school during a period in each year equal to that in which the public schools are in session;"
+    provenance: inferred
+    source_id: id-code-33-202
+    checked_on: "2026-11-05"
+  - field: pathways.private-instruction.teacher_qualifications
+    value: "The parent needs no teaching license; no minimum diploma is specified in the private-instruction provision."
+    quote: "Parents/Guardians homeschooling their children are not required to hold teaching licenses."
+    provenance: inferred
+    source_id: id-home-school-faq
+    checked_on: "2026-11-05"
+  - field: pathways.private-instruction.records
+    value: "The state has no homeschool reporting requirement; attendance and work records are recommended rather than mandated."
+    quote: "There are no reporting requirements in Idaho for homeschool families. There is no list, no monitoring, no check-ins from the state level. The Idaho Department of Education does not maintain records for homeschooling families. It is recommended that homeschooling families keep their own records of attendance, work completion, etc."
+    provenance: measured
+    source_id: id-home-school-faq
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "A refundable tax credit is available for qualifying nonpublic educational expenses."
+    quote: "The new refundable tax credit program provides nearly $50 million in state funds to help full-year Idaho residents pay for eligible nonpublic school expenses. It’s available for Idaho K–12 students. The Idaho State Tax Commission administers the program."
+    provenance: measured
+    source_id: id-choice-program
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "Eligible children can receive up to $5,000, or $7,500 with a qualifying disability, after application and award."
+    quote: "Up to $5,000 per child, or up to $7,500 per child with a qualifying disability."
+    provenance: measured
+    source_id: id-choice-program
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "Qualifying home curriculum expenses can be funded, not just private-school tuition."
+    quote: "Qualifying expenses include tuition to a nonpublic school or a base curriculum that covers at a minimum, the four core subjects of English language arts, math, science, and social studies."
+    provenance: measured
+    source_id: id-choice-expenses
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Parents may dual enroll a nonpublic student in public school, subject to enrollment procedures and capacity."
+    quote: "The parent or guardian of a child of school age who is enrolled in a nonpublic school or a public charter school shall be allowed to enroll the student in any public school, including another public charter school, for dual enrollment purposes."
+    provenance: measured
+    source_id: id-code-33-203
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Home schools are included in the dual-enrollment definition of nonpublic students."
+    quote: "A nonpublic student is any student who receives educational instruction outside a public school classroom and such instruction can include, but is not limited to, a private school or a home school."
+    provenance: measured
+    source_id: id-code-33-203
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Dual-enrolled students can participate in public-school programs subject to eligibility and performance requirements."
+    quote: "Any student participating in dual enrollment may enter into any program in the public school available to other students, subject to compliance with the eligibility requirements herein and the same responsibilities and standards of behavior and performance that apply to any student’s participation in the activity"
+    provenance: measured
+    source_id: id-code-33-203
+    checked_on: "2026-11-05"

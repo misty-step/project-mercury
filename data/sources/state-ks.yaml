@@ -1,0 +1,24 @@
+-
+  id: "ks-homeschool"
+  url: "https://www.ksde.gov/student-success/learning-alternatives/nonaccredited-private-schools"
+  publisher: "Kansas State Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ks-factsheet"
+  url: "https://www.ksde.gov/docs/default-source/csas/factsheet-homeschool.pdf?Status=Master&sfvrsn=9c64f64f_7"
+  publisher: "Kansas State Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ks-activities"
+  url: "https://www.ksrevisor.gov/statutes/chapters/ch72/072_071_0021.html"
+  publisher: "Kansas Office of Revisor of Statutes"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ks-scholarship"
+  url: "https://www.ksrevenue.gov/prtaxcredits-lowincomestudents.html"
+  publisher: "Kansas Department of Revenue"
+  type: "agency"
+  checked_on: "2026-11-05"

@@ -1,0 +1,115 @@
+code: MT
+name: Montana
+summary: >-
+  Parents may teach their own children at home after notifying the county superintendent each school fiscal year. Home schools keep attendance records, meet minimum instructional hours, and teach the basic public-school subjects.
+compulsory_ages: { min: 7, max: 15 }
+pathways:
+  - id: home-school
+    name: Home school
+    summary: A parent instructs their child, stepchild, or ward in the parent's residence under Montana's home school exemption.
+    notice: { required: true, detail: "Notify the county superintendent of the student's home school attendance each school fiscal year." }
+    approval: { required: false, detail: "Not required; meet the statutory exemption requirements and give annual notice." }
+    assessment: { required: false, detail: "No mandated test or outside evaluation; the parent evaluates instruction." }
+    subjects: { required: true, detail: "Provide an organized course of study covering the subjects in the public-school basic instructional program under 20-7-111." }
+    instruction_time: { required: true, detail: "720 hours yearly in grades 1–3; 1,080 in grades 4–12 (1,050 may suffice for graduating seniors). Statutory proficiency exceptions apply." }
+    teacher_qualifications: { required: false, detail: "No diploma or teaching license required for the parent." }
+    records: { required: true, detail: "Maintain pupil attendance records and provide them to the county superintendent on request." }
+funding: { available: false, detail: "Special-needs ESA is authorized but blocked by litigation; check OPI for current status." }
+public_school_access: { available: true, detail: "State law allows home school students to enroll part-time in public school." }
+claims:
+  - field: compulsory_ages
+    value: The usual range is age 7 before the first school day until age 16; attendance continues beyond 16 if eighth-grade work is unfinished.
+    quote: "until the later of the following dates: (a) the child's 16th birthday; or (b) the date of completion of the work of the 8th grade."
+    provenance: measured
+    source_id: mt-attendance
+    checked_on: "2026-11-05"
+  - field: compulsory_ages
+    value: The minimum age is seven before the first day of school in the school fiscal year.
+    quote: "any child who is 7 years of age or older prior to the first day of school in any school fiscal year"
+    provenance: measured
+    source_id: mt-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.notice
+    value: Give notice to the county superintendent every school fiscal year.
+    quote: "shall notify the county superintendent of schools of the county in which the home school is located in each school fiscal year of the student's attendance at the school;"
+    provenance: measured
+    source_id: mt-home-requirements
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.approval
+    value: No program approval is listed among the conditions for the home school exemption.
+    quote: "To qualify its students for exemption from compulsory enrollment under 20-5-102, a home school:"
+    provenance: inferred
+    source_id: mt-home-requirements
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.assessment
+    value: Parents, not a mandatory outside assessor or standardized testing program, evaluate home school instruction.
+    quote: "(4) the evaluation of the home school instruction."
+    provenance: inferred
+    source_id: mt-parent-rights
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.subjects
+    value: Home schools must cover the basic instructional subjects required of public schools.
+    quote: "shall provide an organized course of study that includes instruction in the subjects required of public schools as a basic instructional program pursuant to 20-7-111."
+    provenance: measured
+    source_id: mt-home-requirements
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.instruction_time
+    value: Home schools must meet the minimum aggregate instructional hours in sections 20-1-301 and 20-1-302.
+    quote: "shall provide at least the minimum aggregate hours of pupil instruction in accordance with 20-1-301 and 20-1-302;"
+    provenance: measured
+    source_id: mt-home-requirements
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.instruction_time
+    value: Minimum hours are 720 for grades 1–3 and 1,080 for grades 4–12.
+    quote: "(b) 720 hours for grades 1 through 3; and (c) 1,080 hours for grades 4 through 12."
+    provenance: measured
+    source_id: mt-hours
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.instruction_time
+    value: Graduating seniors may need only 1,050 hours; the statute also contains a demonstrated-proficiency exception.
+    quote: "except that 1,050 aggregate hours of pupil instruction for graduating seniors may be sufficient."
+    provenance: measured
+    source_id: mt-hours
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.teacher_qualifications
+    value: Parents have authority to instruct without a statutory diploma or teacher-license condition.
+    quote: "a parent has the authority to instruct the parent's child, stepchild, or ward in a home school"
+    provenance: inferred
+    source_id: mt-parent-rights
+    checked_on: "2026-11-05"
+  - field: pathways.home-school.records
+    value: Keep attendance records and make them available to the county superintendent on request; the 2025 amendment separates home-school from nonpublic-school immunization records.
+    quote: "shall maintain records on pupil attendance and make the records available to the county superintendent on request;"
+    provenance: measured
+    source_id: mt-home-requirements
+    checked_on: "2026-11-05"
+  - field: funding
+    value: The ESA is a reimbursement program for qualifying students with disabilities.
+    quote: "The Education Savings Account (ESA) is a reimbursement program for parents of a child with a disability under the Individuals with Disabilities Education Act (IDEA), 20 U.S.C. 1400, et seq."
+    provenance: measured
+    source_id: mt-esa
+    checked_on: "2026-11-05"
+  - field: funding
+    value: Reimbursable expenses include curriculum, tutoring and cooperative educational programs, not only private-school tuition.
+    quote: "Curriculum materials"
+    provenance: measured
+    source_id: mt-esa-handbook
+    checked_on: "2026-11-05"
+  - field: funding
+    value: OPI's December 2025 stay notice allowed operation only through the end of that school year; no primary source confirms 2026–27 operation, so current funding is not treated as available.
+    quote: "A full stay has been granted through the end of the school year"
+    provenance: inferred
+    source_id: mt-esa
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: A home school child may enroll part-time in public school.
+    quote: "A child enrolled in a nonpublic or home school may enroll on a part-time basis in a public school."
+    provenance: measured
+    source_id: mt-attendance
+    checked_on: "2026-11-05"
+  - field: funding
+    value: State law authorizes the special-needs ESA reimbursement account, although authorization alone does not establish current operational availability.
+    quote: "for the purpose of reimbursement for the purchase of allowable educational resources pursuant to 20-7-1704 for qualified students."
+    provenance: measured
+    source_id: mt-esa-law
+    checked_on: "2026-11-05"

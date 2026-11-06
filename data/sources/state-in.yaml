@@ -1,0 +1,24 @@
+-
+  id: "in-help"
+  url: "https://www.in.gov/doe/students/homeschool-information/homeschool-help-sheet/"
+  publisher: "Indiana Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "in-information"
+  url: "https://www.in.gov/doe/students/homeschool-information/"
+  publisher: "Indiana Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "in-faq"
+  url: "https://www.in.gov/doe/files/Homeschool-FAQ-1.pdf"
+  publisher: "Indiana Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "in-deductions"
+  url: "https://www.in.gov/dor/i-am-a/individual/deductions/"
+  publisher: "Indiana Department of Revenue"
+  type: "agency"
+  checked_on: "2026-11-05"

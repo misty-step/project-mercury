@@ -1,0 +1,239 @@
+code: "PA"
+name: "Pennsylvania"
+summary: "Families can use a parent-supervised home education program with annual filings, a portfolio and evaluation, or a Pennsylvania-certified private tutor. Both routes require specified subjects and instructional time."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "home-education"
+    name: "Home education program"
+    summary: "A parent, guardian or custodian with a high school diploma supervises education and arranges an independent annual evaluation."
+    notice:
+      required: true
+      detail: "File an affidavit or unsworn declaration with the resident superintendent before starting and annually by August 1, with objectives and health evidence/exemptions."
+    approval:
+      required: false
+      detail: "No district approval to start after filing. For special-education students (except gifted), obtain qualified professional approval of the plan."
+    assessment:
+      required: true
+      detail: "Annual qualified-evaluator interview and portfolio review; report due June 30. Reading/language arts and math tests in grades 3, 5 and 8."
+    subjects:
+      required: true
+      detail: "English, math, science, geography/history/civics, safety/fire prevention, health, PE, music and art; secondary math includes algebra and geometry."
+    instruction_time:
+      required: true
+      detail: "At least 180 days, or 900 hours at elementary level and 990 hours at secondary level, each year."
+    teacher_qualifications:
+      required: true
+      detail: "The parent/guardian/custodian supervisor must hold a high school diploma or equivalent; statutory criminal-history restrictions also apply."
+    records:
+      required: true
+      detail: "Keep a contemporaneous reading log, work samples, grade 3/5/8 test results and annual evaluation; submit the evaluation by June 30."
+  -
+    id: "private-tutoring"
+    name: "Private tutoring"
+    summary: "A Pennsylvania-certified teacher, including a qualified parent, supplies the majority of instruction to children in one family."
+    notice:
+      required: true
+      detail: "Tutor reports students to the resident district and files certification/background checks; parent gives written assurance instructional requirements were met."
+    approval:
+      required: false
+      detail: "No district approval required to start private tutoring."
+    assessment:
+      required: false
+      detail: "No routine annual evaluation or standardized tests; district may request progress evidence after a complaint."
+    subjects:
+      required: true
+      detail: "Elementary: English, arithmetic, geography, U.S./PA history, science, civics, safety, health/PE, music and art; secondary core subjects also prescribed."
+    instruction_time:
+      required: true
+      detail: "At least 180 days, or 900 elementary hours and 990 secondary hours, each school year."
+    teacher_qualifications:
+      required: true
+      detail: "Tutor must be Pennsylvania certified and meet criminal-history/background-check requirements; may teach only one family at a time."
+    records:
+      required: true
+      detail: "Keep evidence of instruction time and progress for complaint investigations; provide written compliance assurance and required enrollment/absence reports."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Generally ages 6–17, or earlier when parents elect school entry; attendance ends at eighteen or qualifying graduation."
+    quote: "\"Compulsory school age\" shall mean the period of a child's life from the time the child's parents elect to have the child enter school and which shall be no later than six (6) years of age until the child reaches eighteen (18) years of age."
+    provenance: "measured"
+    source_id: "pa-compulsory-age"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.notice"
+    value: "File an affidavit or unsworn declaration with the resident superintendent before starting and annually by August 1, with objectives and health evidence/exemptions."
+    quote: "Prior to the commencement of a home education program and annually thereafter by no later than August 1, the supervisor must submit a notarized affidavit or unsworn declaration to the Superintendent of the school district of residence"
+    provenance: "measured"
+    source_id: "pa-home-education-guidance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.approval"
+    value: "No district approval to start after filing. For special-education students (except gifted), obtain qualified professional approval of the plan."
+    quote: "school district approval is not required to commence a home education program when all necessary paperwork has been filed."
+    provenance: "measured"
+    source_id: "pa-home-education-guidance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.approval"
+    value: "No district approval to start after filing. For special-education students (except gifted), obtain qualified professional approval of the plan."
+    quote: "when the program addresses the specific needs of the exceptional student and is approved by a teacher with a valid certificate from the Commonwealth to teach special education or a licensed clinical or certified school psychologist"
+    provenance: "measured"
+    source_id: "pa-attendance-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.assessment"
+    value: "Annual qualified-evaluator interview and portfolio review; report due June 30. Reading/language arts and math tests in grades 3, 5 and 8."
+    quote: "The evaluation shall also be based on an interview of the child and a review of the portfolio required in clause (1) and shall certify whether or not an appropriate education is occurring."
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.assessment"
+    value: "Annual qualified-evaluator interview and portfolio review; report due June 30. Reading/language arts and math tests in grades 3, 5 and 8."
+    quote: "in grades three, five and eight results of nationally normed standardized achievement tests in reading/language arts and mathematics or the results of Statewide tests administered in these grade levels."
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.subjects"
+    value: "English, math, science, geography/history/civics, safety/fire prevention, health, PE, music and art; secondary math includes algebra and geometry."
+    quote: "At the elementary school level, the following courses shall be taught: English, to include spelling, reading and writing; arithmetic; science; geography; history of the United States and Pennsylvania; civics; safety education, including regular and continuous instruction in the dangers and prevention of fires; health and physiology; physical education; music; and art."
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.instruction_time"
+    value: "At least 180 days, or 900 hours at elementary level and 990 hours at secondary level, each year."
+    quote: "a minimum of one hundred eighty (180) days of instruction or nine hundred (900) hours of instruction per year at the elementary level, or nine hundred ninety (990) hours per year at the secondary level"
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.teacher_qualifications"
+    value: "The parent/guardian/custodian supervisor must hold a high school diploma or equivalent; statutory criminal-history restrictions also apply."
+    quote: "provided that such person has a high school diploma or its equivalent."
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.records"
+    value: "Keep a contemporaneous reading log, work samples, grade 3/5/8 test results and annual evaluation; submit the evaluation by June 30."
+    quote: "the supervisor of the home education program shall provide and maintain on file the following documentation for each student enrolled in the home education program:"
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.records"
+    value: "Keep a contemporaneous reading log, work samples, grade 3/5/8 test results and annual evaluation; submit the evaluation by June 30."
+    quote: "A portfolio of records and materials. The portfolio shall consist of a log, made contemporaneously with the instruction, which designates by title the reading materials used"
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-education.records"
+    value: "Keep a contemporaneous reading log, work samples, grade 3/5/8 test results and annual evaluation; submit the evaluation by June 30."
+    quote: "A home school parent must submit a home school evaluation report"
+    provenance: "measured"
+    source_id: "pa-home-education-guidance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.notice"
+    value: "Tutor reports students to the resident district and files certification/background checks; parent gives written assurance instructional requirements were met."
+    quote: "the student must be reported by the tutor as participating in a private tutoring program"
+    provenance: "measured"
+    source_id: "pa-home-tutoring-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.notice"
+    value: "Tutor reports students to the resident district and files certification/background checks; parent gives written assurance instructional requirements were met."
+    quote: "The parent shall provide written assurance that the instructional requirements listed in this section have been met."
+    provenance: "measured"
+    source_id: "pa-private-tutoring-rule"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.approval"
+    value: "No district approval required to start private tutoring."
+    quote: "School district approval is not required to commence private tutoring."
+    provenance: "measured"
+    source_id: "pa-private-tutoring-rule"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.assessment"
+    value: "No routine annual evaluation or standardized tests; district may request progress evidence after a complaint."
+    quote: "No evaluation required"
+    provenance: "measured"
+    source_id: "pa-home-tutoring-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.subjects"
+    value: "Elementary: English, arithmetic, geography, U.S./PA history, science, civics, safety, health/PE, music and art; secondary core subjects also prescribed."
+    quote: "For secondary school level students, the instruction must include: art; English; health; mathematics; music; physical education; science; and social studies, including civics, world history, United States and Pennsylvania history."
+    provenance: "measured"
+    source_id: "pa-private-tutoring-rule"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.instruction_time"
+    value: "At least 180 days, or 900 elementary hours and 990 secondary hours, each school year."
+    quote: "The instruction must be given during the school year for a minimum of 180 days of instruction or for a minimum of 900 hours of instruction for an elementary level student and a minimum of 990 hours of instruction for a secondary level student as the equivalent of 180 days of instruction."
+    provenance: "measured"
+    source_id: "pa-private-tutoring-rule"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.teacher_qualifications"
+    value: "Tutor must be Pennsylvania certified and meet criminal-history/background-check requirements; may teach only one family at a time."
+    quote: "Private tutors must be PA certified teachers and submit background checks to any school district for which they privately tutor students"
+    provenance: "measured"
+    source_id: "pa-home-tutoring-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-tutoring.records"
+    value: "Keep evidence of instruction time and progress for complaint investigations; provide written compliance assurance and required enrollment/absence reports."
+    quote: "Either the private tutor or the parent must keep portfolio-like documentation in case of an investigation initiated by the superintendent in response to a complaint regarding the private tutoring program"
+    provenance: "measured"
+    source_id: "pa-home-tutoring-guide"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "No independent home-education funding is established by the school-choice scholarship program; its scholarships support attending public or nonpublic schools."
+    quote: "Business contributions are then used by Opportunity Scholarship Organizations to provide tuition assistance in the form of scholarships to eligible students residing within the boundaries of a low-achieving school to attend another public school outside of their district or nonpublic school."
+    provenance: "inferred"
+    source_id: "pa-opportunity-scholarship"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "A home education program is not a nonpublic school eligible under school-tuition scholarship language."
+    quote: "A home education program shall not be considered a nonpublic school under the provisions of this act."
+    provenance: "inferred"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Home education students have a right to resident-district extracurricular participation subject to eligibility and tryout criteria."
+    quote: "the school district of residence shall permit a child who is enrolled in a home education program to participate in any activity that is subject to the provisions of section 511, including, but not limited to, clubs, musical ensembles, athletics and theatrical productions"
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Districts must permit home education students to take academic courses totaling up to at least a quarter of the full-time school day."
+    quote: "must permit a child who is enrolled in a home education program to participate in academic courses equaling up to at least one quarter of the school day for full-time students"
+    provenance: "measured"
+    source_id: "pa-home-education-law"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Access for privately tutored students is at district discretion."
+    quote: "A school district may allow students that are being privately tutored to attend classes in the district’s schools or a career and technical education program."
+    provenance: "measured"
+    source_id: "pa-home-tutoring-guide"
+    checked_on: "2026-11-05"
+funding:
+  available: false
+  detail: "No homeschool ESA or expense tax credit; school-choice tax-credit scholarships support school tuition, not independent home education."
+public_school_access:
+  available: true
+  detail: "Home education students have resident-district extracurricular and part-time course rights (at least one quarter of the school day); private-tutor access is discretionary."

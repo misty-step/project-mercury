@@ -1,0 +1,104 @@
+code: "NJ"
+name: "New Jersey"
+summary: "Families may provide instruction academically equivalent to public-school instruction elsewhere than at school. There is no routine curriculum approval or testing, but limited enrollment and high-school withdrawal situations require a filing."
+compulsory_ages:
+  min: 6
+  max: 15
+pathways:
+  - id: "equivalent-instruction"
+    name: "Equivalent instruction elsewhere than at school"
+    summary: "Parents arrange instruction academically equivalent to the local public school, including instruction at home."
+    notice:
+      required: false
+      detail: "No routine notice; required for enrolled high-school withdrawal and certain denied-enrollment cases."
+    approval:
+      required: false
+      detail: "No board review or approval of the curriculum or program."
+    assessment:
+      required: false
+      detail: "No required state or district standardized test."
+    subjects:
+      required: false
+      detail: "No separate subjects named; instruction must be academically equivalent to the local public school."
+    instruction_time:
+      required: false
+      detail: "No fixed homeschool days or hours; provide academically equivalent instruction."
+    teacher_qualifications:
+      required: false
+      detail: "No teaching certification or specific parent credential required."
+    records:
+      required: true
+      detail: "High-school withdrawal requires a transfer form; no routine homeschool portfolio or attendance report is prescribed."
+funding:
+  available: false
+  detail: "No statewide homeschool ESA, scholarship or homeschool-expense tax benefit; parents are responsible for the program."
+public_school_access:
+  available: false
+  detail: "No statewide right to public classes, extracurricular activities or sports; local boards decide."
+claims:
+  - field: "compulsory_ages"
+    value: "Compulsory education covers children from age 6 until age 16."
+    quote: "a child between six and 16"
+    provenance: "inferred"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No statewide homeschool ESA, scholarship or homeschool-expense tax benefit; parents are responsible for the program."
+    quote: "The parent/guardian of the child educated elsewhere than at school are solely responsible for any program selected."
+    provenance: "inferred"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "No statewide right to public classes, extracurricular activities or sports; local boards decide."
+    quote: "The local board of education is not required by law to allow a child educated elsewhere than at school to participate in the regular school curriculum or in extracurricular or sports activities."
+    provenance: "measured"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.notice"
+    value: "No routine notice; required for enrolled high-school withdrawal and certain denied-enrollment cases."
+    quote: "If a parent/guardian decides to remove an enrolled student from his/her high school educational program, the parent/guardian will be required to complete a transfer form which includes information related to the intent to provide instruction elsewhere than at school for the purposes of collecting accurate data on high school enrollment."
+    provenance: "measured"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.approval"
+    value: "No board review or approval of the curriculum or program."
+    quote: "The law does not require or authorize the local board of education to review and approve the curriculum or program of a child educated elsewhere than at school."
+    provenance: "measured"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.assessment"
+    value: "No required state or district standardized test."
+    quote: "A child educated elsewhere than at school is not required to sit for a state or district standardized test."
+    provenance: "measured"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.subjects"
+    value: "No separate subjects named; instruction must be academically equivalent to the local public school."
+    quote: "the instruction was academically equivalent to that provided in the local public school."
+    provenance: "inferred"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.instruction_time"
+    value: "No fixed homeschool days or hours; provide academically equivalent instruction."
+    quote: "the instruction was academically equivalent to that provided in the local public school."
+    provenance: "inferred"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.teacher_qualifications"
+    value: "No teaching certification or specific parent credential required."
+    quote: "A parent/guardian or person(s) teaching a child elsewhere than at school is not required by law to be certified as a teacher in the State of New Jersey."
+    provenance: "inferred"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.records"
+    value: "High-school withdrawal requires a transfer form; no routine homeschool portfolio or attendance report is prescribed."
+    quote: "the parent/guardian will be required to complete a transfer form which includes information related to the intent to provide instruction elsewhere than at school"
+    provenance: "inferred"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.equivalent-instruction.notice"
+    value: "After an enrollment denial, verification is required if the parent does not file intent to appeal."
+    quote: "the parent/guardian is required to provide a statement of verification regarding whether the student will be attending school in another school district or a nonpublic school, or will be receiving instruction elsewhere than at school"
+    provenance: "measured"
+    source_id: "nj-doe-faq"
+    checked_on: "2026-11-05"

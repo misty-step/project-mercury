@@ -1,0 +1,35 @@
+- id: mt-home-requirements
+  url: https://mca.legmt.gov/bills/mca/title_0200/chapter_0050/part_0010/section_0090/0200-0050-0010-0090.html
+  publisher: Montana Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: mt-attendance
+  url: https://mca.legmt.gov/bills/mca/title_0200/chapter_0050/part_0010/section_0020/0200-0050-0010-0020.html
+  publisher: Montana Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: mt-parent-rights
+  url: https://mca.legmt.gov/bills/mca/title_0200/chapter_0050/part_0010/section_0110/0200-0050-0010-0110.html
+  publisher: Montana Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: mt-hours
+  url: https://mca.legmt.gov/bills/mca/title_0200/chapter_0010/part_0030/section_0010/0200-0010-0030-0010.html
+  publisher: Montana Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: mt-esa
+  url: https://opi.mt.gov/Families-Students/Parent-Resources/Education-Savings-Account
+  publisher: Montana Office of Public Instruction
+  type: agency
+  checked_on: "2026-11-05"
+- id: mt-esa-handbook
+  url: https://opifiles.mt.gov/Portals/182/Page%20Files/Education%20Savings%20Account/ESA%20Parent%20Handbook_EDITS_6_6_2025_FINAL.pdf?ver=2025-06-11-100605-557
+  publisher: Montana Office of Public Instruction
+  type: agency
+  checked_on: "2026-11-05"
+- id: mt-esa-law
+  url: https://mca.legmt.gov/bills/mca/title_0200/chapter_0070/part_0170/section_0030/0200-0070-0170-0030.html
+  publisher: Montana Legislature
+  type: statute
+  checked_on: "2026-11-05"

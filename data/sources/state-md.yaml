@@ -1,0 +1,25 @@
+- id: md-comar-home-instruction
+  url: https://msde.maryland.gov/media/18379
+  publisher: Maryland State Department of Education
+  type: statute
+  checked_on: "2026-11-05"
+- id: md-msde-faq
+  url: https://msde.maryland.gov/media/18382
+  publisher: Maryland State Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: md-msde-fact-sheet
+  url: https://msde.maryland.gov/media/18380
+  publisher: Maryland State Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: md-boost
+  url: https://msde.maryland.gov/boost-scholarship-program
+  publisher: Maryland State Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: md-7-301
+  url: https://mgaleg.maryland.gov/2026RS/Statute_Web/ged/7-301.pdf
+  publisher: Maryland General Assembly
+  type: statute
+  checked_on: "2026-11-05"

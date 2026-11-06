@@ -155,9 +155,56 @@ main > h1 + .lede { margin-top: 10px; }
 .badge.measured { color: var(--accent); border-color: var(--accent); }
 .badge.inferred { border-color: var(--muted); }
 .badge.guess { border-style: dashed; border-color: var(--muted); }
+.quote { display: block; margin-top: 4px; font-size: 13px; color: var(--muted); }
+
+.note { max-width: 72ch; margin: 0 0 20px; font-size: 13px; color: var(--muted); }
+main > .note:last-child { margin: 32px 0 0; }
+.lv-no_notice { --lvc: var(--track); }
+.lv-low { --lvc: color-mix(in srgb, var(--accent) 35%, var(--bg)); }
+.lv-moderate { --lvc: color-mix(in srgb, var(--accent) 65%, var(--bg)); }
+.lv-high { --lvc: var(--accent); }
+.lv { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; color: var(--ink2); white-space: nowrap; cursor: help; }
+.lv::before, .sw { content: ""; flex: none; width: 10px; height: 10px; border-radius: 3px; background: var(--lvc); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--muted) 35%, transparent); }
+.smap { display: grid; grid-template-columns: minmax(0, 640px) minmax(0, 1fr); gap: 32px; align-items: center; margin-bottom: 36px; }
+.tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); gap: 4px; }
+.tile { display: grid; place-items: center; aspect-ratio: 1; border-radius: 6px; font: 600 12px var(--mono); background: var(--lvc, transparent); color: var(--ink); transition: box-shadow 0.15s; }
+.tile.lv-high { color: var(--bg); }
+a.tile:hover { color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
+a.tile.lv-high:hover { color: var(--bg); }
+span.tile { color: var(--muted); border: 1px dashed var(--line); }
+.legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; font-size: 14px; }
+.legend li { display: grid; grid-template-columns: 12px minmax(0, 1fr) auto; gap: 2px 10px; align-items: center; }
+.legend .sw { width: 12px; height: 12px; }
+.legend .rule { grid-column: 2 / -1; font-size: 12px; color: var(--muted); }
+.why { margin: 0; font-size: 13px; color: var(--muted); }
+.why a { color: var(--accent); }
+.path { border: 1px solid var(--line); border-radius: 10px; padding: 16px 16px 6px; margin-bottom: 12px; }
+.path h3 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+.path .lv { margin-left: auto; }
+.path > p { max-width: 72ch; margin: 6px 0 10px; font-size: 14px; color: var(--ink2); }
+.duties { margin: 0; }
+.duty { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 2px 16px; padding: 9px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.duty dt { display: flex; align-items: center; gap: 8px; color: var(--muted); }
+.duty dt .i { width: 14px; height: 14px; }
+.duty.on dt { color: var(--ink); font-weight: 500; }
+.duty.on dt .i { color: var(--accent); }
+.duty dd { margin: 0; color: var(--muted); }
+.duty.on dd { color: var(--ink2); }
+.duties.wide .duty:last-child { border-bottom: 1px solid var(--line); }
+.cite { display: inline-flex; vertical-align: -2px; margin-left: 6px; padding: 2px; color: var(--muted); }
+.cite + .cite { margin-left: 0; }
+.cite .i { width: 13px; height: 13px; }
+.cites { display: inline-flex; margin-left: -10px; }
+.all { margin-top: 32px; }
+.all summary { cursor: pointer; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
+.all summary::marker { content: ""; }
+.all summary::before { content: "›"; display: inline-block; color: var(--muted); transition: transform 0.15s; }
+.all[open] summary::before { transform: rotate(90deg); }
+.all .facts { margin-top: 12px; }
 
 @media (max-width: 880px) {
   .top { grid-template-columns: minmax(0, 1fr); }
+  .smap { grid-template-columns: minmax(0, 1fr); gap: 20px; }
 }
 @media (max-width: 600px) {
   .wrap { padding-left: 16px; padding-right: 16px; }
@@ -174,4 +221,7 @@ main > h1 + .lede { margin-top: 10px; }
   .facts tr { display: block; padding: 10px 0; border-top: 1px solid var(--line); }
   .facts td { display: inline-block; padding: 2px 10px 2px 0; border: 0; }
   .facts td:nth-child(2) { display: block; padding: 2px 0 6px; }
+  .tiles { gap: 2px; }
+  .tile { border-radius: 4px; font-size: 9px; }
+  .duty { grid-template-columns: minmax(0, 1fr); }
 }

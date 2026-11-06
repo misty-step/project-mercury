@@ -1,0 +1,123 @@
+code: "TX"
+name: "Texas"
+summary: "Home schools are treated as private schools and must provide a course of study covering reading, spelling, grammar, mathematics, and good citizenship. Texas does not require home-school registration or program approval."
+compulsory_ages:
+  min: 6
+  max: 18
+pathways:
+  -
+    id: "home-school"
+    name: "Home school (private school)"
+    summary: "Parents provide private education at home without state registration or approval."
+    notice:
+      required: false
+      detail: "No initial or annual registration; withdraw in writing if leaving public school. A district may request written assurance of home schooling."
+    approval:
+      required: false
+      detail: "Not required; TEA does not approve or accredit home-school programs."
+    assessment:
+      required: false
+      detail: "No general testing or evaluation requirement; public-school transfer placement and UIL eligibility can involve testing."
+    subjects:
+      required: true
+      detail: "Teach reading, spelling, grammar, mathematics, and good citizenship."
+    instruction_time:
+      required: false
+      detail: "No state minimum days or hours for a home school."
+    teacher_qualifications:
+      required: false
+      detail: "No state teacher credential or parent diploma requirement."
+    records:
+      required: false
+      detail: "No general attendance or portfolio requirement; keeping curriculum and progress records is useful for transfers."
+funding:
+  available: true
+  detail: "Texas Education Freedom Accounts provide accepted homeschool students a $2,000 annual award for approved education expenses in 2026–27."
+public_school_access:
+  available: true
+  detail: "Eligible homeschoolers may participate in UIL activities; if the resident district opts out, use the nearest district that has not opted out."
+claims:
+  -
+    field: "pathways.home-school.notice"
+    value: "No initial or annual registration; withdraw in writing if leaving public school. A district may request written assurance of home schooling."
+    quote: "The TEA does not regulate, index, monitor, approve, register, or accredit the programs available to parents who choose to home school."
+    provenance: "inferred"
+    source_id: "tx-tea-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.approval"
+    value: "Not required; TEA does not approve or accredit home-school programs."
+    quote: "The TEA does not regulate, index, monitor, approve, register, or accredit the programs available to parents who choose to home school."
+    provenance: "inferred"
+    source_id: "tx-tea-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.assessment"
+    value: "No general testing or evaluation requirement; public-school transfer placement and UIL eligibility can involve testing."
+    quote: "The TEA does not regulate, index, monitor, approve, register, or accredit the programs available to parents who choose to home school."
+    provenance: "inferred"
+    source_id: "tx-tea-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.subjects"
+    value: "Teach reading, spelling, grammar, mathematics, and good citizenship."
+    quote: "This letter may require assurances that the home-school curriculum is designed to meet basic education goals including reading, spelling, grammar, mathematics, and a study of good citizenship."
+    provenance: "measured"
+    source_id: "tx-tea-policy"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.instruction_time"
+    value: "No state minimum days or hours for a home school."
+    quote: "students who are home schooled are exempt from the compulsory attendance requirement to the same extent as students enrolled in private schools."
+    provenance: "inferred"
+    source_id: "tx-tea-policy"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.teacher_qualifications"
+    value: "No state teacher credential or parent diploma requirement."
+    quote: "The TEA does not regulate, index, monitor, approve, register, or accredit the programs available to parents who choose to home school."
+    provenance: "inferred"
+    source_id: "tx-tea-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.records"
+    value: "No general attendance or portfolio requirement; keeping curriculum and progress records is useful for transfers."
+    quote: "The TEA does not regulate, index, monitor, approve, register, or accredit the programs available to parents who choose to home school."
+    provenance: "inferred"
+    source_id: "tx-tea-home"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.notice"
+    value: "A withdrawing public-school student should be disenrolled when the school receives written withdrawal notice."
+    quote: "Students should be dis-enrolled by school officials when they receive written notice either by signing withdrawal forms or a letter of withdrawal."
+    provenance: "measured"
+    source_id: "tx-tea-policy"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.home-school.notice"
+    value: "Districts may request assurance that a child is being home schooled."
+    quote: "School districts that become aware of a student who is potentially being home schooled may request in writing a letter of assurance from the parents that the student is being home schooled."
+    provenance: "measured"
+    source_id: "tx-tea-policy"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "Generally from the sixth birthday until the 19th birthday (ages 6–18 inclusive); earlier enrollment can trigger attendance, and statutory exemptions apply."
+    quote: "Unless specifically exempted by Section 25.086, a child who is at least six years of age, or who is younger than six years of age and has previously been enrolled in first grade, and who has not yet reached the child's 19th birthday shall attend school."
+    provenance: "measured"
+    source_id: "tx-25-085"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "The TEFA program provides a $2,000 annual award to accepted home-school students."
+    quote: "Homeschool and other eligible nonpublic students will receive their full $2,000 annual award July 1."
+    provenance: "measured"
+    source_id: "tx-comptroller-tefa"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "State law guarantees eligible home-school students access at a participating district, with a resident-district opt-out."
+    quote: "Homeschool students have a right to participate in UIL activities from the closest school district that has not opted out"
+    provenance: "measured"
+    source_id: "tx-tea-sb401"
+    checked_on: "2026-11-05"

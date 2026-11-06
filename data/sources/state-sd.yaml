@@ -1,0 +1,30 @@
+-
+  id: "sd-doe-faq"
+  url: "https://doe.sd.gov/oatq/documents/SD-AltInst-FAQ.pdf"
+  publisher: "South Dakota Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "sd-13-27-3"
+  url: "https://sdlegislature.gov/Statutes/13-27-3"
+  publisher: "South Dakota Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "sd-13-27-1"
+  url: "https://sdlegislature.gov/Statutes/13-27-1"
+  publisher: "South Dakota Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "sd-doe-home"
+  url: "https://doe.sd.gov/oatq/homeschooling.aspx"
+  publisher: "South Dakota Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "sd-insurance-scholarship"
+  url: "https://dlr.sd.gov/insurance/tax_credit_program.aspx"
+  publisher: "South Dakota Department of Labor and Regulation"
+  type: "agency"
+  checked_on: "2026-11-05"

@@ -1,0 +1,36 @@
+-
+  id: "ut-usbe-home"
+  url: "https://schools.utah.gov/parent/homeschool.php"
+  publisher: "Utah State Board of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ut-53g-6-204"
+  url: "https://le.utah.gov/xcode/Title53G/Chapter6/53G-6-S204.html"
+  publisher: "Utah State Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ut-53g-6-201"
+  url: "https://le.utah.gov/xcode/Title53G/Chapter6/53G-6-S201.html"
+  publisher: "Utah State Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ut-53g-6-202"
+  url: "https://le.utah.gov/xcode/Title53G/Chapter6/53G-6-S202.html"
+  publisher: "Utah State Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ut-53f-6-402"
+  url: "https://le.utah.gov/xcode/Title53F/Chapter6/53F-6-S402.html"
+  publisher: "Utah State Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "ut-53g-6-702"
+  url: "https://le.utah.gov/xcode/Title53G/Chapter6/53G-6-S702.html"
+  publisher: "Utah State Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"

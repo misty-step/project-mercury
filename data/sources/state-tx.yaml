@@ -1,0 +1,30 @@
+-
+  id: "tx-tea-home"
+  url: "https://tea.texas.gov/families-and-students/finding-school-your-child/home-schooling"
+  publisher: "Texas Education Agency"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "tx-tea-policy"
+  url: "https://tea.texas.gov/administrator-addressed-taa/taa-letters/home-schools"
+  publisher: "Texas Education Agency"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "tx-25-085"
+  url: "https://law.justia.com/codes/texas/education-code/title-2/subtitle-e/chapter-25/subchapter-c/section-25-085/"
+  publisher: "Justia (mirror of Texas Education Code)"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "tx-comptroller-tefa"
+  url: "https://comptroller.texas.gov/about/media-center/news/20260630-nearly-73000-texas-education-freedom-accounts-to-receive-initial-funding-july-1-1782833580152"
+  publisher: "Texas Comptroller of Public Accounts"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "tx-tea-sb401"
+  url: "https://tea.texas.gov/educators/superintendents/89th-legislature-updated-2025-09-18.pdf"
+  publisher: "Texas Education Agency"
+  type: "agency"
+  checked_on: "2026-11-05"

@@ -1,0 +1,176 @@
+code: "CA"
+name: "California"
+summary: "Families may establish a home-based private school, use an existing private school’s home program, or employ a credentialed tutor. Private schools file an annual affidavit and keep records; the tutor exemption has a credential and fixed instructional schedule."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  - id: "private-school"
+    name: "Private full-time day school"
+    summary: "A family operates a home-based private school or uses a private school’s home or satellite program."
+    notice:
+      required: true
+      detail: "School files annual Private School Affidavit with CDE October 1–15; an umbrella school may file for its home program."
+    approval:
+      required: false
+      detail: "No program approval; district verifies annual affidavit filing, not educational quality."
+    assessment:
+      required: false
+      detail: "No state-required standardized testing or portfolio review; the private school may set its own assessments."
+    subjects:
+      required: true
+      detail: "Offer public-school branches of study, normally in English; grade-band subjects are in Education Code 51210 and 51220."
+    instruction_time:
+      required: false
+      detail: "Must be a full-time day school, but this exemption sets no numerical minimum days or hours."
+    teacher_qualifications:
+      required: true
+      detail: "Instructors must be capable of teaching; no state credential or diploma minimum is specified."
+    records:
+      required: true
+      detail: "Keep attendance showing half-day absences, courses offered, and faculty names, addresses and educational qualifications."
+  - id: "credentialed-tutor"
+    name: "Instruction by tutor"
+    summary: "A person holding a valid California credential for the grade taught provides private instruction."
+    notice:
+      required: false
+      detail: "No Private School Affidavit or separate notice required under the tutor exemption."
+    approval:
+      required: false
+      detail: "No separate program approval required; instructor must hold the required state credential."
+    assessment:
+      required: false
+      detail: "No standardized test or portfolio evaluation prescribed for the tutor exemption."
+    subjects:
+      required: true
+      detail: "Teach the public-school branches of study in English."
+    instruction_time:
+      required: true
+      detail: "At least 3 hours daily for 175 days each calendar year, between 8 a.m. and 4 p.m."
+    teacher_qualifications:
+      required: true
+      detail: "Tutor or other instructor must hold a valid state credential for the grade taught."
+    records:
+      required: false
+      detail: "No particular attendance or portfolio records prescribed by the tutor exemption."
+funding:
+  available: false
+  detail: "No state ESA or homeschool-expense tax benefit for private home education; public charter and independent-study programs are public enrollment."
+public_school_access:
+  available: false
+  detail: "No statewide right to part-time public classes or interscholastic sports for private homeschoolers; ask the district about available options."
+claims:
+  - field: "compulsory_ages"
+    value: "Compulsory full-time education generally applies from age six until the eighteenth birthday."
+    quote: "Each person between the ages of 6 and 18 years not exempted under the provisions of this chapter or Chapter 3"
+    provenance: "inferred"
+    source_id: "ca-compulsory"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "The state does not provide funding for private homeschooling; no general home-education ESA or tax benefit is identified."
+    quote: "Similar to private schools, the state does not oversee or provide any funding for these students."
+    provenance: "inferred"
+    source_id: "ca-funding-analysis"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "State law leaves nonconflicting local programs and activities to district boards rather than guaranteeing homeschool access."
+    quote: "the governing board of any school district may initiate and carry on any program, activity, or may otherwise act in any manner which is not in conflict with or inconsistent with, or preempted by, any law"
+    provenance: "inferred"
+    source_id: "ca-district-discretion"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.notice"
+    value: "School files annual Private School Affidavit with CDE October 1–15; an umbrella school may file for its home program."
+    quote: "private school instruction on the elementary or high school level shall between the first and 15th day of October of each year, commencing on October 1, 1967, file with the Superintendent of Public Instruction an affidavit or statement, under penalty of perjury,"
+    provenance: "inferred"
+    source_id: "ca-affidavit"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.approval"
+    value: "No program approval; district verifies annual affidavit filing, not educational quality."
+    quote: "The verification required by this section shall not be construed as an evaluation, recognition, approval, or endorsement of any private school or course."
+    provenance: "inferred"
+    source_id: "ca-private-school"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.assessment"
+    value: "No state-required standardized testing or portfolio review; the private school may set its own assessments."
+    quote: "private schools develop their own curriculum and goals for student learning, including graduation requirements and any required testing."
+    provenance: "inferred"
+    source_id: "ca-funding-analysis"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.subjects"
+    value: "Offer public-school branches of study, normally in English; grade-band subjects are in Education Code 51210 and 51220."
+    quote: "be taught in the English language and shall offer instruction in the several branches of study required to be taught in the public schools of the state."
+    provenance: "measured"
+    source_id: "ca-private-school"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.instruction_time"
+    value: "Must be a full-time day school, but this exemption sets no numerical minimum days or hours."
+    quote: "Children who are being instructed in a private full-time day school by persons capable of teaching shall be exempted."
+    provenance: "inferred"
+    source_id: "ca-private-school"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.teacher_qualifications"
+    value: "Instructors must be capable of teaching; no state credential or diploma minimum is specified."
+    quote: "Children who are being instructed in a private full-time day school by persons capable of teaching shall be exempted."
+    provenance: "inferred"
+    source_id: "ca-private-school"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.records"
+    value: "Keep attendance showing half-day absences, courses offered, and faculty names, addresses and educational qualifications."
+    quote: "The names and addresses, including city and street, of its faculty, together with a record of the educational qualifications of each."
+    provenance: "inferred"
+    source_id: "ca-affidavit"
+    checked_on: "2026-11-05"
+  - field: "pathways.credentialed-tutor.notice"
+    value: "No Private School Affidavit or separate notice required under the tutor exemption."
+    quote: "Children not attending a private, full-time, day school and who are being instructed in study and recitation for at least three hours a day for 175 days each calendar year by a private tutor or other person in the several branches of study required to be taught in the public schools of this state and in the English language shall be exempted."
+    provenance: "inferred"
+    source_id: "ca-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.credentialed-tutor.approval"
+    value: "No separate program approval required; instructor must hold the required state credential."
+    quote: "Children not attending a private, full-time, day school and who are being instructed in study and recitation for at least three hours a day for 175 days each calendar year by a private tutor or other person in the several branches of study required to be taught in the public schools of this state and in the English language shall be exempted."
+    provenance: "inferred"
+    source_id: "ca-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.credentialed-tutor.assessment"
+    value: "No standardized test or portfolio evaluation prescribed for the tutor exemption."
+    quote: "Children not attending a private, full-time, day school and who are being instructed in study and recitation for at least three hours a day for 175 days each calendar year by a private tutor or other person in the several branches of study required to be taught in the public schools of this state and in the English language shall be exempted."
+    provenance: "inferred"
+    source_id: "ca-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.credentialed-tutor.subjects"
+    value: "Teach the public-school branches of study in English."
+    quote: "Children not attending a private, full-time, day school and who are being instructed in study and recitation for at least three hours a day for 175 days each calendar year by a private tutor or other person in the several branches of study required to be taught in the public schools of this state and in the English language shall be exempted."
+    provenance: "measured"
+    source_id: "ca-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.credentialed-tutor.instruction_time"
+    value: "At least 3 hours daily for 175 days each calendar year, between 8 a.m. and 4 p.m."
+    quote: "Children not attending a private, full-time, day school and who are being instructed in study and recitation for at least three hours a day for 175 days each calendar year by a private tutor or other person in the several branches of study required to be taught in the public schools of this state and in the English language shall be exempted."
+    provenance: "inferred"
+    source_id: "ca-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.credentialed-tutor.teacher_qualifications"
+    value: "Tutor or other instructor must hold a valid state credential for the grade taught."
+    quote: "The tutor or other person shall hold a valid state credential for the grade taught."
+    provenance: "measured"
+    source_id: "ca-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.credentialed-tutor.records"
+    value: "No particular attendance or portfolio records prescribed by the tutor exemption."
+    quote: "Children not attending a private, full-time, day school and who are being instructed in study and recitation for at least three hours a day for 175 days each calendar year by a private tutor or other person in the several branches of study required to be taught in the public schools of this state and in the English language shall be exempted."
+    provenance: "inferred"
+    source_id: "ca-tutor"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.records"
+    value: "Keep an attendance register with absences of a half day or more."
+    quote: "The attendance of the pupils shall be kept by private school authorities in a register, and the record of attendance shall indicate clearly every absence of the pupil from school for a half day or more during each day that school is maintained during the year."
+    provenance: "measured"
+    source_id: "ca-private-school"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-school.records"
+    value: "The school must maintain its courses of study."
+    quote: "The courses of study offered by the institution."
+    provenance: "measured"
+    source_id: "ca-affidavit"
+    checked_on: "2026-11-05"

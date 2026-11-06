@@ -1,0 +1,18 @@
+-
+  id: "ky-homeschool"
+  url: "https://www.education.ky.gov/federal/Documents/Kentucky%20Homeschool%20Information%20Packet.pdf"
+  publisher: "Kentucky Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ky-nonpublic"
+  url: "https://www.education.ky.gov/federal/Documents/Kentucky%20Nonpublic%20Information%20Packet.pdf"
+  publisher: "Kentucky Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "ky-courses"
+  url: "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=56395"
+  publisher: "Kentucky General Assembly"
+  type: "statute"
+  checked_on: "2026-11-05"

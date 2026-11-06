@@ -1,0 +1,236 @@
+code: "DE"
+name: "Delaware"
+summary: "Families may register a single-family or multi-family homeschool, or use the statutory district-coordinated option. Enrollment and annual attendance reports are required; only the district-coordinated route requires an approved curriculum."
+compulsory_ages:
+  min: 5
+  max: 15
+pathways:
+  - id: "single-family"
+    name: "Single-family homeschool"
+    summary: "A parent or legal guardian primarily teaches their own child in their own residence."
+    notice:
+      required: true
+      detail: "Register the homeschool and students with DDOE; file annual enrollment by September 30. Multi-family schools use a liaison."
+    approval:
+      required: false
+      detail: "No instructional-program approval required; DDOE reviews registration and issues an acknowledgment before public-school withdrawal."
+    assessment:
+      required: false
+      detail: "No state-mandated test or evaluation."
+    subjects:
+      required: false
+      detail: "No subjects prescribed for this homeschool type."
+    instruction_time:
+      required: false
+      detail: "No required minimum number of instructional days or hours."
+    teacher_qualifications:
+      required: false
+      detail: "No diploma or teaching-license requirement; instruction is primarily by a parent or legal guardian."
+    records:
+      required: true
+      detail: "Report annual aggregate attendance to DDOE by July 31 and enrollment by September 30; no state-required academic portfolio."
+  - id: "multi-family"
+    name: "Multi-family homeschool"
+    summary: "Parents or guardians educate children from more than one family and designate a liaison for DDOE reporting."
+    notice:
+      required: true
+      detail: "Register the homeschool and students with DDOE; file annual enrollment by September 30. Multi-family schools use a liaison."
+    approval:
+      required: false
+      detail: "No instructional-program approval required; DDOE reviews registration and issues an acknowledgment before public-school withdrawal."
+    assessment:
+      required: false
+      detail: "No state-mandated test or evaluation."
+    subjects:
+      required: false
+      detail: "No subjects prescribed for this homeschool type."
+    instruction_time:
+      required: false
+      detail: "No required minimum number of instructional days or hours."
+    teacher_qualifications:
+      required: false
+      detail: "No diploma or teaching-license requirement; instruction is primarily by a parent or legal guardian."
+    records:
+      required: true
+      detail: "Report annual aggregate attendance to DDOE by July 31 and enrollment by September 30; no state-required academic portfolio."
+  - id: "district-coordinated"
+    name: "Single-family homeschool coordinated with the local school district"
+    summary: "A parent teaches at home using a curriculum approved by the local superintendent."
+    notice:
+      required: true
+      detail: "Register the homeschool and students with DDOE; file annual enrollment by September 30. Multi-family schools use a liaison."
+    approval:
+      required: true
+      detail: "Local superintendent must approve the curriculum and determine in writing that instruction will be regular and thorough."
+    assessment:
+      required: false
+      detail: "No statewide test or evaluation requirement; the coordinated route may have local conditions."
+    subjects:
+      required: true
+      detail: "Teach the subjects prescribed for public schools, using the superintendent-approved curriculum."
+    instruction_time:
+      required: false
+      detail: "No statewide minimum days or hours; follow the approved curriculum in the coordinated route."
+    teacher_qualifications:
+      required: false
+      detail: "No diploma or teaching-license requirement; instruction is primarily by a parent or legal guardian."
+    records:
+      required: true
+      detail: "Report annual aggregate attendance to DDOE by July 31 and enrollment by September 30; no state-required academic portfolio."
+funding:
+  available: false
+  detail: "No DDOE funding for Delaware homeschools."
+public_school_access:
+  available: false
+  detail: "No statewide right to public-school classes or sports; public-school athletics require full-time enrollment."
+claims:
+  - field: "compulsory_ages"
+    value: "Compulsory enrollment generally runs from five by August 31 until sixteen; public-school withdrawal has separate consent and exit-interview rules."
+    quote: "a child between 5 and 16 years of age"
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "compulsory_ages"
+    value: "A homeschool need not be opened for a child sixteen or older."
+    quote: "You do not have to open a homeschool with the DDOE if your child is 16 or older; however, we welcome and encourage you to do so."
+    provenance: "measured"
+    source_id: "de-nonpublic-registration"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No DDOE funding for Delaware homeschools."
+    quote: "There is no funding provided by the DDOE for Delaware nonpublic schools."
+    provenance: "measured"
+    source_id: "de-nonpublic-faq"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "No guaranteed part-time or sports access; DIAA public-school athletics require full-time enrollment."
+    quote: "Delaware Interscholastic Athletic Association (DIAA) regulations 1008 and 1009 require that in order for a student to represent a school in interscholastic athletics they must be enrolled at that school as a full-time student and the school must be a member school of the DIAA."
+    provenance: "inferred"
+    source_id: "de-nonpublic-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.single-family.notice"
+    value: "Register the homeschool and students with DDOE; file annual enrollment by September 30. Multi-family schools use a liaison."
+    quote: "Such persons shall also submit annually, no later than September 30, a statement of pupil enrollment on such forms as prescribed by the Department of Education."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.single-family.approval"
+    value: "No instructional-program approval required; DDOE reviews registration and issues an acknowledgment before public-school withdrawal."
+    quote: "“Single-family homeschool” means the education of an individual’s own child, primarily by the parent or legal guardian of the child, mainly in their own residence."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.single-family.assessment"
+    value: "No state-mandated test or evaluation."
+    quote: "“Single-family homeschool” means the education of an individual’s own child, primarily by the parent or legal guardian of the child, mainly in their own residence."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.single-family.subjects"
+    value: "No subjects prescribed for this homeschool type."
+    quote: "“Single-family homeschool” means the education of an individual’s own child, primarily by the parent or legal guardian of the child, mainly in their own residence."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.single-family.instruction_time"
+    value: "No required minimum number of instructional days or hours."
+    quote: "The DDOE does not require a specific number of days for nonpublic schools to be open during a school year."
+    provenance: "inferred"
+    source_id: "de-nonpublic-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.single-family.teacher_qualifications"
+    value: "No diploma or teaching-license requirement; instruction is primarily by a parent or legal guardian."
+    quote: "“Single-family homeschool” means the education of an individual’s own child, primarily by the parent or legal guardian of the child, mainly in their own residence."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.single-family.records"
+    value: "Report annual aggregate attendance to DDOE by July 31 and enrollment by September 30; no state-required academic portfolio."
+    quote: "All persons conducting nonpublic schools shall report end of the year attendance information to the Department of Education annually, on or before the July 31, on such forms as shall be prescribed by the Department of Education."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.multi-family.notice"
+    value: "Register the homeschool and students with DDOE; file annual enrollment by September 30. Multi-family schools use a liaison."
+    quote: "Such persons shall also submit annually, no later than September 30, a statement of pupil enrollment on such forms as prescribed by the Department of Education."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.multi-family.approval"
+    value: "No instructional-program approval required; DDOE reviews registration and issues an acknowledgment before public-school withdrawal."
+    quote: "“Multi-family homeschool” means the education of children, primarily by the parents or legal guardians of the children mainly in 1 or more residences, or other facilities, when the children are not all related to each other as brother or sister."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.multi-family.assessment"
+    value: "No state-mandated test or evaluation."
+    quote: "“Multi-family homeschool” means the education of children, primarily by the parents or legal guardians of the children mainly in 1 or more residences, or other facilities, when the children are not all related to each other as brother or sister."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.multi-family.subjects"
+    value: "No subjects prescribed for this homeschool type."
+    quote: "“Multi-family homeschool” means the education of children, primarily by the parents or legal guardians of the children mainly in 1 or more residences, or other facilities, when the children are not all related to each other as brother or sister."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.multi-family.instruction_time"
+    value: "No required minimum number of instructional days or hours."
+    quote: "The DDOE does not require a specific number of days for nonpublic schools to be open during a school year."
+    provenance: "inferred"
+    source_id: "de-nonpublic-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.multi-family.teacher_qualifications"
+    value: "No diploma or teaching-license requirement; instruction is primarily by a parent or legal guardian."
+    quote: "“Multi-family homeschool” means the education of children, primarily by the parents or legal guardians of the children mainly in 1 or more residences, or other facilities, when the children are not all related to each other as brother or sister."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.multi-family.records"
+    value: "Report annual aggregate attendance to DDOE by July 31 and enrollment by September 30; no state-required academic portfolio."
+    quote: "All persons conducting nonpublic schools shall report end of the year attendance information to the Department of Education annually, on or before the July 31, on such forms as shall be prescribed by the Department of Education."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.district-coordinated.notice"
+    value: "Register the homeschool and students with DDOE; file annual enrollment by September 30. Multi-family schools use a liaison."
+    quote: "Such persons shall also submit annually, no later than September 30, a statement of pupil enrollment on such forms as prescribed by the Department of Education."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.district-coordinated.approval"
+    value: "Local superintendent must approve the curriculum and determine in writing that instruction will be regular and thorough."
+    quote: "using a curriculum approved by the local superintendent or the local superintendent’s designee."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.district-coordinated.assessment"
+    value: "No statewide test or evaluation requirement; the coordinated route may have local conditions."
+    quote: "using a curriculum approved by the local superintendent or the local superintendent’s designee."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.district-coordinated.subjects"
+    value: "Teach the subjects prescribed for public schools, using the superintendent-approved curriculum."
+    quote: "in the subjects prescribed for the public schools of the State and in a manner suitable to children of the same age and stage of advancement."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.district-coordinated.instruction_time"
+    value: "No statewide minimum days or hours; follow the approved curriculum in the coordinated route."
+    quote: "The DDOE does not require a specific number of days for nonpublic schools to be open during a school year."
+    provenance: "inferred"
+    source_id: "de-nonpublic-faq"
+    checked_on: "2026-11-05"
+  - field: "pathways.district-coordinated.teacher_qualifications"
+    value: "No diploma or teaching-license requirement; instruction is primarily by a parent or legal guardian."
+    quote: "using a curriculum approved by the local superintendent or the local superintendent’s designee."
+    provenance: "inferred"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"
+  - field: "pathways.district-coordinated.records"
+    value: "Report annual aggregate attendance to DDOE by July 31 and enrollment by September 30; no state-required academic portfolio."
+    quote: "All persons conducting nonpublic schools shall report end of the year attendance information to the Department of Education annually, on or before the July 31, on such forms as shall be prescribed by the Department of Education."
+    provenance: "measured"
+    source_id: "de-attendance-homeschools"
+    checked_on: "2026-11-05"

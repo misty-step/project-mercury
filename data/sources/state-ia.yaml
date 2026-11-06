@@ -1,0 +1,30 @@
+- id: ia-code-299a
+  url: https://www.legis.iowa.gov/docs/code/299A.pdf
+  publisher: Iowa Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: ia-code-age
+  url: https://www.legis.iowa.gov/docs/code/299.1A.pdf
+  publisher: Iowa Legislature
+  type: statute
+  checked_on: "2026-11-05"
+- id: ia-private-rules
+  url: https://www.legis.iowa.gov/docs/iac/chapter/281.31.pdf
+  publisher: Iowa Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: ia-private-handbook
+  url: https://educate.iowa.gov/media/7743/download?inline
+  publisher: Iowa Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: ia-doe-private
+  url: https://educate.iowa.gov/pk-12/educational-choice/homeschooling
+  publisher: Iowa Department of Education
+  type: agency
+  checked_on: "2026-11-05"
+- id: ia-revenue-credit
+  url: https://revenue.iowa.gov/taxes/tax-guidance/individual-income-tax/1040-expanded-instructions/tuition-textbook-credit-k-12
+  publisher: Iowa Department of Revenue
+  type: agency
+  checked_on: "2026-11-05"

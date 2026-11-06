@@ -1,0 +1,164 @@
+code: "WA"
+name: "Washington"
+summary: "Families can provide home-based instruction with an annual declaration, qualified parent instruction and annual assessment, or teach through an approved private school extension program."
+compulsory_ages:
+  min: 8
+  max: 17
+pathways:
+  - id: "home-based"
+    name: "Home-based instruction"
+    summary: "Parents teach their own children after meeting one of the statutory qualification options."
+    notice:
+      required: true
+      detail: "File annual declaration with the district superintendent by September 15 or within two weeks of the start of a school term."
+    approval:
+      required: false
+      detail: "No program approval; superintendent approval is only one optional parent-qualification route."
+    assessment:
+      required: true
+      detail: "Annual approved standardized test by a qualified person or written assessment by a certificated educator."
+    subjects:
+      required: true
+      detail: "Teach occupational education, science, math, language, social studies/history, health, reading/writing/spelling, art and music."
+    instruction_time:
+      required: true
+      detail: "Provide hours equivalent to approved private schools: 1,000 annually in grades 1–12; the law allows experiential instruction."
+    teacher_qualifications:
+      required: true
+      detail: "Use certificated supervision, 45 college quarter credits, a home-instruction course, or superintendent finding of qualification."
+    records:
+      required: true
+      detail: "Keep annual test/assessment in permanent records; forward education and immunization records on school transfer."
+  - id: "private-extension"
+    name: "Approved private school extension program"
+    summary: "Parents teach through an approved private school under a certificated employee’s supervision."
+    notice:
+      required: true
+      detail: "The private school files annual compliance certification with the State Board; no separate home-based declaration."
+    approval:
+      required: true
+      detail: "The supervising private school must be state-approved."
+    assessment:
+      required: true
+      detail: "The certificated supervisor evaluates each student’s progress; meet at least one hour weekly on a monthly average."
+    subjects:
+      required: true
+      detail: "Teach the private-school basic skills, including occupational education, science, math, language, history, health, art and music."
+    instruction_time:
+      required: true
+      detail: "Meet the private-school schedule: 180 days or equivalent hours; 1,000-hour average in grades 1–12 and 450 in kindergarten."
+    teacher_qualifications:
+      required: true
+      detail: "Parent works under a Washington-certificated employee of the approved private school."
+    records:
+      required: true
+      detail: "Safeguard permanent records through the private school."
+funding:
+  available: false
+  detail: "No state-funded home-education account or expense benefit; public ALE programs are public school, not independent homeschooling."
+public_school_access:
+  available: true
+  detail: "Students otherwise eligible for district enrollment have a right to part-time courses and ancillary services."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance is generally required from age 8 until the 18th birthday."
+    quote: "All parents in this state of any child eight years of age and under eighteen years of age shall cause such child to attend the public school of the district in which the child resides"
+    provenance: "measured"
+    source_id: "wa-225-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.notice"
+    value: "File annual declaration with the district superintendent by September 15 or within two weeks of the start of a school term."
+    quote: "Each parent shall file the statement by September 15th of the school year or within two weeks of the beginning of any public school quarter, trimester, or semester with the superintendent of the public school district within which the parent resides or the district that accepts the transfer, and the student shall be deemed a transfer student of the nonresident district."
+    provenance: "measured"
+    source_id: "wa-200-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.approval"
+    value: "No program approval; superintendent approval is only one optional parent-qualification route."
+    quote: "Parents who do comply with the duties set forth in this section shall be presumed to be providing home-based instruction"
+    provenance: "inferred"
+    source_id: "wa-200-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.assessment"
+    value: "Annual approved standardized test by a qualified person or written assessment by a certificated educator."
+    quote: "Ensure that a standardized achievement test approved by the state board of education is administered annually to the child by a qualified individual or that an annual assessment of the student's academic progress is written by a certificated person who is currently working in the field of education."
+    provenance: "measured"
+    source_id: "wa-200-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.subjects"
+    value: "Teach occupational education, science, math, language, social studies/history, health, reading/writing/spelling, art and music."
+    quote: "including a curriculum and instruction in the basic skills of occupational education, science, mathematics, language, social studies, history, health, reading, writing, spelling, and the development of an appreciation of art and music"
+    provenance: "measured"
+    source_id: "wa-225-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.instruction_time"
+    value: "Provide hours equivalent to approved private schools: 1,000 annually in grades 1–12; the law allows experiential instruction."
+    quote: "provided for a number of hours equivalent to the total annual program hours per grade level established for approved private schools"
+    provenance: "measured"
+    source_id: "wa-225-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.teacher_qualifications"
+    value: "Use certificated supervision, 45 college quarter credits, a home-instruction course, or superintendent finding of qualification."
+    quote: "Provided by a parent who is instructing his or her child only and who has either earned forty-five college-level quarter credit hours or its equivalent in semester hours or has completed a course in home-based instruction at a postsecondary institution or a vocational-technical institute; or"
+    provenance: "measured"
+    source_id: "wa-225-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.records"
+    value: "Keep annual test/assessment in permanent records; forward education and immunization records on school transfer."
+    quote: "The standardized test administered or the annual academic progress assessment written shall be made a part of the child's permanent records."
+    provenance: "measured"
+    source_id: "wa-200-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-extension.notice"
+    value: "The private school files annual compliance certification with the State Board; no separate home-based declaration."
+    quote: "The administrative or executive authority of private schools or private school districts shall file each year with the state board of education a statement certifying that the minimum requirements hereinafter set forth are being met, noting any deviations."
+    provenance: "measured"
+    source_id: "wa-195-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-extension.approval"
+    value: "The supervising private school must be state-approved."
+    quote: "An approved private school may operate an extension program for parents, guardians, or persons having legal custody of a child to teach children in their custody."
+    provenance: "measured"
+    source_id: "wa-195-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-extension.assessment"
+    value: "The certificated supervisor evaluates each student’s progress; meet at least one hour weekly on a monthly average."
+    quote: "Each student's progress be evaluated by the certificated person; and"
+    provenance: "measured"
+    source_id: "wa-195-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-extension.subjects"
+    value: "Teach the private-school basic skills, including occupational education, science, math, language, history, health, art and music."
+    quote: "Private school curriculum shall include instruction of the basic skills of occupational education, science, mathematics, language, social studies, history, health, reading, writing, spelling, and the development of appreciation of art and music, all in sufficient units for meeting state board of education graduation requirements."
+    provenance: "measured"
+    source_id: "wa-195-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-extension.instruction_time"
+    value: "Meet the private-school schedule: 180 days or equivalent hours; 1,000-hour average in grades 1–12 and 450 in kindergarten."
+    quote: "the minimum school year for instructional purposes shall consist of no less than one hundred eighty school days or the equivalent in annual minimum instructional hour offerings, with a school-wide annual average total instructional hour offering of one thousand hours for students enrolled in grades one through twelve, and at least four hundred fifty hours for students enrolled in kindergarten."
+    provenance: "measured"
+    source_id: "wa-195-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-extension.teacher_qualifications"
+    value: "Parent works under a Washington-certificated employee of the approved private school."
+    quote: "The parent, guardian, or custodian be under the supervision of an employee of the approved private school who is certificated under chapter"
+    provenance: "measured"
+    source_id: "wa-195-010"
+    checked_on: "2026-11-05"
+  - field: "pathways.private-extension.records"
+    value: "Safeguard permanent records through the private school."
+    quote: "Appropriate measures shall be taken to safeguard all permanent records against loss or damage."
+    provenance: "measured"
+    source_id: "wa-195-010"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No state-funded home-education account or expense benefit; public ALE programs are public school, not independent homeschooling."
+    quote: "Not state-funded. The parent is responsible for paying for all educational materials and experiences."
+    provenance: "measured"
+    source_id: "wa-ospi-bulletin"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Students otherwise eligible for district enrollment have a right to part-time courses and ancillary services."
+    quote: "The board of directors of any school district is authorized and, in the same manner as for other public school students, shall permit the enrollment of and provide ancillary services for part time students:"
+    provenance: "measured"
+    source_id: "wa-150-350"
+    checked_on: "2026-11-05"

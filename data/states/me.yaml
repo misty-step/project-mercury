@@ -1,0 +1,219 @@
+code: ME
+name: Maine
+summary: >-
+  Parents may use a home instruction program with annual notice, 175 instructional days, and an annual assessment, or enroll in a recognized equivalent-instruction private school that directs the education. A separately arranged alternative requires school-board arrangement and commissioner approval.
+compulsory_ages: { min: 6, max: 16 }
+pathways:
+  - id: home-instruction
+    name: Home instruction program
+    summary: The parent directs the child's education and files notices and annual progress assessments with school officials and the commissioner.
+    notice: { required: true, detail: "File intent within 10 calendar days of starting; each later year file continuation and the prior year's assessment by September 1. One portal or superintendent submission serves both recipients." }
+    approval: { required: false, detail: "No program approval required; notice receives an acknowledgment. Certain assessment options require advance agreement." }
+    assessment: { required: true, detail: "Annual achievement test, approved local test, certified-teacher review, qualified support-group portfolio review, or local advisory-board review; submit by September 1." }
+    subjects: { required: true, detail: "English/language arts, math, science, social studies, PE, health, library skills, fine arts; Maine studies once in grades 6-12 and computer proficiency once in grades 7-12." }
+    instruction_time: { required: true, detail: "At least 175 instructional days annually; no hourly minimum. Prior school attendance counts when starting midyear." }
+    teacher_qualifications: { required: false, detail: "No minimum parent teaching credential required; the certified-teacher requirement applies to certain assessment reviewers, not the parent." }
+    records: { required: true, detail: "Keep all notices and assessments until home instruction concludes; make them available to the commissioner on request." }
+  - id: equivalent-private
+    name: Recognized equivalent-instruction private school
+    summary: The family enrolls in a recognized private school, potentially virtual, which legally directs the education rather than the parent operating a home instruction program.
+    notice: { required: true, detail: "The school reports students' names, residences, and grades to resident superintendents within two weeks of opening or by October 1, whichever comes first; update changes." }
+    approval: { required: false, detail: "Recognition is not school approval; the school submits an annual recognition letter to the commissioner." }
+    assessment: { required: true, detail: "The school reports assessment methods, subjects, grade levels, and results to parents, and supplies academic progress reports at least four times annually." }
+    subjects: { required: true, detail: "English reading/writing/spelling/grammar, mathematics, science, American history, Maine history/geography, civil government/citizenship, health, and fine arts." }
+    instruction_time: { required: true, detail: "The school operates at least 175 days or 875 hours annually." }
+    teacher_qualifications: { required: true, detail: "The school administration examines and approves teachers' competency; state teacher certification is not required for recognition." }
+    records: { required: true, detail: "The school reports attendance/enrollment to resident superintendents and gives parents assessment information and at least four academic progress reports yearly." }
+  - id: approved-alternative
+    name: Other arranged and approved equivalent instruction
+    summary: A school board arranges another form of equivalent instruction and the commissioner approves it individually.
+    notice: { required: true, detail: "Arrange the proposed instruction with the school board and obtain commissioner approval before relying on this alternative." }
+    approval: { required: true, detail: "The school board must arrange the alternative and the commissioner must approve it." }
+    assessment: { required: false, detail: "No uniform assessment rule in this provision; comply with any assessment conditions in the approved arrangement." }
+    subjects: { required: false, detail: "No separate subject list in this provision; the approved arrangement must provide equivalent instruction." }
+    instruction_time: { required: false, detail: "No fixed days or hours in this provision; follow the individually approved arrangement." }
+    teacher_qualifications: { required: false, detail: "No uniform instructor credential in this provision; follow the approved arrangement's conditions." }
+    records: { required: false, detail: "No uniform parent recordkeeping rule in this provision; follow any records conditions in the approved arrangement." }
+funding: { available: false, detail: "No general homeschool ESA or expense tax benefit identified; parents bear costs. Eligible homeschoolers may separately receive state-subsidized college course tuition." }
+public_school_access: { available: true, detail: "Home instruction students may take public classes with approval not unreasonably withheld, and try out for extracurriculars under equivalent academic and eligibility rules." }
+claims:
+  - field: compulsory_ages
+    value: "Attendance is required from age 6 until the 17th birthday, with statutory exceptions; enrolled 5-year-olds must attend unless withdrawn."
+    quote: "Persons 6 years of age or older and under 17 years of age shall attend a public day school during the time it is in regular session."
+    provenance: measured
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.notice
+    value: "Notice is due to resident school officials and the commissioner within 10 calendar days of starting."
+    quote: "The student's parent or guardian shall provide a written notice of intent to provide home instruction simultaneously to the school officials of the administrative unit in which the student resides and to the commissioner within 10 calendar days of the beginning of home instruction."
+    provenance: measured
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.notice
+    value: "Annual continuation notices include the prior year's assessment and are due by September 1."
+    quote: "Each subsequent year: File a new Notice of Intent with prior year assessment results attached by September 1. A school year begins July 1 and ends June 30."
+    provenance: measured
+    source_id: me-doe-requirements
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.notice
+    value: "One submission notifies both the department and resident superintendent."
+    quote: "One submission serves as notification to both the Maine Department of Education and the resident superintendent, as required by law."
+    provenance: measured
+    source_id: me-doe-requirements
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.approval
+    value: "The program requires notice rather than preapproval; the department acknowledges a notice."
+    quote: "Parents who supply a valid email address will receive an acknowledgment."
+    provenance: inferred
+    source_id: me-doe-requirements
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.assessment
+    value: "An annual assessment is required, including a certified-teacher progress review as one permitted option."
+    quote: "A statement of assurance that indicates that the home instruction program will include an annual assessment of the student's academic progress that includes at least one of the forms of assessment described in division (b)."
+    provenance: measured
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.assessment
+    value: "One assessment option is review and acceptance by a current Maine-certified teacher."
+    quote: "A review and acceptance of the student's progress by an identified individual who holds a current Maine teacher's certificate;"
+    provenance: measured
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.subjects
+    value: "The required curriculum includes core subjects, PE, health, library skills, fine arts, Maine studies, and computer proficiency at specified grade bands."
+    quote: "Subjects must include English, language arts, math, science, social studies, physical education, health education, library skills, fine arts, Maine Studies (in at least one grade from 6 to 12), and proficiency in the use of computers (at one grade level from 7 to 12)."
+    provenance: measured
+    source_id: me-doe-faq
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.instruction_time
+    value: "At least 175 instructional days are required, without an hourly minimum."
+    quote: "A total of at least 175 instructional days are required. There is no hourly requirement, per day or per year."
+    provenance: measured
+    source_id: me-doe-faq
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.instruction_time
+    value: "Days already attended in school can count toward the 175-day minimum."
+    quote: "The number of days that the student attended school prior to beginning home instruction can be deducted from the 175 instructional day requirement."
+    provenance: measured
+    source_id: me-doe-faq
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.teacher_qualifications
+    value: "The home-instruction statute does not prescribe a parent credential; a home instruction tutor may be the parent or another primary teacher."
+    quote: "For the purpose of this subdivision, a \"home instruction tutor\" means the parent, guardian or other person who acts or will act as a primary teacher of the student in the home instruction program."
+    provenance: inferred
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.home-instruction.records
+    value: "The parent keeps filed notices and assessments until the program concludes and makes them available to the commissioner upon request."
+    quote: "Copies of the information filed under this subparagraph must be maintained by the student's parent or guardian until the home instruction program concludes. The records must be made available to the commissioner upon request."
+    provenance: measured
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.equivalent-private.notice
+    value: "The school reports enrollment to resident superintendents within two weeks of opening or October 1, whichever occurs first."
+    quote: "The chief administrative officer of the private school shall submit in writing, within 2 weeks after the opening of the school, or by October 1st, whichever first occurs, the names, residences, and grade levels of the students attending the school."
+    provenance: measured
+    source_id: me-equivalent-guidelines
+    checked_on: "2026-11-05"
+  - field: pathways.equivalent-private.approval
+    value: "Equivalent-instruction recognition does not require department school approval."
+    quote: "The Maine DOE has no knowledge or information about “equivalent instruction schools”, as they do not seek Department approval."
+    provenance: measured
+    source_id: me-doe-equivalent
+    checked_on: "2026-11-05"
+  - field: pathways.equivalent-private.assessment
+    value: "The school supplies parents with academic assessment information and progress reports at least four times annually."
+    quote: "In addition, it shall be stated in the annual letter that parents shall be furnished academic progress reports a minimum of 4 times annually."
+    provenance: measured
+    source_id: me-equivalent-guidelines
+    checked_on: "2026-11-05"
+  - field: pathways.equivalent-private.subjects
+    value: "The recognized school certifies instruction in English, math, science, history, geography, government/citizenship, health, and fine arts."
+    quote: "the English language, consisting of reading, writing, spelling, grammar, mathematics, science, American history, Maine history and geography and civil government, including the privilege and responsibility of citizenship, health education and fine arts."
+    provenance: measured
+    source_id: me-equivalent-guidelines
+    checked_on: "2026-11-05"
+  - field: pathways.equivalent-private.instruction_time
+    value: "The school operates at least 175 days or 875 hours."
+    quote: "That the school will be in operation a minimum of 175 days or 875 hours."
+    provenance: measured
+    source_id: me-equivalent-guidelines
+    checked_on: "2026-11-05"
+  - field: pathways.equivalent-private.teacher_qualifications
+    value: "The school's administration examines and approves teacher competency; recognition does not establish state certification."
+    quote: "That all teachers in the school who teach the curriculum in Section 3(a), have been examined and approved for competency, by the administration of the school"
+    provenance: measured
+    source_id: me-equivalent-guidelines
+    checked_on: "2026-11-05"
+  - field: pathways.equivalent-private.records
+    value: "The school files enrollment and attendance certificates with resident school officials."
+    quote: "A student is credited with attendance at a private school only if a certificate showing the name, residence and attendance of the person at the school, signed by the person or persons in charge of the school, has been filed with the school officials of the administrative unit in which the student resides."
+    provenance: measured
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.approved-alternative.notice
+    value: "The family must seek an arrangement with the school board and commissioner rather than rely on the ordinary home-instruction notice."
+    quote: "Any other manner arranged for by the school board and approved by the commissioner."
+    provenance: inferred
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.approved-alternative.approval
+    value: "School-board arrangement and commissioner approval are required."
+    quote: "Any other manner arranged for by the school board and approved by the commissioner."
+    provenance: measured
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.approved-alternative.assessment
+    value: "This catch-all approval clause prescribes no uniform assessment; individual approval conditions control."
+    quote: "Any other manner arranged for by the school board and approved by the commissioner."
+    provenance: inferred
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.approved-alternative.subjects
+    value: "This clause sets no separate subject list for individually approved equivalent instruction."
+    quote: "Any other manner arranged for by the school board and approved by the commissioner."
+    provenance: inferred
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.approved-alternative.instruction_time
+    value: "This clause sets no numerical days or hours; the approved arrangement controls."
+    quote: "Any other manner arranged for by the school board and approved by the commissioner."
+    provenance: inferred
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.approved-alternative.teacher_qualifications
+    value: "This clause sets no uniform teacher credential for individually approved instruction."
+    quote: "Any other manner arranged for by the school board and approved by the commissioner."
+    provenance: inferred
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: pathways.approved-alternative.records
+    value: "This clause sets no uniform parent recordkeeping requirement; any approved-plan requirements remain binding."
+    quote: "Any other manner arranged for by the school board and approved by the commissioner."
+    provenance: inferred
+    source_id: me-5001a
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "No general homeschool ESA or expense tax benefit is identified; ordinary home instruction costs belong to parents."
+    quote: "There is no fee charged. However, parents bear the responsibility for all costs."
+    provenance: inferred
+    source_id: me-doe-faq
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "A separate state subsidy is available for eligible postsecondary courses, not for general home instruction expenses."
+    quote: "A student is eligible to receive a state subsidy for postsecondary courses"
+    provenance: measured
+    source_id: me-4772b
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Home instruction students can enroll in public classes with superintendent approval that cannot be unreasonably withheld."
+    quote: "The student or the student's parent or guardian, on the student's behalf, applies in writing to and receives written approval from the superintendent or the superintendent's designee. Approval may not be unreasonably withheld."
+    provenance: measured
+    source_id: me-5021
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Home instruction students may try out for local public extracurricular activities subject to equivalent eligibility rules."
+    quote: "Students receiving home-school instruction are eligible to try out for extracurricular activities sponsored by the local school unit, provided the student applies in writing, if the following requirements are satisfied."
+    provenance: measured
+    source_id: me-5021
+    checked_on: "2026-11-05"

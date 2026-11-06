@@ -1,0 +1,232 @@
+code: "OR"
+name: "Oregon"
+summary: "Families notify their education service district and arrange testing at grades 3, 5, 8 and 10, with disability-plan alternatives. Parent-directed home instruction and instruction by a private teacher are separate attendance exemptions."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "parent-home-instruction"
+    name: "Education at home by a parent or legal guardian"
+    summary: "A parent or legal guardian educates the child at home under ORS 339.030(1)(e) and 339.035."
+    notice:
+      required: true
+      detail: "Notify the local ESD within 10 days of starting the school year or withdrawing; notify the ESD when moving districts."
+    approval:
+      required: false
+      detail: "No program approval required; the ESD acknowledges the notice."
+    assessment:
+      required: true
+      detail: "Test in grades 3, 5, 8 and 10; retain results and submit if requested. IEP/PDP progress evaluation may replace tests; low scores trigger retests."
+    subjects:
+      required: false
+      detail: "No prescribed homeschool subjects or approved curriculum."
+    instruction_time:
+      required: false
+      detail: "No minimum days or hours for parent-directed home instruction."
+    teacher_qualifications:
+      required: false
+      detail: "No minimum parent credential; declining test scores can lead to licensed supervision or a return-to-school order."
+    records:
+      required: true
+      detail: "Retain test results and submit them to the ESD on request; submit required private disability-plan evaluations instead where applicable."
+  -
+    id: "private-teacher"
+    name: "Instruction by a private teacher"
+    summary: "A private teacher provides the usual public-school courses for an equivalent period under ORS 339.030(1)(d)."
+    notice:
+      required: true
+      detail: "Notify the local ESD within 10 days of starting the school year or withdrawing; notify the ESD when moving districts."
+    approval:
+      required: false
+      detail: "No program approval required; the ESD acknowledges the notice."
+    assessment:
+      required: true
+      detail: "Test in grades 3, 5, 8 and 10; disability-plan evaluations may replace tests. Low scores trigger further testing and possible supervision."
+    subjects:
+      required: true
+      detail: "Teach the courses of study usually taught in public-school kindergarten through grade 12."
+    instruction_time:
+      required: true
+      detail: "Instruction must cover a period equivalent to that required for children attending public schools."
+    teacher_qualifications:
+      required: false
+      detail: "No general teaching license requirement; declining test scores can lead to supervision by a licensed teacher."
+    records:
+      required: true
+      detail: "Retain test results and submit them to the ESD on request; submit required private disability-plan evaluations instead where applicable."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Generally ages 6–17, with six measured by September 1; an enrolled five-year-old must attend while enrolled."
+    quote: "all children between the ages of 6 and 18 years who have not completed the 12th grade are required to regularly attend a public full-time school during the entire school term."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "A child counts as six if the sixth birthday occurred on or before September 1 before the current term."
+    quote: "a child is considered to be six years of age if the sixth birthday of the child occurred on or before September 1 immediately preceding the beginning of the current school term."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.notice"
+    value: "Notify the local ESD within 10 days of starting the school year or withdrawing; notify the ESD when moving districts."
+    quote: "If you start homeschooling at the beginning of a school year, you must notify within 10 days of the start of the school year. If you are starting sometime during the school year, you must notify within 10 days of withdrawing your child from school."
+    provenance: "measured"
+    source_id: "or-homeschool-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.approval"
+    value: "No program approval required; the ESD acknowledges the notice."
+    quote: "The education service district shall acknowledge receipt of any notification in writing."
+    provenance: "inferred"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.assessment"
+    value: "Test in grades 3, 5, 8 and 10; retain results and submit if requested. IEP/PDP progress evaluation may replace tests; low scores trigger retests."
+    quote: "Children being taught as provided in subsection (2) of this section shall be examined at grades 3, 5, 8 and 10"
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.assessment"
+    value: "Test in grades 3, 5, 8 and 10; retain results and submit if requested. IEP/PDP progress evaluation may replace tests; low scores trigger retests."
+    quote: "shall be evaluated for satisfactory educational progress according to the recommendations of the program or plan."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.teacher_qualifications"
+    value: "No minimum parent credential; declining test scores can lead to licensed supervision or a return-to-school order."
+    quote: "Children being educated in the children’s home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.records"
+    value: "Retain test results and submit them to the ESD on request; submit required private disability-plan evaluations instead where applicable."
+    quote: "Upon request of the superintendent of the education service district, the parent or legal guardian shall submit the results of the examination to the education service district."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.notice"
+    value: "Notify the local ESD within 10 days of starting the school year or withdrawing; notify the ESD when moving districts."
+    quote: "If you start homeschooling at the beginning of a school year, you must notify within 10 days of the start of the school year. If you are starting sometime during the school year, you must notify within 10 days of withdrawing your child from school."
+    provenance: "measured"
+    source_id: "or-homeschool-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.approval"
+    value: "No program approval required; the ESD acknowledges the notice."
+    quote: "The education service district shall acknowledge receipt of any notification in writing."
+    provenance: "inferred"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.assessment"
+    value: "Test in grades 3, 5, 8 and 10; disability-plan evaluations may replace tests. Low scores trigger further testing and possible supervision."
+    quote: "Children being taught as provided in subsection (2) of this section shall be examined at grades 3, 5, 8 and 10"
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.assessment"
+    value: "Test in grades 3, 5, 8 and 10; disability-plan evaluations may replace tests. Low scores trigger further testing and possible supervision."
+    quote: "shall be evaluated for satisfactory educational progress according to the recommendations of the program or plan."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.teacher_qualifications"
+    value: "No general teaching license requirement; declining test scores can lead to supervision by a licensed teacher."
+    quote: "Children being taught for a period equivalent to that required of children attending public schools by a private teacher the courses of study usually taught in kindergarten through grade 12 in the public school."
+    provenance: "inferred"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.records"
+    value: "Retain test results and submit them to the ESD on request; submit required private disability-plan evaluations instead where applicable."
+    quote: "Upon request of the superintendent of the education service district, the parent or legal guardian shall submit the results of the examination to the education service district."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.subjects"
+    value: "No prescribed homeschool subjects or approved curriculum."
+    quote: "Because homeschooling families have complete autonomy in how and what they teach, and because there are no standards for homeschooling in Oregon"
+    provenance: "inferred"
+    source_id: "or-homeschool-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.instruction_time"
+    value: "No minimum days or hours for parent-directed home instruction."
+    quote: "Children being educated in the children’s home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.subjects"
+    value: "Teach the courses of study usually taught in public-school kindergarten through grade 12."
+    quote: "Children being taught for a period equivalent to that required of children attending public schools by a private teacher the courses of study usually taught in kindergarten through grade 12 in the public school."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.instruction_time"
+    value: "Instruction must cover a period equivalent to that required for children attending public schools."
+    quote: "Children being taught for a period equivalent to that required of children attending public schools by a private teacher the courses of study usually taught in kindergarten through grade 12 in the public school."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "No state homeschool materials or testing funding is available."
+    quote: "Not at this time."
+    provenance: "measured"
+    source_id: "or-homeschool-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Districts may not deny eligible resident homeschooled students access to interscholastic activities."
+    quote: "the opportunity to participate in all interscholastic activities available in the school district within the attendance boundaries in which the high school equivalency student, homeschooled student or public charter school student resides if the student fulfills the following conditions, as applicable:"
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Academic eligibility may be shown by an annual approved test at or above the 23rd percentile, or district-adopted alternatives."
+    quote: "Achieve a minimum score that places the student at or above the 23rd percentile, based on national norms, on an examination from the list the State Board of Education adopts under ORS 339.035."
+    provenance: "measured"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "Independent homeschooling families provide the educational materials themselves."
+    quote: "Parents/Guardians are responsible to provide all educational material utilized in a homeschool."
+    provenance: "inferred"
+    source_id: "or-homeschool-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.parent-home-instruction.teacher_qualifications"
+    value: "No routine instructor credential is specified; a licensed supervisor may be imposed after declining test scores."
+    quote: "Place the education of the child under the supervision of a person holding a teaching license who is selected by the parent or legal guardian at the expense of the parent or legal guardian."
+    provenance: "inferred"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.private-teacher.teacher_qualifications"
+    value: "No routine instructor credential is specified; a licensed supervisor may be imposed after declining test scores."
+    quote: "Place the education of the child under the supervision of a person holding a teaching license who is selected by the parent or legal guardian at the expense of the parent or legal guardian."
+    provenance: "inferred"
+    source_id: "or-attendance-home-instruction"
+    checked_on: "2026-11-05"
+funding:
+  available: false
+  detail: "No state funding for independent homeschool materials or testing; public charter enrollment is not this home-instruction exemption."
+public_school_access:
+  available: true
+  detail: "Resident homeschool students may join interscholastic activities if eligible; annual testing at or above the 23rd percentile or district alternatives apply."

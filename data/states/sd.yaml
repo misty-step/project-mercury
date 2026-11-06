@@ -1,0 +1,123 @@
+code: "SD"
+name: "South Dakota"
+summary: "Families provide alternative instruction in language arts and mathematics and file a one-time notification, updating it after specified transitions. No state testing or instructor certification is required."
+compulsory_ages:
+  min: 6
+  max: 17
+pathways:
+  -
+    id: "alternative-instruction"
+    name: "Alternative instruction"
+    summary: "Parents or other instructors teach no more than 22 children, covering the required basic skills."
+    notice:
+      required: true
+      detail: "Notify DOE or the local district within 30 days of starting; update within 30 days of moving districts or enrolling in school."
+    approval:
+      required: false
+      detail: "Not required; the district accepts the notification without school board action."
+    assessment:
+      required: false
+      detail: "Not required; standardized testing is optional."
+    subjects:
+      required: true
+      detail: "Teach language arts and mathematics, with instruction leading to mastery of English."
+    instruction_time:
+      required: false
+      detail: "No minimum number of days or hours is specified for alternative instruction."
+    teacher_qualifications:
+      required: false
+      detail: "No state certification or minimum degree is required."
+    records:
+      required: false
+      detail: "No general portfolio mandate; activity participants must submit the previous semester’s transcript and eligibility documents."
+funding:
+  available: false
+  detail: "No general homeschool ESA or expense tax benefit; the state tax-credit scholarship requires attendance at an accredited nonpublic school."
+public_school_access:
+  available: true
+  detail: "Resident districts must admit alternative-instruction students part-time and allow eligible students to participate in school activities."
+claims:
+  -
+    field: "pathways.alternative-instruction.notice"
+    value: "Notify DOE or the local district within 30 days of starting; update within 30 days of moving districts or enrolling in school."
+    quote: "A notification for alternative instruction must be filed within 30 days from the first time the child begins alternative instruction or within 30 days of the following transitions:"
+    provenance: "measured"
+    source_id: "sd-doe-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.alternative-instruction.approval"
+    value: "Not required; the district accepts the notification without school board action."
+    quote: "Once a parent, guardian, or other person having control of a child formally notifies the local district or the State on the form provided by the Department of Education, the district must consider the notification submitted."
+    provenance: "inferred"
+    source_id: "sd-doe-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.alternative-instruction.assessment"
+    value: "Not required; standardized testing is optional."
+    quote: "Alternative instruction students are no longer required to take and submit the results of nationally standardized achievement tests in fourth, eighth, or eleventh grades."
+    provenance: "inferred"
+    source_id: "sd-doe-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.alternative-instruction.subjects"
+    value: "Teach language arts and mathematics, with instruction leading to mastery of English."
+    quote: "the child is being provided with alternative instruction in the basic skills of language arts and mathematics."
+    provenance: "measured"
+    source_id: "sd-13-27-3"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.alternative-instruction.instruction_time"
+    value: "No minimum number of days or hours is specified for alternative instruction."
+    quote: "No person may instruct more than twenty-two children. All instructions shall be given so as to lead to a mastery of the English language."
+    provenance: "inferred"
+    source_id: "sd-13-27-3"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.alternative-instruction.teacher_qualifications"
+    value: "No state certification or minimum degree is required."
+    quote: "The person providing instruction is not required to be certified."
+    provenance: "inferred"
+    source_id: "sd-13-27-3"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.alternative-instruction.records"
+    value: "No general portfolio mandate; activity participants must submit the previous semester’s transcript and eligibility documents."
+    quote: "Parents/guardians must provide the school district a copy of the student's transcript from the previous semester."
+    provenance: "measured"
+    source_id: "sd-doe-home"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "Attendance is required from age 6 by September 1 until age 18; kindergarten must be attended before age 7. Graduation and statutory withdrawal/excuse exceptions apply."
+    quote: "or any child who, by the first day of September, is at least six years old, shall cause the child to regularly attend a public or nonpublic school or receive alternative instruction, as set forth in § 13-27-3, until the child is eighteen years old, has graduated, or is excused or withdraws as provided in this chapter."
+    provenance: "measured"
+    source_id: "sd-13-27-1"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "Kindergarten must be attended before the seventh birthday."
+    quote: "Each child shall attend kindergarten prior to age seven."
+    provenance: "measured"
+    source_id: "sd-13-27-1"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "No general homeschool expense benefit identified; the state tax-credit scholarship is for accredited nonpublic-school attendance."
+    quote: "Qualifying schools must be accredited by the South Dakota Department of Education to offer elementary and high school education."
+    provenance: "inferred"
+    source_id: "sd-insurance-scholarship"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Alternative-instruction students may enroll in public school classes part-time."
+    quote: "Yes, alternative instruction students can enroll for one or more classes on a part-time basis while receiving alternative instruction for the balance of their education."
+    provenance: "measured"
+    source_id: "sd-doe-faq"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "Districts must allow eligible resident alternative-instruction students to participate in activities."
+    quote: "Each public-school district shall allow participation in athletics, fine arts, or activities for a child being provided alternative instruction pursuant to § 13-27-3 within the district in which the child resides."
+    provenance: "measured"
+    source_id: "sd-doe-home"
+    checked_on: "2026-11-05"

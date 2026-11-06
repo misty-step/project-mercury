@@ -1,0 +1,314 @@
+code: "WV"
+name: "West Virginia"
+summary: "Families may use notice-based home instruction with annual assessment or county-board-approved home instruction. Hope Scholarship individualized instruction and the separate learning-pod/microschool exemption have their own rules."
+compulsory_ages:
+  min: 6
+  max: 16
+pathways:
+  - id: "notice"
+    name: "Home instruction by notice of intent"
+    summary: "Parents notify the county and arrange annual assessment rather than seeking county-board approval."
+    notice:
+      required: true
+      detail: "File intent with county superintendent/board when starting; notify termination or county change; enrolled pupils file by the start date."
+    approval:
+      required: false
+      detail: "No advance approval; a superintendent must obtain a court order to deny instruction under the statutory neglect standard."
+    assessment:
+      required: true
+      detail: "Annual standardized test, state test, certified-teacher portfolio review or mutually agreed assessment; remediate inadequate progress."
+    subjects:
+      required: true
+      detail: "Teach reading, language, mathematics, science and social studies."
+    instruction_time:
+      required: false
+      detail: "No specified instructional days or hours for the notice-based route."
+    teacher_qualifications:
+      required: true
+      detail: "Instructor must provide evidence of a high school diploma/equivalent or qualifying postsecondary credential."
+    records:
+      required: true
+      detail: "Keep assessments three years; submit grades 3, 5, 8 and 11 results by June 30; additional evidence after two inadequate years."
+  - id: "board-approved"
+    name: "County-board-approved home instruction"
+    summary: "The county board approves home instruction and the county determines instructor qualifications."
+    notice:
+      required: true
+      detail: "Apply to the county board for approval of home instruction."
+    approval:
+      required: true
+      detail: "County board approval is required."
+    assessment:
+      required: true
+      detail: "Alternative assessment measures apply to special-education students; board may require progress information."
+    subjects:
+      required: true
+      detail: "Teach subjects required in the state’s public elementary schools."
+    instruction_time:
+      required: true
+      detail: "Instruction must equal the statutory instructional term, now at least 900 hours."
+    teacher_qualifications:
+      required: true
+      detail: "County superintendent and board determine whether the instructor is qualified."
+    records:
+      required: true
+      detail: "Supply attendance, instruction and progress records to the county board when the superintendent requests them."
+  - id: "hope-iip"
+    name: "Hope Scholarship individualized instructional program"
+    summary: "Scholarship recipients provide customized instruction at home or elsewhere under the Hope Scholarship statute."
+    notice:
+      required: true
+      detail: "File notice of Hope participation with the county superintendent and report annual attendance/academic compliance."
+    approval:
+      required: true
+      detail: "Obtain a Hope Scholarship award and sign the annual parent agreement."
+    assessment:
+      required: true
+      detail: "Annual nationally normed test or certified-teacher work review; report results/progress determination to the county superintendent."
+    subjects:
+      required: true
+      detail: "Teach reading, language, mathematics, science and social studies; provide opportunities for educational enrichment."
+    instruction_time:
+      required: false
+      detail: "No days or hours prescribed for an individualized instructional program in the Hope statute."
+    teacher_qualifications:
+      required: false
+      detail: "No parent diploma or teaching credential prescribed for Hope individualized instruction."
+    records:
+      required: true
+      detail: "Report annual assessment/progress to the county; submit continued residency proof and annual parent agreement."
+  - id: "pod-microschool"
+    name: "Learning pod or microschool"
+    summary: "Parents may instead use the separate statutory exemption for learning pods or microschools, which are not classified as homeschooling."
+    notice:
+      required: true
+      detail: "File county notice when starting; report termination or county change; previously enrolled pupils file by participation start."
+    approval:
+      required: false
+      detail: "No county program approval specified under the separate pod/microschool exemption."
+    assessment:
+      required: true
+      detail: "Obtain annual standardized/state test, certified-teacher portfolio review or agreed alternative assessment."
+    subjects:
+      required: true
+      detail: "Teach reading, language, mathematics, science and social studies."
+    instruction_time:
+      required: false
+      detail: "No specified days or hours under the pod/microschool exemption."
+    teacher_qualifications:
+      required: true
+      detail: "Instructor must provide high school diploma/equivalent or qualifying postsecondary credential."
+    records:
+      required: true
+      detail: "Keep assessments three years; submit results at grades 3, 5, 8 and 11 frequency; school composite results are permitted."
+funding:
+  available: true
+  detail: "Hope Scholarship accounts pay qualifying costs for eligible families using individualized instruction at home."
+public_school_access:
+  available: true
+  detail: "Home-instructed, Hope and pod/microschool students may play secondary-school sports/activities in their attendance zone if eligibility rules are met."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance starts in the school year the child turns 6 before July 1, or on public kindergarten enrollment, and continues until age 17; continued school-system enrollment extends the duty."
+    quote: "compulsory school attendance begins with the school year in which the sixth birthday is reached prior to July 1 of such year or upon enrolling in a full-time publicly funded kindergarten program, and continues to the 17th birthday or for as long as the student continues to be enrolled in a school system after the 17th birthday."
+    provenance: "measured"
+    source_id: "wv-18-8-1a"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.notice"
+    value: "File intent with county superintendent/board when starting; notify termination or county change; enrolled pupils file by the start date."
+    quote: "Upon commencing home instruction under this section the parent of a child receiving home instruction shall present to the county superintendent or county board a notice of intent to provide home instruction"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.approval"
+    value: "No advance approval; a superintendent must obtain a court order to deny instruction under the statutory neglect standard."
+    quote: "the county superintendent may, after a showing of probable cause, seek from the circuit court of the county an order denying home instruction of the child."
+    provenance: "inferred"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.assessment"
+    value: "Annual standardized test, state test, certified-teacher portfolio review or mutually agreed assessment; remediate inadequate progress."
+    quote: "Annually, the person or persons providing home instruction shall obtain an academic assessment of the child for the previous school year in one of the following ways:"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.subjects"
+    value: "Teach reading, language, mathematics, science and social studies."
+    quote: "assurance that the child shall receive instruction in reading, language, mathematics, science, and social studies, and that the child shall be assessed annually in accordance with this subdivision."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.instruction_time"
+    value: "No specified instructional days or hours for the notice-based route."
+    quote: "Upon commencing home instruction under this section the parent of a child receiving home instruction shall present to the county superintendent or county board a notice of intent to provide home instruction"
+    provenance: "inferred"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.teacher_qualifications"
+    value: "Instructor must provide evidence of a high school diploma/equivalent or qualifying postsecondary credential."
+    quote: "The person or persons providing home instruction shall submit satisfactory evidence of a high school diploma or equivalent, or a post-secondary degree or certificate from a regionally accredited institution"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.records"
+    value: "Keep assessments three years; submit grades 3, 5, 8 and 11 results by June 30; additional evidence after two inadequate years."
+    quote: "The parent or legal guardian shall submit to the county superintendent the results of the academic assessment of the child at grade levels three, five, eight, and 11, as applicable, by June 30 of the year in which the assessment was administered."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.notice.records"
+    value: "Keep copies of academic assessments for three years."
+    quote: "A parent or legal guardian shall maintain copies of each student’s Academic Assessment for three years."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.notice"
+    value: "Apply to the county board for approval of home instruction."
+    quote: "If the request for home instruction is denied by the county board, good and reasonable justification for the denial shall be furnished in writing to the applicant by the county board."
+    provenance: "inferred"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.approval"
+    value: "County board approval is required."
+    quote: "The instruction shall be in the home of the child or children or at some other place approved by the county board and for a time equal to the instructional term set forth in"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.assessment"
+    value: "Alternative assessment measures apply to special-education students; board may require progress information."
+    quote: "The state board shall develop guidelines for the home schooling of special education students including alternative assessment measures to assure that satisfactory academic progress is achieved."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.subjects"
+    value: "Teach subjects required in the state’s public elementary schools."
+    quote: "The instruction shall be conducted by a person or persons who, in the judgment of the county superintendent and county board, are qualified to give instruction in subjects required to be taught in public elementary schools in the state."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.instruction_time"
+    value: "Instruction must equal the statutory instructional term, now at least 900 hours."
+    quote: "The instruction shall be in the home of the child or children or at some other place approved by the county board and for a time equal to the instructional term set forth in"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.teacher_qualifications"
+    value: "County superintendent and board determine whether the instructor is qualified."
+    quote: "The instruction shall be conducted by a person or persons who, in the judgment of the county superintendent and county board, are qualified to give instruction in subjects required to be taught in public elementary schools in the state."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.records"
+    value: "Supply attendance, instruction and progress records to the county board when the superintendent requests them."
+    quote: "The person or persons providing the instruction, upon request of the county superintendent, shall furnish to the county board information and records as may be required periodically with respect to attendance, instruction, and progress of students receiving the instruction."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.board-approved.instruction_time"
+    value: "The statutory instructional term is at least 900 instructional hours."
+    quote: "\"Instructional term\" consists of at least 900 instructional hours."
+    provenance: "measured"
+    source_id: "wv-18-5-45"
+    checked_on: "2026-11-05"
+  - field: "pathways.hope-iip.notice"
+    value: "File notice of Hope participation with the county superintendent and report annual attendance/academic compliance."
+    quote: "provides a notice of intent to participate in the Hope Scholarship Program to the county superintendent."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.hope-iip.approval"
+    value: "Obtain a Hope Scholarship award and sign the annual parent agreement."
+    quote: "The board shall approve an application for a Hope Scholarship if all of the following circumstances are met:"
+    provenance: "measured"
+    source_id: "wv-18-31-5"
+    checked_on: "2026-11-05"
+  - field: "pathways.hope-iip.assessment"
+    value: "Annual nationally normed test or certified-teacher work review; report results/progress determination to the county superintendent."
+    quote: "A certified teacher conducts a review of the student's academic work annually;"
+    provenance: "measured"
+    source_id: "wv-18-31-8"
+    checked_on: "2026-11-05"
+  - field: "pathways.hope-iip.subjects"
+    value: "Teach reading, language, mathematics, science and social studies; provide opportunities for educational enrichment."
+    quote: "To provide an education for the eligible recipient in at least the subjects of reading, language, mathematics, science, and social studies;"
+    provenance: "measured"
+    source_id: "wv-18-31-5"
+    checked_on: "2026-11-05"
+  - field: "pathways.hope-iip.instruction_time"
+    value: "No days or hours prescribed for an individualized instructional program in the Hope statute."
+    quote: "Hope Scholarship students participating in an IIP are not enrolled in a participating school and shall be governed by the requirements of this article, unless otherwise stated, and not any other compulsory school attendance exemption requirements;"
+    provenance: "inferred"
+    source_id: "wv-18-31-2"
+    checked_on: "2026-11-05"
+  - field: "pathways.hope-iip.teacher_qualifications"
+    value: "No parent diploma or teaching credential prescribed for Hope individualized instruction."
+    quote: "Hope Scholarship students participating in an IIP are not enrolled in a participating school and shall be governed by the requirements of this article, unless otherwise stated, and not any other compulsory school attendance exemption requirements;"
+    provenance: "inferred"
+    source_id: "wv-18-31-2"
+    checked_on: "2026-11-05"
+  - field: "pathways.hope-iip.records"
+    value: "Report annual assessment/progress to the county; submit continued residency proof and annual parent agreement."
+    quote: "The parent must report to the county superintendent of the student’s county of residence that the student has complied with all attendance and academic requirements in accordance with subsection (a) of this section for the most recent school year."
+    provenance: "measured"
+    source_id: "wv-18-31-8"
+    checked_on: "2026-11-05"
+  - field: "pathways.pod-microschool.notice"
+    value: "File county notice when starting; report termination or county change; previously enrolled pupils file by participation start."
+    quote: "a notice of intent to participate in a learning pod or microschool that includes the name, address, and age of any child of compulsory school age participating and assurance that the child shall receive instruction in reading, language, mathematics, science, and social studies, and that the child shall be assessed annually in accordance with this subsection."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.pod-microschool.approval"
+    value: "No county program approval specified under the separate pod/microschool exemption."
+    quote: "A child is exempt from the compulsory school attendance requirement set forth in §18-8-1a of this code if the child participates in a learning pod or microschool pursuant to this subsection."
+    provenance: "inferred"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.pod-microschool.assessment"
+    value: "Obtain annual standardized/state test, certified-teacher portfolio review or agreed alternative assessment."
+    quote: "Annually, the person or persons providing instruction shall obtain an academic assessment of the child for the previous school year in one of the following ways:"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.pod-microschool.subjects"
+    value: "Teach reading, language, mathematics, science and social studies."
+    quote: "a notice of intent to participate in a learning pod or microschool that includes the name, address, and age of any child of compulsory school age participating and assurance that the child shall receive instruction in reading, language, mathematics, science, and social studies, and that the child shall be assessed annually in accordance with this subsection."
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.pod-microschool.instruction_time"
+    value: "No specified days or hours under the pod/microschool exemption."
+    quote: "a notice of intent to participate in a learning pod or microschool that includes the name, address, and age of any child of compulsory school age participating and assurance that the child shall receive instruction in reading, language, mathematics, science, and social studies, and that the child shall be assessed annually in accordance with this subsection."
+    provenance: "inferred"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.pod-microschool.teacher_qualifications"
+    value: "Instructor must provide high school diploma/equivalent or qualifying postsecondary credential."
+    quote: "The person or persons providing instruction shall submit satisfactory evidence of a high school diploma or equivalent, or a post-secondary degree or certificate from a regionally accredited institution"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "pathways.pod-microschool.records"
+    value: "Keep assessments three years; submit results at grades 3, 5, 8 and 11 frequency; school composite results are permitted."
+    quote: "The parent, legal guardian, learning pod, or microschool shall submit to the county superintendent the results of the academic assessment of the child with the same frequency prescribed in §18-8-1(c)(2)(E) of this code:"
+    provenance: "measured"
+    source_id: "wv-18-8-1"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "Hope Scholarship accounts pay qualifying costs for eligible families using individualized instruction at home."
+    quote: "\"Individualized Instructional Program (IIP)\" means a customized educational experience that takes place either at home or another location."
+    provenance: "measured"
+    source_id: "wv-18-31-2"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "The Hope Scholarship places funds in a personal education savings account for qualifying education expenses."
+    quote: "The board shall create a standard application form that a parent can submit to establish his or her student's eligibility for the award of Hope Scholarship funds, to be placed in a personal education savings account to be used for qualifying education expenses"
+    provenance: "measured"
+    source_id: "wv-18-31-5"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Home-instructed, Hope and pod/microschool students may play secondary-school sports/activities in their attendance zone if eligibility rules are met."
+    quote: "Eligibility is limited to participation in interscholastic athletic events and other extracurricular activities at the public secondary school serving the attendance zone in which the student lives:"
+    provenance: "measured"
+    source_id: "wv-18-2-25"
+    checked_on: "2026-11-05"

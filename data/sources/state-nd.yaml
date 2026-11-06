@@ -1,0 +1,30 @@
+- id: nd-home-education
+  url: https://ndlegis.gov/cencode/t15-1c23.pdf
+  publisher: North Dakota Legislative Branch
+  type: statute
+  checked_on: "2026-11-05"
+- id: nd-attendance
+  url: https://ndlegis.gov/cencode/t15-1c20.pdf
+  publisher: North Dakota Legislative Branch
+  type: statute
+  checked_on: "2026-11-05"
+- id: nd-parent-guide
+  url: https://www.nd.gov/dpi/familiescommunity/families/home-education/home-education-north-dakota-parent-guide
+  publisher: North Dakota Department of Public Instruction
+  type: agency
+  checked_on: "2026-11-05"
+- id: nd-school-law
+  url: https://ndlegis.gov/cencode/t15-1c06.pdf
+  publisher: North Dakota Legislative Branch
+  type: statute
+  checked_on: "2026-11-05"
+- id: nd-curriculum
+  url: https://ndlegis.gov/cencode/t15-1c21.pdf
+  publisher: North Dakota Legislative Branch
+  type: statute
+  checked_on: "2026-11-05"
+- id: nd-school-approval
+  url: https://www.nd.gov/dpi/districtsschools/school-approval-compliance/public-and-nonpublic-school-approval-processes
+  publisher: North Dakota Department of Public Instruction
+  type: agency
+  checked_on: "2026-11-05"

@@ -1,0 +1,302 @@
+code: "AK"
+name: "Alaska"
+summary: "Parents or legal guardians may educate their children at home without filing with the state. Certified tutoring, exempt private schools, and individually approved educational experiences offer other nonpublic routes."
+compulsory_ages:
+  min: 7
+  max: 15
+pathways:
+  - id: "parent"
+    name: "Education at home by a parent or legal guardian"
+    summary: "A parent or legal guardian teaches the child at home under the direct attendance exemption."
+    notice:
+      required: false
+      detail: "Not required."
+    approval:
+      required: false
+      detail: "Not required."
+    assessment:
+      required: false
+      detail: "No state testing or evaluation required."
+    subjects:
+      required: false
+      detail: "No subjects prescribed for this exemption."
+    instruction_time:
+      required: false
+      detail: "No days or hours prescribed for this exemption."
+    teacher_qualifications:
+      required: false
+      detail: "No diploma or teaching certificate required for the parent or legal guardian."
+    records:
+      required: false
+      detail: "No attendance or academic records required by this exemption."
+  - id: "tutor"
+    name: "Certified private tutor"
+    summary: "A state-certificated tutor provides an academic education comparable to local public schools."
+    notice:
+      required: false
+      detail: "No separate notice prescribed for the tutor exemption."
+    approval:
+      required: false
+      detail: "No program approval prescribed; tutor must be certificated."
+    assessment:
+      required: false
+      detail: "No testing or evaluation prescribed for this exemption."
+    subjects:
+      required: false
+      detail: "No named subject list; education must be comparable to local public schools."
+    instruction_time:
+      required: false
+      detail: "No specific days or hours prescribed for this exemption."
+    teacher_qualifications:
+      required: true
+      detail: "Tutor must hold an Alaska teaching certificate under AS 14.20.020."
+    records:
+      required: false
+      detail: "No specific records prescribed for this exemption."
+  - id: "exempt-private"
+    name: "Exempt religious or other private school"
+    summary: "A home-based private school may elect the exempt-school reporting, attendance, and testing rules."
+    notice:
+      required: true
+      detail: "File annual enrollment notice with the local superintendent; school reports enrollment counts and calendar to the commissioner."
+    approval:
+      required: false
+      detail: "No educational program approval required if exempt-school conditions are met."
+    assessment:
+      required: true
+      detail: "Administer a nationally standardized test each year in grades 4, 6, and 8."
+    subjects:
+      required: false
+      detail: "No prescribed instructional subject list; academic education must be comparable to local public schools."
+    instruction_time:
+      required: true
+      detail: "Operate at least 180 days annually on a regular schedule."
+    teacher_qualifications:
+      required: false
+      detail: "No teaching certificate or diploma minimum under the exempt-school provisions."
+    records:
+      required: true
+      detail: "Keep monthly attendance, test results, and permanent academic and health records; certify recordkeeping to DEED."
+  - id: "approved-experience"
+    name: "School-board-approved educational experience"
+    summary: "A family requests an individual educational experience that the school board finds equally serves the child."
+    notice:
+      required: true
+      detail: "Parents or guardian submit a written request for an educational-experience excuse."
+    approval:
+      required: true
+      detail: "School board must approve the experience; the school principal or administrator approves the written request."
+    assessment:
+      required: false
+      detail: "No statewide assessment prescribed; approval may carry individual conditions."
+    subjects:
+      required: false
+      detail: "No statewide subject list; the board must find the experience serves the child’s educational interests."
+    instruction_time:
+      required: false
+      detail: "No statewide days or hours prescribed for this exemption."
+    teacher_qualifications:
+      required: false
+      detail: "No statewide credential or diploma minimum prescribed for this exemption."
+    records:
+      required: true
+      detail: "Submit the written parental request; no ongoing statewide record list is prescribed."
+funding:
+  available: false
+  detail: "No independent-homeschool ESA or tax benefit; district correspondence allotments belong to public-school programs."
+public_school_access:
+  available: true
+  detail: "Grades 9–12 in an accredited homeschool program may join public-school interscholastic activities, subject to eligibility rules."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance is required from age 7 until age 16; special rules apply to six-year-olds enrolled in public first grade."
+    quote: "Every child between seven and 16 years of age shall attend school at the public school in the district in which the child resides during each school term."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "No independent-homeschool ESA or tax benefit; district correspondence allotments belong to public-school programs."
+    quote: "In Alaska, Correspondence programs are district-supported schooling options in the home. \"Homeschooling\" refers to schooling without district affiliation."
+    provenance: "inferred"
+    source_id: "ak-correspondence"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Grades 9–12 in an accredited homeschool program may join public-school interscholastic activities, subject to eligibility rules."
+    quote: "a home school program that is accredited by a recognized accrediting body;"
+    provenance: "inferred"
+    source_id: "ak-activities"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Eligible full-time alternative-program students in grades 9–12 have statutory public-school activity access."
+    quote: "A full-time student who is eligible under (b) of this section who is enrolled in grades nine through 12 in an alternative education program that is located in the state and that does not offer interscholastic activities is eligible to participate in any interscholastic activities program available in a public school"
+    provenance: "measured"
+    source_id: "ak-activities"
+    checked_on: "2026-11-05"
+  - field: "pathways.parent.notice"
+    value: "Not required."
+    quote: "is being educated in the child's home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.parent.approval"
+    value: "Not required."
+    quote: "is being educated in the child's home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.parent.assessment"
+    value: "No state testing or evaluation required."
+    quote: "is being educated in the child's home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.parent.subjects"
+    value: "No subjects prescribed for this exemption."
+    quote: "is being educated in the child's home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.parent.instruction_time"
+    value: "No days or hours prescribed for this exemption."
+    quote: "is being educated in the child's home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.parent.teacher_qualifications"
+    value: "No diploma or teaching certificate required for the parent or legal guardian."
+    quote: "is being educated in the child's home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.parent.records"
+    value: "No attendance or academic records required by this exemption."
+    quote: "is being educated in the child's home by a parent or legal guardian."
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.tutor.notice"
+    value: "No separate notice prescribed for the tutor exemption."
+    quote: "tutoring by personnel certificated according to AS 14.20.020; or"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.tutor.approval"
+    value: "No program approval prescribed; tutor must be certificated."
+    quote: "tutoring by personnel certificated according to AS 14.20.020; or"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.tutor.assessment"
+    value: "No testing or evaluation prescribed for this exemption."
+    quote: "tutoring by personnel certificated according to AS 14.20.020; or"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.tutor.subjects"
+    value: "No named subject list; education must be comparable to local public schools."
+    quote: "is provided an academic education comparable to that offered by the public schools in the area, either by"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.tutor.instruction_time"
+    value: "No specific days or hours prescribed for this exemption."
+    quote: "tutoring by personnel certificated according to AS 14.20.020; or"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.tutor.teacher_qualifications"
+    value: "Tutor must hold an Alaska teaching certificate under AS 14.20.020."
+    quote: "tutoring by personnel certificated according to AS 14.20.020; or"
+    provenance: "measured"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.tutor.records"
+    value: "No specific records prescribed for this exemption."
+    quote: "tutoring by personnel certificated according to AS 14.20.020; or"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.exempt-private.notice"
+    value: "File annual enrollment notice with the local superintendent; school reports enrollment counts and calendar to the commissioner."
+    quote: "shall file an annual notice of enrollment in the school for the child with the local public school superintendent for the area in which the child resides on a form provided by the department."
+    provenance: "measured"
+    source_id: "ak-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.exempt-private.approval"
+    value: "No educational program approval required if exempt-school conditions are met."
+    quote: "is exempt from other provisions of law and regulations relating to education except law and regulations relating to physical health, fire safety, sanitation, immunization, and physical examinations."
+    provenance: "inferred"
+    source_id: "ak-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.exempt-private.assessment"
+    value: "Administer a nationally standardized test each year in grades 4, 6, and 8."
+    quote: "shall administer a nationally standardized test selected by the chief administrative officer of the school to all students enrolled in grades four, six, and eight at least once each school year."
+    provenance: "measured"
+    source_id: "ak-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.exempt-private.subjects"
+    value: "No prescribed instructional subject list; academic education must be comparable to local public schools."
+    quote: "is provided an academic education comparable to that offered by the public schools in the area, either by"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.exempt-private.instruction_time"
+    value: "Operate at least 180 days annually on a regular schedule."
+    quote: "shall maintain monthly attendance records for each student enrolled in the school, shall operate on a regular schedule, excluding reasonable holidays and vacations, during at least 180 days of the year, shall make an annual report to the commissioner of the number of students in each grade and the school calendar,"
+    provenance: "measured"
+    source_id: "ak-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.exempt-private.teacher_qualifications"
+    value: "No teaching certificate or diploma minimum under the exempt-school provisions."
+    quote: "is exempt from other provisions of law and regulations relating to education except law and regulations relating to physical health, fire safety, sanitation, immunization, and physical examinations."
+    provenance: "inferred"
+    source_id: "ak-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.exempt-private.records"
+    value: "Keep monthly attendance, test results, and permanent academic and health records; certify recordkeeping to DEED."
+    quote: "shall maintain permanent student records reflecting immunizations, physical examinations, standardized testing, academic achievement, courses taken at the school, and level of eligibility for an Alaska performance scholarship under"
+    provenance: "measured"
+    source_id: "ak-private-schools"
+    checked_on: "2026-11-05"
+  - field: "pathways.approved-experience.notice"
+    value: "Parents or guardian submit a written request for an educational-experience excuse."
+    quote: "is equally well-served by an educational experience approved by the school board as serving the child's educational interests despite an absence from school, and the request for excuse is made in writing by the child's parents or guardian and approved by the principal or administrator of the school that the child attends;"
+    provenance: "measured"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.approved-experience.approval"
+    value: "School board must approve the experience; the school principal or administrator approves the written request."
+    quote: "is equally well-served by an educational experience approved by the school board as serving the child's educational interests despite an absence from school, and the request for excuse is made in writing by the child's parents or guardian and approved by the principal or administrator of the school that the child attends;"
+    provenance: "measured"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.approved-experience.assessment"
+    value: "No statewide assessment prescribed; approval may carry individual conditions."
+    quote: "is equally well-served by an educational experience approved by the school board as serving the child's educational interests despite an absence from school, and the request for excuse is made in writing by the child's parents or guardian and approved by the principal or administrator of the school that the child attends;"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.approved-experience.subjects"
+    value: "No statewide subject list; the board must find the experience serves the child’s educational interests."
+    quote: "is equally well-served by an educational experience approved by the school board as serving the child's educational interests despite an absence from school, and the request for excuse is made in writing by the child's parents or guardian and approved by the principal or administrator of the school that the child attends;"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.approved-experience.instruction_time"
+    value: "No statewide days or hours prescribed for this exemption."
+    quote: "is equally well-served by an educational experience approved by the school board as serving the child's educational interests despite an absence from school, and the request for excuse is made in writing by the child's parents or guardian and approved by the principal or administrator of the school that the child attends;"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.approved-experience.teacher_qualifications"
+    value: "No statewide credential or diploma minimum prescribed for this exemption."
+    quote: "is equally well-served by an educational experience approved by the school board as serving the child's educational interests despite an absence from school, and the request for excuse is made in writing by the child's parents or guardian and approved by the principal or administrator of the school that the child attends;"
+    provenance: "inferred"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"
+  - field: "pathways.approved-experience.records"
+    value: "Submit the written parental request; no ongoing statewide record list is prescribed."
+    quote: "is equally well-served by an educational experience approved by the school board as serving the child's educational interests despite an absence from school, and the request for excuse is made in writing by the child's parents or guardian and approved by the principal or administrator of the school that the child attends;"
+    provenance: "measured"
+    source_id: "ak-attendance"
+    checked_on: "2026-11-05"

@@ -1,0 +1,176 @@
+code: "AZ"
+name: "Arizona"
+summary: "Families may teach through a homeschool affidavit or use an Arizona Empowerment Scholarship Account under a separate state contract. Both routes require core subjects; ESA families follow funding-account rules instead of filing a homeschool affidavit."
+compulsory_ages:
+  min: 6
+  max: 15
+pathways:
+  - id: "homeschool"
+    name: "Homeschool"
+    summary: "A parent, guardian or custodian provides nonpublic home instruction after filing with the county school superintendent."
+    notice:
+      required: true
+      detail: "File county affidavit within 30 days of starting; notify termination within 30 days; file anew if instruction resumes."
+    approval:
+      required: false
+      detail: "No program approval required; file the affidavit with the county superintendent."
+    assessment:
+      required: false
+      detail: "No homeschool testing required while receiving home instruction."
+    subjects:
+      required: true
+      detail: "Teach reading, grammar, mathematics, social studies and science."
+    instruction_time:
+      required: false
+      detail: "No homeschool days or hours minimum prescribed."
+    teacher_qualifications:
+      required: false
+      detail: "No diploma or teaching certificate minimum for the parent or custodian."
+    records:
+      required: true
+      detail: "Provide birth certificate or other allowed identity evidence to the county superintendent within 30 days; no academic portfolio required."
+  - id: "esa"
+    name: "Arizona empowerment scholarship account"
+    summary: "A family signs an ADE agreement to educate outside public district and charter schools using an ESA."
+    notice:
+      required: true
+      detail: "Apply to ADE and sign the ESA agreement; renew annually; ADE sends participant lists to county superintendents."
+    approval:
+      required: true
+      detail: "ADE determines eligibility and issues an award letter before ESA enrollment."
+    assessment:
+      required: true
+      detail: "No general achievement test; annual education-plan evaluations apply to certain disability-based funding extensions."
+    subjects:
+      required: true
+      detail: "Provide reading, grammar, mathematics, social studies and science under the ESA agreement."
+    instruction_time:
+      required: false
+      detail: "No minimum instructional days or hours prescribed in the ESA agreement statute."
+    teacher_qualifications:
+      required: false
+      detail: "No parent diploma or certificate minimum; purchased teaching services have separate provider rules."
+    records:
+      required: true
+      detail: "Document allowable account spending and furnish information required for state compliance reviews."
+funding:
+  available: true
+  detail: "The ESA program can fund home education through a separate ADE agreement; ESA participants must not file a homeschool affidavit."
+public_school_access:
+  available: true
+  detail: "Resident homeschooled children may try out for public-school interscholastic activities; eligibility and prior-enrollment restrictions apply."
+claims:
+  - field: "compulsory_ages"
+    value: "Attendance generally runs from age six until sixteen; a homeschool affidavit may postpone instruction until age eight."
+    quote: "Every child between the ages of six and sixteen years shall attend a school and shall be provided instruction in at least the subjects of reading, grammar, mathematics, social studies and science."
+    provenance: "inferred"
+    source_id: "az-instruction"
+    checked_on: "2026-11-05"
+  - field: "compulsory_ages"
+    value: "A custodian may file an affidavit postponing homeschool instruction if the child has not reached eight by September 1."
+    quote: "If the child will attend homeschool, the child has not reached eight years of age by September 1 of the school year and the person who has custody of the child does not desire to begin home instruction until the child has reached eight years of age,"
+    provenance: "inferred"
+    source_id: "az-instruction"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "The ESA program can fund home education through a separate ADE agreement; ESA participants must not file a homeschool affidavit."
+    quote: "Not file an affidavit of intent to homeschool pursuant to section 15-802, subsection B, paragraph 2 or 3."
+    provenance: "inferred"
+    source_id: "az-esa"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "ESA monies may purchase curricula and supplementary materials."
+    quote: "Curricula and supplementary materials."
+    provenance: "measured"
+    source_id: "az-esa"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Resident homeschooled children may try out for public-school interscholastic activities; eligibility and prior-enrollment restrictions apply."
+    quote: "a child who resides within the attendance area of a public school and who is homeschooled shall be allowed to try out for interscholastic activities on behalf of the public school in the same manner as a pupil who is enrolled in that public school."
+    provenance: "measured"
+    source_id: "az-activities"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.notice"
+    value: "File county affidavit within 30 days of starting; notify termination within 30 days; file anew if instruction resumes."
+    quote: "An affidavit of intent shall be filed within thirty days from the time the child begins to attend a private school or homeschool and is not required thereafter unless the private school or the homeschool instruction is terminated and then resumed."
+    provenance: "measured"
+    source_id: "az-instruction"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.approval"
+    value: "No program approval required; file the affidavit with the county superintendent."
+    quote: "An affidavit of intent shall be filed within thirty days from the time the child begins to attend a private school or homeschool and is not required thereafter unless the private school or the homeschool instruction is terminated and then resumed."
+    provenance: "inferred"
+    source_id: "az-instruction"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.assessment"
+    value: "No homeschool testing required while receiving home instruction."
+    quote: "This article shall not be construed to require the testing of children who are instructed in a homeschool program while they are receiving homeschool instruction."
+    provenance: "measured"
+    source_id: "az-testing"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.subjects"
+    value: "Teach reading, grammar, mathematics, social studies and science."
+    quote: "Every child between the ages of six and sixteen years shall attend a school and shall be provided instruction in at least the subjects of reading, grammar, mathematics, social studies and science."
+    provenance: "measured"
+    source_id: "az-instruction"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.instruction_time"
+    value: "No homeschool days or hours minimum prescribed."
+    quote: "\"Homeschool\" means a nonpublic school conducted primarily by the parent, guardian or other person who has custody of the child or nonpublic instruction provided in the child's home."
+    provenance: "inferred"
+    source_id: "az-instruction"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.teacher_qualifications"
+    value: "No diploma or teaching certificate minimum for the parent or custodian."
+    quote: "\"Homeschool\" means a nonpublic school conducted primarily by the parent, guardian or other person who has custody of the child or nonpublic instruction provided in the child's home."
+    provenance: "inferred"
+    source_id: "az-instruction"
+    checked_on: "2026-11-05"
+  - field: "pathways.homeschool.records"
+    value: "Provide birth certificate or other allowed identity evidence to the county superintendent within 30 days; no academic portfolio required."
+    quote: "If a child is instructed at home pursuant to section 15-802, the person who has custody of the child shall, within thirty days after the home instruction begins, provide to the county school superintendent of the county in which the child resides one of the following:"
+    provenance: "inferred"
+    source_id: "az-identity"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.notice"
+    value: "Apply to ADE and sign the ESA agreement; renew annually; ADE sends participant lists to county superintendents."
+    quote: "A parent must renew the qualified student's Arizona empowerment scholarship account on an annual basis."
+    provenance: "inferred"
+    source_id: "az-esa"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.approval"
+    value: "ADE determines eligibility and issues an award letter before ESA enrollment."
+    quote: "The department shall issue an award letter to eligible applicants within thirty days after receipt of a completed application and all required documentation."
+    provenance: "inferred"
+    source_id: "az-esa-administration"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.assessment"
+    value: "No general achievement test; annual education-plan evaluations apply to certain disability-based funding extensions."
+    quote: "the qualified student will not be eligible to continue to receive monies pursuant to this article unless the results of an annual education plan conducted pursuant to this subdivision demonstrate that the qualified student meets the eligibility criteria prescribed in the annual education plan."
+    provenance: "measured"
+    source_id: "az-esa"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.subjects"
+    value: "Provide reading, grammar, mathematics, social studies and science under the ESA agreement."
+    quote: "Use a portion of the Arizona empowerment scholarship account monies allocated annually to provide an education for the qualified student in at least the subjects of reading, grammar, mathematics, social studies and science,"
+    provenance: "measured"
+    source_id: "az-esa"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.instruction_time"
+    value: "No minimum instructional days or hours prescribed in the ESA agreement statute."
+    quote: "To enroll a qualified student for an Arizona empowerment scholarship account, the parent of the qualified student must sign an agreement to do all of the following:"
+    provenance: "inferred"
+    source_id: "az-esa"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.teacher_qualifications"
+    value: "No parent diploma or certificate minimum; purchased teaching services have separate provider rules."
+    quote: "To enroll a qualified student for an Arizona empowerment scholarship account, the parent of the qualified student must sign an agreement to do all of the following:"
+    provenance: "inferred"
+    source_id: "az-esa"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.records"
+    value: "Document allowable account spending and furnish information required for state compliance reviews."
+    quote: "The department shall conduct or contract for annual audits of Arizona empowerment scholarship accounts to ensure compliance with section 15-2402, subsection B, paragraph 4."
+    provenance: "inferred"
+    source_id: "az-esa-administration"
+    checked_on: "2026-11-05"

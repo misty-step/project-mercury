@@ -1,0 +1,116 @@
+code: "MA"
+name: "Massachusetts"
+summary: "Massachusetts requires advance local approval of a home education plan. Instruction must cover legally required subjects and satisfy the district’s approval standards; local policies govern the submission process."
+compulsory_ages:
+  min: 6
+  max: 15
+pathways:
+  -
+    id: "approved-home-instruction"
+    name: "Approved home instruction"
+    summary: "Parents obtain advance approval of a home education plan from the resident superintendent or school committee."
+    notice:
+      required: true
+      detail: "Submit a home education plan to the resident superintendent or school committee before beginning; follow the district approval policy."
+    approval:
+      required: true
+      detail: "Advance approval by the superintendent or school committee is required."
+    assessment:
+      required: true
+      detail: "The district may require evidence of progress as part of its approval process; the method is determined locally."
+    subjects:
+      required: true
+      detail: "Cover the subjects required under M.G.L. c.71 §§1–3; the district reviews the home education plan."
+    instruction_time:
+      required: false
+      detail: "No separate statewide homeschool day/hour minimum; instructional arrangements must satisfy the locally approved plan."
+    teacher_qualifications:
+      required: false
+      detail: "No specific parent degree or teaching credential is specified in the home-instruction exemption."
+    records:
+      required: true
+      detail: "Submit a home education plan and documentation required under the local approval policy; no statewide portfolio format is specified."
+funding:
+  available: false
+  detail: "No statewide homeschool ESA or homeschool-expense income-tax credit or deduction."
+public_school_access:
+  available: false
+  detail: "No statewide entitlement to public-school classes or extracurriculars; participation is a local decision."
+claims:
+  -
+    field: "compulsory_ages"
+    value: "Attendance begins in September of the calendar year the child turns six."
+    quote: "Each child must attend school beginning in September of the calendar year in which he or she attains the age of six."
+    provenance: "measured"
+    source_id: "ma-age"
+    checked_on: "2026-11-05"
+  -
+    field: "compulsory_ages"
+    value: "The Board of Education establishes the minimum and maximum compulsory-attendance ages."
+    quote: "Every child between the minimum and maximum ages established for school attendance by the board of education shall"
+    provenance: "measured"
+    source_id: "ma-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.approved-home-instruction.notice"
+    value: "Parents must present a home education plan through the local approval policy."
+    quote: "Each school committee in Massachusetts has a policy on approval of home schooling plans; details are available from the school district."
+    provenance: "inferred"
+    source_id: "ma-law-library"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.approved-home-instruction.approval"
+    value: "The superintendent or school committee must approve instruction in advance."
+    quote: "a child who is being otherwise instructed in a manner approved in advance by the superintendent or the school committee."
+    provenance: "measured"
+    source_id: "ma-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.approved-home-instruction.assessment"
+    value: "District approval may require evidence that progress is comparable to public-school instruction."
+    quote: "school committees shall approve a private school when satisfied that the instruction in all the studies required by law equals in thoroughness and efficiency, and in the progress made therein, that in the public schools in the same town"
+    provenance: "inferred"
+    source_id: "ma-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.approved-home-instruction.subjects"
+    value: "The subjects specified in M.G.L. c.71 §§1–3 apply to home education."
+    quote: "The subjects that must be taught apply to schools and home schooling according to Care & Protection of Charles"
+    provenance: "measured"
+    source_id: "ma-law-library"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.approved-home-instruction.instruction_time"
+    value: "The homeschool exemption relies on advance-approved instruction, not a separate fixed homeschool day/hour schedule."
+    quote: "a child who is being otherwise instructed in a manner approved in advance by the superintendent or the school committee."
+    provenance: "inferred"
+    source_id: "ma-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.approved-home-instruction.teacher_qualifications"
+    value: "The homeschool exemption specifies advance approval but no parent degree or teaching license."
+    quote: "a child who is being otherwise instructed in a manner approved in advance by the superintendent or the school committee."
+    provenance: "inferred"
+    source_id: "ma-attendance"
+    checked_on: "2026-11-05"
+  -
+    field: "pathways.approved-home-instruction.records"
+    value: "Families submit plans and follow local approval documentation requirements, rather than a universal state portfolio format."
+    quote: "Each school committee in Massachusetts has a policy on approval of home schooling plans; details are available from the school district."
+    provenance: "inferred"
+    source_id: "ma-law-library"
+    checked_on: "2026-11-05"
+  -
+    field: "funding"
+    value: "No general homeschool-expense ESA, income-tax credit or deduction is identified; the education tuition deduction is limited to higher education."
+    quote: "Massachusetts allows a deduction for tuition payments paid by taxpayers for themselves, and their dependents who attend a qualifying two or four-year college leading to an undergraduate or associates degree, diploma, or certificate."
+    provenance: "inferred"
+    source_id: "ma-tax"
+    checked_on: "2026-11-05"
+  -
+    field: "public_school_access"
+    value: "The compulsory-attendance/home-instruction statute grants no statewide part-time-course or athletics entitlement; districts decide."
+    quote: "The school committee of each town shall provide for and enforce the school attendance of all children actually residing therein in accordance herewith."
+    provenance: "inferred"
+    source_id: "ma-attendance"
+    checked_on: "2026-11-05"

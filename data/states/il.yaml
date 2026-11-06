@@ -1,0 +1,97 @@
+code: IL
+name: Illinois
+summary: >-
+  Illinois treats home education as private schooling. Families must teach the required subject areas in English, but do not need state registration, program approval or standardized testing.
+compulsory_ages: { min: 6, max: 16 }
+pathways:
+  - id: private-school
+    name: Private school at home
+    summary: A parent or guardian provides the education required of a private school through a home program.
+    notice: { required: false, detail: "No homeschool registration required; withdraw from the current school to avoid mistaken truancy reports. Regional forms are voluntary." }
+    approval: { required: false, detail: "No state or district program approval required." }
+    assessment: { required: false, detail: "No required standardized tests or submitted assessments." }
+    subjects: { required: true, detail: "Teach in English: language arts, mathematics, biological and physical science, social science, fine arts, and physical development and health." }
+    instruction_time: { required: false, detail: "No required number of school days or hours per day." }
+    teacher_qualifications: { required: false, detail: "No parent diploma or teaching-license requirement." }
+    records: { required: false, detail: "No specific homeschool recordkeeping requirement; documentation is recommended for proving education or returning to school." }
+funding: { available: true, detail: "Eligible homeschool expenses qualify for a state income-tax credit of 25% above the first $250, up to $750 per family; income limits apply." }
+public_school_access: { available: true, detail: "Resident students may take public-school classes part-time if space is available and requested by May 1 of the prior school year; no general sports right." }
+claims:
+  - field: compulsory_ages
+    value: "Compulsory attendance begins at age 6 on or before September 1 and ends at 17 (ages 6–16), unless already graduated."
+    quote: "between the ages of 6 (on or before September 1) and 17 years (unless the child has already graduated from high school) beginning with the 2014-2015 school year"
+    provenance: measured
+    source_id: il-attendance
+    checked_on: "2026-11-05"
+  - field: pathways.private-school.notice
+    value: "There is no compulsory homeschool registration form; regional and Chicago forms are voluntary."
+    quote: "ISBE no longer collects homeschool forms. Your Regional Office of Education may have a voluntary form available to notify their office that you intend to homeschool. Chicago Public Schools has a voluntary form available for residents of Chicago."
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: pathways.private-school.approval
+    value: "After organizing the program and withdrawing the child, no approval or license is required."
+    quote: "You may begin homeschooling after you have organized your homeschool program or enrolled your child in an online school and have withdrawn your child from their current school. There are no other forms, licenses, approvals, etc. that are required."
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: pathways.private-school.assessment
+    value: "No tests, grades or other assessments must be administered or submitted."
+    quote: "You are not required to administer or submit tests, homework, projects, grades, or any other materials to a school, district, or ISBE."
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: pathways.private-school.subjects
+    value: "Instruction must be in English and cover the six named subject areas."
+    quote: "you must provide instruction, in the English language, in the following subject areas: Language arts Mathematics Biological and physical science Social science (social studies) Fine arts Physical development and health"
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: pathways.private-school.instruction_time
+    value: "No required number or length of school days applies."
+    quote: "There are no requirements for the number of school days or the length of a school day for homeschool students. Classes can occur any day of the week and at any time during the day."
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: pathways.private-school.teacher_qualifications
+    value: "No parent diploma or teaching license is required; ISBE identifies subjects as the only specific requirement."
+    quote: "In Illinois, the only specific requirement is that certain subject areas be taught."
+    provenance: inferred
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: pathways.private-school.records
+    value: "Recordkeeping is recommended rather than specifically required."
+    quote: "Although there are no specific recordkeeping requirements, you are strongly encouraged to keep good records of your homeschool program."
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "A qualifying private school in the home is eligible for the education expense credit."
+    quote: "Private schools providing educational instruction in the home that satisfy the requirements of the truancy law in Section 26-1 of the School Code also qualify as Illinois schools."
+    provenance: measured
+    source_id: il-education-credit
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The credit is 25% of qualified expenses above $250, capped at $750."
+    quote: "You will be allowed 25 percent of your student’s qualified education expenses after the first $250. Your total credit may not exceed $750 for tax years ending on or after December 31, 2017, regardless of the number of qualifying students."
+    provenance: measured
+    source_id: il-education-credit
+    checked_on: "2026-11-05"
+  - field: funding
+    value: "The credit is unavailable above $500,000 adjusted gross income for joint returns or $250,000 for other filing statuses."
+    quote: "an education expense credit is not allowed if the taxpayer’s adjusted gross income for the taxable year exceeds $500,000 for returns with a federal filing status of married filing jointly, or $250,000 for all other returns."
+    provenance: measured
+    source_id: il-education-credit
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "Students may take resident public-school classes part-time, subject to space and a May 1 request in the previous school year."
+    quote: "students may attend their local public school part time under the following conditions: The request was made by May 1 of the previous school year. There is enough space available in the school. The child lives within the attendance zone of the school."
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"
+  - field: public_school_access
+    value: "There is no general right to extracurricular access."
+    quote: "Public schools have no obligation to make extracurricular activities open to students who are being homeschooled."
+    provenance: measured
+    source_id: il-isbe-homeschool
+    checked_on: "2026-11-05"

@@ -1,0 +1,170 @@
+code: "WY"
+name: "Wyoming"
+summary: "Parents may run a home-based educational program with a basic academic curriculum without submitting curriculum plans to the district. A separate education savings account route adds notice and assessment duties."
+compulsory_ages:
+  min: 7
+  max: 15
+pathways:
+  - id: "home-based"
+    name: "Home-based educational program"
+    summary: "Parents or their designee administer a sequential basic academic curriculum."
+    notice:
+      required: false
+      detail: "No routine homeschool filing; notify the district when withdrawing a previously enrolled public-school student."
+    approval:
+      required: false
+      detail: "No approval required; curriculum submission was removed effective July 1, 2025."
+    assessment:
+      required: false
+      detail: "No standardized test or evaluation required under the home-based curriculum provision."
+    subjects:
+      required: true
+      detail: "Teach sequential reading, writing, mathematics, civics, history, literature and science."
+    instruction_time:
+      required: true
+      detail: "Compulsory attendance law specifies attendance during the entire local public-school session; no separate hourly homeschool minimum."
+    teacher_qualifications:
+      required: false
+      detail: "No parent diploma or teaching credential required."
+    records:
+      required: false
+      detail: "No routine portfolio, attendance log or test record requirement in the home-based curriculum provision."
+  - id: "esa"
+    name: "Education savings account individualized instruction"
+    summary: "Eligible families educate outside a school through an approved ESA rather than the statutory home-based program."
+    notice:
+      required: true
+      detail: "Give the resident school district annual notice of intent to participate in the ESA program."
+    approval:
+      required: true
+      detail: "Apply for and receive ESA approval from the state superintendent; sign the parent agreement."
+    assessment:
+      required: true
+      detail: "Take statewide assessments or a nationally normed achievement exam; academic progress must be assessed."
+    subjects:
+      required: true
+      detail: "Teach reading, writing, math, civics including US/Wyoming constitutions, history, literature and science."
+    instruction_time:
+      required: false
+      detail: "No day/hour minimum specified in the ESA instruction agreement."
+    teacher_qualifications:
+      required: false
+      detail: "No parent diploma or teaching credential specified in the ESA agreement."
+    records:
+      required: true
+      detail: "Submit annual ESA participation notice to the resident public school district."
+funding:
+  available: true
+  detail: "ESA offers eligible nonpublic students $7,000 yearly, including curriculum costs; program is operating while litigation continues."
+public_school_access:
+  available: true
+  detail: "Resident non-full-time students may join district activities under equal participation rules and fees."
+claims:
+  - field: "compulsory_ages"
+    value: "Age 7 by August 1 (September 15 for approved kindergarten entrants) until age 16 or completion of grade 10."
+    quote: "whose seventh birthday falls on or before August 1, or September 15 if the child started kindergarten pursuant to an approved request under W.S. 21-3-110(a)(xxxviii), of any year and who has not yet attained his sixteenth birthday or completed the tenth grade"
+    provenance: "measured"
+    source_id: "wy-wde-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.notice"
+    value: "No routine homeschool filing; notify the district when withdrawing a previously enrolled public-school student."
+    quote: "Therefore, if a student has been enrolled in a public school district, parents must notify the school district upon withdrawal from that school district. However, there is no legal requirement for a student who has never enrolled in a public school district to report to the district."
+    provenance: "measured"
+    source_id: "wy-wde-implementation"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.approval"
+    value: "No approval required; curriculum submission was removed effective July 1, 2025."
+    quote: "Per HB 46, effective July 1, 2025, the homeschooling entity is no longer required to submit this curriculum to the local school district."
+    provenance: "inferred"
+    source_id: "wy-wde-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.assessment"
+    value: "No standardized test or evaluation required under the home-based curriculum provision."
+    quote: "A home-based educational program shall meet the requirements of a basic academic educational program pursuant to W.S. 21-4-101(a)(vi)."
+    provenance: "inferred"
+    source_id: "wy-wde-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.subjects"
+    value: "Teach sequential reading, writing, mathematics, civics, history, literature and science."
+    quote: "a sequentially progressive curriculum of fundamental instruction in reading, writing, mathematics, civics, history, literature and science."
+    provenance: "measured"
+    source_id: "wy-wde-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.instruction_time"
+    value: "Compulsory attendance law specifies attendance during the entire local public-school session; no separate hourly homeschool minimum."
+    quote: "shall be required to send such child to, and such child shall be required to attend, a public or private school each year, during the entire time that the public schools shall be in session in the district in which the pupil resides;"
+    provenance: "measured"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.teacher_qualifications"
+    value: "No parent diploma or teaching credential required."
+    quote: "A home-based educational program means a program of educational instruction provided to a child by the child’s parent or legal guardian or by a person designated by the parent or legal guardian."
+    provenance: "inferred"
+    source_id: "wy-wde-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.home-based.records"
+    value: "No routine portfolio, attendance log or test record requirement in the home-based curriculum provision."
+    quote: "A home-based educational program shall meet the requirements of a basic academic educational program pursuant to W.S. 21-4-101(a)(vi)."
+    provenance: "inferred"
+    source_id: "wy-wde-home"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.notice"
+    value: "Give the resident school district annual notice of intent to participate in the ESA program."
+    quote: "the parent shall annually provide the student's resident public school district notice of intent to participate in the ESA program;"
+    provenance: "measured"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.approval"
+    value: "Apply for and receive ESA approval from the state superintendent; sign the parent agreement."
+    quote: "for approving applications in an expeditious manner."
+    provenance: "measured"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.assessment"
+    value: "Take statewide assessments or a nationally normed achievement exam; academic progress must be assessed."
+    quote: "Parents must ensure their children receive instruction in core subjects and are assessed on academic progress through the state assessment or nationally norm referenced assessment."
+    provenance: "measured"
+    source_id: "wy-wde-esa"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.subjects"
+    value: "Teach reading, writing, math, civics including US/Wyoming constitutions, history, literature and science."
+    quote: "instruction in reading, writing, mathematics, civics, including studies of the United States constitution and the constitution of the state of Wyoming, history, literature and science and is assessed on academic progress."
+    provenance: "measured"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.instruction_time"
+    value: "No day/hour minimum specified in the ESA instruction agreement."
+    quote: "An ESA student receiving individualized instruction in a non-school setting shall not be construed to be a student of a home-based educational program as defined in W.S. 21-4-101(a)(v)."
+    provenance: "inferred"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.teacher_qualifications"
+    value: "No parent diploma or teaching credential specified in the ESA agreement."
+    quote: "An ESA student receiving individualized instruction in a non-school setting shall not be construed to be a student of a home-based educational program as defined in W.S. 21-4-101(a)(v)."
+    provenance: "inferred"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"
+  - field: "pathways.esa.records"
+    value: "Submit annual ESA participation notice to the resident public school district."
+    quote: "the parent shall annually provide the student's resident public school district notice of intent to participate in the ESA program;"
+    provenance: "measured"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "ESA offers eligible nonpublic students $7,000 yearly, including curriculum costs; program is operating while litigation continues."
+    quote: "The program allows eligible students to receive $7,000 annually for various educational expenses, including private school tuition, curriculum, tutoring, extracurricular activities, and other approved education-related costs."
+    provenance: "measured"
+    source_id: "wy-wde-esa"
+    checked_on: "2026-11-05"
+  - field: "funding"
+    value: "The injunction has been lifted, and the state is currently allowed to distribute funds while the case continues."
+    quote: "The Wyoming Supreme Court recently lifted a lower court’s injunction, which means the state is officially authorized to move forward with the ESA program and distribute funds to families. The underlying case on the constitutionality of the program is still being litigated."
+    provenance: "measured"
+    source_id: "wy-wde-esa"
+    checked_on: "2026-11-05"
+  - field: "public_school_access"
+    value: "Resident non-full-time students may join district activities under equal participation rules and fees."
+    quote: "shall be permitted by the district to participate in any activities offered by the district, including, but not limited to, activities which are sanctioned by the Wyoming high school activities association"
+    provenance: "measured"
+    source_id: "wy-education-code"
+    checked_on: "2026-11-05"

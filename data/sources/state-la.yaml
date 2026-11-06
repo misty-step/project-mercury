@@ -1,0 +1,30 @@
+-
+  id: "la-attendance"
+  url: "https://legis.la.gov/Legis/Law.aspx?p=y&d=80276"
+  publisher: "Louisiana Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "la-study-law"
+  url: "https://www.legis.la.gov/Legis/Law.aspx?d=80346"
+  publisher: "Louisiana Legislature"
+  type: "statute"
+  checked_on: "2026-11-05"
+-
+  id: "la-study-guide"
+  url: "https://doe.louisiana.gov/docs/default-source/nonpublic-schools/bese-approved-home-study-guidelines-and-instructions.pdf"
+  publisher: "Louisiana Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "la-nonpublic-guide"
+  url: "https://doe.louisiana.gov/docs/default-source/nonpublic-schools/nonpublic-schools-not-seeking-state-approval-guidelines-and-instructions.pdf"
+  publisher: "Louisiana Department of Education"
+  type: "agency"
+  checked_on: "2026-11-05"
+-
+  id: "la-deduction"
+  url: "https://revenue.louisiana.gov/individuals/general-resources/school-expense-deduction/"
+  publisher: "Louisiana Department of Revenue"
+  type: "agency"
+  checked_on: "2026-11-05"
