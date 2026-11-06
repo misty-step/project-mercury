@@ -9,7 +9,7 @@ pathways:
     name: "Equivalent instruction elsewhere than at school"
     summary: "Parents arrange instruction academically equivalent to the local public school, including instruction at home."
     notice:
-      required: true
+      required: false
       detail: "No routine notice; required for enrolled high-school withdrawal and certain denied-enrollment cases."
     approval:
       required: false

@@ -33,7 +33,7 @@ pathways:
     name: "Independent or parochial school enrollment"
     summary: "A family enrolls with an independent or parochial school that permits home instruction and follows its program."
     notice:
-      required: true
+      required: false
       detail: "No parent homeschool notice; the school must report names, ages, residences and attendance to its local district if requested, at most monthly."
     approval:
       required: false

@@ -55,6 +55,11 @@ satisfies attendance on its own). Each pathway lists seven duties as
 `{ required, detail }`: `notice`, `approval`, `assessment`, `subjects`,
 `instruction_time`, `teacher_qualifications` and `records`.
 
+A duty that applies only in some cases (certain grades, some families) is
+`required: true` with the conditions in `detail`. The exception is notice: a
+filing owed only on withdrawal from public school, on request, or to join public
+school activities is `required: false`, with the condition in `detail`.
+
 `validate` requires a claim for `compulsory_ages`, `funding`,
 `public_school_access` and every `pathways.<id>.<duty>`. State claims must quote
 the cited page verbatim (`quote`), carry `checked_on` as `YYYY-MM-DD`, be

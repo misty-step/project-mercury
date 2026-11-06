@@ -17,7 +17,7 @@ pathways:
   - id: independent
     name: Independent private instruction
     summary: An unaccredited private or religious instructional program teaches the core subjects and answers specified district or department information requests.
-    notice: { required: true, detail: "No initial filing; upon written request, report instructor, location, responsible authority and students to the superintendent or DOE director." }
+    notice: { required: false, detail: "No initial filing; upon written request, report instructor, location, responsible authority and students to the superintendent or DOE director." }
     approval: { required: false, detail: "No program approval or accreditation required." }
     assessment: { required: false, detail: "No mandatory annual testing or progress evaluation." }
     subjects: { required: true, detail: "Mathematics, reading and language arts, science and social studies in all grade levels." }

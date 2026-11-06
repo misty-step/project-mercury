@@ -9,7 +9,7 @@ pathways:
     name: "Home-based educational program"
     summary: "Parents or their designee administer a sequential basic academic curriculum."
     notice:
-      required: true
+      required: false
       detail: "No routine homeschool filing; notify the district when withdrawing a previously enrolled public-school student."
     approval:
       required: false

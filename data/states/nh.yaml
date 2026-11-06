@@ -9,7 +9,7 @@ pathways:
     name: "Home education"
     summary: "A parent provides, coordinates or directs education for their own child under RSA 193-A, as revised effective July 1, 2026."
     notice:
-      required: true
+      required: false
       detail: "No routine declaration; required upon public-school withdrawal or to access public-school programs."
     approval:
       required: false

@@ -28,7 +28,7 @@ pathways:
       required: false
       detail: "No state certification or minimum degree is required."
     records:
-      required: true
+      required: false
       detail: "No general portfolio mandate; activity participants must submit the previous semester’s transcript and eligibility documents."
 funding:
   available: false
